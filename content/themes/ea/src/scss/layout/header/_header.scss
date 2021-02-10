@@ -1,0 +1,92 @@
+.hd-Header {
+  background-color: $color-light-grey;
+  color: $color-secondary;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  .logged-in.admin-bar & {
+    top: 46px;
+
+    @include break-min(783px) {
+      top: 32px;
+    }
+  }
+}
+
+.hd-Header_Inner {
+  @include inner;
+}
+
+.hd-Header_Items {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: $headerHeight;
+
+  display: flex;
+
+  transition: height .3s ease;
+
+  .hd-Header--scrolled & {
+    height: $headerHeightScrolled;
+  }
+}
+
+.hd-Header_Item {
+  flex: 1 1 auto;
+}
+
+.hd-Header_Item--logo {
+  width: 135px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 135px;
+
+  transition: flex-basis .3s ease, width .3s ease;
+
+  .hd-Header--scrolled & {
+    width: 80px;
+
+    flex-basis: 80px;
+  }
+}
+
+.hd-Header_Item--nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include break-min($md) {
+    flex-wrap: wrap;
+  }
+}
+
+.hd-Header_Item--tools {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+.hd-Header_Title {
+  @include screen_reader_only;
+}
+
+.hd-Header_Logo {
+  display: block;
+
+  svg {
+    height: $headerHeight;
+    will-change: height;
+  }
+
+  .hd-Header--scrolled & {
+    svg {
+      height: $headerHeightScrolled;
+    }
+  }
+}

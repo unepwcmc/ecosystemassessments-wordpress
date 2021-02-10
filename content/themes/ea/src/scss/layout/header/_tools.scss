@@ -1,0 +1,63 @@
+.hd-Tools {
+  display: flex;
+
+  @include break-min($md) {
+    margin-left: 30px;
+  }
+}
+
+.hd-Tools_Items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hd-Tools_Item {
+  margin-left: 30px;
+
+  flex: 0 0 auto;
+
+  @include break-min($md) {
+    margin-left: 20px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+a.hd-Tools_Button {
+  @include button_primary_light;
+
+  &.hd-Tools_Button--external {
+    display: flex;
+    justify-content: center;
+
+    svg {
+      fill: #fff;
+      margin-left: 5px;
+      width: 14px;
+    }
+  }
+}
+
+.hd-Tools_Item--menuToggle {
+  @include break-min(1024px) {
+    display: none;
+  }
+}
+
+.hd-Tools_NavToggle {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: $color-tools-icons;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+
+  display: block;
+}

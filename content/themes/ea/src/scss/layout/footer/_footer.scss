@@ -1,0 +1,50 @@
+.ft-Footer {
+  background-color: $color-footer;
+  color: $color-secondary;
+
+  position: relative;
+  z-index: 1;
+}
+
+.ft-Footer_Inner {
+  @include inner;
+}
+
+.ft-Footer_Body {
+
+}
+
+.ft-Footer_Footer {
+  margin-top: $item-padding;
+  border-top: 2px solid $color-border;
+  padding-top: $item-padding;
+  padding-bottom: $item-padding;
+
+  @include break-min($sm) {
+    display: flex;
+  }
+}
+
+.ft-Footer_Image {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 170px;
+
+  display: block;
+  align-self: flex-start;
+  flex: 0 0 170px;
+
+  @include break-min($sm) {
+    margin-bottom: 0;
+  }
+}
+
+p.ft-Footer_Text {
+  color: currentColor;
+  font-size: 12px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  max-width: 700px;
+
+  flex: 1 1 auto;
+}

@@ -1,0 +1,88 @@
+
+.frm-Contact_Form {
+  @include spacer;
+
+  @include break-min($xs) {
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  h3.frm-Contact_Title,
+  .rte-RichText h3.frm-Contact_Title {
+    @include font_heading-2;
+    font-weight: $fw-light;
+    margin-bottom: $spacer-small;
+    text-align: center;
+    width: 100%;
+
+    @include break-min($xs) {
+      margin-bottom: $spacer-medium;
+    }
+  }
+
+  label.frm-Contact_Label {
+    line-height: 1;
+    margin-bottom: 20px;
+    width: 100%;
+
+    display: block;
+    flex: 0 0 100%;
+
+    &.frm-Contact_Label--small {
+      @include break-min($xs) {
+        width: calc(50% - 6.15px);
+
+        flex: 0 0 calc(50% - 6.15px);
+      }
+    }
+  }
+
+  .frm-Contact_Input,
+  .frm-Contact_Select,
+  .frm-Contact_Textarea {
+    margin-top: 10px;
+
+    &.wpcf7-not-valid {
+      border-color: $color-error;
+    }
+  }
+
+  span.wpcf7-not-valid-tip {
+    font-size: 12px;
+    margin-top: $item-padding-small;
+  }
+
+  .frm-Contact_Submit {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wpcf7-submit {
+    margin: 0 !important;
+    width: auto;
+
+    align-self: flex-start;
+
+    @include break-min($sm) {
+      width: calc((1 / 4) * 100%);
+    }
+  }
+
+  .wpcf7-response-output {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  display: block;
+}

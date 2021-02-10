@@ -1,0 +1,20 @@
+.sbr-Widgets_Items {
+  margin: 0;
+}
+
+.sbr-Widgets_Item {
+  margin-bottom: $grid-gap;
+
+  @include break-min($sm) {
+    margin-bottom: $grid-gap * 2;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h3.sbr-Widgets_Title {
+  font-size: 16px;
+  margin-bottom: 0;
+}

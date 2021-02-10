@@ -1,0 +1,53 @@
+.editor-block-list__layout,
+.lyt-Body,
+.lyt-Body .ent-Entry_Content {
+  // Block Quote
+
+  // .wp-block-quote p {
+  //   font-size: 22px;
+  //   font-weight: 500;
+  // }
+
+  // Buttons
+  .wp-block-button {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .wp-block-button__link {
+    @include button_primary;
+  }
+
+  .wp-block-button.button-secondary .wp-block-button__link {
+    @include button_secondary;
+  }
+
+  // Embed
+
+  .wp-embedded-content {
+    max-width: 100%;
+  }
+
+  // Images
+
+  .wp-block-image {
+    margin-top: #{$grid-gap * 2};
+    margin-bottom: #{$grid-gap * 2};
+
+    img {
+      display: block;
+    }
+
+    figcaption {
+      text-align: left;
+      font-size: 12px;
+    }
+  }
+
+  .wp-block-separator {
+    margin: 0;
+    border: 0;
+    border-top: 1px solid $color-border;
+  }
+}

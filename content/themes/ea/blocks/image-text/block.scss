@@ -1,0 +1,54 @@
+@import "../../src/scss/utilities/variables";
+@import "../../src/scss/utilities/mixins";
+
+.blk-ImageText {
+  @include spacer;
+}
+
+.blk-ImageText_Inner {
+  @include inner;
+}
+
+.blk-ImageText_Columns {
+  @include break-min($md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.blk-ImageText_Column {
+  width: calc(((1 / 2) * 100%) - #{$grid-gap / 2});
+
+  flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap / 2});
+
+  &.blk-ImageText_Column--image {
+    margin-bottom: $item-padding;
+
+    @include break-min($md) {
+      margin-top: $spacer-xlarge;
+      margin-bottom: 0;
+      order: 2;
+    }
+  }
+
+  &.blk-ImageText_Column--text {
+    @include break-min($md) {
+      order: 1;
+    }
+  }
+}
+
+.blk-ImageText_ImageWrap {
+  padding-bottom: calc((5 / 7) * 100%);
+
+  position: relative;
+}
+
+.blk-ImageText_Image {
+  @include absolute_fill;
+  @include object_fit_cover;
+}
+
+a.blk-ImageText_Link {
+  @include button_primary;
+}

@@ -1,0 +1,16 @@
+.ent-Comments {
+  @include spacer_bottom;
+}
+
+.ent-Comments_Header {
+  margin-bottom: $spacer-small;
+  text-align: center;
+
+  @include break-min($xs) {
+    margin-bottom: $spacer-medium;
+  }
+}
+
+.ent-Comments_Inner {
+  @include inner;
+}

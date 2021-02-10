@@ -1,0 +1,70 @@
+@import "../../src/scss/utilities/variables";
+@import "../../src/scss/utilities/mixins";
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .lyt-Body {
+
+    // Header
+
+    .hd-Header_Inner,
+    .hd-Header_Body,
+    .hd-Header_Items {
+      height: 100%;
+    }
+
+    // Icon
+    .ico-Logo {
+      height: 100px;
+      transition: width .3s ease transform .3s ease;
+
+      .hd-Header--scrolled & {
+        height: 60px;
+        transform: scale(1.25) translateY(7px);
+      }
+    }
+
+    // Layout
+
+    .lyt-Primary {
+      @include break-min($sm) {
+        .lyt-Container--hasSidebar & {
+          width: 74.35%;
+          flex: 0 0 74.35%;
+        }
+      }
+    }
+
+    // Blocks
+
+    // Top Level Landing Page Intro
+
+    .blk-Intro_Column {
+      @include break-min($sm) {
+        width: 49.35%;
+        flex: 0 0 49.35%;
+      }
+    }
+
+    // Text Image Columns
+
+    .blk-TextImage_Column {
+      @include break-min($sm) {
+        width: 49.35%;
+        flex: 0 0 49.35%;
+      }
+    }
+
+    // Case Study Stats
+    .cst-Stats {
+      @include break-min($md) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      @include break-min($lg) {
+        margin-left: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter}) !important;
+        margin-right: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter}) !important;
+      }
+    }
+
+  }
+}

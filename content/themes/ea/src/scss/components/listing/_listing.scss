@@ -1,0 +1,65 @@
+.lst-Listing_Header {
+  padding-top: $spacer-small;
+  padding-bottom: $spacer-small;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+p.lst-Listing_Count {
+  margin-bottom: 0;
+}
+
+.lst-Listing_Items {
+  @include listing_items;
+
+  @include break-min($md) {
+    margin-top: 0;
+  }
+}
+
+.lst-Listing_Item {
+  @include listing_item;
+  @include listing_item_dividers;
+
+  .lst-Latest & {
+    @include break-max($sm) {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @include break-max($md) {
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+}
+
+.lst-Listing_Loader {
+  padding-top: $spacer-medium;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  &.lst-Listing_Loader--padded {
+    padding: $spacer-xlarge;
+  }
+
+  svg {
+    width: 50px;
+    transform: scale(-1,1);
+  }
+}
+
+.lst-Listing_Empty {
+  @include spacer;
+  text-align: center;
+}
+
+.lst-Listing_EmptyMessage {
+  @include h3;
+}

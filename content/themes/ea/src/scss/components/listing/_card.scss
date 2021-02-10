@@ -1,0 +1,57 @@
+.crd-Listing_Card {
+  cursor: pointer;
+  width: 100%;
+
+  position: relative;
+}
+
+.crd-Listing_ImageWrap {
+  overflow: hidden;
+  padding-bottom: calc((13 / 15) * 100%); // 86.666...%
+
+  position: relative;
+
+  .lst-Listing--member & {
+    padding-bottom: calc((2 / 3) * 100%);
+  }
+}
+
+.crd-Listing_Image {
+  @include absolute_fill;
+  @include object_fit_cover;
+  backface-visibility: hidden;
+  transition: transform .5s ease;
+  will-change: transform;
+
+  .lst-Listing--member & {
+    @include object_fit_contain;
+    padding: 0 $spacer-medium;
+  }
+
+  .crd-Listing_Card:hover & {
+    transform: scale(1.015);
+  }
+}
+
+.crd-Listing_Body {
+  padding: 10px 15px;
+}
+
+p.crd-Listing_Date {
+  @include font_heading-6;
+  color: $color-primary;
+  font-weight: $fw-bold;
+  margin-top: $item-padding-smaller;
+  text-transform: uppercase;
+}
+
+h3.crd-Listing_Title {
+  @include font_heading-4;
+  font-weight: $fw-light;
+  margin-bottom: 0;
+}
+
+a.crd-Listing_FauxLink {
+  @include absolute_fill;
+  z-index: 2;
+}

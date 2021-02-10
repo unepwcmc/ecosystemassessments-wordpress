@@ -1,0 +1,42 @@
+.art-Related {
+  margin-top: $grid-gap * 2;
+}
+
+.art-Related_Header {
+  text-align: center;
+  margin-bottom: $grid-gap * 2;
+}
+
+.art-Related_Title {
+  @include section_title;
+}
+
+.art-Related_Items {
+  margin: 0;
+
+  @include break-min($sm) {
+    display: flex;
+    margin-right: -#{$grid-gap};
+  }
+}
+
+.art-Related_Item {
+  @include no_bullets;
+  margin-bottom: $grid-gap;
+
+  &:last-child {
+    display: none;
+  }
+
+  @include break-min($sm) {
+    display: flex;
+    width: calc(((3 / 12) * 100%) - #{$grid-gap});
+    flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap});
+    margin-right: $grid-gap;
+    margin-bottom: 0;
+
+    &:last-child {
+      display: flex;
+    }
+  }
+}

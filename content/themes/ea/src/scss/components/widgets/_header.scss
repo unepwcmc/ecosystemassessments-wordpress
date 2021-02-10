@@ -1,0 +1,48 @@
+.hd-Widgets_Items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hd-Widgets_Item {
+  flex: 0 0 auto;
+
+  &:first-child {
+    display: none;
+
+    @include break-min($sm) {
+      display: block;
+    }
+  }
+}
+
+.hd-Widget_Button {
+  @include button-secondary;
+  font-size: 14px;
+  margin: 0;
+}
+
+.hd-Widget_LinkItems {
+  margin-bottom: 0;
+}
+
+.hd-Widget_LinkItem {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+
+  i {
+    width: 16px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a.hd-Widget_Link {
+  text-decoration: none;
+  font-weight: 600;
+}

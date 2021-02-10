@@ -1,0 +1,124 @@
+//-------------------------------------------------
+// Hero
+//-------------------------------------------------
+
+.her-Hero_Inner {
+  @include inner_padding;
+  display: flex;
+}
+
+.her-Hero_Body {
+  @include spacer_body_small;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+
+  .lyt-Body & {
+    min-height: 200px;
+
+    @include break-min($xs) {
+      min-height: 300px;
+    }
+
+    @include break-min($sm) {
+      min-height: 400px;
+    }
+  }
+}
+
+.her-Hero_BackgroundImage {
+  margin-bottom: $spacer-small;
+  padding-bottom: 50%;
+  width: 100%;
+
+  position: relative;
+
+  // @include break-min($sm) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: static;
+  // }
+
+  img {
+    @include absolute_fill;
+    @include object_fit_cover;
+    z-index: 1;
+  }
+}
+
+.her-Hero_Content {
+  color: #fff;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $grid-gap;
+  padding-left: $grid-gap;
+  text-align: center;
+
+  position: relative;
+  z-index: 3;
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  @include break-min($sm) {
+    max-width: 700px;
+  }
+
+  @include break-min($md) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  @include break-min($lg) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+h2.her-Hero_Title {
+  @include font_heading-2;
+  font-weight: $fw-regular;
+  color: currentColor;
+
+  display: block;
+
+  &:only-child {
+    margin-bottom: 0;
+  }
+
+  @include break-min($sm) {
+    @include font_heading-1;
+  }
+}
+
+h3.her-Hero_Heading {
+  @include h4;
+  color: currentColor;
+  font-weight: $fw-bold;
+  margin-bottom: $item-padding * 2;
+}
+
+p.her-Hero_Text {
+  color: currentColor;
+}
+
+a.her-Hero_Link {
+  @include button_primary;
+  margin: 0 !important;
+}
+
+.her-Hero_Overlay {
+  display: none;
+  @include absolute_fill;
+  background-color: $color-secondary;
+  z-index: 2;
+
+  // @include break-min($sm) {
+    display: block;
+  // }
+}

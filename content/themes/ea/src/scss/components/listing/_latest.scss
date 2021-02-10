@@ -1,0 +1,31 @@
+.lst-Latest {
+  @include spacer_bottom;
+}
+
+.lst-Latest_Inner {
+  @include inner;
+}
+
+.lst-Latest_Header {
+  margin-bottom: $spacer-small;
+  text-align: center;
+
+  @include break-min($sm) {
+    margin-bottom: $spacer-medium * 1.5;
+  }
+}
+
+h3.lst-Latest_Title {
+  @include font_heading-2;
+  margin-bottom: $item-padding-smaller;
+  text-transform: capitalize;
+}
+
+a.lst-Latest_Link {
+  color: $color-grey-text;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

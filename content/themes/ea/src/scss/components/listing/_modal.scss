@@ -1,0 +1,86 @@
+h3.lst-Modal_Title {
+  @include h2;
+  font-weight: $fw-bold;
+  margin-bottom: $item-padding-smaller;
+}
+
+h4.lst-Modal_Heading {
+  @include h2;
+  margin-bottom: $item-padding-small;
+}
+
+.lst-Modal_Columns {
+  @include break-min($xs) {
+    display: flex;
+  }
+}
+
+.lst-Modal_Column {
+  @include break-min($xs) {
+    &.lst-Modal_Column--small {
+      margin-right: $grid-gap * 1.5;
+      width: calc(((1 / 3) * 100%) - #{($grid-gap * 1.5) / 2});
+
+      flex: 0 0 calc(((1 / 3) * 100%) - #{($grid-gap * 1.5) / 2});
+    }
+    &.lst-Modal_Column--large {
+      width: calc(((2 / 3) * 100%) - #{($grid-gap * 1.5) / 2});
+
+      flex: 1 0 calc(((2 / 3) * 100%) - #{($grid-gap * 1.5) / 2});
+    }
+  }
+}
+
+.lst-Modal_ImageWrap {
+  position: relative;
+  padding-bottom: 100%;
+  margin-top: $item-padding-small;
+  margin-bottom: $item-padding;
+}
+
+.lst-Modal_Image {
+  @include absolute_fill;
+  @include object_fit_cover;
+
+  .lst-Listing--member & {
+    @include object_fit_contain;
+  }
+}
+
+.lst-Modal_Content {
+  margin-top: $item-padding;
+
+  @include break-min($xs) {
+    margin-top: 0;
+  }
+
+  p {
+    @include font_large_text;
+  }
+}
+
+.lst-Modal_Items {
+  @include structural_ul;
+}
+
+.lst-Modal_Item {
+  @include no_bullets;
+  margin-bottom: $item-padding-smaller;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a.lst-Modal_Link {
+  @include font_small_text;
+  text-decoration: none;
+  font-weight: $fw-bold;
+  word-break: break-all;
+}
+
+.lst-Modal_SocialIcon {
+  width: 15px;
+  height: 12px;
+  display: inline-block;
+}

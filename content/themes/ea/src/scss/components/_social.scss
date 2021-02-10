@@ -1,0 +1,55 @@
+.soc-Social {
+  margin-top: #{$item-padding * 1.5};
+}
+
+p.soc-Social_Heading {
+  margin: 0 $grid-gap 0 0;
+  font-size: 16px;
+  color: $color-secondary;
+  display: none;
+
+  @include break-min($sm) {
+    display: block;
+  }
+}
+
+.soc-Social_Icons,
+.rte-RichText .soc-Social_Icons {
+  @include no_margin_padding;
+  display: flex;
+  justify-content: center;
+
+  @include break-min($sm) {
+    justify-content: flex-start;
+  }
+}
+
+.soc-Social_Icon,
+.rte-RichText .soc-Social_Icon {
+  @include no_bullets;
+  margin-right: #{$grid-gap * 2};
+  margin-bottom: 0;
+
+  @include break-min($sm) {
+    margin-right: #{$grid-gap * 1.5};
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: block;
+  }
+
+  svg {
+    fill: $color-grey-text;
+    transition: opacity 0.3s ease;
+    max-width: 25px;
+    height: 25px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import "../../src/scss/utilities/variables";
+@import "../../src/scss/utilities/mixins";
+
+.blk-LinkTiles {
+  @include spacer_xlarge;
+
+  .home & {
+    @include break-min($md) {
+      margin-top: $spacer-large;
+    }
+  }
+}
+
+.blk-LinkTiles_Inner {
+  @include inner;
+}
+
+ul.blk-LinkTiles_Items {
+  @include no_margin_padding;
+  @include break-min($sm) {
+    display: flex;
+    margin-right: -#{$grid-gap};
+
+  }
+}
+
+li.blk-LinkTiles_Item {
+  @include no_bullets;
+  position: relative;
+  margin-bottom: $spacer-medium;
+
+  @include break-min($sm) {
+    margin-right: $grid-gap;
+    margin-bottom: 0;
+
+    flex: 1;
+  }
+
+  &::after {
+    background-image: -webkit-gradient(linear, right top, right bottom, color-stop(35%, $color-border), color-stop(0%, #fff));
+    background-image: linear-gradient(to bottom, $color-border 35%, #fff 0%);
+    background-position: right;
+    background-size: 1px 4px;
+    background-repeat: repeat-y;
+    width: 1px;
+    height: 100%;
+
+    display: block;
+
+    position: absolute;
+    top: 1px;
+    right: -#{($grid-gap / 2)};
+
+    @include break-min($sm) {
+      content: '';
+    }
+  }
+
+  &:last-child {
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.blk-LinkTile {
+  position: relative;
+}
+
+.blk-LinkTile_ImageWrap {
+  margin-bottom: $item-padding;
+  padding-bottom: calc((20 / 23) * 100%);
+  overflow: hidden;
+  width: 100%;
+
+  position: relative;
+}
+
+.blk-LinkTile_Image {
+  @include absolute_fill;
+  @include object_fit_cover;
+  transition: transform .5s ease;
+  will-change: transform;
+
+  .blk-LinkTile:hover & {
+    transform: scale(1.015);
+  }
+}
+
+.blk-LinkTile_Content {
+  padding-bottom: $spacer-medium;
+  
+  @include break-min($sm) {
+    padding-bottom: $spacer-medium * 1.5;
+  }
+}
+
+h3.blk-LinkTile_Title {
+  color: $color-primary;
+  font-weight: $fw-regular;
+  margin-bottom: 5px;
+}
+
+p.blk-LinkTile_Text {
+  margin-bottom: 0;
+}
+
+p.blk-LinkTile_Link {
+  font-size: 18px;
+  font-weight: $fw-bold;
+  line-height: 1;
+  margin-bottom: 0;
+  padding-left: 30px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  svg {
+    display: inline-block;
+    width: 16px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+  }
+}
+
+a.blk-LinkTile_FauxLink {
+  @include absolute_fill;
+  z-index: 1;
+}

@@ -1,0 +1,93 @@
+.lst-Filter_DrawerToggle {
+  @include button_primary;
+  margin-left: $grid-gap * 2;
+  width: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.lst-Filter_Items {
+  @include structural_ul;
+}
+
+.lst-Filter_Item {
+  border-top: 1px solid $color-border;
+  margin-top: $item-padding;
+  padding-top: $item-padding / 2;
+  padding-bottom: $item-padding;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h4.lst-Filter_Title {
+  font-weight: $fw-bold;
+  margin-bottom: $spacer-small;
+}
+
+ul.lst-Filter_Terms {
+  @include structural_ul;
+}
+
+li.lst-Filter_Term {
+  padding-bottom: $item-padding * 1.5;
+}
+
+.lst-Filter_Checkbox {
+  display: none;
+}
+
+.lst-Filter_Label {
+  @include h4;
+  cursor: pointer;
+  padding-left: $grid-gap * 2.5;
+
+  position: relative;
+
+  &::before {
+    border: 2px solid $color-secondary;
+    content: '';
+    width: 16px;
+    height: 16px;
+
+    display: block;
+
+    position: absolute;
+    top: 7px;
+    left: 0;
+  }
+
+  &::after {
+    background-image: url('../../img/icon-tick-blue.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    width: 20px;
+    height: 20px;
+
+    display: block;
+
+    position: absolute;
+    top: 5px;
+    left: 2px;
+
+    transition: opacity .3s ease, visibility .3s ease;
+  }
+}
+
+.lst-Filter_Checkbox:checked + .lst-Filter_Label {
+  &::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}

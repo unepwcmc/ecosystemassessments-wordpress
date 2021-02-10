@@ -1,0 +1,130 @@
+.ent-Entry {
+  position: relative;
+}
+
+.ent-Entry_Header {
+  .error-404 & {
+    @include section_header;
+  }
+}
+
+.ent-Entry_Body {
+  strong {
+    font-size: 20px;
+  }
+
+  .error-404 & {
+    max-width: $restrained-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lyt-Primary--restrained & {
+    @include restrain_width;
+  }
+
+  .lyt-Container--hasSidebar & {
+    @include break-min($sm) {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+
+  .lyt-Container--sidebarRight & {
+    @include break-min($sm) {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  .lyt-Primary--simple & {
+    @include break-min($lg) {
+      max-width: calc((6 / 9) * 100%);
+    }
+  }
+}
+
+.ent-Entry_Columns {
+  display: flex;
+}
+
+.ent-Entry_Column {
+  &:first-child {
+    width: 200px;
+    flex: 0 0 200px;
+  }
+  &:last-child {
+    flex: 1 1 auto;
+  }
+}
+
+.ent-Entry_Thumbnail {
+  position: relative;
+  padding-bottom: 100%;
+
+  img {
+    @include absolute_fill;
+    @include object-fit-cover;
+  }
+}
+
+h2.ent-Entry_Title {
+  // font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  max-width: calc((10 / 12) * 100%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $grid-gap;
+}
+
+p.ent-Entry_Details,
+.rte-RichText p.ent-Entry_Details {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.ent-Entry_ImageWrapper,
+.ent-Entry_VideoWrapper {
+  position: relative;
+  padding-bottom: calc((9 / 16) * 100%);
+  margin-bottom: 20px;
+}
+
+.ent-Entry_Image,
+.ent-Entry_Video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}
+
+a.ent-Entry_Link {
+  margin-top: #{$item-padding * 1.5};
+  margin-bottom: #{$item-padding * 1.5};
+
+  display: inline-block;
+}
+
+a.ent-Entry_FauxLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ent-Entry_IFrame {
+  @include spacer;
+  float: none;
+  
+  display: block;
+}

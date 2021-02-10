@@ -1,0 +1,91 @@
+.lyt-Body {
+  padding-top: 120px;
+
+  position: relative;
+
+  &::after {
+    content: '';
+    background-color: $color-light-grey;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: #{$headerHeight * 2};
+    z-index: -1;
+  }
+}
+
+.lyt-Container {
+  overflow: hidden;
+
+  &.lyt-Container--hasSidebar {
+    @include break-min($sm) {
+      margin-top: $grid-gap;
+    }
+
+    @include break-min($md) {
+      display: flex;
+      margin-top: 0;
+    }
+  }
+}
+
+.lyt-Container_Inner {
+  @include inner;
+}
+
+.lyt-Container_Body {
+  .lyt-Container--hasSidebar & {
+    @include break-min($md) {
+      display: flex;
+    }
+  }
+}
+
+.lyt-Primary {
+  @include break-min($md) {
+    .lyt-Container--hasSidebar & {
+      width: calc((9 / 12) * 100%);
+      flex: 1 1 calc((9 / 12) * 100%);
+    }
+
+    .lyt-Container--sidebarRight & {
+      order: 1;
+    }
+  }
+}
+
+.lyt-Primary_Header {
+  margin-top: #{$grid-gap * 2};
+  margin-bottom: #{$grid-gap * 2};
+
+  @include break-min($md) {
+    margin-top: #{$grid-gap * 3};
+    margin-bottom: #{$grid-gap * 3};
+  }
+}
+
+h2.lyt-Primary_Title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+
+  @include break-min($md) {
+    text-align: center;
+  }
+}
+
+.lyt-Primary_Body {
+  @include spacer_bottom;
+
+  &:not(.lyt-Primary_Body--archive) {
+    @include spacer_top;
+  }
+
+  @include break-min($md) {
+    .home & {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.hd-Search {
+  position: relative;
+}
+
+.hd-Search_Toggle {
+  display: block;
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  color: $color-primary;
+
+  svg {
+    width: 32px;
+    height: 32px;
+    transition: opacity .3s ease;
+
+    @include break-min($md) {
+      opacity: 0.8;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .hd-Search--bar-active &,
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+}
+
+.hd-Search_Bar {
+  position: fixed;
+  top: 85px;
+  right: #{$grid-gap / 2};
+  left: #{$grid-gap / 2};
+  z-index: 10;
+  opacity: 0;
+  visiblity: hidden;
+  max-width: 100%;
+
+  pointer-events: none;
+  overflow: hidden;
+  transition: opacity 0.5s ease, visiblity 0.5s ease;
+
+  .admin-bar & {
+    top: 130px;
+
+    @include break-min($xs) {
+      top: calc(100% + 5px);
+    }
+  }
+
+  @include break-min($xs) {
+    position: absolute;
+    width: 100%;
+    min-width: 450px;
+    top: calc(100% + 5px);
+    right: -58px;
+    left: auto;
+  }
+
+  @include break-min($md) {
+    right: -36px;
+  }
+
+  .hd-Search--bar-active & {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+}
+
+.hd-Search_Form {
+  display: flex;
+  border: 8px solid #D6D6D6;
+  background: #D6D6D6;
+  border-radius: 3px;
+  position: relative;
+  margin-top: 15px;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #D6D6D6;
+
+    position: absolute;
+    top: -37px;
+    right: 63px;
+
+    @include break-min($xs) {
+      right: 50px;
+    }
+
+    @include break-min($md) {
+      right: 23.5px;
+    }
+  }
+}
+
+.hd-Search_Input {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 8.5px 10px;
+
+  flex: 1 1 auto;
+}
+
+input.hd-Search_Button {
+  background-color: $color-grey-text !important;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-color: $color-secondary !important;
+  color: #fff;
+  margin: 0;
+  padding: 5px 10px !important;
+  min-width: 0;
+  width: 80px;
+
+  flex: 0 0 80px;
+
+  &:hover {
+    background-color: darken($color-grey-text, 10%) !important;
+    color: #fff !important;
+  }
+}

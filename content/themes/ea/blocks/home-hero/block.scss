@@ -1,0 +1,87 @@
+@import "../../src/scss/utilities/variables";
+@import "../../src/scss/utilities/mixins";
+
+.her-Home_Inner {
+  @include inner_padding;
+
+  display: flex;
+}
+
+.her-Home_BackgroundImage {
+  @include absolute_fill;
+  @include object_fit_cover;
+  z-index: 1;
+}
+
+.her-Home_Body {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+
+  .lyt-Body & {
+    @include break-min($lg) {
+      min-height: 600px;
+    }
+  }
+}
+
+.her-Home_Content {
+  padding: $spacer-medium $grid-gap;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+
+  position: relative;
+  z-index: 2;
+
+  @include break-min($xs) {
+    padding: $spacer-large $grid-gap;
+    max-width: 750px;
+  }
+
+  @include break-min($lg) {
+    padding: $spacer-xlarge $grid-gap $spacer-large;
+  }
+
+  & *:last-child {
+    margin-bottom: 0;
+  }
+
+  .her-Home--dark & {
+    color: $color-secondary;
+  }
+}
+
+h2.her-Home_Title {
+  @include h1;
+  color: currentColor;
+  text-align: center;
+  margin: 0 auto $item-padding * 2;
+}
+
+.her-Home_Text {
+  font-size: 18px;
+  font-weight: $fw-regular;
+  margin-bottom: $item-padding * 2;
+}
+
+a.her-Home_Link {
+  @include button_primary;
+  margin: 0;
+
+  &.her-Home_Link--external {
+    display: inline-flex;
+    justify-content: center;
+
+    svg {
+      fill: $color-white;
+      margin-left: 10px;
+      width: 14px;
+    }
+  }
+}
