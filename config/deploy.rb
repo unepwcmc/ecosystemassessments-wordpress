@@ -14,14 +14,14 @@ set :wp_email, 'helpdesk@unep-wcmc.org'
 set :deploy_user, 'wcmc'
 
 # The WordPress 'Site Title' for the website
-set :wp_sitename, 'urbanalliance'
+set :wp_sitename, 'ecosystemassessments'
 
 # The local environment URL.
 set :wp_localurl, 'http://wpdeploy.local'
 
 # An identifying name for the application to be used by Capistrano
-set :application, 'urbanalliance'
-set :repo_url, 'git@github.com:unepwcmc/urban_alliance.git'
+set :application, 'ecosystemassessments'
+set :repo_url, 'git@github.com:unepwcmc/ecosystemassessments-wordpress.git'
 
 
 ################################################################################
