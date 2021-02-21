@@ -13,7 +13,7 @@
 
 <section class="ent-Entry no-results not-found">
 	<header class="ent-Entry_Header">
-		<h1 class="ent-Entry_Title"><?php _e( 'Nothing Found', 'iucnua' ); ?></h1>
+		<h1 class="ent-Entry_Title"><?php _e( 'Nothing Found', 'ea' ); ?></h1>
 	</header><!-- .ent-Entry_Header -->
 
 	<div class="ent-Entry_Content">
@@ -23,7 +23,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'iucnua' ),
+					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'ea' ),
 					array(
 						'a' => array(
 							'href' => array(),
@@ -36,14 +36,14 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'iucnua' ); ?></p>
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'ea' ); ?></p>
 			<?php
 			get_search_form();
 
 		else :
 			?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'iucnua' ); ?></p>
+			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'ea' ); ?></p>
 			<?php
 			get_search_form();
 

@@ -12,7 +12,7 @@ content/uploads/
 content/mu-plugins/
 content/wp-cache-config.php
 content/plugins/hello.php
-content/themes/iucnua/.env
+content/themes/ea/.env
 db.php
 /index.php
 xmlrpc.php

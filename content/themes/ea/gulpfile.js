@@ -117,7 +117,7 @@ function cleanupScripts() {
 // Watch
 function watch() {
   browserSync.init({
-    proxy: 'iucnua.local',
+    proxy: 'ecosystemassessments.local',
     ghostMode: {
         clicks: false,
         location: false,

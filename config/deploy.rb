@@ -38,7 +38,7 @@ set :ssh_options, forward_agent: true
 ## Linked files and directories (symlinks)
 ################################################################################
 
-set :linked_files, %w(wp-config.php .htaccess robots.txt index.php content/themes/iucnua/.env)
+set :linked_files, %w(wp-config.php .htaccess robots.txt index.php content/themes/ea/.env)
 set :linked_dirs, %w(content/uploads content/plugins)
 
 
