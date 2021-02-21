@@ -395,7 +395,7 @@ function prefix_disable_gutenberg($current_status, $post_type)
 	Add wrapper around header menu UL
 -------------------------------------------------------------------------------*/
 
-class submenuWrap extends Walker__nav_Menu {
+class submenuWrap extends Walker_Nav_Menu {
   function start_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat("\t", $depth);
     $output .= "\n$indent<div class='nav-header__submenu'><ul class='sub-menu'>\n";
