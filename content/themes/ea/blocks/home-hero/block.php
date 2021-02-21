@@ -26,11 +26,19 @@
   <div class="hero-home__inner">
     <div class="hero-home__body" <?php if ($background_colour) echo 'style="background-color: ' . $background_colour . ';"'; ?>>
       <div class="hero-home__content">
-        <h2 class="hero-home__title"><?php echo $title; ?></h2>
-        <div class="hero-home__text"><?php echo $text; ?></div>
-        <a href="<?php echo $link_url; ?>" class="hero-home__link<?php if ($link_url_external) echo ' hero-home__link--external'; ?>"<?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>><?php echo $link_text; ?>
-          <?php if ($link_url_external) get_template_part( 'template-parts/icons/icon', 'external' ); ?>
-        </a>
+        <?php if ($title !== '') : ?>
+          <h2 class="hero-home__title"><?php echo $title; ?></h2>
+        <?php endif; ?>
+
+        <?php if ($text !== '') : ?>
+          <div class="hero-home__text"><?php echo $text; ?></div>
+        <?php endif; ?>
+
+        <?php if ($link_url !== '') : ?>
+          <a href="<?php echo $link_url; ?>" class="hero-home__link<?php if ($link_url_external) echo ' hero-home__link--external'; ?>"<?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>><?php echo $link_text; ?>
+            <?php if ($link_url_external) get_template_part( 'template-parts/icons/icon', 'external' ); ?>
+          </a>
+        <?php endif; ?>
       </div>
       <?php if ($image_url): ?>
         <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="hero-home__background-image" style="opacity: <?php echo $image_opacity; ?>">
