@@ -1,4 +1,4 @@
-.hd-Header {
+.header {
   background-color: $color-light-grey;
   color: $color-secondary;
 
@@ -17,11 +17,11 @@
   }
 }
 
-.hd-Header_Inner {
+.header__inner {
   @include inner;
 }
 
-.hd-Header_Items {
+.header__items {
   padding-top: 10px;
   padding-bottom: 10px;
   height: $headerHeight;
@@ -30,16 +30,16 @@
 
   transition: height .3s ease;
 
-  .hd-Header--scrolled & {
+  .header--scrolled & {
     height: $headerHeightScrolled;
   }
 }
 
-.hd-Header_Item {
+.header__item {
   flex: 1 1 auto;
 }
 
-.hd-Header_Item--logo {
+.header__item--logo {
   width: 135px;
 
   display: flex;
@@ -49,14 +49,14 @@
 
   transition: flex-basis .3s ease, width .3s ease;
 
-  .hd-Header--scrolled & {
+  .header--scrolled & {
     width: 80px;
 
     flex-basis: 80px;
   }
 }
 
-.hd-Header_Item--nav {
+.header__item--nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -66,17 +66,17 @@
   }
 }
 
-.hd-Header_Item--tools {
+.header__item--tools {
   display: flex;
   justify-content: flex-end;
   flex: 0 0 auto;
 }
 
-.hd-Header_Title {
+.header__title {
   @include screen_reader_only;
 }
 
-.hd-Header_Logo {
+.header__logo {
   display: block;
 
   svg {
@@ -84,7 +84,7 @@
     will-change: height;
   }
 
-  .hd-Header--scrolled & {
+  .header--scrolled & {
     svg {
       height: $headerHeightScrolled;
     }

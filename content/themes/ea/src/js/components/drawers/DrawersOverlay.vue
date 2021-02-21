@@ -1,5 +1,5 @@
 <template>
-  <div class="drw-Drawers_Overlay" @click="clickHandler"></div>
+  <div class="drawers__overlay" @click="clickHandler"></div>
 </template>
 
 <script>

@@ -2,12 +2,12 @@
 // Hero
 //-------------------------------------------------
 
-.her-Hero_Inner {
+.hero__inner {
   @include inner_padding;
   display: flex;
 }
 
-.her-Hero_Body {
+.hero__body {
   @include spacer_body_small;
   width: 100%;
 
@@ -18,7 +18,7 @@
 
   position: relative;
 
-  .lyt-Body & {
+  .layout__body & {
     min-height: 200px;
 
     @include break-min($xs) {
@@ -31,7 +31,7 @@
   }
 }
 
-.her-Hero_BackgroundImage {
+.hero__background-image {
   margin-bottom: $spacer-small;
   padding-bottom: 50%;
   width: 100%;
@@ -51,7 +51,7 @@
   }
 }
 
-.her-Hero_Content {
+.hero__content {
   color: #fff;
   margin-right: auto;
   margin-left: auto;
@@ -80,7 +80,7 @@
   }
 }
 
-h2.her-Hero_Title {
+h2.hero__title {
   @include font_heading-2;
   font-weight: $fw-regular;
   color: currentColor;
@@ -96,23 +96,23 @@ h2.her-Hero_Title {
   }
 }
 
-h3.her-Hero_Heading {
+h3.hero__heading {
   @include h4;
   color: currentColor;
   font-weight: $fw-bold;
   margin-bottom: $item-padding * 2;
 }
 
-p.her-Hero_Text {
+p.hero__text {
   color: currentColor;
 }
 
-a.her-Hero_Link {
+a.hero__link {
   @include button_primary;
   margin: 0 !important;
 }
 
-.her-Hero_Overlay {
+.hero__overlay {
   display: none;
   @include absolute_fill;
   background-color: $color-secondary;

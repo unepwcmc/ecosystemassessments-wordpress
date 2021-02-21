@@ -1,4 +1,4 @@
-.lyt-Body {
+.layout__body {
   padding-top: 120px;
 
   position: relative;
@@ -15,10 +15,10 @@
   }
 }
 
-.lyt-Container {
+.layout-container {
   overflow: hidden;
 
-  &.lyt-Container--hasSidebar {
+  &.layout-container--has-sidebar {
     @include break-min($sm) {
       margin-top: $grid-gap;
     }
@@ -30,32 +30,32 @@
   }
 }
 
-.lyt-Container_Inner {
+.layout-container__inner {
   @include inner;
 }
 
-.lyt-Container_Body {
-  .lyt-Container--hasSidebar & {
+.layout-container__body {
+  .layout-container--has-sidebar & {
     @include break-min($md) {
       display: flex;
     }
   }
 }
 
-.lyt-Primary {
+.layout-primary {
   @include break-min($md) {
-    .lyt-Container--hasSidebar & {
+    .layout-container--has-sidebar & {
       width: calc((9 / 12) * 100%);
       flex: 1 1 calc((9 / 12) * 100%);
     }
 
-    .lyt-Container--sidebarRight & {
+    .layout-container--sidebar-right & {
       order: 1;
     }
   }
 }
 
-.lyt-Primary_Header {
+.layout-primary__header {
   margin-top: #{$grid-gap * 2};
   margin-bottom: #{$grid-gap * 2};
 
@@ -65,7 +65,7 @@
   }
 }
 
-h2.lyt-Primary_Title {
+h2.layout-primary__title {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 0;
@@ -75,10 +75,10 @@ h2.lyt-Primary_Title {
   }
 }
 
-.lyt-Primary_Body {
+.layout-primary__body {
   @include spacer_bottom;
 
-  &:not(.lyt-Primary_Body--archive) {
+  &:not(.layout-primary__body--archive) {
     @include spacer_top;
   }
 

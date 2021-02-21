@@ -17,14 +17,14 @@
   $background_colour = get_theme_mod( 'cta_block_background_colour' );
 ?>
 
-<div class="cta-Block" style="background-color: <?php echo $background_colour; ?>;">
-  <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>" class="cta-Block_BackgroundImage" style="opacity: <?php echo $background_image_opacity; ?>;">
-  <div class="cta-Block_Inner">
-    <div class="cta-Block_Body">
-      <div class="cta-Block_Content">
-        <h3 class="cta-Block_Title"><?php echo $title; ?></h3>
-        <p class="cta-Block_Text"><?php echo $text; ?></p>
-        <a href="<?php echo $link_url; ?>" class="cta-Block_Link<?php if ($link_url_external) echo ' cta-Block_Link--external'; ?>"<?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>><?php echo $link_text; ?></a>
+<div class="cta-block" style="background-color: <?php echo $background_colour; ?>;">
+  <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>" class="cta-block__background-image" style="opacity: <?php echo $background_image_opacity; ?>;">
+  <div class="cta-block__inner">
+    <div class="cta-block__body">
+      <div class="cta-block__content">
+        <h3 class="cta-block__title"><?php echo $title; ?></h3>
+        <p class="cta-block__text"><?php echo $text; ?></p>
+        <a href="<?php echo $link_url; ?>" class="cta-block__link<?php if ($link_url_external) echo ' cta-block__link--external'; ?>"<?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>><?php echo $link_text; ?></a>
       </div>
     </div>
   </div>

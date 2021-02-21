@@ -1,6 +1,6 @@
 <template>
-  <li class="lst-Filter_Item">
-    <h4 class="lst-Filter_Title">{{ config.label }}</h4>
+  <li class="listing-filter__item">
+    <h4 class="listing-filter__title">{{ config.label }}</h4>
     <listing-terms
       :filter="config.taxonomy"
       :terms="config.terms"

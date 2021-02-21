@@ -17,22 +17,22 @@
   $caption_2 = block_field( 'caption-2', false );
 ?>
 
-<div class="blk-TwoImages">
-  <div class="blk-TwoImages_Items">
-    <div class="blk-TwoImages_Item">
-      <figure class="blk-TwoImages_Figure">
-        <div class="blk-TwoImages_ImageWrap">
-          <img src="<?php echo $image_1_url; ?>" alt="<?php echo $image_1_alt; ?>" class="blk-TwoImages_Image">
+<div class="block-two-images">
+  <div class="block-two-images__items">
+    <div class="block-two-images__item">
+      <figure class="block-two-images_Figure">
+        <div class="block-two-images__image-wrap">
+          <img src="<?php echo $image_1_url; ?>" alt="<?php echo $image_1_alt; ?>" class="block-two-images__image">
         </div>
-        <figcaption class="blk-TwoImages_Caption"><?php echo $caption_1; ?></figcaption>
+        <figcaption class="block-two-images__caption"><?php echo $caption_1; ?></figcaption>
       </figure>
     </div>
-    <div class="blk-TwoImages_Item">
-      <figure class="blk-TwoImages_Figure">
-        <div class="blk-TwoImages_ImageWrap">
-          <img src="<?php echo $image_2_url; ?>" alt="<?php echo $image_2_alt; ?>" class="blk-TwoImages_Image">
+    <div class="block-two-images__item">
+      <figure class="block-two-images_Figure">
+        <div class="block-two-images__image-wrap">
+          <img src="<?php echo $image_2_url; ?>" alt="<?php echo $image_2_alt; ?>" class="block-two-images__image">
         </div>
-        <figcaption class="blk-TwoImages_Caption"><?php echo $caption_2; ?></figcaption>
+        <figcaption class="block-two-images__caption"><?php echo $caption_2; ?></figcaption>
       </figure>
     </div>
   </div>

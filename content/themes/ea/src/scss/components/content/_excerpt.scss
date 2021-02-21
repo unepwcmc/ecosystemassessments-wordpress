@@ -1,4 +1,4 @@
-.ent-Excerpt {
+.entry-excerpt {
   margin-bottom: #{$grid-gap * 3};
 
   position: relative;
@@ -8,19 +8,19 @@
   }
 }
 
-.ent-Excerpt_Body {
-  .lyt-Primary--restrained & {
+.entry-excerpt__body {
+  .layout-primary--restrained & {
     @include restrain_width;
   }
 }
 
-.ent-Excerpt_Columns {
+.entry-excerpt__columns {
   @include break-min($sm) {
     display: flex;
   }
 }
 
-.ent-Excerpt_Column {
+.entry-excerpt__column {
   &:first-child {
     @include break-min($sm) {
       margin-right: $grid-gap;
@@ -43,7 +43,7 @@
   }
 }
 
-.ent-Excerpt_Thumbnail {
+.entry-excerpt__thumbnail {
   margin-top: $item-padding-smaller;
   padding-bottom: 100%;
 
@@ -61,7 +61,7 @@
   }
 }
 
-h2.ent-Excerpt_Title {
+h2.entry-excerpt__title {
   @include font_heading-3;
   margin-bottom: $item-padding;
 
@@ -70,7 +70,7 @@ h2.ent-Excerpt_Title {
   }
 }
 
-p.ent-Excerpt_Details {
+p.entry-excerpt__details {
   @include font_small_text;
   color: $color-primary;
   font-weight: $fw-bold;
@@ -78,18 +78,18 @@ p.ent-Excerpt_Details {
   text-align: center;
   text-transform: uppercase;
 
-  .ent-Excerpt--search & {
+  .entry-excerpt--search & {
     text-align: left;
   }
 }
 
-.ent-Excerpt_Content {
+.entry-excerpt__content {
   line-height: 1.5;
   margin-top: $item-padding;
   margin-bottom: $item-padding;
 }
 
-a.ent-Excerpt_Link {
+a.entry-excerpt__link {
   font-size: 18px;
   font-weight: $fw-bold;
   line-height: 1;
@@ -110,7 +110,7 @@ a.ent-Excerpt_Link {
   }
 }
 
-a.ent-Excerpt_FauxLink {
+a.entry-excerpt__fauxlink {
   height: 100%;
   width: 100%;
 

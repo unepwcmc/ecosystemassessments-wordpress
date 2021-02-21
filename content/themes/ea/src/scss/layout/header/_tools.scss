@@ -1,4 +1,4 @@
-.hd-Tools {
+.header-tools {
   display: flex;
 
   @include break-min($md) {
@@ -6,13 +6,13 @@
   }
 }
 
-.hd-Tools_Items {
+.header-tools__items {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.hd-Tools_Item {
+.header-tools__item {
   margin-left: 30px;
 
   flex: 0 0 auto;
@@ -26,10 +26,10 @@
   }
 }
 
-a.hd-Tools_Button {
+a.header-tools__button {
   @include button_primary_light;
 
-  &.hd-Tools_Button--external {
+  &.header-tools__button--external {
     display: flex;
     justify-content: center;
 
@@ -41,13 +41,13 @@ a.hd-Tools_Button {
   }
 }
 
-.hd-Tools_Item--menuToggle {
+.header-tools__item--menu-toggle {
   @include break-min(1024px) {
     display: none;
   }
 }
 
-.hd-Tools_NavToggle {
+.header-tools__nav-toggle {
   appearance: none;
   background: transparent;
   border: 0;

@@ -1,7 +1,7 @@
 <template>
-  <div :class="['hd-Header', { 'hd-Header--scrolled' : scrolled }]" ref="header">
-    <div class="hd-Header_Inner">
-      <div class="hd-Header_Body">
+  <div :class="['header', { 'header--scrolled' : scrolled }]" ref="header">
+    <div class="header__inner">
+      <div class="header__body">
         <slot></slot>
       </div>
     </div>

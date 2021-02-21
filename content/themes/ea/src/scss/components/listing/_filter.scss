@@ -1,4 +1,4 @@
-.lst-Filter_DrawerToggle {
+.listing-filter__drawer-toggle {
   @include button_primary;
   margin-left: $grid-gap * 2;
   width: 150px;
@@ -13,11 +13,11 @@
   }
 }
 
-.lst-Filter_Items {
+.listing-filter__items {
   @include structural_ul;
 }
 
-.lst-Filter_Item {
+.listing-filter__item {
   border-top: 1px solid $color-border;
   margin-top: $item-padding;
   padding-top: $item-padding / 2;
@@ -28,24 +28,24 @@
   }
 }
 
-h4.lst-Filter_Title {
+h4.listing-filter__title {
   font-weight: $fw-bold;
   margin-bottom: $spacer-small;
 }
 
-ul.lst-Filter_Terms {
+ul.listing-filter__terms {
   @include structural_ul;
 }
 
-li.lst-Filter_Term {
+li.listing-filter__term {
   padding-bottom: $item-padding * 1.5;
 }
 
-.lst-Filter_Checkbox {
+.listing-filter__checkbox {
   display: none;
 }
 
-.lst-Filter_Label {
+.listing-filter__label {
   @include h4;
   cursor: pointer;
   padding-left: $grid-gap * 2.5;
@@ -85,7 +85,7 @@ li.lst-Filter_Term {
   }
 }
 
-.lst-Filter_Checkbox:checked + .lst-Filter_Label {
+.listing-filter__checkbox:checked + .listing-filter__label {
   &::after {
     opacity: 1;
     visibility: visible;

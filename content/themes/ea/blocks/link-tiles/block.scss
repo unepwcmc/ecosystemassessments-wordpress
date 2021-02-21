@@ -1,7 +1,7 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.blk-LinkTiles {
+.block-link-tiles {
   @include spacer_xlarge;
 
   .home & {
@@ -11,11 +11,11 @@
   }
 }
 
-.blk-LinkTiles_Inner {
+.block-link-tiles__inner {
   @include inner;
 }
 
-ul.blk-LinkTiles_Items {
+ul.block-link-tiles__items {
   @include no_margin_padding;
   @include break-min($sm) {
     display: flex;
@@ -24,7 +24,7 @@ ul.blk-LinkTiles_Items {
   }
 }
 
-li.blk-LinkTiles_Item {
+li.block-link-tiles__item {
   @include no_bullets;
   position: relative;
   margin-bottom: $spacer-medium;
@@ -63,11 +63,11 @@ li.blk-LinkTiles_Item {
   }
 }
 
-.blk-LinkTile {
+.block-link-tile {
   position: relative;
 }
 
-.blk-LinkTile_ImageWrap {
+.block-link-tile__image-wrap {
   margin-bottom: $item-padding;
   padding-bottom: calc((20 / 23) * 100%);
   overflow: hidden;
@@ -76,18 +76,18 @@ li.blk-LinkTiles_Item {
   position: relative;
 }
 
-.blk-LinkTile_Image {
+.block-link-tile__image {
   @include absolute_fill;
   @include object_fit_cover;
   transition: transform .5s ease;
   will-change: transform;
 
-  .blk-LinkTile:hover & {
+  .block-link-tile:hover & {
     transform: scale(1.015);
   }
 }
 
-.blk-LinkTile_Content {
+.block-link-tile__content {
   padding-bottom: $spacer-medium;
   
   @include break-min($sm) {
@@ -95,17 +95,17 @@ li.blk-LinkTiles_Item {
   }
 }
 
-h3.blk-LinkTile_Title {
+h3.block-link-tile__title {
   color: $color-primary;
   font-weight: $fw-regular;
   margin-bottom: 5px;
 }
 
-p.blk-LinkTile_Text {
+p.block-link-tile__text {
   margin-bottom: 0;
 }
 
-p.blk-LinkTile_Link {
+p.block-link-tile__link {
   font-size: 18px;
   font-weight: $fw-bold;
   line-height: 1;
@@ -128,7 +128,7 @@ p.blk-LinkTile_Link {
   }
 }
 
-a.blk-LinkTile_FauxLink {
+a.block-link-tile__fauxlink {
   @include absolute_fill;
   z-index: 1;
 }

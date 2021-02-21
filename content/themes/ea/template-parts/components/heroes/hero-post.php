@@ -8,21 +8,21 @@
   $opacity = get_query_var( 'hero-opacity' ) != '' ? get_query_var( 'hero-opacity' ) : get_theme_mod( 'default_hero_overlay_opacity' );
 ?>
 
-<div class="her-Hero her-Hero--post">
-  <div class="her-Hero_Inner">
-    <div class="her-Hero_Body">
-      <div class="her-Hero_BackgroundImage">
+<div class="hero hero--post">
+  <div class="hero__inner">
+    <div class="hero__body">
+      <div class="hero__background-image">
         <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>">
       </div>
-      <div class="her-Hero_Overlay" style="opacity: <?php echo $opacity; ?>"></div>
-      <div class="her-Hero_Content">
+      <div class="hero__overlay" style="opacity: <?php echo $opacity; ?>"></div>
+      <div class="hero__content">
         <?php if ($title != ''): ?>
-          <h2 class="her-Hero_Title"><?php echo $title; ?></h2>
+          <h2 class="hero__title"><?php echo $title; ?></h2>
         <?php endif; ?>
         <?php if ( is_singular( 'event' ) ) : ?>
-          <h3 class="her-Hero_Heading">Event</h3>
+          <h3 class="hero__heading">Event</h3>
           <?php if ( $registration_link ) : ?>
-            <a href="<?php echo $registration_link; ?>" class="her-Hero_Link" target="_blank">Register</a>
+            <a href="<?php echo $registration_link; ?>" class="hero__link" target="_blank">Register</a>
           <?php endif; ?>
         <?php endif; ?>
       </div>

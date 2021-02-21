@@ -14,15 +14,15 @@
   $get_items = new WP_Query($get_items_query);
 ?>
 
-<div class="art-Related">
-  <div class="art-Related_Header">
-    <h3 class="art-Related_Title">Other articles</h3>
+<div class="article-related">
+  <div class="article-related__header">
+    <h3 class="article-related__title">Other articles</h3>
   </div>
-  <div class="art-Related_Body">
+  <div class="article-related__body">
     <?php if ( have_posts() ) : ?>
-      <ul class="art-Related_Items">
+      <ul class="article-related__items">
         <?php while ( $get_items->have_posts() ) : $get_items->the_post(); ?>
-          <li class="art-Related_Item">
+          <li class="article-related__item">
             <?php get_template_part( 'template-parts/components/cards/card', 'blog' ); ?>
           </li>
         <?php endwhile ?>

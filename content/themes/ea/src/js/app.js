@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
       },
 
       mounted() {
-        document.querySelector('body').classList.add('lyt-Body--loaded')
+        document.querySelector('body').classList.add('layout__body--loaded')
       }
     })
 

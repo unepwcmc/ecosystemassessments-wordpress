@@ -2,10 +2,10 @@
 Utilities
 -------------------------------------------------------------------------------*/
 
-.utl-Restrained {
+.utility__restrained {
   @include restrain_width;
 }
 
-.utl-ScreenReaderOnly {
+.utility__screen-reader-only {
   @include screen_reader_only;
 }

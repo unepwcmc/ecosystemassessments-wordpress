@@ -1,4 +1,4 @@
-.frm-Form {
+.form {
   @include break-min($md) {
     display: flex;
     flex-wrap: wrap;
@@ -9,14 +9,14 @@
   }
 }
 
-.frm-Input {
+.form-input {
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
 
-.frm-Input_Group {
+.form-input__group {
   position: relative;
   display: block;
   margin-bottom: 10px;
@@ -27,11 +27,11 @@
   }
 }
 
-.frm-Select {
+.form-select {
   border-radius: 0 !important;
 }
 
-.frm-Submit {
+.form-submit {
   margin: 20px auto 0 !important;
   display: flex;
   flex-direction: column;

@@ -1,8 +1,8 @@
-.soc-Social {
+.social {
   margin-top: #{$item-padding * 1.5};
 }
 
-p.soc-Social_Heading {
+p.social__heading {
   margin: 0 $grid-gap 0 0;
   font-size: 16px;
   color: $color-secondary;
@@ -13,8 +13,8 @@ p.soc-Social_Heading {
   }
 }
 
-.soc-Social_Icons,
-.rte-RichText .soc-Social_Icons {
+.social__icons,
+.richtext .social__icons {
   @include no_margin_padding;
   display: flex;
   justify-content: center;
@@ -24,8 +24,8 @@ p.soc-Social_Heading {
   }
 }
 
-.soc-Social_Icon,
-.rte-RichText .soc-Social_Icon {
+.social__icon,
+.richtext .social__icon {
   @include no_bullets;
   margin-right: #{$grid-gap * 2};
   margin-bottom: 0;

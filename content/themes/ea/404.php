@@ -13,23 +13,23 @@ get_header(); ?>
 	get_template_part('template-parts/components/heroes/hero', 'page');
 ?>
 
-<div class="lyt-Container">
-	<div class="lyt-Container_Inner">
-		<div class="lyt-Container_Body">
-			<section class="lyt-Primary lyt-Primary--restrained error-404 not-found">
-				<div class="lyt-Primary_Body">
-					<div class="ent-Entry">
-						<header class="ent-Entry_Header">
-							<h3 class="ent-Entry_Title"><?php _e( 'It looks like nothing was found at this location. Maybe try a search?' ); ?></h3>
+<div class="layout-container">
+	<div class="layout-container__inner">
+		<div class="layout-container__body">
+			<section class="layout-primary layout-primary--restrained error-404 not-found">
+				<div class="layout-primary__body">
+					<div class="entry">
+						<header class="entry__header">
+							<h3 class="entry__title"><?php _e( 'It looks like nothing was found at this location. Maybe try a search?' ); ?></h3>
 						</header>
-						<div class="ent-Entry_Body">
-							<div class="ent-Entry_Content">
-								<form class="lyt-Search_Form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-									<label class="utl-ScreenReaderOnly" for="s">Search for:</label>
+						<div class="entry__body">
+							<div class="entry__content">
+								<form class="layout-search__form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+									<label class="utility__screen-reader-only" for="s">Search for:</label>
 
-									<input type="text" value="" name="s" id="s" class="lyt-Search_Input" placeholder="Search here" />
+									<input type="text" value="" name="s" id="s" class="layout-search__input" placeholder="Search here" />
 
-									<input class="lyt-Search_Button" type="submit"></input>
+									<input class="layout-search__button" type="submit"></input>
 								</form>
 							</div>
 						</div>

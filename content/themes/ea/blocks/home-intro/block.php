@@ -17,22 +17,22 @@
   $flipped = block_field( 'flipped', false);
 ?>
 
-<div class="blk-HomeIntro">
-  <div class="blk-HomeIntro_Body">
-    <div class="blk-HomeIntro_Columns<?php if($flipped) echo ' blk-HomeIntro_Columns-flipped' ?>">
-      <div class="blk-HomeIntro_Column">
-        <div class="blk-HomeIntro_Content">
-          <p class="blk-HomeIntro_LeadText"><?php echo $lead_text; ?></p>
-          <p class="blk-HomeIntro_Text"><?php echo $text; ?></p>
-          <a class="blk-HomeIntro_Link" href="<?php echo $link_url; ?>" title="<?php echo $link_text; ?>"><?php echo $link_text; ?></a>
+<div class="block-home-intro">
+  <div class="block-home-intro__body">
+    <div class="block-home-intro__columns<?php if($flipped) echo ' block-home-intro__columns-flipped' ?>">
+      <div class="block-home-intro__column">
+        <div class="block-home-intro__content">
+          <p class="block-home-intro__lead-text"><?php echo $lead_text; ?></p>
+          <p class="block-home-intro__text"><?php echo $text; ?></p>
+          <a class="block-home-intro__link" href="<?php echo $link_url; ?>" title="<?php echo $link_text; ?>"><?php echo $link_text; ?></a>
         </div>
       </div>
-      <div class="blk-HomeIntro_Column">
-        <div class="blk-HomeIntro_ImageWrap blk-HomeIntro_ImageWrap-primary">
-          <img class="blk-HomeIntro_Image" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
+      <div class="block-home-intro__column">
+        <div class="block-home-intro__image-wrap block-home-intro__image-wrap-primary">
+          <img class="block-home-intro__image" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
         </div>
-        <div class="blk-HomeIntro_ImageWrap blk-HomeIntro_ImageWrap-secondary">
-          <img class="blk-HomeIntro_Image" src="<?php echo get_stylesheet_directory_uri() . '/inc/img/pattern-bg-bright.png'; ?>" alt="Background pattern">
+        <div class="block-home-intro__image-wrap block-home-intro__image-wrap-secondary">
+          <img class="block-home-intro__image" src="<?php echo get_stylesheet_directory_uri() . '/inc/img/pattern-bg-bright.png'; ?>" alt="Background pattern">
         </div>
       </div>
     </div>

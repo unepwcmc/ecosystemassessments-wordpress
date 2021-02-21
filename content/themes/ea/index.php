@@ -13,15 +13,15 @@
 
 get_header(); ?>
 
-<div class="lyt-Container lyt-Container--hasSidebar">
-	<div class="lyt-Container_Inner">
-		<div class="lyt-Container_Body">
+<div class="layout-container layout-container--has-sidebar">
+	<div class="layout-container__inner">
+		<div class="layout-container__body">
 			<?php get_sidebar(); ?>
 			<!-- primary  -->
-			<section class="lyt-Primary">
-					<div class="lyt-Primary_Body">
+			<section class="layout-primary">
+					<div class="layout-primary__body">
 						<?php if ( have_posts() ) : ?>
-							<ul class="lyt-Entry_Items">
+							<ul class="layout-entry__items">
 								<?php while ( have_posts() ) : the_post();
 
 									/*
@@ -29,7 +29,7 @@ get_header(); ?>
 									* If you want to override this in a child theme, then include a file
 									* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 									*/
-									echo '<li class="lyt-Entry_Item">';
+									echo '<li class="layout-entry__item">';
 										get_template_part( 'template-parts/components/cards/card', 'blog' );
 									echo '</li>';
 								endwhile;

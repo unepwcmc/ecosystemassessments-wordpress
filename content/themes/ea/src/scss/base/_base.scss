@@ -14,20 +14,20 @@ body {
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 
-  &.lyt-Body--loaded {
+  &.layout__body--loaded {
     opacity: 1;
     visibility: visible;
   }
 
-  &.utl-DrawerActive {
+  &.utility__drawer-active {
     overflow: hidden;
 
-    &.utl-iOS {
+    &.utility__iOS {
       position: fixed;
     }
   }
 
-  &.lyt-Body--modalActive {
+  &.layout__body--modal-active {
     position: fixed;
     right: 0;
     left: 0;
@@ -72,8 +72,8 @@ li {
 }
 
 .editor-block-list__layout,
-.ent-Entry_Content,
-.lyt-Sidebar {
+.entry__content,
+.layout-sidebar {
   ul {
     margin-left: 0;
 
@@ -230,6 +230,6 @@ td {
 
 // Flickity
 
-.lyt-Body .flickity-page-dots {
+.layout__body .flickity-page-dots {
   bottom: 0;
 }

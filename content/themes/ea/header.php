@@ -23,11 +23,11 @@
 <body <?php body_class($body_class); ?>>
   <div id="v-app">
     <!-- Drawers -->
-    <div class="drw-Drawers">
+    <div class="drawers">
       <drawers-overlay></drawers-overlay>
       <drawer name="menu">
         <add-class-on-click
-          class="drw-Drawer_Content"
+          class="drawer__content"
           class-name="open"
           element=".menu-item-has-children"
         >
@@ -36,43 +36,43 @@
       </drawer>
     </div>
     <!-- Header -->
-    <header class="lyt-Header">
+    <header class="layout-header">
       <main-header>
 
-        <div class="hd-Header_Items">
-          <div class="hd-Header_Item hd-Header_Item--logo">
+        <div class="header__items">
+          <div class="header__item header__item--logo">
             <!-- Site Name & Logo  -->
-            <h1 class="hd-Header_Title"><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></h1>
-            <a class="hd-Header_Logo" href="/" title="<?php echo get_bloginfo('name'); ?>">
-              <span class="utl-ScreenReaderOnly"><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></span>
+            <h1 class="header__title"><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></h1>
+            <a class="header__logo" href="/" title="<?php echo get_bloginfo('name'); ?>">
+              <span class="utility__screen-reader-only"><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></span>
               <?php get_template_part( 'template-parts/global/logo' ); ?>
             </a>
           </div>
-          <div class="hd-Header_Item hd-Header_Item--nav">
+          <div class="header__item header__item--nav">
             <!-- Main Navigation -->
             <?php if ( has_nav_menu( 'primary' ) ) : ?>
               <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
             <?php endif; ?>
           </div>
-          <div class="hd-Header_Item hd-Header_Item--tools">
-            <div class="hd-Tools">
-              <div class="hd-Tools_Items">
-                <div class="hd-Tools_Item hd-Tools_Item-search">
+          <div class="header__item header__item--tools">
+            <div class="header-tools">
+              <div class="header-tools__items">
+                <div class="header-tools__item header-tools__item--search">
                   <header-search form-action="<?php echo esc_url( home_url( '/' ) ); ?>" />
                 </div>
                 <?php
                   if (get_theme_mod( 'enable_header_button' )):
                     $external_header_link = get_theme_mod( 'header_button_external_link' );
                 ?>
-                  <div class="hd-Tools_Item hd-Tools_Item--cta">
-                    <a href="<?php echo get_theme_mod( 'header_button_url' ); ?>" class="hd-Tools_Button<?php if ($external_header_link) echo ' hd-Tools_Button--external'; ?>" <?php if ($external_header_link) echo 'target="_blank"' ?> title="<?php echo get_theme_mod( 'header_button_text' ); ?>">
+                  <div class="header-tools__item header-tools__item--cta">
+                    <a href="<?php echo get_theme_mod( 'header_button_url' ); ?>" class="header-tools__button<?php if ($external_header_link) echo ' header-tools__button--external'; ?>" <?php if ($external_header_link) echo 'target="_blank"' ?> title="<?php echo get_theme_mod( 'header_button_text' ); ?>">
                       <?php echo get_theme_mod( 'header_button_text' ); ?><?php if ($external_header_link) get_template_part( 'template-parts/icons/icon', 'external' ); ?>
                     </a>
                   </div>
                 <?php endif; ?>
-                <div class="hd-Tools_Item hd-Tools_Item--menuToggle">
+                <div class="header-tools__item header-tools__item--menu-toggle">
                   <drawer-trigger
-                    class="hd-Tools_NavToggle"
+                    class="header-tools__nav-toggle"
                     controls="navigation"
                     drawer="menu"
                     label="Menu Toggle"
@@ -89,4 +89,4 @@
       </main-header>
     </header>
 
-    <main class="lyt-Main" role="main">
+    <main class="layout-main" role="main">

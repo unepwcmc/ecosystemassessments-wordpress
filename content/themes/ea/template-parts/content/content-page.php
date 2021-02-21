@@ -6,19 +6,19 @@
  *
  */
  	global $template;
-	$post_classes_array = ['ent-Entry'];
+	$post_classes_array = ['entry'];
 	if (basename( $template ) !== 'front-page.php') {
-		array_push($post_classes_array, 'rte-RichText');
+		array_push($post_classes_array, 'richtext');
 	}
 	$post_classes = implode(' ', $post_classes_array);
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
-	<header class="ent-Entry_Header">
-		<?php the_title( '<h1 class="ent-Entry_Title utl-ScreenReaderOnly">', '</h1>' ); ?>
-	</header><!-- .ent-Entry_Header -->
-	<div class="ent-Entry_Body">
-		<div class="ent-Entry_Content">
+	<header class="entry__header">
+		<?php the_title( '<h1 class="entry__title utility__screen-reader-only">', '</h1>' ); ?>
+	</header><!-- .entry__header -->
+	<div class="entry__body">
+		<div class="entry__content">
 
 			<?php
 				the_content();
@@ -31,6 +31,6 @@
 				);
 			?>
 
-		</div><!-- .ent-Entry_Content -->
+		</div><!-- .entry__content -->
 	</div>
 </article><!-- #post-## -->

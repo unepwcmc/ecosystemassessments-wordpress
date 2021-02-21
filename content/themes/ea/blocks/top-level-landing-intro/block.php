@@ -19,34 +19,34 @@
   $flipped = block_field( 'flipped', false);
 ?>
 
-<div class="blk-Intro">
-  <div class="blk-Intro_Body">
-    <div class="blk-Intro_Columns<?php if($flipped) echo ' blk-Intro_Columns-flipped' ?>">
-      <div class="blk-Intro_Column">
-        <div class="blk-Intro_Content">
+<div class="block-intro">
+  <div class="block-intro__body">
+    <div class="block-intro__columns<?php if($flipped) echo ' block-intro__columns-flipped' ?>">
+      <div class="block-intro__column">
+        <div class="block-intro__content">
           <?php if ($lead_text != ''): ?>
-            <p class="blk-Intro_LeadText"><?php echo $lead_text; ?></p>
+            <p class="block-intro__lead-text"><?php echo $lead_text; ?></p>
           <?php endif; ?>
           <?php if ($text != ''): ?>
-            <p class="blk-Intro_Text"><?php echo $text; ?></p>
+            <p class="block-intro__text"><?php echo $text; ?></p>
           <?php endif; ?>
           <?php if ($link_url != ''): ?>
-            <a class="blk-Intro_Link" href="<?php echo $link_url; ?>" title="<?php echo $link_text; ?>"><?php echo $link_text; ?></a>
+            <a class="block-intro__link" href="<?php echo $link_url; ?>" title="<?php echo $link_text; ?>"><?php echo $link_text; ?></a>
           <?php endif; ?>
         </div>
       </div>
-      <div class="blk-Intro_Column">
-        <div class="blk-Intro_ImageWrap blk-Intro_ImageWrap-primary">
-          <img class="blk-Intro_Image" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
+      <div class="block-intro__column">
+        <div class="block-intro__image-wrap block-intro__image-wrap-primary">
+          <img class="block-intro__image" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
         </div>
-        <div class="blk-Intro_ImageWrap blk-Intro_ImageWrap-secondary">
-          <img class="blk-Intro_Image" src="<?php echo get_stylesheet_directory_uri() . '/inc/img/pattern-bg-bright.png'; ?>" alt="Background pattern">
+        <div class="block-intro__image-wrap block-intro__image-wrap-secondary">
+          <img class="block-intro__image" src="<?php echo get_stylesheet_directory_uri() . '/inc/img/pattern-bg-bright.png'; ?>" alt="Background pattern">
         </div>
       </div>
     </div>
   </div>
   <?php if ($show_social): ?>
-    <div class="blk-Intro_Footer">
+    <div class="block-intro__footer">
       <?php get_template_part( 'template-parts/social/social', 'share' ); ?>
     </div>
   <?php endif; ?>

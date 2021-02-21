@@ -1,15 +1,15 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.blk-Contact {
+.block-contact {
   @include spacer_xlarge;
 }
 
-.blk-Contact_Inner {
+.block-contact__inner {
   @include inner;
 }
 
-.blk-Contact_Header {
+.block-contact__header {
   margin-bottom: $spacer-small;
   text-align: center;
 
@@ -18,11 +18,11 @@
   }
 }
 
-h3.blk-Contact_Title {
+h3.block-contact__title {
   @include font_heading-2;
 }
 
-.blk-Contact_Columns {
+.block-contact__columns {
   @include break-min($xxs) {
     margin-right: -#{$grid-gap};
 
@@ -36,7 +36,7 @@ h3.blk-Contact_Title {
   }
 }
 
-.blk-Contact_Column {
+.block-contact__column {
   margin-bottom: $spacer-small;
   // background-color: red;
 
@@ -53,11 +53,11 @@ h3.blk-Contact_Title {
   }
 }
 
-h4.blk-Contact_Heading {
+h4.block-contact__heading {
   @include font_heading-5;
   font-weight: $fw-bold;
 }
 
-p.blk-Contact_Text {
+p.block-contact__text {
   margin-bottom: $item-padding-small;
 }

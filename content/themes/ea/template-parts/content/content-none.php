@@ -11,12 +11,12 @@
 
 ?>
 
-<section class="ent-Entry no-results not-found">
-	<header class="ent-Entry_Header">
-		<h1 class="ent-Entry_Title"><?php _e( 'Nothing Found', 'ea' ); ?></h1>
-	</header><!-- .ent-Entry_Header -->
+<section class="entry no-results not-found">
+	<header class="entry__header">
+		<h1 class="entry__title"><?php _e( 'Nothing Found', 'ea' ); ?></h1>
+	</header><!-- .entry__header -->
 
-	<div class="ent-Entry_Content">
+	<div class="entry__content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
@@ -49,5 +49,5 @@
 
 		endif;
 		?>
-	</div><!-- .ent-Entry_Content -->
+	</div><!-- .entry__content -->
 </section><!-- .no-results -->

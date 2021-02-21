@@ -6,34 +6,34 @@
  *
  */
 ?>
-<aside class="lyt-Sidebar lyt-Sidebar--right">
-	<ul class="lyt-SideBar_Items">
+<aside class="layout-sidebar layout-sidebar--right">
+	<ul class="layout-sidebar__items">
 		<?php if ( is_singular( array( 'post', 'event' ) ) ) : ?>
-			<li class="lyt-SideBar_Item">
-				<p class="lyt-SideBar_Text lyt-Sidebar_Text--heading">Date</p>
+			<li class="layout-sidebar__item">
+				<p class="layout-sidebar__text layout-sidebar__text--heading">Date</p>
 				<?php if (get_field( 'date_end' )) : ?>
-					<p class="lyt-SideBar_Text"><?php echo get_field( 'date_start' ) . ' - ' . get_field( 'date_end' ); ?></p>
+					<p class="layout-sidebar__text"><?php echo get_field( 'date_start' ) . ' - ' . get_field( 'date_end' ); ?></p>
 				<?php else : ?>
-					<p class="lyt-SideBar_Text"><?php echo get_field( 'date_start' ) ?  get_field( 'date_start' ) : the_date('j F Y'); ?></p>
+					<p class="layout-sidebar__text"><?php echo get_field( 'date_start' ) ?  get_field( 'date_start' ) : the_date('j F Y'); ?></p>
 				<?php endif; ?>
 			</li>
 		<?php endif ?>
 		<?php if ( get_field( 'time' ) ) : ?>
-			<li class="lyt-SideBar_Item">
-				<p class="lyt-SideBar_Text lyt-Sidebar_Text--heading">Time</p>
-				<p class="lyt-SideBar_Text"><?php echo get_field( 'time' ); ?></p>
+			<li class="layout-sidebar__item">
+				<p class="layout-sidebar__text layout-sidebar__text--heading">Time</p>
+				<p class="layout-sidebar__text"><?php echo get_field( 'time' ); ?></p>
 			</li>
 		<?php endif ?>
 		<?php if ( get_field( 'location' ) ) : ?>
-			<li class="lyt-SideBar_Item">
-				<p class="lyt-SideBar_Text lyt-Sidebar_Text--heading">Location</p>
-				<p class="lyt-SideBar_Text"><?php echo get_field( 'location' ); ?></p>
+			<li class="layout-sidebar__item">
+				<p class="layout-sidebar__text layout-sidebar__text--heading">Location</p>
+				<p class="layout-sidebar__text"><?php echo get_field( 'location' ); ?></p>
 			</li>
 		<?php endif ?>
 	</ul>
 	<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
-	  <div class="sbr-Widgets">
-	    <ul class="sbr-Widgets_Items">
+	  <div class="sidebar-widgets">
+	    <ul class="sidebar-widgets__items">
 				<?php dynamic_sidebar( 'sidebar' ); ?>
 	    </ul>
 	  </div>

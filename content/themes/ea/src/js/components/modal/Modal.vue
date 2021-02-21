@@ -1,21 +1,21 @@
 <template>
-  <div :class="['mod-Modal', { 'mod-Modal--active' : active }]">
-    <div class="mod-Modal_Inner">
+  <div :class="['modal', { 'modal--active' : active }]">
+    <div class="modal__inner">
 
-      <div class="mod-Modal_Body">
-        <div class="mod-Modal_Close" v-on:click="closeModal">
-          <span class="mod-Modal_CloseSpan"></span>
-          <span class="mod-Modal_CloseSpan"></span>
+      <div class="modal__body">
+        <div class="modal__close" v-on:click="closeModal">
+          <span class="modal__close-span"></span>
+          <span class="modal__close-span"></span>
         </div>
 
-        <div class="mod-Modal_Content">
+        <div class="modal__content">
           <slot />
         </div>
       </div>
 
     </div>
 
-    <div class="mod-Modal_Overlay" v-on:click="closeModal"></div>
+    <div class="modal__overlay" v-on:click="closeModal"></div>
   </div>
 </template>
 
@@ -45,12 +45,12 @@
     methods: {
       closeModal() {
         this.active = false
-        this.toggleBodyClass('removeClass', 'lyt-Body--modalActive');
+        this.toggleBodyClass('removeClass', 'layout__body--modal-active');
       },
 
       openModal() {
         this.active = true
-        this.toggleBodyClass('addClass', 'lyt-Body--modalActive');
+        this.toggleBodyClass('addClass', 'layout__body--modal-active');
       },
 
       toggleBodyClass(addRemoveClass, className) {

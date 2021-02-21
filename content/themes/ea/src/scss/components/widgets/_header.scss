@@ -1,10 +1,10 @@
-.hd-Widgets_Items {
+.header-widgets__items {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.hd-Widgets_Item {
+.header-widgets__item {
   flex: 0 0 auto;
 
   &:first-child {
@@ -16,17 +16,17 @@
   }
 }
 
-.hd-Widget_Button {
+.header-widget__button {
   @include button-secondary;
   font-size: 14px;
   margin: 0;
 }
 
-.hd-Widget_LinkItems {
+.header-widget__link-items {
   margin-bottom: 0;
 }
 
-.hd-Widget_LinkItem {
+.header-widget__link-item {
   list-style: none;
   margin-bottom: 10px;
   font-size: 14px;
@@ -42,7 +42,7 @@
   }
 }
 
-a.hd-Widget_Link {
+a.header-widget__link {
   text-decoration: none;
   font-weight: 600;
 }

@@ -1,10 +1,10 @@
-.ft-Newsletter {
+.footer-newsletter {
   @include spacer_bottom;
   background-color: $color-light-grey;
   border-radius: 5px;
 }
 
-.ft-Newsletter_Content {
+.footer-newsletter__content {
   padding: $item-padding;
 
   @include break-min($xs) {
@@ -14,7 +14,7 @@
   }
 }
 
-p.ft-Newsletter_Text {
+p.footer-newsletter__text {
   @include h4;
   margin-right: $grid-gap;
   margin-bottom: 5px;
@@ -24,7 +24,7 @@ p.ft-Newsletter_Text {
   }
 }
 
-a.ft-Newsletter_Link {
+a.footer-newsletter__link {
   @include button_primary;
   margin-left: auto;
   width: 100%;

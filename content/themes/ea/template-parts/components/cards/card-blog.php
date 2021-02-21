@@ -9,23 +9,23 @@
   }
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="crd-Card crd-Card-blog">
-	<header class="crd-Card_Header">
+<article id="post-<?php the_ID(); ?>" class="card card--blog">
+	<header class="card__header">
     <?php
       if ( ! empty( $post_categories ) ) {
-          echo '<span class="crd-Card_Badge">' . esc_html( $post_categories[0]->name ) . '</span>';
+          echo '<span class="card__badge">' . esc_html( $post_categories[0]->name ) . '</span>';
       }
     ?>
-    <div class="crd-Card_Image">
+    <div class="card__image">
       <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
     </div>
 	</header>
-	<div class="crd-Card_Body">
-		<div class="crd-Card_Content">
-      <p class="crd-Card_Details"><?php the_time( 'd/m/y' ); ?></p>
-      <h3 class="crd-Card_Title"><?php the_title(); ?></h3>
-      <p class="crd-Card_Link">More</p>
+	<div class="card__body">
+		<div class="card__content">
+      <p class="card__details"><?php the_time( 'd/m/y' ); ?></p>
+      <h3 class="card__title"><?php the_title(); ?></h3>
+      <p class="card__link">More</p>
 		</div>
 	</div>
-  <a class="crd-Card_FauxLink" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"></a>
+  <a class="card__fauxlink" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"></a>
 </article><!-- #post-## -->

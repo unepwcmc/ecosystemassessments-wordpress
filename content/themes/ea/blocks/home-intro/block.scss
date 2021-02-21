@@ -1,7 +1,7 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.blk-HomeIntro_Columns {
+.block-home-intro__columns {
   padding-bottom: #{$grid-gap * 4};
   @include break-min($sm) {
     display: flex;
@@ -9,7 +9,7 @@
   }
 }
 
-.blk-HomeIntro_Column {
+.block-home-intro__column {
   position: relative;
 
   @include break-min($sm) {
@@ -25,7 +25,7 @@
       margin-bottom: 0;
     }
 
-    .blk-HomeIntro_Columns-flipped & {
+    .block-home-intro__columns-flipped & {
       order: 2;
       margin-right: 0;
       margin-left: $grid-gap;
@@ -38,7 +38,7 @@
       align-self: end;
       padding-left: calc(((1 / 12) * 100%) + #{$grid-gap});
 
-      .blk-HomeIntro_Columns-flipped & {
+      .block-home-intro__columns-flipped & {
         order: 1;
         padding-left: 0;
       }
@@ -46,18 +46,18 @@
   }
 }
 
-p.blk-HomeIntro_LeadText {
+p.block-home-intro__lead-text {
   font-size: 22px;
   font-weight: 500;
   line-height: 1.4;
 }
 
-p.blk-HomeIntro_Text {
+p.block-home-intro__text {
   line-height: 1.5;
   font-size: 15px;
 }
 
-a.blk-HomeIntro_Link {
+a.block-home-intro__link {
   @include underline_on_hover;
 
   color: $color-grey-text;
@@ -66,11 +66,11 @@ a.blk-HomeIntro_Link {
   font-weight: 500;
 }
 
-.blk-HomeIntro_ImageWrap {
+.block-home-intro__image-wrap {
   position: relative;
 }
 
-.blk-HomeIntro_ImageWrap-primary {
+.block-home-intro__image-wrap-primary {
   width: calc(100% + 10px);
   z-index: 2;
   border-right: 10px solid #fff;
@@ -81,14 +81,14 @@ a.blk-HomeIntro_Link {
     margin-bottom: 5%;
   }
 
-  .blk-HomeIntro_Columns-flipped & {
+  .block-home-intro__columns-flipped & {
     border-right: 0;
     border-left: 10px solid #fff;
     margin-left: -10px;
   }
 }
 
-.blk-HomeIntro_ImageWrap-secondary {
+.block-home-intro__image-wrap-secondary {
   width: 70%;
   position: absolute;
   bottom: -#{$grid-gap * 4};
@@ -99,13 +99,13 @@ a.blk-HomeIntro_Link {
     bottom: 0;
   }
 
-  .blk-HomeIntro_Columns-flipped & {
+  .block-home-intro__columns-flipped & {
     right: auto;
     left: -#{100px - $grid-gap};
   }
 }
 
-.blk-HomeIntro_Image {
+.block-home-intro__image {
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';

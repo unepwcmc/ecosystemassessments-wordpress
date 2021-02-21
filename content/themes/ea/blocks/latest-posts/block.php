@@ -16,13 +16,13 @@
     }
   }
 ?>
-<div class="lst-Latest">
-  <div class="lst-Latest_Inner">
-    <div class="lst-Latest_Header">
-      <h3 class="lst-Latest_Title">Latest <?php echo $post_label; ?></h3>
-      <a href="<?php echo '/' . strtolower($post_label); ?>" class="lst-Latest_Link">View all</a>
+<div class="listing-latest">
+  <div class="listing-latest__inner">
+    <div class="listing-latest__header">
+      <h3 class="listing-latest__title">Latest <?php echo $post_label; ?></h3>
+      <a href="<?php echo '/' . strtolower($post_label); ?>" class="listing-latest__link">View all</a>
     </div>
-    <div class="lst-Latest_Body">
+    <div class="listing-latest__body">
 
       <latest-posts
         post-type="<?php echo $post_type; ?>"

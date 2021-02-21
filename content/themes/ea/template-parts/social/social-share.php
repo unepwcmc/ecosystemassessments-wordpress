@@ -8,14 +8,14 @@
   )
 ?>
 
-<div class="soc-Social">
-  <ul class="soc-Social_Icons">
+<div class="social">
+  <ul class="social__icons">
     <?php foreach ($socials as $social) :
       $social_url = $social_share_urls[$social];
       if ($social_url != '') : ?>
-        <li class="soc-Social_Icon">
+        <li class="social__icon">
           <a href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer noopener" title="Share via <?php echo ucfirst($social); ?>">
-            <span class="utl-ScreenReaderOnly"><?php echo $social; ?></span>
+            <span class="utility__screen-reader-only"><?php echo $social; ?></span>
             <?php get_template_part( 'template-parts/icons/icon', $social ); ?>
           </a>
         </li>

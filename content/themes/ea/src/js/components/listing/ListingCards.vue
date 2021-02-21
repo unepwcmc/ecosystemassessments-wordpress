@@ -1,6 +1,6 @@
 <template>
-  <ul class="lst-Listing_Items">
-    <li class="lst-Listing_Item" v-for="(post, index) in posts">
+  <ul class="listing__items">
+    <li class="listing__item" v-for="(post, index) in posts">
       <ListingCard
         :id="index"
         :key="post.id"

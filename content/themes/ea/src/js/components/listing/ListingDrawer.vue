@@ -1,5 +1,5 @@
 <template>
-  <div class="lst-Filter_Drawer">
+  <div class="listing-filter__drawer">
     <drawer
       name="filter"
       label="Filters"
@@ -10,7 +10,7 @@
       />
     </drawer>
     <drawer-trigger
-      class="lst-Filter_DrawerToggle"
+      class="listing-filter__drawer-toggle"
       controls="filter"
       drawer="filter"
       label="Filter Toggle"

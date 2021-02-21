@@ -1,4 +1,4 @@
-.mod-Modal {
+.modal {
   opacity: 0;
   pointer-events: none;
   visibility: visible;
@@ -26,14 +26,14 @@
     z-index: 999999999;
   }
 
-  &.mod-Modal--active {
+  &.modal--active {
     opacity: 1;
     pointer-events: all;
     visibility: visible;
   }
 }
 
-.mod-Modal_Overlay {
+.modal__overlay {
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
 
@@ -45,7 +45,7 @@
   z-index: 31;
 }
 
-.mod-Modal_Inner {
+.modal__inner {
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -58,7 +58,7 @@
   }
 }
 
-.mod-Modal_Body {
+.modal__body {
   background-color: #fff;
   color: $color-secondary;
   margin: 0;
@@ -76,7 +76,7 @@
   }
 }
 
-.mod-Modal_Close {
+.modal__close {
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -91,7 +91,7 @@
   }
 }
 
-.mod-Modal_CloseSpan {
+.modal__close-span {
   background-color: $color-secondary;
   transform-origin: 50% 50%;
   height: 1px;
@@ -110,7 +110,7 @@
   }
 }
 
-.mod-Modal_Content {
+.modal__content {
   margin-top: $grid-gap;
   padding-right: $item-padding * 1.5;
   overflow-y: auto;

@@ -1,4 +1,4 @@
-.drw-Drawer {
+.drawer {
   background-color: $color-white;
   color: $color-secondary;
   padding-top: $item-padding;
@@ -17,7 +17,7 @@
   transform: translateX(500px);
   transition: transform 0.3s ease;
 
-  &.drw-Drawer--left {
+  &.drawer--left {
     right: auto;
     left: 0;
     transform: translateX(-500px);
@@ -33,16 +33,12 @@
     }
   }
 
-  &.drw-Drawer--active {
+  &.drawer--active {
     transform: translateX(0);
-
-    // @include break-min($md) {
-    //   transform: translateX(500px);
-    // }
   }
 }
 
-.drw-Drawer_Inner {
+.drawer__inner {
   padding-right: $grid-gap;
   padding-left: $grid-gap;
 
@@ -58,7 +54,7 @@
   }
 }
 
-.drw-Drawer_Close {
+.drawer__close {
   background: none;
   border: 0;
   cursor: pointer;
@@ -73,7 +69,7 @@
   right: 0;
 }
 
-.drw-Drawer_Header {
+.drawer__header {
   position: relative;
 
   [data-drawer="menu"] & {
@@ -85,7 +81,7 @@
   }
 }
 
-a.drw-Drawer_Logo {
+a.drawer__logo {
   display: block;
   transition: transform .3s ease;
   transform: translateY(0);
@@ -97,11 +93,11 @@ a.drw-Drawer_Logo {
   }
 }
 
-h3.drw-Drawer_Title {
+h3.drawer__title {
   margin-bottom: 0;
 }
 
-.drw-Drawer_Body {
+.drawer__body {
   overflow-y: auto;
   padding-right: $grid-gap;
 
@@ -130,6 +126,6 @@ h3.drw-Drawer_Title {
 }
 
 
-.drw-Drawer_Nav {
+.drawer__nav {
   width: 100%;
 }

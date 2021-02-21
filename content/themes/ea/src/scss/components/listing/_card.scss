@@ -1,43 +1,43 @@
-.crd-Listing_Card {
+.card-listing__card {
   cursor: pointer;
   width: 100%;
 
   position: relative;
 }
 
-.crd-Listing_ImageWrap {
+.card-listing__image-wrap {
   overflow: hidden;
   padding-bottom: calc((13 / 15) * 100%); // 86.666...%
 
   position: relative;
 
-  .lst-Listing--member & {
+  .listing--member & {
     padding-bottom: calc((2 / 3) * 100%);
   }
 }
 
-.crd-Listing_Image {
+.card-listing__image {
   @include absolute_fill;
   @include object_fit_cover;
   backface-visibility: hidden;
   transition: transform .5s ease;
   will-change: transform;
 
-  .lst-Listing--member & {
+  .listing--member & {
     @include object_fit_contain;
     padding: 0 $spacer-medium;
   }
 
-  .crd-Listing_Card:hover & {
+  .card-listing__card:hover & {
     transform: scale(1.015);
   }
 }
 
-.crd-Listing_Body {
+.card-listing__body {
   padding: 10px 15px;
 }
 
-p.crd-Listing_Date {
+p.card-listing__date {
   @include font_heading-6;
   color: $color-primary;
   font-weight: $fw-bold;
@@ -45,13 +45,13 @@ p.crd-Listing_Date {
   text-transform: uppercase;
 }
 
-h3.crd-Listing_Title {
+h3.card-listing__title {
   @include font_heading-4;
   font-weight: $fw-light;
   margin-bottom: 0;
 }
 
-a.crd-Listing_FauxLink {
+a.card-listing__fauxlink {
   @include absolute_fill;
   z-index: 2;
 }

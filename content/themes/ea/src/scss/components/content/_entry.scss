@@ -1,14 +1,14 @@
-.ent-Entry {
+.entry {
   position: relative;
 }
 
-.ent-Entry_Header {
+.entry__header {
   .error-404 & {
     @include section_header;
   }
 }
 
-.ent-Entry_Body {
+.entry__body {
   strong {
     font-size: 20px;
   }
@@ -19,36 +19,36 @@
     margin-right: auto;
   }
 
-  .lyt-Primary--restrained & {
+  .layout-primary--restrained & {
     @include restrain_width;
   }
 
-  .lyt-Container--hasSidebar & {
+  .layout-container--has-sidebar & {
     @include break-min($sm) {
       margin-right: auto;
       margin-left: 0;
     }
   }
 
-  .lyt-Container--sidebarRight & {
+  .layout-container--sidebar-right & {
     @include break-min($sm) {
       margin-right: 0;
       margin-left: auto;
     }
   }
 
-  .lyt-Primary--simple & {
+  .layout-primary--simple & {
     @include break-min($lg) {
       max-width: calc((6 / 9) * 100%);
     }
   }
 }
 
-.ent-Entry_Columns {
+.entry__columns {
   display: flex;
 }
 
-.ent-Entry_Column {
+.entry__column {
   &:first-child {
     width: 200px;
     flex: 0 0 200px;
@@ -58,7 +58,7 @@
   }
 }
 
-.ent-Entry_Thumbnail {
+.entry__thumbnail {
   position: relative;
   padding-bottom: 100%;
 
@@ -68,8 +68,7 @@
   }
 }
 
-h2.ent-Entry_Title {
-  // font-size: 50px;
+h2.entry__title {
   font-weight: 400;
   text-align: center;
   max-width: calc((10 / 12) * 100%);
@@ -78,22 +77,22 @@ h2.ent-Entry_Title {
   margin-bottom: $grid-gap;
 }
 
-p.ent-Entry_Details,
-.rte-RichText p.ent-Entry_Details {
+p.entry__details,
+.richtext p.entry__details {
   font-size: 14px;
   text-align: center;
   margin-bottom: 25px;
 }
 
-.ent-Entry_ImageWrapper,
-.ent-Entry_VideoWrapper {
+.entry__image-wrapper,
+.entry__video-wrapper {
   position: relative;
   padding-bottom: calc((9 / 16) * 100%);
   margin-bottom: 20px;
 }
 
-.ent-Entry_Image,
-.ent-Entry_Video {
+.entry__image,
+.entry__video {
   position: absolute;
   top: 0;
   right: 0;
@@ -105,14 +104,14 @@ p.ent-Entry_Details,
   font-family: 'object-fit: cover;';
 }
 
-a.ent-Entry_Link {
+a.entry__link {
   margin-top: #{$item-padding * 1.5};
   margin-bottom: #{$item-padding * 1.5};
 
   display: inline-block;
 }
 
-a.ent-Entry_FauxLink {
+a.entry__fauxlink {
   position: absolute;
   top: 0;
   right: 0;
@@ -122,9 +121,9 @@ a.ent-Entry_FauxLink {
   height: 100%;
 }
 
-.ent-Entry_IFrame {
+.entry__iframe {
   @include spacer;
   float: none;
-  
+
   display: block;
 }

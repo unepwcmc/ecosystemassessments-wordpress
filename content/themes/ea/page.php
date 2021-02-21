@@ -35,12 +35,12 @@ get_header(); ?>
 	endif;
 ?>
 
-<div class="lyt-Container lyt-Container--hasSidebar">
-	<div class="lyt-Container_Inner">
-		<div class="lyt-Container_Body">
+<div class="layout-container layout-container--has-sidebar">
+	<div class="layout-container__inner">
+		<div class="layout-container__body">
 			<?php get_sidebar('page'); ?>
-			<section class="lyt-Primary lyt-Primary--simple">
-				<div class="lyt-Primary_Body">
+			<section class="layout-primary layout-primary--simple">
+				<div class="layout-primary__body">
 					<?php
 						if ( have_posts() ) :
 							while ( have_posts() ) :

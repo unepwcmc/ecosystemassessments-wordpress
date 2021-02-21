@@ -27,11 +27,11 @@
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
 ?>
 
-<div class="lyt-Container">
-	<div class="lyt-Container_Inner">
-		<div class="lyt-Container_Body">
-			<section class="lyt-Primary">
-				<div class="lyt-Primary_Body lyt-Primary_Body--archive">
+<div class="layout-container">
+	<div class="layout-container__inner">
+		<div class="layout-container__body">
+			<section class="layout-primary">
+				<div class="layout-primary__body layout-primary__body--archive">
 
 					<listing-grid post-type="<?php echo $post_type; ?>" />
 

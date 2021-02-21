@@ -1,5 +1,5 @@
 
-.frm-Contact_Form {
+.form-contact__form {
   @include spacer;
 
   @include break-min($xs) {
@@ -12,8 +12,8 @@
     position: relative;
   }
 
-  h3.frm-Contact_Title,
-  .rte-RichText h3.frm-Contact_Title {
+  h3.form-contact__title,
+  .richtext h3.form-contact__title {
     @include font_heading-2;
     font-weight: $fw-light;
     margin-bottom: $spacer-small;
@@ -25,7 +25,7 @@
     }
   }
 
-  label.frm-Contact_Label {
+  label.form-contact__label {
     line-height: 1;
     margin-bottom: 20px;
     width: 100%;
@@ -33,7 +33,7 @@
     display: block;
     flex: 0 0 100%;
 
-    &.frm-Contact_Label--small {
+    &.form-contact__label--small {
       @include break-min($xs) {
         width: calc(50% - 6.15px);
 
@@ -42,9 +42,9 @@
     }
   }
 
-  .frm-Contact_Input,
-  .frm-Contact_Select,
-  .frm-Contact_Textarea {
+  .form-contact__input,
+  .form-contact__select,
+  .form-contact__textarea {
     margin-top: 10px;
 
     &.wpcf7-not-valid {
@@ -57,7 +57,7 @@
     margin-top: $item-padding-small;
   }
 
-  .frm-Contact_Submit {
+  .form-contact__submit {
     width: 100%;
 
     display: flex;

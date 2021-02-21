@@ -1,9 +1,9 @@
-.ico-Logo {
+.icon-logo {
   max-height: 100px;
   transition: max-height .3s ease;
   will-change: max-height;
 
-  .hd-Header--scrolled & {
+  .header--scrolled & {
     max-height: 60px;
   }
 }

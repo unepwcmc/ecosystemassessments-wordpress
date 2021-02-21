@@ -1,4 +1,4 @@
-.crd-Card {
+.card {
   display: flex;
   flex-direction: column;
   align-self: stretch;
@@ -7,7 +7,7 @@
   background-color: $color-light-grey;
 }
 
-.crd-Card_Badge {
+.card__badge {
   position: absolute;
   top: #{$grid-gap / 2};
   left: #{$grid-gap / 2};
@@ -26,7 +26,7 @@
   }
 }
 
-.crd-Card_Image {
+.card__image {
   position: relative;
   padding-bottom: calc((19 / 29) * 100%);
   overflow: hidden;
@@ -42,39 +42,39 @@
     transition: transform .5s ease;
     will-change: transform;
 
-    .crd-Card:hover & {
+    .card:hover & {
       transform: scale(1.025);
     }
   }
 }
 
-.crd-Card_Body {
+.card__body {
   flex: 1 1 auto;
   display: flex;
 }
 
-.crd-Card_Content {
+.card__content {
   position: relative;
   padding: #{$grid-gap / 2} #{$grid-gap / 2} #{$grid-gap};
   flex: 1 1 auto;
 
-  .crd-Card--file & {
+  .card--file & {
     padding-bottom: #{$grid-gap * 3};
   }
 
-  .crd-Card--family & {
+  .card--family & {
     padding-bottom: #{$grid-gap * 4};
   }
 }
 
-p.crd-Card_Details {
+p.card__details {
   font-size: 12px;
   line-height: 1;
   margin-bottom: 5px;
   color: $color-grey-text;
 }
 
-h3.crd-Card_Title {
+h3.card__title {
   color: currentColor;
   font-size: 18px;
   font-weight: 500;
@@ -82,7 +82,7 @@ h3.crd-Card_Title {
   margin-bottom: 0;
 }
 
-p.crd-Card_Link {
+p.card__link {
   margin-top: $grid-gap;
   margin-bottom: 0;
   color: $color-grey-text;
@@ -91,7 +91,7 @@ p.crd-Card_Link {
   line-height: 1;
 }
 
-p.crd-Card_Members {
+p.card__members {
   color: $color-grey-text;
   font-weight: 500;
   font-size: 14px;
@@ -110,7 +110,7 @@ p.crd-Card_Members {
   }
 }
 
-.crd-Card_Icon {
+.card__icon {
   position: absolute;
   bottom: #{$grid-gap / 2};
   right: #{$grid-gap / 2};
@@ -122,20 +122,20 @@ p.crd-Card_Members {
   }
 }
 
-p.crd-Card_JobTitle {
+p.card__job-title {
   font-size: 14px;
   line-height: 1.2;
   margin-top: 5px;
   margin-bottom: 0;
 }
 
-p.crd-Card_Bio,
-p.crd-Card_Email,
-p.crd-Card_Location {
+p.card__bio,
+p.card__email,
+p.card__location {
   display: none;
 }
 
-a.crd-Card_FauxLink {
+a.card__fauxlink {
   @include absolute_fill;
   z-index: 2;
 }

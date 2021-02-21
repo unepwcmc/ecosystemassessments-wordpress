@@ -1,6 +1,6 @@
 .editor-block-list__layout,
-.lyt-Body,
-.lyt-Body .ent-Entry_Content {
+.layout__body,
+.layout__body .entry__content {
   .wp-block-mkl-section-block {
     @include spacer;
 
@@ -34,7 +34,7 @@
     }
   }
 
-  .wgt-Widgets_Item:first-child .wp-block-mkl-section-block:first-child {
+  .widgets__item:first-child .wp-block-mkl-section-block:first-child {
     margin-top: 0;
   }
 

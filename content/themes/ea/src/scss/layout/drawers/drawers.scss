@@ -1,8 +1,8 @@
-.drw-Drawers {
+.drawers {
   z-index: 20;
 }
 
-.drw-Drawers_Overlay {
+.drawers__overlay {
   z-index: 22;
   position: fixed;
   top: 0;
@@ -15,7 +15,7 @@
   transition: opacity .3s ease, visibility .3s ease;
   pointer-events: none;
 
-  .utl-DrawerActive & {
+  .utility__drawer-active & {
     opacity: 1;
     visibility: visible;
     pointer-events: all;

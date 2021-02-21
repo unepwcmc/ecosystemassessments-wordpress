@@ -1,8 +1,8 @@
-.hd-Search {
+.header-search {
   position: relative;
 }
 
-.hd-Search_Toggle {
+.header-search__toggle {
   display: block;
   appearance: none;
   background: none;
@@ -24,7 +24,7 @@
     }
   }
 
-  .hd-Search--bar-active &,
+  .header-search--bar-active &,
   &:hover {
     svg {
       opacity: 1;
@@ -32,7 +32,7 @@
   }
 }
 
-.hd-Search_Bar {
+.header-search__bar {
   position: fixed;
   top: 85px;
   right: #{$grid-gap / 2};
@@ -67,7 +67,7 @@
     right: -36px;
   }
 
-  .hd-Search--bar-active & {
+  .header-search--bar-active & {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
@@ -75,7 +75,7 @@
   }
 }
 
-.hd-Search_Form {
+.header-search__form {
   display: flex;
   border: 8px solid #D6D6D6;
   background: #D6D6D6;
@@ -105,7 +105,7 @@
   }
 }
 
-.hd-Search_Input {
+.header-search__input {
   border-right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -116,7 +116,7 @@
   flex: 1 1 auto;
 }
 
-input.hd-Search_Button {
+input.header-search__button {
   background-color: $color-grey-text !important;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;

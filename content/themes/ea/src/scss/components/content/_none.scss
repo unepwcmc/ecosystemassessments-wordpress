@@ -1,4 +1,4 @@
-.ent-Entry.no-results.not-found {
+.entry.no-results.not-found {
   margin: $grid-gap * 4 auto;
   max-width: 500px;
 
@@ -6,7 +6,7 @@
     margin: 0 auto;
   }
 
-  .ent-Entry_Title {
+  .entry__title {
     font-size: 22px;
     line-height: 1;
     margin-bottom: $grid-gap * 3;

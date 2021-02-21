@@ -1,9 +1,9 @@
 <?php if (get_theme_mod( 'newsletter_enabled' )): ?>
-  <div class="ft-Newsletter">
-    <div class="ft-Newsletter_Inner">
-      <div class="ft-Newsletter_Content">
-        <p class="ft-Newsletter_Text"><?php echo get_theme_mod( 'newsletter_text' ); ?></p>
-        <a href="<?php echo get_theme_mod( 'newsletter_link_url' ); ?>" class="ft-Newsletter_Link"><?php echo get_theme_mod( 'newsletter_link_text' ); ?></a>
+  <div class="footer-newsletter">
+    <div class="footer-newsletter__inner">
+      <div class="footer-newsletter__content">
+        <p class="footer-newsletter__text"><?php echo get_theme_mod( 'newsletter_text' ); ?></p>
+        <a href="<?php echo get_theme_mod( 'newsletter_link_url' ); ?>" class="footer-newsletter__link"><?php echo get_theme_mod( 'newsletter_link_text' ); ?></a>
       </div>
     </div>
   </div>

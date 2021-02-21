@@ -12,8 +12,8 @@ get_header(); ?>
 
 ?>
 
-<div class="lyt-Container">
-	<section class="lyt-Primary">
+<div class="layout-container">
+	<section class="layout-primary">
 		<?php
 			if ( have_posts() ) :
 				while ( have_posts() ) :

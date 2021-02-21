@@ -6,16 +6,16 @@
  *
  */
 ?>
-<aside class="lyt-Sidebar">
-	<ul class="lyt-SideBar_Items">
-		<li class="lyt-SideBar_Item">
-			<p class="lyt-SideBar_Text lyt-Sidebar_Text--heading">Date</p>
-			<p class="lyt-SideBar_Text"><?php the_date(); ?></p>
+<aside class="layout-sidebar">
+	<ul class="layout-sidebar__items">
+		<li class="layout-sidebar__item">
+			<p class="layout-sidebar__text layout-sidebar__text--heading">Date</p>
+			<p class="layout-sidebar__text"><?php the_date(); ?></p>
 		</li>
 	</ul>
 	<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
-	  <div class="sbr-Widgets">
-	    <ul class="sbr-Widgets_Items">
+	  <div class="sidebar-widgets">
+	    <ul class="sidebar-widgets__items">
 				<?php dynamic_sidebar( 'sidebar' ); ?>
 	    </ul>
 	  </div>

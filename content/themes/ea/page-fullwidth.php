@@ -34,11 +34,11 @@ get_header(); ?>
 	endif;
 ?>
 
-<div class="lyt-Container">
-	<div class="lyt-Container_Inner">
-		<div class="lyt-Container_Body">
-			<section class="lyt-Primary">
-				<div class="lyt-Primary_Body">
+<div class="layout-container">
+	<div class="layout-container__inner">
+		<div class="layout-container__body">
+			<section class="layout-primary">
+				<div class="layout-primary__body">
 					<?php
 						if ( have_posts() ) :
 							while ( have_posts() ) :

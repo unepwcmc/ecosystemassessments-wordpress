@@ -1,4 +1,4 @@
-.lyt-Sidebar {
+.layout-sidebar {
   @include spacer;
 
   @include break-min($md) {
@@ -9,7 +9,7 @@
     // padding-bottom: 55px;
   }
 
-  .lyt-Container--sidebarRight & {
+  .layout-container--sidebar-right & {
     @include break-min($md) {
       margin-right: 0;
       margin-left: $grid-gap * 2;
@@ -18,14 +18,14 @@
   }
 }
 
-.lyt-SideBar_Items {
+.layout-sidebar__items {
   @include structural_ul;
   @include break-min($sm) {
     margin-top: $item-padding-smaller;
   }
 }
 
-.lyt-SideBar_Item {
+.layout-sidebar__item {
   border-top: 2px solid $color-border;
   padding-bottom: $item-padding;
 
@@ -38,11 +38,11 @@
   }
 }
 
-p.lyt-SideBar_Text {
+p.layout-sidebar__text {
   margin-top: $item-padding-smaller;
   margin-bottom: 0;
 
-  &.lyt-Sidebar_Text--heading {
+  &.layout-sidebar__text--heading {
     font-weight: $fw-medium;
   }
 }

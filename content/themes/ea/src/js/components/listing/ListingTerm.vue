@@ -1,7 +1,7 @@
 <template>
-  <li class="lst-Filter_Term">
-    <input class="lst-Filter_Checkbox" type="checkbox" :value="value" :checked="checked" @change="onChange($event.target.checked)" />
-    <label class="lst-Filter_Label">{{ label }}</label>
+  <li class="listing-filter__term">
+    <input class="listing-filter__checkbox" type="checkbox" :value="value" :checked="checked" @change="onChange($event.target.checked)" />
+    <label class="listing-filter__label">{{ label }}</label>
   </li>
 </template>
 

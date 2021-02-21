@@ -1,7 +1,7 @@
 <template>
-  <div :class="['lst-Listing', `lst-Listing--${postType}`]" v-if="!isLoading">
-    <div class="lst-Listing_Header">
-      <p class="lst-Listing_Count" v-if="!isFetching">Showing {{ posts.length }} of {{ maxPosts }} entries</p>
+  <div :class="['listing', `listing--${postType}`]" v-if="!isLoading">
+    <div class="listing__header">
+      <p class="listing__count" v-if="!isFetching">Showing {{ posts.length }} of {{ maxPosts }} entries</p>
 
       <listing-drawer
         :filters="filters"
@@ -10,8 +10,8 @@
       />
     </div>
 
-    <div class="lst-Listing_Body">
-      <div class="lst-Listing_Content" v-if="posts.length">
+    <div class="listing__body">
+      <div class="listing__content" v-if="posts.length">
         <listing-cards
         :modal="this.modal"
         :posts="posts"
@@ -22,12 +22,12 @@
         <observer v-on:intersect="intersected" />
       </div>
 
-      <div class="lst-Listing_Content lst-Listing_Content--empty" v-else>
-        <p class="lst-Listing_EmptyMessage" v-if="!isFetching">No results found.</p>
+      <div class="listing__content listing__content--empty" v-else>
+        <p class="listing___empty-message" v-if="!isFetching">No results found.</p>
       </div>
 
       <div
-        class="lst-Listing_Loader"
+        class="listing__loader"
         v-if="isFetching"
       >
         <loader />
@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <div class="lst-Listing_Loader lst-Listing_Loader--padded" v-else>
+  <div class="listing__loader listing__loader--padded" v-else>
     <loader />
   </div>
 </template>
@@ -93,8 +93,8 @@ export default {
       activeTerms: {},
       config: {
         postsBaseUrl: '/wp-json/wp/v2/',
-        eventsBaseUrl: '/wp-json/urban-alliance/v1/events?_embed',
-        filtersBaseURL: '/wp-json/urban-alliance/v1/list-filters'
+        eventsBaseUrl: '/wp-json/ecosystem-assessments/v1/events?_embed',
+        filtersBaseURL: '/wp-json/ecosystem-assessments/v1/list-filters'
       },
       filters: [],
       isLoading: true,

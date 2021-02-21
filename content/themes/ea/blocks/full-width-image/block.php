@@ -12,12 +12,12 @@
   $caption = block_field( 'caption', false );
 ?>
 
-<figure class="blk-FullWidthImage">
-  <div class="blk-FullWidthImage_ImageWrap">
-    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="blk-FullWidthImage_Image">
+<figure class="block-full-width-image">
+  <div class="block-full-width-image__image-wrap">
+    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="block-full-width-image__image">
   </div>
   <?php if ($caption): ?>
-    <figcaption class="blk-FullWidthImage_Caption"><?php echo $caption; ?></figcaption>
-    <div class="blk-FullWidthImage_Overlay"></div>
+    <figcaption class="block-full-width-image__caption"><?php echo $caption; ?></figcaption>
+    <div class="block-full-width-image__overlay"></div>
   <?php endif; ?>
 </figure>

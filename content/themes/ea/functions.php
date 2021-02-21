@@ -7,7 +7,7 @@ Add Class to Body
 // Add specific CSS class by filter.
 
 add_filter( 'body_class', function( $classes ) {
-    return array_merge( $classes, array( 'lyt-Body' ) );
+    return array_merge( $classes, array( 'layout__body' ) );
 } );
 
 /*-------------------------------------------------------------------------------------------------
@@ -153,36 +153,36 @@ function custom_register_sidebar() {
 	register_sidebar(array(
 		'name' => __('Sidebar', 'custom'),
 		'id' => 'sidebar',
-		'before_widget' => '<li class="sbr-Widgets_Item"><div class="sbr-Widget sbr-Widget-%1$s sbr-Widget-%2$s">',
+		'before_widget' => '<li class="sidebar-widgets__item"><div class="sidebar-widget sidebar-widget-%1$s sidebar-widget-%2$s">',
 		'after_widget' => "</div></li>",
-		'before_title' => '<h3 class="sbr-Widget_Title">',
+		'before_title' => '<h3 class="sidebar-widget__title">',
 		'after_title' => '</h3>'
 	));
 
 	register_sidebar(array(
 		'name' => __('Header', 'custom'),
 		'id' => 'header',
-		'before_widget' => '<div class="hd-Widgets_Item"><aside class="hd-Widget hd-Widget-%1$s hd-Widget-%2$s">',
+		'before_widget' => '<div class="header-widgets__item"><aside class="header-widget header-widget-%1$s header-widget-%2$s">',
 		'after_widget' => "</aside></div>",
-		'before_title' => '<h3 class="hd-Widget_Title">',
+		'before_title' => '<h3 class="header-widget__title">',
 		'after_title' => '</h3>'
 	));
 
 	register_sidebar(array(
 		'name' => __('After Content', 'custom'),
 		'id' => 'after-content',
-		'before_widget' => '<div class="wgt-Widgets_Item"><aside class="wgt-Widget wgt-Widget-%1$s wgt-Widget-%2$s">',
+		'before_widget' => '<div class="widgets__item"><aside class="widget widget-%1$s widget-%2$s">',
 		'after_widget' => "</aside></div>",
-		'before_title' => '<h3 class="wgt-Widget_Title">',
+		'before_title' => '<h3 class="widget__title">',
 		'after_title' => '</h3>'
 	));
 
 	register_sidebar(array(
 		'name' => __('Footer', 'custom'),
 		'id' => 'footer',
-		'before_widget' => '<div class="ft-Widgets_Item ft-Widgets_Item-%1$s ft-Widgets_Item-%2$s"><aside class="ft-Widget ft-Widget-%1$s ft-Widget-%2$s">',
+		'before_widget' => '<div class="footer-widgets__item footer-widgets__item-%1$s footer-widgets__item-%2$s"><aside class="footer-widget footer-widget-%1$s footer-widget-%2$s">',
 		'after_widget' => "</aside></div>",
-		'before_title' => '<h3 class="ft-Widget_Title">',
+		'before_title' => '<h3 class="footer-widget__title">',
 		'after_title' => '</h3>'
 	));
 }
@@ -322,11 +322,11 @@ function footer_social_icons( $items, $args ) {
           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item--social-icons">';
           if ($facebook_url) {
             $items .= '
-              <a class="social-icon social-icon--facebook" href="' . $facebook_url . '" title="Facebook" target="_blank">Facebook' . $facebook_icon . '</a>';
+              <a class="social-icon social-icon---facebook" href="' . $facebook_url . '" title="Facebook" target="_blank">Facebook' . $facebook_icon . '</a>';
           }
           if ($twitter_url) {
             $items .= '
-              <a class="social-icon social-icon--twitter" href="' . $twitter_url . '" title="Twitter" target="_blank">Twitter' . $twitter_icon . '</a>';
+              <a class="social-icon social-icon---twitter" href="' . $twitter_url . '" title="Twitter" target="_blank">Twitter' . $twitter_icon . '</a>';
           }
         $items .= '</li>';
       }
@@ -347,7 +347,7 @@ add_filter( 'wp_nav_menu_items', 'footer_logo', 10, 2 );
 function footer_logo( $items, $args ) {
   if ($args->theme_location == 'footer') {
     $logo = load_template_part('template-parts/global/logo');
-    $items .= '<li class="menu-item menu-item--logo"><a class="nav-Footer_Logo" href="' . get_site_url() . '" title="' . get_bloginfo('name') . '">' . $logo . '</a></li>';
+    $items .= '<li class="menu-item menu-item--logo"><a class="nav-footer__logo" href="' . get_site_url() . '" title="' . get_bloginfo('name') . '">' . $logo . '</a></li>';
   }
   return $items;
 }
@@ -395,10 +395,10 @@ function prefix_disable_gutenberg($current_status, $post_type)
 	Add wrapper around header menu UL
 -------------------------------------------------------------------------------*/
 
-class submenuWrap extends Walker_Nav_Menu {
+class submenuWrap extends Walker__nav_Menu {
   function start_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat("\t", $depth);
-    $output .= "\n$indent<div class='nav-Header_SubMenu'><ul class='sub-menu'>\n";
+    $output .= "\n$indent<div class='nav-header__submenu'><ul class='sub-menu'>\n";
   }
   function end_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat("\t", $depth);
@@ -424,8 +424,8 @@ function pagination_bar() {
   if ($total_pages > 1){
     $current_page = max(1, get_query_var('paged'));
 
-		echo '<div class="pag-Pagination_Bar">';
-			echo '<div class="pag-Pagination_Nav">';
+		echo '<div class="pagination__bar">';
+			echo '<div class="pagination__nav">';
 
         global $template;
         // structure of "format" depends on whether we're using pretty permalinks
@@ -437,9 +437,9 @@ function pagination_bar() {
           'current' => $current_page,
           'total' => $total_pages,
           'prev_next' => True,
-          'prev_text' => __('<div class="pag-Pagination_Number">&laquo;</div>'),
-          'next_text' => __('<div class="pag-Pagination_Number">&raquo;</div>'),
-          'before_page_number' => '<div class="pag-Pagination_Number">',
+          'prev_text' => __('<div class="pagination__number">&laquo;</div>'),
+          'next_text' => __('<div class="pagination__number">&raquo;</div>'),
+          'before_page_number' => '<div class="pagination__number">',
           'after_page_number' => '</div>'
   	    ));
 

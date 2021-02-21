@@ -1,12 +1,12 @@
-.lst-Latest {
+.listing-latest {
   @include spacer_bottom;
 }
 
-.lst-Latest_Inner {
+.listing-latest__inner {
   @include inner;
 }
 
-.lst-Latest_Header {
+.listing-latest__header {
   margin-bottom: $spacer-small;
   text-align: center;
 
@@ -15,13 +15,13 @@
   }
 }
 
-h3.lst-Latest_Title {
+h3.listing-latest__title {
   @include font_heading-2;
   margin-bottom: $item-padding-smaller;
   text-transform: capitalize;
 }
 
-a.lst-Latest_Link {
+a.listing-latest__link {
   color: $color-grey-text;
   text-decoration: none;
 

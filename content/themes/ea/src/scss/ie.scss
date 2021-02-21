@@ -2,22 +2,22 @@
 @import "../../src/scss/utilities/mixins";
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .lyt-Body {
+  .layout__body {
 
     // Header
 
-    .hd-Header_Inner,
-    .hd-Header_Body,
-    .hd-Header_Items {
+    .header__inner,
+    .header__body,
+    .header__items {
       height: 100%;
     }
 
     // Icon
-    .ico-Logo {
+    .icon-logo {
       height: 100px;
       transition: width .3s ease transform .3s ease;
 
-      .hd-Header--scrolled & {
+      .header--scrolled & {
         height: 60px;
         transform: scale(1.25) translateY(7px);
       }
@@ -25,9 +25,9 @@
 
     // Layout
 
-    .lyt-Primary {
+    .layout-primary {
       @include break-min($sm) {
-        .lyt-Container--hasSidebar & {
+        .layout-container--has-sidebar & {
           width: 74.35%;
           flex: 0 0 74.35%;
         }
@@ -38,7 +38,7 @@
 
     // Top Level Landing Page Intro
 
-    .blk-Intro_Column {
+    .block-intro__column {
       @include break-min($sm) {
         width: 49.35%;
         flex: 0 0 49.35%;
@@ -47,7 +47,7 @@
 
     // Text Image Columns
 
-    .blk-TextImage_Column {
+    .block-text-image__column {
       @include break-min($sm) {
         width: 49.35%;
         flex: 0 0 49.35%;
@@ -55,7 +55,7 @@
     }
 
     // Case Study Stats
-    .cst-Stats {
+    .casestudy-stats {
       @include break-min($md) {
         margin-left: auto !important;
         margin-right: auto !important;

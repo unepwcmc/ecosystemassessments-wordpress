@@ -1,14 +1,14 @@
-.pag-Pagination_Bar {
+.pagination__bar {
   text-align: center;
   margin-top: #{$grid-gap * 2};
   margin-bottom: #{$grid-gap * 2};
 }
 
-p.pag-Pagination_Count {
+p.pagination__count {
   margin-bottom: 0;
 }
 
-.pag-Pagination_Nav {
+.pagination__nav {
 
 }
 
@@ -49,6 +49,6 @@ a.page-numbers {
   }
 }
 
-.pag-Pagination_Number {
+.pagination__number {
   line-height: 1;
 }

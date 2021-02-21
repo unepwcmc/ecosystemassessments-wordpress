@@ -1,4 +1,4 @@
-.lst-Listing_Header {
+.listing__header {
   padding-top: $spacer-small;
   padding-bottom: $spacer-small;
 
@@ -7,11 +7,11 @@
   justify-content: flex-end;
 }
 
-p.lst-Listing_Count {
+p.listing__count {
   margin-bottom: 0;
 }
 
-.lst-Listing_Items {
+.listing__items {
   @include listing_items;
 
   @include break-min($md) {
@@ -19,11 +19,11 @@ p.lst-Listing_Count {
   }
 }
 
-.lst-Listing_Item {
+.listing__item {
   @include listing_item;
   @include listing_item_dividers;
 
-  .lst-Latest & {
+  .listing-latest & {
     @include break-max($sm) {
       &:nth-child(3) {
         display: none;
@@ -38,14 +38,14 @@ p.lst-Listing_Count {
   }
 }
 
-.lst-Listing_Loader {
+.listing__loader {
   padding-top: $spacer-medium;
   width: 100%;
 
   display: flex;
   justify-content: center;
 
-  &.lst-Listing_Loader--padded {
+  &.listing__loader--padded {
     padding: $spacer-xlarge;
   }
 
@@ -55,11 +55,11 @@ p.lst-Listing_Count {
   }
 }
 
-.lst-Listing_Empty {
+.listing__empty {
   @include spacer;
   text-align: center;
 }
 
-.lst-Listing_EmptyMessage {
+.listing___empty-message {
   @include h3;
 }

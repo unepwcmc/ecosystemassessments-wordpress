@@ -4,8 +4,8 @@
 ?>
 
 <?php if ($text): ?>
-  <div class="art-Boilerplate">
-    <div class="art-Boilerplate_Text">
+  <div class="article-boilerplate">
+    <div class="article-boilerplate__text">
       <?php echo $text; ?>
     </div>
   </div>

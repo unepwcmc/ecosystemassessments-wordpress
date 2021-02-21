@@ -1,8 +1,8 @@
-.sbr-Widgets_Items {
+.sidebar-widgets__items {
   margin: 0;
 }
 
-.sbr-Widgets_Item {
+.sidebar-widgets__item {
   margin-bottom: $grid-gap;
 
   @include break-min($sm) {
@@ -14,7 +14,7 @@
   }
 }
 
-h3.sbr-Widgets_Title {
+h3.sidebar-widgets__title {
   font-size: 16px;
   margin-bottom: 0;
 }

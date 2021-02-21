@@ -1,5 +1,5 @@
 <template>
-  <ul class="lst-Filter_Items">
+  <ul class="listing-filter__items">
     <listing-filter
       v-for="filter in filters"
       :config="filter"

@@ -1,4 +1,4 @@
-.lyt-Search {
+.layout-search {
   @include break-min($xs) {
     max-width: 500px;
     margin-right: auto;
@@ -6,20 +6,20 @@
   }
 }
 
-.lyt-Search_Form {
+.layout-search__form {
   @include break-min($xs) {
     display: flex;
   }
 }
 
-.lyt-Search_Input {
+.layout-search__input {
   @include break-min($xs) {
     flex: 1 1 auto;
     margin-right: $grid-gap;
   }
 }
 
-.lyt-Search_Button[type="submit"] {
+.layout-search__button[type="submit"] {
   @include break-min($xs) {
     width: 120px;
     flex: 0 0 120px;

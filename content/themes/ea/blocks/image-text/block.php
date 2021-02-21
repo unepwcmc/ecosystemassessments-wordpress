@@ -15,19 +15,19 @@
   $img_url = wp_get_attachment_image_url( $image, 'full-size' );
 ?>
 
-<div class="blk-ImageText">
-  <div class="blk-ImageText_Inner">
-    <div class="blk-ImageText_Columns">
-      <div class="blk-ImageText_Column blk-ImageText_Column--image">
-        <div class="blk-ImageText_ImageWrap">
-          <img src="<?php echo $img_url; ?>" alt="<?php echo $title; ?>" class="blk-ImageText_Image">
+<div class="block-image-text">
+  <div class="block-image-text__inner">
+    <div class="block-image-text__columns">
+      <div class="block-image-text__column block-image-text__column--image">
+        <div class="block-image-text__image-wrap">
+          <img src="<?php echo $img_url; ?>" alt="<?php echo $title; ?>" class="block-image-text__image">
         </div>
       </div>
-      <div class="blk-ImageText_Column blk-ImageText_Column--text">
-        <h3 class="blk-ImageText_Title"><?php echo $title; ?></h3>
-        <div class="blk-ImageText_Text">
+      <div class="block-image-text__column block-image-text__column--text">
+        <h3 class="block-image-text__title"><?php echo $title; ?></h3>
+        <div class="block-image-text__text">
           <?php echo $text; ?>
-          <a href="<?php echo $link_url; ?>" class="blk-ImageText_Link"><?php echo $link_text; ?></a>
+          <a href="<?php echo $link_url; ?>" class="block-image-text__link"><?php echo $link_text; ?></a>
         </div>
       </div>
     </div>

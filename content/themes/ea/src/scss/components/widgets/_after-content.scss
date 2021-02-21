@@ -1,19 +1,19 @@
-.wgt-Widgets {
+.widgets {
   .single-event &,
   .single-post & {
     border-top: 1px solid $color-border;
   }
 }
 
-.wgt-Widgets_Body {
+.widgets__body {
   @include spacer_top;
 }
 
-.wgt-Widgets_Items {
+.widgets__items {
   max-width: 100%;
 }
 
-.wgt-Widgets_Item {
+.widgets__item {
   *:first-child {
     margin-top: 0 !important;
   }

@@ -22,18 +22,18 @@
   $image_opacity = block_field( 'image-opacity', false );
 ?>
 
-<div class="her-Home<?php if ($dark_text) echo ' her-Home--dark'; ?>">
-  <div class="her-Home_Inner">
-    <div class="her-Home_Body" <?php if ($background_colour) echo 'style="background-color: ' . $background_colour . ';"'; ?>>
-      <div class="her-Home_Content">
-        <h2 class="her-Home_Title"><?php echo $title; ?></h2>
-        <div class="her-Home_Text"><?php echo $text; ?></div>
-        <a href="<?php echo $link_url; ?>" class="her-Home_Link<?php if ($link_url_external) echo ' her-Home_Link--external'; ?>"<?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>><?php echo $link_text; ?>
+<div class="hero-home<?php if ($dark_text) echo ' hero-home--dark'; ?>">
+  <div class="hero-home__inner">
+    <div class="hero-home__body" <?php if ($background_colour) echo 'style="background-color: ' . $background_colour . ';"'; ?>>
+      <div class="hero-home__content">
+        <h2 class="hero-home__title"><?php echo $title; ?></h2>
+        <div class="hero-home__text"><?php echo $text; ?></div>
+        <a href="<?php echo $link_url; ?>" class="hero-home__link<?php if ($link_url_external) echo ' hero-home__link--external'; ?>"<?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>><?php echo $link_text; ?>
           <?php if ($link_url_external) get_template_part( 'template-parts/icons/icon', 'external' ); ?>
         </a>
       </div>
       <?php if ($image_url): ?>
-        <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="her-Home_BackgroundImage" style="opacity: <?php echo $image_opacity; ?>">
+        <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="hero-home__background-image" style="opacity: <?php echo $image_opacity; ?>">
       <?php endif; ?>
     </div>
   </div>

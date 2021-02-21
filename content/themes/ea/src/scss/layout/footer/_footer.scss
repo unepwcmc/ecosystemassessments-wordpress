@@ -1,4 +1,4 @@
-.ft-Footer {
+.footer {
   background-color: $color-footer;
   color: $color-secondary;
 
@@ -6,15 +6,15 @@
   z-index: 1;
 }
 
-.ft-Footer_Inner {
+.footer__inner {
   @include inner;
 }
 
-.ft-Footer_Body {
+.footer__body {
 
 }
 
-.ft-Footer_Footer {
+.footer__footer {
   margin-top: $item-padding;
   border-top: 2px solid $color-border;
   padding-top: $item-padding;
@@ -25,7 +25,7 @@
   }
 }
 
-.ft-Footer_Image {
+.footer__image {
   margin-right: 10px;
   margin-bottom: 10px;
   width: 170px;
@@ -39,7 +39,7 @@
   }
 }
 
-p.ft-Footer_Text {
+p.footer__text {
   color: currentColor;
   font-size: 12px;
   line-height: 1.2;

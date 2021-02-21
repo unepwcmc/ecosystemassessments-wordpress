@@ -1,27 +1,27 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.blk-ImageText {
+.block-image-text {
   @include spacer;
 }
 
-.blk-ImageText_Inner {
+.block-image-text__inner {
   @include inner;
 }
 
-.blk-ImageText_Columns {
+.block-image-text__columns {
   @include break-min($md) {
     display: flex;
     justify-content: space-between;
   }
 }
 
-.blk-ImageText_Column {
+.block-image-text__column {
   width: calc(((1 / 2) * 100%) - #{$grid-gap / 2});
 
   flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap / 2});
 
-  &.blk-ImageText_Column--image {
+  &.block-image-text__column--image {
     margin-bottom: $item-padding;
 
     @include break-min($md) {
@@ -31,24 +31,24 @@
     }
   }
 
-  &.blk-ImageText_Column--text {
+  &.block-image-text__column--text {
     @include break-min($md) {
       order: 1;
     }
   }
 }
 
-.blk-ImageText_ImageWrap {
+.block-image-text__image-wrap {
   padding-bottom: calc((5 / 7) * 100%);
 
   position: relative;
 }
 
-.blk-ImageText_Image {
+.block-image-text__image {
   @include absolute_fill;
   @include object_fit_cover;
 }
 
-a.blk-ImageText_Link {
+a.block-image-text__link {
   @include button_primary;
 }

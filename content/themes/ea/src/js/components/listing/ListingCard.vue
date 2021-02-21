@@ -1,15 +1,15 @@
 <template>
-  <div class="crd-Listing_Card" @click="clickHandler()">
-    <div class="crd-Listing_Header">
-      <div class="crd-Listing_ImageWrap">
-        <img class="crd-Listing_Image" :src="imageUrl" :alt="title">
+  <div class="card-listing__card" @click="clickHandler()">
+    <div class="card-listing__header">
+      <div class="card-listing__image-wrap">
+        <img class="card-listing__image" :src="imageUrl" :alt="title">
       </div>
     </div>
-    <div class="crd-Listing_Body">
-      <p class="crd-Listing_Date" v-if="hasDate">{{ date }}</p>
-      <h3 class="crd-Listing_Title">{{ title }}</h3>
+    <div class="card-listing__body">
+      <p class="card-listing__date" v-if="hasDate">{{ date }}</p>
+      <h3 class="card-listing__title">{{ title }}</h3>
     </div>
-    <a :href="link" class="crd-Listing_FauxLink" :title="title" :target="hrefTarget" v-if="!modal"></a>
+    <a :href="link" class="card-listing__fauxlink" :title="title" :target="hrefTarget" v-if="!modal"></a>
   </div>
 </template>
 

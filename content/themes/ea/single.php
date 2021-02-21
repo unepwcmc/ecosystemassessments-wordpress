@@ -31,12 +31,12 @@ get_header(); ?>
 	endif; wp_reset_query();
 ?>
 
-<div class="lyt-Container lyt-Container--hasSidebar lyt-Container--sidebarRight">
-	<div class="lyt-Container_Inner">
-		<div class="lyt-Container_Body">
+<div class="layout-container layout-container--has-sidebar layout-container--sidebar-right">
+	<div class="layout-container__inner">
+		<div class="layout-container__body">
 			<?php get_sidebar('single'); ?>
-			<section class="lyt-Primary lyt-Primary--restrained">
-				<div class="lyt-Primary_Body">
+			<section class="layout-primary layout-primary--restrained">
+				<div class="layout-primary__body">
 					<?php
 						/* Start the Loop */
 						if ( have_posts() ) :
@@ -50,30 +50,6 @@ get_header(); ?>
 				</div>
 			</section>
 		</div>
-		<?php
-			if ( have_posts() ) :
-				while ( have_posts() ) :
-					the_post();
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) : ?>
-						<div class="lyt-Container_Footer">
-							<div class="ent-Comments">
-								<div class="ent-Comments_Inner">
-									<div class="ent-Comments_Header">
-										<h3 class="ent-Comments_Title">Comments</h3>
-									</div>
-									<div class="ent-Comments_Body">
-								    <?php comments_template(); ?>
-									</div>
-								</div>
-							</div>
-						</div>
-					<?php endif;
-
-				endwhile;
-			endif; wp_reset_query(); // End of the loop.
-		?>
 	</div>
 </div>
 

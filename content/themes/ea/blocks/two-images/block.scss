@@ -1,7 +1,7 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.blk-TwoImages_Items {
+.block-two-images__items {
   @include ignore_restrained_width;
 
   @include break-min($xs) {
@@ -9,7 +9,7 @@
   }
 }
 
-.blk-TwoImages_Item {
+.block-two-images__item {
   &:first-child {
     margin-bottom: $grid-gap;
   }
@@ -25,15 +25,15 @@
   }
 }
 
-.blk-TwoImages_ImageWrap,
-.editor-block-list__layout .blk-TwoImages_ImageWrap {
+.block-two-images__image-wrap,
+.editor-block-list__layout .block-two-images__image-wrap {
   position: relative;
   padding-bottom: calc((10 / 14.25) * 100%);
 
 }
 
-.blk-TwoImages_Image,
-.editor-block-list__layout .blk-TwoImages_Image {
+.block-two-images__image,
+.editor-block-list__layout .block-two-images__image {
   @include absolute_fill;
   @include object-fit-cover;
 }

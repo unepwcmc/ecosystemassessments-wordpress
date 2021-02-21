@@ -14,18 +14,18 @@
 	$registration_link = get_field( 'registration_url' );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'ent-Entry rte-RichText' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'entry richtext' ); ?>>
 	<?php /* ?>
-	<header class="ent-Entry_Header">
+	<header class="entry__header">
 		<?php
-		the_title( '<h2 class="ent-Entry_Title">', '</h2>' );
+		the_title( '<h2 class="entry__title">', '</h2>' );
 		?>
-		<p class="ent-Entry_Details"><?php echo $category[0]->name . ' | ' . get_the_date( 'j/m/y' ); ?></p>
+		<p class="entry__details"><?php echo $category[0]->name . ' | ' . get_the_date( 'j/m/y' ); ?></p>
 	</header><!-- .entry-header -->
 	<?php */ ?>
 
-	<div class="ent-Entry_Body">
-		<div class="ent-Entry_Content">
+	<div class="entry__body">
+		<div class="entry__content">
 			<?php
 			/* translators: %s: Name of current post */
 			the_content(
@@ -47,7 +47,7 @@
 			</div><!-- .entry-content -->
 
 			<?php if ( is_singular( 'event' ) && $registration_link ) : ?>
-				<a href="<?php echo $registration_link ?>" class="ent-Entry_Link" target="_blank">Click here to register</a>
+				<a href="<?php echo $registration_link ?>" class="entry__link" target="_blank">Click here to register</a>
 			<?php endif; ?>
 
 			<?php get_template_part( 'template-parts/social/social', 'share'); ?>

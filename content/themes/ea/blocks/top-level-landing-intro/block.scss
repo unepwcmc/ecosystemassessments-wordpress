@@ -1,7 +1,7 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.blk-Intro_Columns {
+.block-intro__columns {
   margin-bottom: #{$grid-gap * 5};
 
   @include break-min($sm) {
@@ -10,7 +10,7 @@
   }
 }
 
-.blk-Intro_Column {
+.block-intro__column {
   position: relative;
 
   @include break-min($sm) {
@@ -25,7 +25,7 @@
       margin-right: $grid-gap;
       margin-bottom: 0;
 
-      .blk-Intro_Columns-flipped & {
+      .block-intro__columns-flipped & {
         order: 2;
         margin-right: 0;
         margin-left: $grid-gap;
@@ -37,14 +37,14 @@
     @include break-min($sm) {
       align-self: end;
 
-      .blk-Intro_Columns-flipped & {
+      .block-intro__columns-flipped & {
         order: 1;
       }
     }
   }
 }
 
-p.blk-Intro_LeadText {
+p.block-intro__lead-text {
   font-size: 22px;
   font-weight: 500;
   line-height: 1.4;
@@ -52,22 +52,22 @@ p.blk-Intro_LeadText {
   margin-bottom: 15px;
 }
 
-p.blk-Intro_Text {
+p.block-intro__text {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-a.blk-Intro_Link {
+a.block-intro__link {
   color: $color-grey-text;
   text-decoration: none;
   font-size: 16px;
 }
 
-.blk-Intro_ImageWrap {
+.block-intro__image-wrap {
   position: relative;
 }
 
-.blk-Intro_ImageWrap-primary {
+.block-intro__image-wrap-primary {
   width: calc(100% + 10px);
   margin-bottom: 5%;
   z-index: 2;
@@ -75,7 +75,7 @@ a.blk-Intro_Link {
   border-bottom: 15px solid #fff;
   padding-bottom: 55%;
 
-  .blk-Intro_Columns-flipped & {
+  .block-intro__columns-flipped & {
     @include break-min($sm) {
       border-right: 0;
       border-left: 10px solid #fff;
@@ -84,7 +84,7 @@ a.blk-Intro_Link {
   }
 }
 
-.blk-Intro_ImageWrap-secondary {
+.block-intro__image-wrap-secondary {
   width: 70%;
   position: absolute;
   bottom: -#{$grid-gap * 4};
@@ -95,7 +95,7 @@ a.blk-Intro_Link {
     bottom: 0;
   }
 
-  .blk-Intro_Columns-flipped & {
+  .block-intro__columns-flipped & {
     @include break-min($sm) {
       right: auto;
       left: -#{100px - $grid-gap};
@@ -103,7 +103,7 @@ a.blk-Intro_Link {
   }
 }
 
-.blk-Intro_Image {
+.block-intro__image {
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';

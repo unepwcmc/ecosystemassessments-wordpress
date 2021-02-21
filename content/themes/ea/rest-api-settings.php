@@ -17,7 +17,7 @@ function is_taxonomy_assigned_to_post_type( $post_type, $taxonomy = null ) {
 
 /**
  * Custom JSON API endpoint.
- * Usage: http://sample-project.com/wp-json/urban-alliance/v1/list-filters
+ * Usage: http://sample-project.com/wp-json/ecosystem-assessments/v1/list-filters
  */
 function post_filters( WP_REST_Request $request ) {
     $parameters = $request->get_query_params();
@@ -67,7 +67,7 @@ function post_filters( WP_REST_Request $request ) {
     return $result;
 }
 add_action('rest_api_init', function () {
-    register_rest_route('urban-alliance/v1', '/list-filters', array(
+    register_rest_route('ecosystem-assessments/v1', '/list-filters', array(
         'methods' => 'GET',
         'callback' => 'post_filters',
     ));
@@ -126,7 +126,7 @@ function get_events_by_date_start( WP_REST_Request $request ) {
 }
 
 add_action( 'rest_api_init', function () {
-  register_rest_route( 'urban-alliance/v1', '/events', array(
+  register_rest_route( 'ecosystem-assessments/v1', '/events', array(
     'methods' => 'GET',
     'callback' => 'get_events_by_date_start',
   ) );
