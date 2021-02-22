@@ -27,7 +27,7 @@
 }
 
 a.header-tools__button {
-  @include button_primary_light;
+  @include button_primary;
 
   &.header-tools__button--external {
     display: flex;

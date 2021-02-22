@@ -324,7 +324,7 @@ function hero_customizer_settings($wp_customize) {
 
       // Default background image
       $wp_customize->add_setting('default_hero_image');
-      $wp_customize->add_control( new WP_Customize__image_Control( $wp_customize, 'default_hero_image', array(
+      $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'default_hero_image', array(
         'label' => 'Default Background Image',
         'section' => 'default_hero',
         'settings' => 'default_hero_image'
@@ -772,7 +772,7 @@ function cta_block_customizer_settings($wp_customize) {
 
     // Background image
     $wp_customize->add_setting('cta_block_background_image');
-    $wp_customize->add_control( new WP_Customize__image_Control( $wp_customize, 'cta_block_background_image', array(
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cta_block_background_image', array(
       'label' => 'Background Image',
       'section' => 'cta_block',
       'settings' => 'cta_block_background_image'

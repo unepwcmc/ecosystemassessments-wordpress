@@ -2,13 +2,12 @@
   /*
     Home Hero Block
     Created by UNEP-WCMC
-    With Block Lab for Gutenberg - https://getblocklab.com/
+    With Genesis Custom Blocks for Gutenberg - https://getblocklab.com/
   */
 
   // Variables
 
   $title = block_field( 'title', false );
-  $text = block_field( 'text', false );
   $dark_text = block_field( 'dark-text', false );
 
   $link_url = block_field( 'link-url', false );
@@ -28,10 +27,6 @@
       <div class="hero-home__content">
         <?php if ($title !== '') : ?>
           <h2 class="hero-home__title"><?php echo $title; ?></h2>
-        <?php endif; ?>
-
-        <?php if ($text !== '') : ?>
-          <div class="hero-home__text"><?php echo $text; ?></div>
         <?php endif; ?>
 
         <?php if ($link_url !== '') : ?>

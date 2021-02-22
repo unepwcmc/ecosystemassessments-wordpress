@@ -145,8 +145,9 @@
 //-------------------------------------------------
 
 @mixin heading {
-  font-family: $font-heading;
   color: $color-headings;
+  font-family: $font-heading;
+  font-weight: $fw-light;
   margin-bottom: $item-padding;
 }
 
@@ -155,8 +156,8 @@
   line-height: 48px;
 
   @include break-min($sm) {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 60px;
+    line-height: 62px;
   }
 }
 
@@ -312,7 +313,7 @@
 @mixin button {
   appearance: none;
   border: 1px solid transparent;
-  border-radius: 30px;
+  border-radius: 4px;
   cursor: pointer;
   font-family: $font-body;
   font-size: 16px;
@@ -320,10 +321,9 @@
   line-height: 1;
   margin: 12px 0;
   outline: 0;
-  padding: 16px 34px;
+  padding: 16px 38px;
   text-align: center;
   text-decoration: none;
-  min-width: 160px;
 
   display: inline-block;
 
@@ -346,19 +346,6 @@
   &:hover {
     background-color: darken($color-primary, 10%);
     border-color: darken($color-primary, 10%);
-  }
-}
-
-@mixin button_primary_light {
-  @include button;
-  color: #fff;
-  background-color: $color-primary-light;
-  border-color: $color-primary-light;
-
-  &:hover {
-    color: #fff;
-    border-color: $color-primary;
-    background-color: $color-primary;
   }
 }
 

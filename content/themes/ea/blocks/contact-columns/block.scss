@@ -38,7 +38,6 @@ h3.block-contact__title {
 
 .block-contact__column {
   margin-bottom: $spacer-small;
-  // background-color: red;
 
   @include break-min($xxs) {
     margin-right: $grid-gap;

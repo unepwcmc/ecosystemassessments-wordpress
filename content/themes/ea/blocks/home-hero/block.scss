@@ -31,8 +31,7 @@
 }
 
 .hero-home__content {
-  padding: $spacer-medium $grid-gap;
-  text-align: center;
+  padding: $spacer-medium $item-padding;
   width: 100%;
   color: #fff;
 
@@ -40,12 +39,11 @@
   z-index: 2;
 
   @include break-min($xs) {
-    padding: $spacer-large $grid-gap;
-    max-width: 750px;
+    padding: $spacer-large $item-padding;
   }
 
   @include break-min($lg) {
-    padding: $spacer-xlarge $grid-gap $spacer-large;
+    padding: $spacer-xlarge ($item-padding * 2) $spacer-large;
   }
 
   & *:last-child {
@@ -60,8 +58,11 @@
 h2.hero-home__title {
   @include h1;
   color: currentColor;
-  text-align: center;
-  margin: 0 auto $item-padding * 2;
+  margin-bottom: $item-padding * 2;
+
+  @include break-min($md) {
+    max-width: calc((9 / 12) * 100%);
+  }
 }
 
 .hero-home__text {

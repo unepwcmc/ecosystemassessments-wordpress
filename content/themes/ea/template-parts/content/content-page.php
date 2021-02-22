@@ -14,9 +14,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
-	<header class="entry__header">
-		<?php the_title( '<h1 class="entry__title utility__screen-reader-only">', '</h1>' ); ?>
-	</header><!-- .entry__header -->
 	<div class="entry__body">
 		<div class="entry__content">
 

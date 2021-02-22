@@ -14,20 +14,19 @@ p.pagination__count {
 
 span.page-numbers,
 a.page-numbers {
-  display: inline-block;
-  // padding: 8px 12px;
-  width: 40px;
-  height: 40px;
   border: 1px solid $color-secondary;
   font-size: 12px;
-  text-decoration: none;
   margin-right: 10px;
-  transition: background-color .3s ease, border-color .35s ease, color .3s ease;
-  position: relative;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
 
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  position: relative;
+  transition: background-color .3s ease, border-color .35s ease, color .3s ease;
 
   &:hover:not(.current) {
     background-color: $color-primary;

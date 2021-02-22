@@ -5,8 +5,6 @@
     width: calc(((3 / 12) * 100%) - #{$grid-gap * 2});
     flex: 1 1 calc(((3 / 12) * 100%) - #{$grid-gap * 2});
     margin-right: $grid-gap * 2;
-    // padding-top: 55px;
-    // padding-bottom: 55px;
   }
 
   .layout-container--sidebar-right & {

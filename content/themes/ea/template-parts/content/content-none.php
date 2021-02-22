@@ -13,7 +13,7 @@
 
 <section class="entry no-results not-found">
 	<header class="entry__header">
-		<h1 class="entry__title"><?php _e( 'Nothing Found', 'ea' ); ?></h1>
+		<h2 class="entry__title"><?php _e( 'Nothing Found', 'ea' ); ?></h2>
 	</header><!-- .entry__header -->
 
 	<div class="entry__content">

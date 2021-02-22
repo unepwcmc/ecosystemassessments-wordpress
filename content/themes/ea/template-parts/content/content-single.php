@@ -15,15 +15,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry richtext' ); ?>>
-	<?php /* ?>
-	<header class="entry__header">
-		<?php
-		the_title( '<h2 class="entry__title">', '</h2>' );
-		?>
-		<p class="entry__details"><?php echo $category[0]->name . ' | ' . get_the_date( 'j/m/y' ); ?></p>
-	</header><!-- .entry-header -->
-	<?php */ ?>
-
 	<div class="entry__body">
 		<div class="entry__content">
 			<?php

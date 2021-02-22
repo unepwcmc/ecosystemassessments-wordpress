@@ -32,17 +32,12 @@
 }
 
 .hero__background-image {
-  margin-bottom: $spacer-small;
-  padding-bottom: 50%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: static;
   width: 100%;
 
   position: relative;
-
-  // @include break-min($sm) {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    position: static;
-  // }
 
   img {
     @include absolute_fill;
@@ -113,12 +108,7 @@ a.hero__link {
 }
 
 .hero__overlay {
-  display: none;
   @include absolute_fill;
   background-color: $color-secondary;
   z-index: 2;
-
-  // @include break-min($sm) {
-    display: block;
-  // }
 }
