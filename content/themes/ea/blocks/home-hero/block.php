@@ -18,7 +18,7 @@
   $image = block_field( 'image', false );
   $image_url = wp_get_attachment_image_src( $image, 'full-size' )[0];
 
-  $image_opacity = block_field( 'image-opacity', false );
+  $overlay_opacity = block_field( 'overlay-opacity', false );
 ?>
 
 <div class="hero-home<?php if ($dark_text) echo ' hero-home--dark'; ?>">
@@ -35,7 +35,8 @@
       <?php endif; ?>
     </div>
     <?php if ($image_url): ?>
-      <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="hero-home__background-image" style="opacity: <?php echo $image_opacity; ?>">
+      <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="hero-home__background-image">
     <?php endif; ?>
+    <div class="hero-home__overlay" style="opacity: <?php echo $overlay_opacity; ?>"></div>
   </div>
 </div>

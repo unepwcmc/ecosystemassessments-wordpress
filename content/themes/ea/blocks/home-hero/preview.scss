@@ -1,6 +1,7 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
+.block-editor__container .hero-home__background-image,
 .hero-home__background-image {
   @include absolute_fill;
   @include object_fit_cover;
@@ -55,9 +56,11 @@
   }
 }
 
+.editor-styles-wrapper h2.hero-home__title,
 h2.hero-home__title {
-  @include h1;
+  @include h3;
   color: currentColor;
+  font-weight: $fw-light;
   margin-bottom: $item-padding * 2;
 
   @include break-min($md) {

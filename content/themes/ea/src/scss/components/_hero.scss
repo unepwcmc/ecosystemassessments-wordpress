@@ -71,6 +71,6 @@ h2.hero__title {
 
 .hero__overlay {
   @include absolute_fill;
-  background: linear-gradient(180deg, rgba($color-secondary, 0.65) 0%, rgba($color-secondary, 0) 35%, rgba($color-secondary, 0) 100%);
+  background: $hero-gradient;
   z-index: 2;
 }
