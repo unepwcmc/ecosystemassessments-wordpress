@@ -554,68 +554,39 @@ function hero_customizer_settings($wp_customize) {
       'settings' => 'members_hero_button_text'
       ) ) );
 
-  // Add Tools & Resources Hero Section
-  $wp_customize->add_section( 'tools_hero', array (
-    'title' => 'Tools & Resources Page',
+  // Add Resources Hero Section
+  $wp_customize->add_section( 'resources_hero', array (
+    'title' => 'Resources Page',
     'panel' => 'hero_settings',
-    'description' => 'Settings for the hero on the Tools & Resources listing page',
+    'description' => 'Settings for the hero on the Resources listing page',
     'priority' => 100
   ) );
 
-      // Tools & Resources Hero title
-      $wp_customize->add_setting('tools_hero_title');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'tools_hero_title',
+      // Resources Hero title
+      $wp_customize->add_setting('resources_hero_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'resources_hero_title',
       array(
       'label' => 'Title',
-      'section' => 'tools_hero',
-      'settings' => 'tools_hero_title'
+      'section' => 'resources_hero',
+      'settings' => 'resources_hero_title'
       ) ) );
 
-      // Tools & Resources Hero background image
-      $wp_customize->add_setting('tools_hero_image');
-      $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'tools_hero_image', array(
+      // Resources Hero background image
+      $wp_customize->add_setting('resources_hero_image');
+      $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'resources_hero_image', array(
         'label' => 'Background Image',
-        'section' => 'tools_hero',
-        'settings' => 'tools_hero_image'
+        'section' => 'resources_hero',
+        'settings' => 'resources_hero_image'
       ) ) );
 
-      // Tools & Resources Hero Hero overlay opacity
-      $wp_customize->add_setting('tools_hero_overlay_opacity');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'tools_hero_overlay_opacity',
+      // Resources Hero Hero overlay opacity
+      $wp_customize->add_setting('resources_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'resources_hero_overlay_opacity',
       array(
         'label' => 'Overlay Opacity',
-        'section' => 'tools_hero',
+        'section' => 'resources_hero',
         'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-        'settings' => 'tools_hero_overlay_opacity'
-      ) ) );
-
-      // Tools & Resources Hero text
-      $wp_customize->add_setting('tools_hero_text');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'tools_hero_text',
-      array(
-      'label' => 'Text',
-      'type' => 'textarea',
-      'section' => 'tools_hero',
-      'settings' => 'tools_hero_text'
-      ) ) );
-
-      // Tools & Resources Hero button url
-      $wp_customize->add_setting('tools_hero_button_link');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'tools_hero_button_link',
-      array(
-      'label' => 'Button Link',
-      'type' => 'dropdown-pages',
-      'section' => 'tools_hero',
-      'settings' => 'tools_hero_button_link'
-      ) ) );
-
-      // Tools & Resources Hero button text
-      $wp_customize->add_setting('tools_hero_button_text');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'tools_hero_button_text',
-      array(
-      'label' => 'Button Text',
-      'section' => 'tools_hero',
-      'settings' => 'tools_hero_button_text'
+        'settings' => 'resources_hero_overlay_opacity'
       ) ) );
 
   // Add Projects Hero Section
