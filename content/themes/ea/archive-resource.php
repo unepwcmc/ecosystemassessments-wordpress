@@ -42,7 +42,7 @@
 						}
 					?>
 
-					<listing-grid post-type="<?php echo $post_type; ?>" :modal="true" />
+					<listing-grid post-type="<?php echo $post_type; ?>" />
 
 				</div>
 			</section>
