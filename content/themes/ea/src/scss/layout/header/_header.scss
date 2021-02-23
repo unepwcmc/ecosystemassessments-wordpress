@@ -1,12 +1,19 @@
 .header {
-  background-color: $color-light-grey;
-  color: $color-secondary;
+  background-color: transparent;
+  color: $color-white;
 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 5;
+
+  transition: color .3s ease, background-color .3s ease;
+
+  &.header--scrolled {
+    background-color: $color-light-grey;
+    color: $color-secondary;
+  }
 
   .logged-in.admin-bar & {
     top: 46px;

@@ -3,18 +3,26 @@
 }
 
 .header-search__toggle {
-  display: block;
   appearance: none;
   background: none;
   border: 0;
-  padding: 0;
+  color: $color-white;
   cursor: pointer;
   outline: none;
-  color: $color-primary;
+  padding: 0;
+
+  display: block;
+
+  transition: color .3s ease;
+
+  .header--scrolled & {
+    color: $color-primary;
+  }
 
   svg {
     width: 32px;
     height: 32px;
+
     transition: opacity .3s ease;
 
     @include break-min($md) {

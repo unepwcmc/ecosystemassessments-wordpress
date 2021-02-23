@@ -27,7 +27,13 @@
 }
 
 a.header-tools__button {
-  @include button_primary;
+  @include button_ghost;
+  @include button_small;
+  color: $color-white;
+
+  .header--scrolled & {
+    color: $color-secondary;
+  }
 
   &.header-tools__button--external {
     display: flex;

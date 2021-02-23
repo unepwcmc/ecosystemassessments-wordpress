@@ -332,10 +332,13 @@
     border-color 0.35s ease;
 }
 
+@mixin button_small {
+  padding: 8px 18px;
+}
+
 @mixin button_wider {
   padding-right: 30px;
   padding-left: 30px;
-
 }
 
 @mixin button_primary {
@@ -376,14 +379,18 @@
 
 @mixin button_ghost {
   @include button;
-  color: #fff;
-  border-color: #fff;
-  background-color: rgba(0,0,0,0.3);
+  color: currentColor;
+  border-color: currentColor;
+  background-color: transparent;
 
   &:hover {
-    color: $color-primary;
-    border-color: #fff;
-    background-color: #fff;
+    color: $color-white;
+    border-color: $color-primary;
+    background-color: $color-primary;
+  }
+
+  .header--scrolled &:hover {
+    color: $color-white;
   }
 }
 

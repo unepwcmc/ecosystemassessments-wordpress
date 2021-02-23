@@ -2,11 +2,6 @@
 // Hero
 //-------------------------------------------------
 
-.hero__inner {
-  @include inner_padding;
-  display: flex;
-}
-
 .hero__body {
   @include spacer_body_small;
   width: 100%;
@@ -32,18 +27,9 @@
 }
 
 .hero__background-image {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  position: static;
-  width: 100%;
-
-  position: relative;
-
-  img {
-    @include absolute_fill;
-    @include object_fit_cover;
-    z-index: 1;
-  }
+  @include absolute_fill;
+  @include object_fit_cover;
+  z-index: 1;
 }
 
 .hero__content {
@@ -109,6 +95,6 @@ a.hero__link {
 
 .hero__overlay {
   @include absolute_fill;
-  background-color: $color-secondary;
+  background: linear-gradient(180deg, rgba($color-secondary, 0.65) 0%, rgba($color-secondary, 0) 35%, rgba($color-secondary, 0) 100%);
   z-index: 2;
 }

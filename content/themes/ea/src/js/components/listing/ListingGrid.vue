@@ -13,10 +13,10 @@
     <div class="listing__body">
       <div class="listing__content" v-if="posts.length">
         <listing-cards
-        :modal="this.modal"
-        :posts="posts"
-        :post-type="postSingular"
-        @onCardClicked="updateActivePost"
+          :modal="this.modal"
+          :posts="posts"
+          :post-type="postSingular"
+          @onCardClicked="updateActivePost"
         />
 
         <observer v-on:intersect="intersected" />
