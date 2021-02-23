@@ -9,7 +9,7 @@ set :branch, 'master'
 set :stage, :production
 
 # The URL of the website in this environment.
-set :stage_url, 'urbanalliance.production.wordpress-linode.linode.unep-wcmc.org'
+set :stage_url, 'ecosystemassessments.production.wordpress-linode.linode.unep-wcmc.org'
 
 # The environment's server credentials
 server 'production.wordpress-linode.linode.unep-wcmc.org', user: 'wcmc', roles: %w(web app db)
