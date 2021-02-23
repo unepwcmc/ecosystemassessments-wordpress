@@ -31,10 +31,9 @@ get_header(); ?>
 	endif; wp_reset_query();
 ?>
 
-<div class="layout-container layout-container--has-sidebar layout-container--sidebar-right">
+<div class="layout-container">
 	<div class="layout-container__inner">
 		<div class="layout-container__body">
-			<?php get_sidebar('single'); ?>
 			<section class="layout-primary layout-primary--restrained">
 				<div class="layout-primary__body">
 					<?php

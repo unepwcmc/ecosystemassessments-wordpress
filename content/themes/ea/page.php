@@ -35,11 +35,10 @@ get_header(); ?>
 	endif;
 ?>
 
-<div class="layout-container layout-container--has-sidebar">
+<div class="layout-container">
 	<div class="layout-container__inner">
 		<div class="layout-container__body">
-			<?php get_sidebar('page'); ?>
-			<section class="layout-primary layout-primary--simple">
+			<section class="layout-primary layout-primary--restrained">
 				<div class="layout-primary__body">
 					<?php
 						if ( have_posts() ) :

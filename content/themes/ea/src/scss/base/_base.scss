@@ -139,7 +139,7 @@ input[type="radio"] {
 }
 
 input[type="submit"] {
-  @include button_primary;
+  @include button_secondary;
   @include button_wider;
 }
 

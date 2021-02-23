@@ -15,6 +15,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry richtext' ); ?>>
+	<div class="entry__header">
+		<h2 class="entry__title"><?php the_title(); ?></h2>
+	</div>
 	<div class="entry__body">
 		<div class="entry__content">
 			<?php
