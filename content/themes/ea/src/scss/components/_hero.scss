@@ -7,7 +7,6 @@
   width: 100%;
 
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
 
@@ -21,7 +20,7 @@
     }
 
     @include break-min($sm) {
-      min-height: 400px;
+      min-height: 650px;
     }
   }
 }
@@ -34,21 +33,14 @@
 
 .hero__content {
   color: #fff;
-  margin-right: auto;
-  margin-left: auto;
   padding-right: $grid-gap;
   padding-left: $grid-gap;
-  text-align: center;
 
   position: relative;
   z-index: 3;
 
   *:last-child {
     margin-bottom: 0;
-  }
-
-  @include break-min($sm) {
-    max-width: 700px;
   }
 
   @include break-min($md) {
@@ -63,7 +55,7 @@
 
 h2.hero__title {
   @include font_heading-2;
-  font-weight: $fw-regular;
+  font-weight: $fw-light;
   color: currentColor;
 
   display: block;
@@ -75,22 +67,6 @@ h2.hero__title {
   @include break-min($sm) {
     @include font_heading-1;
   }
-}
-
-h3.hero__heading {
-  @include h4;
-  color: currentColor;
-  font-weight: $fw-bold;
-  margin-bottom: $item-padding * 2;
-}
-
-p.hero__text {
-  color: currentColor;
-}
-
-a.hero__link {
-  @include button_primary;
-  margin: 0 !important;
 }
 
 .hero__overlay {

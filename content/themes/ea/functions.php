@@ -285,59 +285,6 @@ function load_template_part($template_name, $part_name=null) {
 }
 
 /*-------------------------------------------------------------------------------
-Add social icons to footer nav
--------------------------------------------------------------------------------*/
-
-add_filter( 'wp_nav_menu_items', 'footer_social_icons', 10, 2 );
-
-function footer_social_icons( $items, $args ) {
-  if ($args->theme_location == 'footer') {
-    $instagram_url = get_theme_mod( 'instagram_url' );
-
-    $facebook_url = get_theme_mod( 'facebook_url' );
-    $facebook_icon = load_template_part('template-parts/icons/icon', 'facebook');
-
-    $twitter_url = get_theme_mod( 'twitter_url' );
-    $twitter_icon = load_template_part('template-parts/icons/icon', 'twitter');
-
-
-    $items .=
-      '<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-        <a>Get In Touch</a>
-        <ul class="sub-menu">
-          <li class="menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/contact-us/" title="Contact Us">Contact Us</a>
-          </li>
-          <li class="menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/newsletter/" title="Newsletter">Newsletter</a>
-          </li>';
-      if ($instagram_url) {
-        $items .= '
-          <li class="menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="' . $instagram_url . '" title="Instagram" target="_blank">Instagram</a>
-          </li>';
-      }
-      if ($facebook_url || $twitter_url) {
-        $items .= '
-          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item--social-icons">';
-          if ($facebook_url) {
-            $items .= '
-              <a class="social-icon social-icon---facebook" href="' . $facebook_url . '" title="Facebook" target="_blank">Facebook' . $facebook_icon . '</a>';
-          }
-          if ($twitter_url) {
-            $items .= '
-              <a class="social-icon social-icon---twitter" href="' . $twitter_url . '" title="Twitter" target="_blank">Twitter' . $twitter_icon . '</a>';
-          }
-        $items .= '</li>';
-      }
-    $items .= '
-        </ul>
-      </li>';
-  }
-  return $items;
-}
-
-/*-------------------------------------------------------------------------------
 Add logo to footer nav
 -------------------------------------------------------------------------------*/
 

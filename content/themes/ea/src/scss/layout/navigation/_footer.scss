@@ -21,6 +21,10 @@
       color: currentColor;
       text-decoration: none;
 
+      &:not([href]) {
+        font-weight: $fw-bold;
+      }
+
       &[href]:hover {
         text-decoration: underline;
       }
@@ -35,22 +39,26 @@
     margin-right: $grid-gap;
     margin-bottom: $item-padding * 2;
     width: calc(((6 / 12) * 100%) - #{$grid-gap});
+
     flex: 0 0 calc(((6 / 12) * 100%) - #{$grid-gap});
 
     @include break-min($xs) {
       width: calc(((4 / 12) * 100%) - #{$grid-gap});
+
       flex: 0 0 calc(((4 / 12) * 100%) - #{$grid-gap});
     }
 
     @include break-min($sm) {
-      flex: 0 0 180px;
       width: auto;
+
+      flex: 0 0 180px;
     }
 
     > a {
-      display: block;
       font-weight: $fw-medium;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+
+      display: block;
     }
 
     &.menu-item--logo {

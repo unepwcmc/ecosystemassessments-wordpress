@@ -11,7 +11,7 @@
   transition: color .3s ease, background-color .3s ease;
 
   &.header--scrolled {
-    background-color: $color-light-grey;
+    background-color: $color-header;
     color: $color-secondary;
   }
 
@@ -25,7 +25,8 @@
 }
 
 .header__inner {
-  @include inner;
+  padding-left: $grid-gap;
+  padding-right: $grid-gap;
 }
 
 .header__items {

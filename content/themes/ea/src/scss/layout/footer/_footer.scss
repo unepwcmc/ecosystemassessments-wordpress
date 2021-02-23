@@ -1,6 +1,7 @@
 .footer {
+  @include spacer_body_small;
   background-color: $color-footer;
-  color: $color-secondary;
+  color: $color-white;
 
   position: relative;
   z-index: 1;
@@ -8,10 +9,6 @@
 
 .footer__inner {
   @include inner;
-}
-
-.footer__body {
-
 }
 
 .footer__footer {
