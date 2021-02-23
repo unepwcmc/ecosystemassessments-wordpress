@@ -1,12 +1,6 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.hero-home__inner {
-  @include inner_padding;
-
-  display: flex;
-}
-
 .hero-home__background-image {
   @include absolute_fill;
   @include object_fit_cover;
@@ -25,7 +19,7 @@
 
   .layout__body & {
     @include break-min($lg) {
-      min-height: 600px;
+      min-height: 800px;
     }
   }
 }
