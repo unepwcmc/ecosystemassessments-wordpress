@@ -1,134 +1,59 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.block-link-tiles {
-  @include spacer_xlarge;
-
-  .home & {
-    @include break-min($md) {
-      margin-top: $spacer-large;
-    }
-  }
+.link-tiles {
+  @include spacer;
 }
 
-.block-link-tiles__inner {
-  @include inner;
+.link-tiles__header {
+  @include section_header;
 }
 
-ul.block-link-tiles__items {
-  @include no_margin_padding;
-  @include break-min($sm) {
-    display: flex;
-    margin-right: -#{$grid-gap};
-
-  }
+.link-tiles__title {
+  @include section_title;
 }
 
-li.block-link-tiles__item {
-  @include no_bullets;
-  position: relative;
-  margin-bottom: $spacer-medium;
-
-  @include break-min($sm) {
-    margin-right: $grid-gap;
-    margin-bottom: 0;
-
-    flex: 1;
-  }
-
-  &::after {
-    background-image: -webkit-gradient(linear, right top, right bottom, color-stop(35%, $color-border), color-stop(0%, #fff));
-    background-image: linear-gradient(to bottom, $color-border 35%, #fff 0%);
-    background-position: right;
-    background-size: 1px 4px;
-    background-repeat: repeat-y;
-    width: 1px;
-    height: 100%;
-
-    display: block;
-
-    position: absolute;
-    top: 1px;
-    right: -#{($grid-gap / 2)};
-
-    @include break-min($sm) {
-      content: '';
-    }
-  }
-
-  &:last-child {
-    &::after {
-      content: none;
-    }
-  }
+.link-tiles__items {
+  @include structural_ul;
+  display: flex;
+  margin-right: -$grid-gap;
 }
 
-.block-link-tile {
-  position: relative;
+.link-tiles__item {
+  flex: 0 0 calc(((1 / 4) * 100%) - #{$grid-gap});
+  margin-right: $grid-gap;
 }
 
-.block-link-tile__image-wrap {
-  margin-bottom: $item-padding;
-  padding-bottom: calc((20 / 23) * 100%);
+.link-tile {
+  border-radius: 5px;
   overflow: hidden;
-  width: 100%;
-
+  padding-bottom: calc((7 / 6) * 100%);
   position: relative;
 }
 
-.block-link-tile__image {
-  @include absolute_fill;
-  @include object_fit_cover;
-  transition: transform .5s ease;
-  will-change: transform;
-
-  .block-link-tile:hover & {
-    transform: scale(1.015);
-  }
-}
-
-.block-link-tile__content {
-  padding-bottom: $spacer-medium;
-  
-  @include break-min($sm) {
-    padding-bottom: $spacer-medium * 1.5;
-  }
-}
-
-h3.block-link-tile__title {
-  color: $color-primary;
+h4.link-tile__title {
+  color: $color-white;
   font-weight: $fw-regular;
-  margin-bottom: 5px;
-}
-
-p.block-link-tile__text {
-  margin-bottom: 0;
-}
-
-p.block-link-tile__link {
-  font-size: 18px;
-  font-weight: $fw-bold;
-  line-height: 1;
-  margin-bottom: 0;
-  padding-left: 30px;
 
   position: absolute;
-  bottom: 0;
-  left: 0;
-
-  svg {
-    display: inline-block;
-    width: 16px;
-
-    position: absolute;
-    top: 50%;
-    left: 0;
-
-    transform: translateY(-50%);
-  }
+  top: $item-padding;
+  left: $item-padding;
+  z-index: 3;
 }
 
-a.block-link-tile__fauxlink {
+.link-tile__image {
   @include absolute_fill;
+  @include object_fit_cover;
   z-index: 1;
+}
+
+.link-tile__image-overlay {
+  @include absolute_fill;
+  background: $card-gradient;
+  z-index: 2;
+}
+
+a.link-tile__fauxlink {
+  @include absolute_fill;
+  z-index: 4;
 }
