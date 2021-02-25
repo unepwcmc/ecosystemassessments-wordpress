@@ -15,9 +15,8 @@
       <label
         class="listing-filter__label"
         :for="term.term_id"
-      >
-        {{ term.name }}
-      </label>
+        v-html="term.name"
+      />
     </li>
   </ul>
 </template>

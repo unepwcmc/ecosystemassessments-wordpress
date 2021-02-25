@@ -12,11 +12,18 @@
   <?php
     wp_head();
     global $post;
-    $body_class = 'page';
+    $body_base_class = is_single( $post ) ? 'single' : 'page';
+
+    $body_class = $body_base_class;
 
     if ($post) {
-      $body_class = $body_class . ' page-' . $post->post_name;
+      $body_class .= ' ' . $body_base_class . '-' . $post->post_name;
+
+      if (is_single( $post )) {
+        $body_class .= ' no-hero';
+      }
     }
+
   ?>
 </head>
 

@@ -1,7 +1,10 @@
 <template>
   <li class="listing-filter__term">
     <input class="listing-filter__checkbox" type="checkbox" :value="value" :checked="checked" @change="onChange($event.target.checked)" />
-    <label class="listing-filter__label">{{ label }}</label>
+    <label
+      class="listing-filter__label"
+      v-html="label"
+    />
   </li>
 </template>
 

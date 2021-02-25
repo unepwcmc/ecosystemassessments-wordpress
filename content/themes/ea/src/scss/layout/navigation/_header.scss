@@ -38,6 +38,10 @@
       a {
         color: currentColor;
         text-decoration: none;
+
+        &:not([href]) {
+          cursor: pointer;
+        }
       }
 
       > a {

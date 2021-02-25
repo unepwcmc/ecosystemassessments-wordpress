@@ -422,11 +422,28 @@ CREATE ACF META IN REST
 // add_action( 'rest_api_init', 'create_ACF_meta_in_REST' );
 
 /*-------------------------------------------------------------------------------------------------
+MULTIPLE TAXONOMIES IN ONE URL - https://wordpress.stackexchange.com/a/181003
+------------------------------------------------------------------------------------------------- */
+
+function custom_rewrite_rules() {
+    add_rewrite_rule('^resources/resource_stage/(.*)/resource_type/(.*)?', 'index.php?resource_stage=$matches[1]&resource_type=$matches[2]', 'top');
+    add_rewrite_rule('^resources/resource_stage/(.*)', 'index.php?resource_stage=$matches[1]', 'top');
+    add_rewrite_rule('^resources/resource_type/(.*)?', 'index.php?resource_type=$matches[1]', 'top');
+    add_rewrite_rule('^resources/all', 'index.php?post_type=resource', 'top');
+}
+add_action('init', 'custom_rewrite_rules');
+
+/*-------------------------------------------------------------------------------------------------
 IMPORT CUSTOMIZER SETTINGS
 ------------------------------------------------------------------------------------------------- */
 require_once( 'customizer-settings.php' );
 
 /*-------------------------------------------------------------------------------------------------
+Relevanssi Rest API Support
+------------------------------------------------------------------------------------------------- */
+require_once( 'relevanssi-rest-api-support.php' );
+
+/*-------------------------------------------------------------------------------------------------
 Custom Rest API Settings
 ------------------------------------------------------------------------------------------------- */
-// require_once( 'rest-api-settings.php' );
+require_once( 'rest-api-settings.php' );

@@ -1,6 +1,9 @@
 <template>
   <li class="listing-filter__item">
-    <h4 class="listing-filter__title">{{ config.label }}</h4>
+    <h4
+      class="listing-filter__title"
+      v-html="config.label"
+    />
     <listing-terms
       :filter="config.taxonomy"
       :terms="config.terms"

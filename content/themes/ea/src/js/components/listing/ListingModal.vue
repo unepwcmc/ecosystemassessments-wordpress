@@ -1,26 +1,58 @@
 <template>
   <modal>
-    <h3 class="listing-modal__title">{{ title }}</h3>
-    <h4 class="listing-modal__heading" v-if="jobTitle">{{ jobTitle }}</h4>
+    <h3 class="listing-modal__title">
+      {{ title }}
+    </h3>
+    <h4
+      class="listing-modal__heading"
+      v-if="jobTitle"
+    >
+      {{ jobTitle }}
+    </h4>
     <div class="listing-modal__columns">
-      <div class="listing-modal__column listing-modal__column--small" v-if="imageUrl">
-        <div class="listing-modal__image-wrap" v-if="imageUrl">
-          <img class="listing-modal__image" :src="imageUrl" :alt="title">
+      <div
+        v-if="imageUrl"
+        class="listing-modal__column listing-modal__column--small"
+      >
+        <div
+          v-if="imageUrl"
+          class="listing-modal__image-wrap"
+        >
+          <img
+            class="listing-modal__image"
+            :src="imageUrl"
+            :alt="title"
+          >
         </div>
-        <ul class="listing-modal__items" v-if="email || twitterUrl">
+        <ul
+          class="listing-modal__items"
+          v-if="email || twitterUrl"
+        >
           <li class="listing-modal__item">
-            <a class="listing-modal__link" :href="`mailto:${ email }`">{{ email }}</a>
+            <a
+              class="listing-modal__link"
+              :href="`mailto:${ email }`"
+            >
+              {{ email }}
+            </a>
           </li>
           <li class="listing-modal__item">
-            <a class="listing-modal__link" :href="`https://twitter.com/${ twitterUrl }`">
-              <svg class="listing-modal__social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.12 20.41"><g data-name="Layer 2"><path d="M7.9 20.41A14.56 14.56 0 0022.56 5.75v-.67a10.36 10.36 0 002.57-2.67 10.17 10.17 0 01-3 .81 5.15 5.15 0 002.3-2.85 10.22 10.22 0 01-3.28 1.25 5.16 5.16 0 00-8.91 3.54 5 5 0 00.13 1.16A14.59 14.59 0 011.75.94a5.18 5.18 0 001.59 6.88A5.08 5.08 0 011 7.17v.07a5.18 5.18 0 004.14 5 5.1 5.1 0 01-2.33.09A5.19 5.19 0 007.63 16a10.39 10.39 0 01-6.4 2.21c-.41 0-.82 0-1.23-.07a14.65 14.65 0 007.9 2.31" fill="currentColor" data-name="Layer 1"/></g></svg>
+            <a
+              class="listing-modal__link"
+              :href="`https://twitter.com/${ twitterUrl }`"
+            >
+              <IconTwitter class="listing-modal__social-icon" />
               Twitter
             </a>
           </li>
         </ul>
       </div>
       <div class="listing-modal__column listing-modal__column--large">
-        <div class="listing-modal__content richtext" v-if="content" v-html="content" />
+        <div
+          class="listing-modal__content richtext"
+          v-if="content"
+          v-html="content"
+        />
       </div>
     </div>
   </modal>
@@ -28,17 +60,19 @@
 
 <script>
   import { decodeString } from '../../helpers/application-helpers.js'
+  import IconTwitter from '../../icons/IconTwitter.vue'
   import Modal from '../modal/Modal.vue'
 
   export default {
     name: 'ListingModal',
 
     components: {
+      IconTwitter,
       Modal
     },
 
     props: {
-      config: {
+      post: {
         type: Object,
         default: () => {}
       }
@@ -46,27 +80,27 @@
 
     computed: {
       content() {
-        return this.config.content ? this.config.content.rendered : ''
+        return this.post.content ? this.post.content.rendered : ''
       },
 
       email() {
-        return this.config.ACF.email ? this.config.ACF.email : ''
+        return this.post.ACF ? this.post.ACF.email : ''
       },
 
       imageUrl() {
-        return this.config._embedded ? this.config._embedded['wp:featuredmedia'][0].source_url : ''
+        return this.post._embedded['wp:featuredmedia'] ? this.post._embedded['wp:featuredmedia'][0].source_url : ''
       },
 
       jobTitle() {
-        return this.config.ACF.job_title ? this.config.ACF.job_title : ''
+        return this.post.ACF ? this.post.ACF.job_title : ''
       },
 
       title() {
-        return this.config.title ? decodeString(this.config.title.rendered) : ''
+        return this.post.title ? decodeString(this.post.title.rendered) : ''
       },
 
       twitterUrl() {
-        return this.config.ACF.twitter_account ? this.config.ACF.twitter_account : ''
+        return this.post.ACF ? this.post.ACF.twitter_account : ''
       }
     }
   }

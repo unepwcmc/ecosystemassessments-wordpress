@@ -10,6 +10,7 @@
 
   transition: color .3s ease, background-color .3s ease;
 
+  .no-hero &,
   &.header--scrolled {
     background-color: $color-header;
     color: $color-secondary;

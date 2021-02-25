@@ -11,9 +11,7 @@
 <div class="hero hero--post">
   <div class="hero__inner">
     <div class="hero__body">
-      <div class="hero__background-image">
-        <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>">
-      </div>
+      <img class="hero__background-image" src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>">
       <div class="hero__overlay" style="opacity: <?php echo $opacity; ?>"></div>
       <div class="hero__content">
         <?php if ($title != ''): ?>

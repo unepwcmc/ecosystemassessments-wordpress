@@ -11,6 +11,10 @@
       margin-top: 0;
     }
   }
+
+  .no-hero & {
+    padding-top: $headerHeight;
+  }
 }
 
 .layout-container__inner {

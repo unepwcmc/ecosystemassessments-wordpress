@@ -490,68 +490,68 @@ function hero_customizer_settings($wp_customize) {
       ) ) );
 
 
-  // Add Members Hero Section
-  $wp_customize->add_section( 'members_hero', array (
-    'title' => 'Members Page',
+  // Add Partners Hero Section
+  $wp_customize->add_section( 'partners_hero', array (
+    'title' => 'Partners Page',
     'panel' => 'hero_settings',
-    'description' => 'Settings for the hero on the Members listing page',
+    'description' => 'Settings for the hero on the Partners listing page',
     'priority' => 100
   ) );
 
-      // Members Hero title
-      $wp_customize->add_setting('members_hero_title');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'members_hero_title',
+      // Partners Hero title
+      $wp_customize->add_setting('partners_hero_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_title',
       array(
       'label' => 'Title',
-      'section' => 'members_hero',
-      'settings' => 'members_hero_title'
+      'section' => 'partners_hero',
+      'settings' => 'partners_hero_title'
       ) ) );
 
-      // Members Hero background image
-      $wp_customize->add_setting('members_hero_image');
-      $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'members_hero_image', array(
+      // Partners Hero background image
+      $wp_customize->add_setting('partners_hero_image');
+      $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'partners_hero_image', array(
         'label' => 'Background Image',
-        'section' => 'members_hero',
-        'settings' => 'members_hero_image'
+        'section' => 'partners_hero',
+        'settings' => 'partners_hero_image'
       ) ) );
 
-      // Members Hero Hero overlay opacity
-      $wp_customize->add_setting('members_hero_overlay_opacity');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'members_hero_overlay_opacity',
+      // Partners Hero Hero overlay opacity
+      $wp_customize->add_setting('partners_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_overlay_opacity',
       array(
         'label' => 'Overlay Opacity',
-        'section' => 'members_hero',
+        'section' => 'partners_hero',
         'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-        'settings' => 'members_hero_overlay_opacity'
+        'settings' => 'partners_hero_overlay_opacity'
       ) ) );
 
-      // Members Hero text
-      $wp_customize->add_setting('members_hero_text');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'members_hero_text',
+      // Partners Hero text
+      $wp_customize->add_setting('partners_hero_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_text',
       array(
       'label' => 'Text',
       'type' => 'textarea',
-      'section' => 'members_hero',
-      'settings' => 'members_hero_text'
+      'section' => 'partners_hero',
+      'settings' => 'partners_hero_text'
       ) ) );
 
-      // Members Hero button url
-      $wp_customize->add_setting('members_hero_button_link');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'members_hero_button_link',
+      // Partners Hero button url
+      $wp_customize->add_setting('partners_hero_button_link');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_button_link',
       array(
       'label' => 'Button Link',
       'type' => 'dropdown-pages',
-      'section' => 'members_hero',
-      'settings' => 'members_hero_button_link'
+      'section' => 'partners_hero',
+      'settings' => 'partners_hero_button_link'
       ) ) );
 
-      // Members Hero button text
-      $wp_customize->add_setting('members_hero_button_text');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'members_hero_button_text',
+      // Partners Hero button text
+      $wp_customize->add_setting('partners_hero_button_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_button_text',
       array(
       'label' => 'Button Text',
-      'section' => 'members_hero',
-      'settings' => 'members_hero_button_text'
+      'section' => 'partners_hero',
+      'settings' => 'partners_hero_button_text'
       ) ) );
 
   // Add Resources Hero Section

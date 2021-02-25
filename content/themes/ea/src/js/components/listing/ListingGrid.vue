@@ -34,8 +34,8 @@
       </div>
 
       <listing-modal
-        :config="activePost"
         v-if="modal"
+        v-bind="{ post: activePost }"
       />
     </div>
   </div>
@@ -64,6 +64,14 @@ export default {
   },
 
   props: {
+    resourceStage: {
+      type: String,
+      default: undefined
+    },
+    resourceType: {
+      type: String,
+      default: undefined
+    },
     postType: {
       type: String,
       required: true
@@ -93,6 +101,7 @@ export default {
       activeTerms: {},
       config: {
         postsBaseUrl: '/wp-json/wp/v2/',
+        resourcesBaseUrl: '/wp-json/relevanssi/v1/search?s=',
         eventsBaseUrl: '/wp-json/ecosystem-assessments/v1/events?_embed',
         filtersBaseURL: '/wp-json/ecosystem-assessments/v1/list-filters'
       },
@@ -118,6 +127,14 @@ export default {
       let params = {
         'page': this.page,
         'per_page': this.perPage
+      }
+
+      if (this.resourceStage) {
+        params['resource_stage'] = this.resourceStage
+      }
+
+      if (this.resourceType) {
+        params['resource_type'] = this.resourceType
       }
 
       Object.keys(this.activeTerms).forEach(term => {
@@ -202,9 +219,16 @@ export default {
     },
 
     getPostsURL() {
-      let requestURL = this.postType == 'event'
+      let requestURL = ''
+
+      // TODO make in to a switch statement
+      if (this.postType == 'resource') {
+        requestURL = this.config.resourcesBaseUrl
+      } else {
+        requestURL = this.postType == 'event'
         ? this.config.eventsBaseUrl
         : this.config.postsBaseUrl + this.postType + '?_embed'
+      }
 
       return encodeURI(requestURL)
     },

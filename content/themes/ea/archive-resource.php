@@ -33,16 +33,9 @@
 			<section class="layout-primary">
 				<div class="layout-primary__body layout-primary__body--archive">
 
-					<?php
-						if ( get_query_var('stage') ) {
+				<h1>Archive Resource!</h1>
 
-						    // If so echo the value
-						    echo get_query_var('stage');
-
-						}
-					?>
-
-					<listing-grid post-type="<?php echo $post_type; ?>" :modal="true" />
+					<listing-grid post-type="<?php echo $post_type; ?>" />
 
 				</div>
 			</section>

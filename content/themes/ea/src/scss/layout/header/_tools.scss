@@ -31,8 +31,13 @@ a.header-tools__button {
   @include button_small;
   color: $color-white;
 
+  .no-hero &,
   .header--scrolled & {
     color: $color-secondary;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   &.header-tools__button--external {

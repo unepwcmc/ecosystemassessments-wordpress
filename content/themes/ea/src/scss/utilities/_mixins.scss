@@ -388,10 +388,6 @@
     border-color: $color-primary;
     background-color: $color-primary;
   }
-
-  .header--scrolled &:hover {
-    color: $color-white;
-  }
 }
 
 @mixin button_accent {
