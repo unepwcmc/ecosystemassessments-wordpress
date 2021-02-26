@@ -147,7 +147,6 @@
 @mixin heading {
   color: $color-headings;
   font-family: $font-heading;
-  font-weight: $fw-light;
   margin-bottom: $item-padding;
 }
 
@@ -156,8 +155,8 @@
   line-height: 48px;
 
   @include break-min($sm) {
-    font-size: 60px;
-    line-height: 62px;
+    font-size: 65px;
+    line-height: 68px;
   }
 }
 
@@ -316,13 +315,13 @@
   border-radius: 4px;
   cursor: pointer;
   font-family: $font-body;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: $fw-regular;
   letter-spacing: 1px;
   line-height: 1;
   margin: 12px 0;
   outline: 0;
-  padding: 16px 38px;
+  padding: 16px 36px;
   text-align: center;
   text-decoration: none;
 

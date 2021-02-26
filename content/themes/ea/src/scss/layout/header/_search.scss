@@ -42,31 +42,25 @@
 }
 
 .header-search__bar {
+  pointer-events: none;
+  opacity: 0;
+  overflow: hidden;
+  visiblity: hidden;
+  max-width: 100%;
+
   position: fixed;
   top: 85px;
   right: #{$grid-gap / 2};
   left: #{$grid-gap / 2};
   z-index: 10;
-  opacity: 0;
-  visiblity: hidden;
-  max-width: 100%;
 
-  pointer-events: none;
-  overflow: hidden;
   transition: opacity 0.5s ease, visiblity 0.5s ease;
 
-  .admin-bar & {
-    top: 130px;
-
-    @include break-min($xs) {
-      top: calc(100% + 5px);
-    }
-  }
-
   @include break-min($xs) {
-    position: absolute;
     width: 100%;
     min-width: 450px;
+
+    position: absolute;
     top: calc(100% + 5px);
     right: -58px;
     left: auto;
@@ -76,29 +70,40 @@
     right: -36px;
   }
 
+  .admin-bar & {
+    top: 130px;
+
+    @include break-min($xs) {
+      top: calc(100% + 5px);
+    }
+  }
+
   .header-search--bar-active & {
     opacity: 1;
-    visibility: visible;
     pointer-events: all;
+    visibility: visible;
+
     transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 }
 
 .header-search__form {
-  display: flex;
-  border: 8px solid #D6D6D6;
   background: #D6D6D6;
+  border: 8px solid #D6D6D6;
   border-radius: 3px;
-  position: relative;
   margin-top: 15px;
 
+  display: flex;
+  position: relative;
+
   &::after {
-    display: block;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #D6D6D6;
     content: '';
     width: 30px;
     height: 30px;
-    border: 15px solid transparent;
-    border-bottom: 15px solid #D6D6D6;
+
+    display: block;
 
     position: absolute;
     top: -37px;
@@ -115,11 +120,8 @@
 }
 
 .header-search__input {
+  border-radius: 3px 0 0 3px;
   border-right: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
   padding: 8.5px 10px;
 
   flex: 1 1 auto;
@@ -127,16 +129,14 @@
 
 input.header-search__button {
   background-color: $color-grey-text !important;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
   border-color: $color-secondary !important;
+  border-radius: 0 3px 3px 0;
   color: #fff;
+  font-size: 16px;
   margin: 0;
   padding: 5px 10px !important;
-  min-width: 0;
   width: 80px;
+  min-width: 0;
 
   flex: 0 0 80px;
 
