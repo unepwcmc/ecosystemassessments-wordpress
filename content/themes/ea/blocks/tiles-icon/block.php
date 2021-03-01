@@ -19,8 +19,7 @@
                 <div class="tile-icon__body">
                   <?php if (block_sub_value('icon')) : ?>
                     <div class="tile-icon__icon">
-                      <?php $icon_variable = block_sub_value('icon') ?>
-                      <?php get_template_part('template-parts/icons/icon', $icon_variable) ?>
+                      <?php get_template_part('template-parts/icons/icon', block_sub_value('icon')) ?>
                     </div>
                   <?php endif; ?>
 

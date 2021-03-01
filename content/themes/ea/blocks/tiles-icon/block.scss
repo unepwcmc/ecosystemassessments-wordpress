@@ -15,10 +15,10 @@
 }
 
 .tiles-icon__items {
+  @include structural_ul;
   display: block;
   
   @include break-min($md) {
-    @include structural_ul;
     display: flex;
     margin-right: -$grid-gap;
   }
