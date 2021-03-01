@@ -202,13 +202,8 @@
 }
 
 @mixin font_large_text {
-  font-size: 16px;
-  line-height: 20px;
-  
-  @include break-min($xxs) {
-    font-size: 20px;
-    line-height: 28px;
-  }
+  font-size: 20px;
+  line-height: 32px;
 }
 
 @mixin font_base_text {
@@ -323,6 +318,7 @@
   font-family: $font-body;
   font-size: 16px;
   font-weight: $fw-regular;
+  letter-spacing: 1px;
   line-height: 1;
   margin: 12px 0;
   outline: 0;
