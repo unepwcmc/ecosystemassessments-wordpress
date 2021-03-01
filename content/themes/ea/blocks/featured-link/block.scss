@@ -1,0 +1,88 @@
+@import "../../src/scss/utilities/variables";
+@import "../../src/scss/utilities/mixins";
+
+.featured-link__background-image {
+  @include absolute_fill;
+  @include object_fit_cover;
+  z-index: 1;
+}
+
+.featured-link__overlay {
+  @include absolute_fill;
+  background: $hero-gradient;
+  z-index: 2;
+}
+
+.featured-link__body {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+
+  .layout__body & {
+    @include break-min($lg) {
+      min-height: 800px;
+    }
+  }
+}
+
+.featured-link__content {
+  padding: $spacer-medium $item-padding;
+  width: 100%;
+  color: #fff;
+
+  position: relative;
+  z-index: 3;
+
+  @include break-min($xs) {
+    padding: $spacer-large $item-padding;
+  }
+
+  @include break-min($lg) {
+    padding: $spacer-xlarge ($item-padding * 2) $spacer-large;
+  }
+
+  & *:last-child {
+    margin-bottom: 0;
+  }
+
+  .featured-link--dark & {
+    color: $color-secondary;
+  }
+}
+
+h2.featured-link__title {
+  @include h1;
+  color: currentColor;
+  margin-bottom: $item-padding * 2;
+
+  @include break-min($md) {
+    max-width: calc((9 / 12) * 100%);
+  }
+}
+
+.featured-link__text {
+  font-size: 18px;
+  font-weight: $fw-regular;
+  margin-bottom: $item-padding * 2;
+}
+
+a.featured-link__link {
+  @include button_primary;
+  margin: 0;
+
+  &.featured-link__link--external {
+    display: inline-flex;
+    justify-content: center;
+
+    svg {
+      fill: $color-white;
+      margin-left: 10px;
+      width: 14px;
+    }
+  }
+}
