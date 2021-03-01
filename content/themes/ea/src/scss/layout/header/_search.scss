@@ -17,7 +17,7 @@
 
   .no-hero &,
   .header--scrolled & {
-    color: $color-primary;
+    color: $color-tools-icons;
   }
 
   svg {
@@ -128,20 +128,20 @@
 }
 
 input.header-search__button {
-  background-color: $color-grey-text !important;
-  border-color: $color-secondary !important;
+  background-color: $color-primary;
+  border-color: $color-secondary;
   border-radius: 0 3px 3px 0;
   color: #fff;
   font-size: 16px;
   margin: 0;
-  padding: 5px 10px !important;
+  padding: 5px 10px;
   width: 80px;
   min-width: 0;
 
   flex: 0 0 80px;
 
   &:hover {
-    background-color: darken($color-grey-text, 10%) !important;
-    color: #fff !important;
+    background-color: darken($color-primary, 10%);
+    color: #fff;
   }
 }

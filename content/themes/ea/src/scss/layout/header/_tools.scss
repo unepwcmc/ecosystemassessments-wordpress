@@ -34,7 +34,7 @@ a.header-tools__button {
 
   .no-hero &,
   .header--scrolled & {
-    color: $color-secondary;
+    color: $color-tools-icons;
 
     &:hover {
       color: $color-white;
@@ -63,7 +63,7 @@ a.header-tools__button {
   appearance: none;
   background: transparent;
   border: 0;
-  color: $color-tools-icons;
+  color: $color-white;
   cursor: pointer;
   margin: 0;
   outline: none;
@@ -72,4 +72,8 @@ a.header-tools__button {
   height: 32px;
 
   display: block;
+
+  .header--scrolled & {
+    color: $color-tools-icons;
+  }
 }

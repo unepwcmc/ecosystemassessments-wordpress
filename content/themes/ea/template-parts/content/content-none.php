@@ -13,7 +13,7 @@
 
 <section class="entry no-results not-found">
 	<header class="entry__header">
-		<h2 class="entry__title"><?php _e( 'Nothing Found', 'ea' ); ?></h2>
+		<h2 class="entry__title"><?php _e( 'Nothing Found', 'wcmc' ); ?></h2>
 	</header><!-- .entry__header -->
 
 	<div class="entry__content">
@@ -23,7 +23,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'ea' ),
+					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wcmc' ),
 					array(
 						'a' => array(
 							'href' => array(),
@@ -36,14 +36,14 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'ea' ); ?></p>
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wcmc' ); ?></p>
 			<?php
 			get_search_form();
 
 		else :
 			?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'ea' ); ?></p>
+			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wcmc' ); ?></p>
 			<?php
 			get_search_form();
 
