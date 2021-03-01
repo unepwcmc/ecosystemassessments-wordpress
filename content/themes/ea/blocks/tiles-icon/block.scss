@@ -1,0 +1,84 @@
+@import "../../src/scss/utilities/variables";
+@import "../../src/scss/utilities/mixins";
+
+.tiles-icon {
+  @include spacer;
+}
+
+.tiles-icon__inner {
+  @include inner;
+}
+
+.tiles-icon__items {
+  @include structural_ul;
+  display: block;
+
+  @include break-min($md) {
+    display: flex;
+    margin-right: -$grid-gap;
+  }
+}
+
+.tiles-icon__item {
+  margin-bottom: $grid-gap;
+
+  @include break-min($md) {
+    margin-right: $grid-gap;
+    margin-bottom: 0;
+
+    flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
+  }
+}
+
+.tile-icon {
+  border: 0.5px solid $color-dark-grey;
+  border-radius: 5px;
+}
+
+.tile-icon__body {
+  margin: 20px;
+
+  @include break-min($md) {
+    margin: 32px $spacer-medium 50px $spacer-medium;
+  }
+}
+
+.tile-icon__icon {
+  margin-bottom: 48px;
+  width: 80px;
+  height: 80px;
+
+  @include break-min($md) {
+    margin-bottom: $spacer-large;
+  }
+}
+
+h3.tile-icon__title {
+  font-weight: $fw-regular;
+}
+
+p.tile-icon__description {
+  @include font_large_text;
+
+  font-weight: $fw-regular;
+  margin-bottom: 15px;
+
+  @include break-min($md) {
+    margin-bottom: $spacer-small;
+  }
+}
+
+.tile-icon__links {
+  display: flex;
+  align-items: center;
+}
+
+a.tile-icon__link {
+  @include button_secondary;
+  @include font_large_text;
+  margin-right: 5px;
+
+  @include break-min($md) {
+    margin-right: 15px;
+  }
+}

@@ -9,7 +9,7 @@
 get_header(); ?>
 
 <?php
-	set_query_var('hero-title', 'Oops! That page can&rsquo;t be found.');
+	set_query_var('hero-title', __( "Oops! That page can't be found.", "wcmc" ));
 	get_template_part('template-parts/components/heroes/hero', 'page');
 ?>
 
@@ -20,14 +20,14 @@ get_header(); ?>
 				<div class="layout-primary__body">
 					<div class="entry">
 						<header class="entry__header">
-							<h3 class="entry__title"><?php _e( 'It looks like nothing was found at this location. Maybe try a search?' ); ?></h3>
+							<h3 class="entry__title"><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'wcmc' ); ?></h3>
 						</header>
 						<div class="entry__body">
 							<div class="entry__content">
 								<form class="layout-search__form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-									<label class="utility__screen-reader-only" for="s">Search for:</label>
+									<label class="utility__screen-reader-only" for="s"><?php _e( 'Search for:', 'wcmc' ); ?></label>
 
-									<input type="text" value="" name="s" id="s" class="layout-search__input" placeholder="Search here" />
+									<input type="text" value="" name="s" id="s" class="layout-search__input" placeholder="<?php _e( 'Search here', 'wcmc'); ?>" />
 
 									<input class="layout-search__button" type="submit"></input>
 								</form>
