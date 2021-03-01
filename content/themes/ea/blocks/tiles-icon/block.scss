@@ -2,12 +2,7 @@
 @import "../../src/scss/utilities/mixins";
 
 .tiles-icon {
-  margin-top: 60px;
-  margin-bottom: 60px;
-
-  @include break-min($md) {
-    @include spacer;
-  }
+  @include spacer;
 }
 
 .tiles-icon__inner {
@@ -28,8 +23,10 @@
   margin-bottom: $grid-gap;
   
   @include break-min($md) {
-    flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
     margin-right: $grid-gap;
+    margin-bottom: 0;
+
+    flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
   }
 }
 
