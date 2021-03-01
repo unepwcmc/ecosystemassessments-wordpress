@@ -202,10 +202,11 @@
 }
 
 @mixin font_large_text {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   
   @include break-min($xxs) {
+    font-size: 20px;
     line-height: 28px;
   }
 }
@@ -361,10 +362,6 @@
   color: $color-primary;
   background-color: transparent;
   border-color: $color-primary;
-
-  @include break-min($xxs) {
-    @include font_large_text();
-  }
 
   &:hover {
     color: #fff;

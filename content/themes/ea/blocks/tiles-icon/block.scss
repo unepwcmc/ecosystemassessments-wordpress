@@ -75,6 +75,7 @@ p.tile-icon__description {
 
 a.tile-icon__link {
   @include button_secondary;
+  @include font_large_text;
   margin-right: 5px;
   
   @include break-min($md) {
