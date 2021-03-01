@@ -45,11 +45,8 @@
 
 .tile-icon__icon {
   margin-bottom: 48px;
-  
-  svg {
-    width: 80px;
-    height: 80px;
-  }
+  width: 80px;
+  height: 80px;
   
   @include break-min($md) {
     margin-bottom: $spacer-large;
