@@ -60,11 +60,7 @@
 }
 
 h3.tile-icon__title {
-  font-weight: $fw-bold;
-  
-  @include break-min($md) {
-    font-weight: $fw-regular;
-  }
+  font-weight: $fw-regular;
 }
 
 p.tile-icon__description {
