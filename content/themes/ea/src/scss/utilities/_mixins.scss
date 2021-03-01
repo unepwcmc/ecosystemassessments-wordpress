@@ -349,11 +349,6 @@
   color: #fff;
   background-color: $color-primary;
   border-color: $color-primary;
-  padding: 12px 30px;
-
-  @include break-min($xxs) {
-    padding: 16px 38px;
-  }
 
   &:hover {
     background-color: darken($color-primary, 10%);

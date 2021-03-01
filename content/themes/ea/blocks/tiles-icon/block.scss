@@ -5,12 +5,12 @@
   margin-top: 60px;
   margin-bottom: 60px;
 
-  @include break-min($xxs) {
+  @include break-min($md) {
     @include spacer;
   }
 }
 
-.tiles-icon__body {
+.tiles-icon__inner {
   @include inner;
 }
 
@@ -27,7 +27,7 @@
 .tiles-icon__item {
   margin-bottom: $grid-gap;
   
-  @include break-min($xxs) {
+  @include break-min($md) {
     flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
     margin-right: $grid-gap;
   }
@@ -41,7 +41,7 @@
 .tile-icon__body {
   margin: 20px;
   
-  @include break-min($xxs) {
+  @include break-min($md) {
     margin: 32px $spacer-medium 50px $spacer-medium;
   }
 }
@@ -54,7 +54,7 @@
     height: 80px;
   }
   
-  @include break-min($xxs) {
+  @include break-min($md) {
     margin-bottom: $spacer-large;
   }
 }
@@ -73,7 +73,7 @@ p.tile-icon__description {
   font-weight: $fw-regular;
   margin-bottom: 15px;
   
-  @include break-min($xxs) {
+  @include break-min($md) {
     margin-bottom: $spacer-small;
   }
 }
@@ -84,11 +84,10 @@ p.tile-icon__description {
 }
 
 a.tile-icon__link {
-  @include button_primary;
+  @include button_secondary;
   margin-right: 5px;
   
-  @include break-min($xxs) {
-    @include button_secondary;
+  @include break-min($md) {
     margin-right: 15px;
   }
 }
