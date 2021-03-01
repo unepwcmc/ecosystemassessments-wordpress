@@ -203,7 +203,11 @@
 
 @mixin font_large_text {
   font-size: 20px;
-  line-height: 32px;
+  line-height: 20px;
+  
+  @include break-min($xxs) {
+    line-height: 28px;
+  }
 }
 
 @mixin font_base_text {
@@ -318,7 +322,6 @@
   font-family: $font-body;
   font-size: 16px;
   font-weight: $fw-regular;
-  letter-spacing: 1px;
   line-height: 1;
   margin: 12px 0;
   outline: 0;
@@ -346,6 +349,11 @@
   color: #fff;
   background-color: $color-primary;
   border-color: $color-primary;
+  padding: 12px 30px;
+
+  @include break-min($xxs) {
+    padding: 16px 38px;
+  }
 
   &:hover {
     background-color: darken($color-primary, 10%);
@@ -358,6 +366,10 @@
   color: $color-primary;
   background-color: transparent;
   border-color: $color-primary;
+
+  @include break-min($xxs) {
+    @include font_large_text();
+  }
 
   &:hover {
     color: #fff;
