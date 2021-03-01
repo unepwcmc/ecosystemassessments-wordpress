@@ -53,14 +53,8 @@
   }
 }
 
-h3.tile-icon__title {
-  font-weight: $fw-regular;
-}
-
 p.tile-icon__description {
   @include font_large_text;
-
-  font-weight: $fw-regular;
   margin-bottom: 15px;
 
   @include break-min($md) {
