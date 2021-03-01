@@ -9,7 +9,7 @@
 
 .featured-link__overlay {
   @include absolute_fill;
-  background: $hero-gradient;
+  background: rgba($color-secondary, 0.25);
   z-index: 2;
 }
 
