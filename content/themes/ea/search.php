@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <?php
-	set_query_var('hero-title', 'Search results');
+	set_query_var('hero-title', __( 'Search results', 'wcmc' ));
 	get_template_part('template-parts/components/heroes/hero', 'page');
 ?>
 
@@ -18,9 +18,21 @@ get_header(); ?>
 			<section class="layout-primary layout-primary--restrained">
 				<header class="layout-primary__header">
 					<?php if ( have_posts() ) : ?>
-						<h2 class="layout-primary__title"><?php printf( __( 'Showing ' . $wp_query->post_count . ' of ' . $wp_query->found_posts . ' results for "%s"' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+						<h2 class="layout-primary__title">
+							<?php printf(
+								__( 'Showing  %d of %d results for "%s"', 'wcmc' ),
+								$wp_query->post_count,
+								$wp_query->found_posts,
+								'<span>' . get_search_query() . '</span>'
+							); ?>
+						</h2>
 						<?php else : ?>
-							<h2 class="layout-primary__title"><?php _e( 'No results found for ' . '<span>' . get_search_query() . '</span>' ); ?></h2>
+							<h2 class="layout-primary__title">
+								<?php printf(
+									__( 'No results found for %s', 'wcmc' ),
+									'<span>' . get_search_query() . '</span>'
+								); ?>
+							</h2>
 						<?php endif; ?>
 					</header>
 
@@ -45,11 +57,12 @@ get_header(); ?>
 						?>
 						<div class="layout-primary__body">
 							<div class="layout-search">
-								<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.' ); ?></p>
+								<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wcmc' ); ?></p>
+								
 								<form class="layout-search__form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-									<label class="utility__screen-reader-only" for="s">Search for:</label>
+									<label class="utility__screen-reader-only" for="s"><?php _e( 'Search for:', 'wcmc' ); ?></label>
 
-									<input type="text" value="" name="s" id="s" class="layout-search__input" placeholder="Search here" />
+									<input type="text" value="" name="s" id="s" class="layout-search__input" placeholder="<?php _e( 'Search here', 'wcmc' ); ?>" />
 
 									<input class="layout-search__button" type="submit"></input>
 								</form>

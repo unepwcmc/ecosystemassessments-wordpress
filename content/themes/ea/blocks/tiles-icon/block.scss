@@ -12,7 +12,7 @@
 .tiles-icon__items {
   @include structural_ul;
   display: block;
-  
+
   @include break-min($md) {
     display: flex;
     margin-right: -$grid-gap;
@@ -21,7 +21,7 @@
 
 .tiles-icon__item {
   margin-bottom: $grid-gap;
-  
+
   @include break-min($md) {
     margin-right: $grid-gap;
     margin-bottom: 0;
@@ -37,7 +37,7 @@
 
 .tile-icon__body {
   margin: 20px;
-  
+
   @include break-min($md) {
     margin: 32px $spacer-medium 50px $spacer-medium;
   }
@@ -47,7 +47,7 @@
   margin-bottom: 48px;
   width: 80px;
   height: 80px;
-  
+
   @include break-min($md) {
     margin-bottom: $spacer-large;
   }
@@ -62,7 +62,7 @@ p.tile-icon__description {
 
   font-weight: $fw-regular;
   margin-bottom: 15px;
-  
+
   @include break-min($md) {
     margin-bottom: $spacer-small;
   }
@@ -77,7 +77,7 @@ a.tile-icon__link {
   @include button_secondary;
   @include font_large_text;
   margin-right: 5px;
-  
+
   @include break-min($md) {
     margin-right: 15px;
   }

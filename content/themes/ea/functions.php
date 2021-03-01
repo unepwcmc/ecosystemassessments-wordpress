@@ -148,10 +148,10 @@ function custom_load_js(){
 SIDEBARS
 ------------------------------------------------------------------------------------------------- */
 
-function custom_register_sidebar() {
+function wcmc_register_sidebar() {
 
 	register_sidebar(array(
-		'name' => __('Sidebar', 'custom'),
+		'name' => __('Sidebar', 'wcmc'),
 		'id' => 'sidebar',
 		'before_widget' => '<li class="sidebar-widgets__item"><div class="sidebar-widget sidebar-widget-%1$s sidebar-widget-%2$s">',
 		'after_widget' => "</div></li>",
@@ -160,7 +160,7 @@ function custom_register_sidebar() {
 	));
 
 	register_sidebar(array(
-		'name' => __('Header', 'custom'),
+		'name' => __('Header', 'wcmc'),
 		'id' => 'header',
 		'before_widget' => '<div class="header-widgets__item"><aside class="header-widget header-widget-%1$s header-widget-%2$s">',
 		'after_widget' => "</aside></div>",
@@ -169,7 +169,7 @@ function custom_register_sidebar() {
 	));
 
 	register_sidebar(array(
-		'name' => __('After Content', 'custom'),
+		'name' => __('After Content', 'wcmc'),
 		'id' => 'after-content',
 		'before_widget' => '<div class="widgets__item"><aside class="widget widget-%1$s widget-%2$s">',
 		'after_widget' => "</aside></div>",
@@ -178,7 +178,7 @@ function custom_register_sidebar() {
 	));
 
 	register_sidebar(array(
-		'name' => __('Footer', 'custom'),
+		'name' => __('Footer', 'wcmc'),
 		'id' => 'footer',
 		'before_widget' => '<div class="footer-widgets__item footer-widgets__item-%1$s footer-widgets__item-%2$s"><aside class="footer-widget footer-widget-%1$s footer-widget-%2$s">',
 		'after_widget' => "</aside></div>",
@@ -187,7 +187,7 @@ function custom_register_sidebar() {
 	));
 }
 
-add_action('widgets_init', 'custom_register_sidebar');
+add_action('widgets_init', 'wcmc_register_sidebar');
 
 
 
@@ -300,45 +300,6 @@ function footer_logo( $items, $args ) {
 }
 
 /*-------------------------------------------------------------------------------
-Remove Archive Labels
--------------------------------------------------------------------------------*/
-
-add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
-/**
- * Remove archive labels.
- *
- * @param  string $title Current archive title to be displayed.
- * @return string        Modified archive title to be displayed.
- */
-function my_theme_archive_title( $title ) {
-    if ( is_category() ) {
-        $title = single_cat_title( '', false );
-    } elseif ( is_tag() ) {
-        $title = single_tag_title( '', false );
-    } elseif ( is_author() ) {
-        $title = '<span class="vcard">' . get_the_author() . '</span>';
-    } elseif ( is_post_type_archive() ) {
-        $title = post_type_archive_title( '', false );
-    } elseif ( is_tax() ) {
-        $title = single_term_title( '', false );
-    }
-
-    return $title;
-}
-
-/*-------------------------------------------------------------------------------
-	Disable gutenberg for FAQ post types
--------------------------------------------------------------------------------*/
-
-add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
-function prefix_disable_gutenberg($current_status, $post_type)
-{
-    // Use your post type key instead of 'product'
-    if ($post_type === 'faq') return false;
-    return $current_status;
-}
-
-/*-------------------------------------------------------------------------------
 	Add wrapper around header menu UL
 -------------------------------------------------------------------------------*/
 
@@ -394,32 +355,6 @@ function pagination_bar() {
 		echo '</div>';
   }
 }
-
-/*-------------------------------------------------------------------------------------------------
-CREATE ACF META IN REST
-------------------------------------------------------------------------------------------------- */
-
-// function create_ACF_meta_in_REST() {
-//   $postypes_to_exclude = ['acf-field-group','acf-field'];
-//   $extra_postypes_to_include = ["page"];
-//   $post_types = array_diff(get_post_types(["_builtin" => false], 'names'),$postypes_to_exclude);
-//
-//   array_push($post_types, $extra_postypes_to_include);
-//
-//   foreach ($post_types as $post_type) {
-//     register_rest_field( $post_type, 'ACF', [
-//       'get_callback'    => 'expose_ACF_fields',
-//       'schema'          => null,
-//     ] );
-//   }
-// }
-//
-// function expose_ACF_fields( $object ) {
-//   $ID = $object['id'];
-//   return get_fields($ID);
-// }
-//
-// add_action( 'rest_api_init', 'create_ACF_meta_in_REST' );
 
 /*-------------------------------------------------------------------------------------------------
 MULTIPLE TAXONOMIES IN ONE URL - https://wordpress.stackexchange.com/a/181003

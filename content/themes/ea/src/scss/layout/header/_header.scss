@@ -49,19 +49,20 @@
 }
 
 .header__item--logo {
-  width: 135px;
+  width: 60px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 0 0 135px;
+  flex: 0 0 60px;
 
-  transition: flex-basis .3s ease, width .3s ease;
+  transition: color .3s ease, flex-basis .3s ease, width .3s ease;
 
   .header--scrolled & {
-    width: 80px;
+    color: $color-primary;
+    width: 45px;
 
-    flex-basis: 80px;
+    flex-basis: 45px;
   }
 }
 
