@@ -147,6 +147,7 @@
 @mixin heading {
   color: $color-headings;
   font-family: $font-heading;
+  font-weight: $fw-light;
   margin-bottom: $item-padding;
 }
 
@@ -203,7 +204,7 @@
 @mixin font_large_text {
   font-size: 16px;
   line-height: 20px;
-  
+
   @include break-min($xxs) {
     font-size: 20px;
     line-height: 28px;
