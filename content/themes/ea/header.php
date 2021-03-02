@@ -23,7 +23,6 @@
         $body_class .= ' no-hero';
       }
     }
-
   ?>
 </head>
 
