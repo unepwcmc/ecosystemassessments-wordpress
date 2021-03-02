@@ -1,18 +1,6 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.featured-link__background-image {
-  @include absolute_fill;
-  @include object_fit_cover;
-  z-index: 1;
-}
-
-.featured-link__overlay {
-  @include absolute_fill;
-  background: rgba($color-secondary, 0.25);
-  z-index: 2;
-}
-
 .featured-link__body {
   width: 100%;
 
@@ -31,9 +19,9 @@
 }
 
 .featured-link__content {
+  color: $color-white;
   padding: $spacer-medium $item-padding;
   width: 100%;
-  color: #fff;
 
   position: relative;
   z-index: 3;
@@ -85,4 +73,17 @@ a.featured-link__link {
       width: 14px;
     }
   }
+}
+
+.featured-link__background-image {
+  @include absolute_fill;
+  @include object_fit_cover;
+  z-index: 1;
+}
+
+.featured-link__overlay {
+  @include absolute_fill;
+  background: rgba($color-secondary, 0.25);
+
+  z-index: 2;
 }
