@@ -42,12 +42,12 @@
   @include break-min($sm) {
     margin-right: auto;
     padding: $spacer-medium;
-    width: calc((5 / 12) * 100%);
-
+    
     bottom: $spacer-large;
   }
-
-  @include break-min($md) {
+  
+  @include break-min($lg) {
+    width: calc((5 / 12) * 100%);
     padding: 60px $spacer-medium 45px $spacer-medium;
   }
 
@@ -74,13 +74,12 @@
 h3.cta-block__title,
 .editor-block-list__layout h3.cta-block__title {
   @include h2;
-  color: currentColor;
   margin-bottom: $spacer-small;
 }
 
 p.cta-block__text,
 .editor-block-list__layout .cta-block__text {
-  font-size: 18px;
+  @include font_large_text;
   margin-bottom: $spacer-small;
 }
 

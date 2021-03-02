@@ -362,6 +362,12 @@
   color: $color-primary;
   background-color: transparent;
   border-color: $color-primary;
+  font-size: 16px;
+
+  @include break-min($xxs) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 
   &:hover {
     color: #fff;
