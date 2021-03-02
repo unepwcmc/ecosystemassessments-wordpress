@@ -1,6 +1,6 @@
 <?php
   /*
-    Home Hero Block
+    Featured Link Block
     Created by UNEP-WCMC
     With Genesis Custom Blocks for Gutenberg - https://getblocklab.com/
   */
@@ -21,17 +21,17 @@
   $overlay_opacity = block_field( 'overlay-opacity', false );
 ?>
 
-<div class="hero-home<?php if ($dark_text) echo ' hero-home--dark'; ?>">
-  <div class="hero-home__body" <?php if ($background_colour) echo 'style="background-color: ' . $background_colour . ';"'; ?>>
-    <div class="hero-home__content">
+<div class="featured-link<?php if ($dark_text) echo ' featured-link--dark'; ?>">
+  <div class="featured-link__body" <?php if ($background_colour) echo 'style="background-color: ' . $background_colour . ';"'; ?>>
+    <div class="featured-link__content">
       <?php if ($title !== '') : ?>
-        <h2 class="hero-home__title"><?php echo $title; ?></h2>
+        <h2 class="featured-link__title"><?php echo $title; ?></h2>
       <?php endif; ?>
 
       <?php if ($link_url !== '') : ?>
         <a 
           href="<?php echo $link_url; ?>" 
-          class="hero-home__link<?php if ($link_url_external) echo ' hero-home__link--external'; ?>"
+          class="featured-link__link<?php if ($link_url_external) echo ' featured-link__link--external'; ?>"
           <?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>
         >
           <?php echo $link_text; ?>
@@ -40,8 +40,8 @@
       <?php endif; ?>
     </div>
     <?php if ($image_url): ?>
-      <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="hero-home__background-image">
+      <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="featured-link__background-image">
     <?php endif; ?>
-    <div class="hero-home__overlay" style="opacity: <?php echo $overlay_opacity; ?>"></div>
+    <div class="featured-link__overlay" style="opacity: <?php echo $overlay_opacity; ?>"></div>
   </div>
 </div>

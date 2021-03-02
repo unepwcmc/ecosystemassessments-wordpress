@@ -1,7 +1,7 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
 
-.hero-home__body {
+.featured-link__body {
   width: 100%;
 
   display: flex;
@@ -12,19 +12,13 @@
   position: relative;
 
   .layout__body & {
-    min-height: 500px;
-
-    @include break-min($sm) {
-      min-height: 650px;
-    }
-
     @include break-min($lg) {
       min-height: 800px;
     }
   }
 }
 
-.hero-home__content {
+.featured-link__content {
   color: $color-white;
   padding: $spacer-medium $item-padding;
   width: 100%;
@@ -44,32 +38,32 @@
     margin-bottom: 0;
   }
 
-  .hero-home--dark & {
+  .featured-link--dark & {
     color: $color-secondary;
   }
 }
 
-h2.hero-home__title {
+h2.featured-link__title {
   @include h1;
   color: currentColor;
-  font-weight: $fw-light;
   margin-bottom: $item-padding * 2;
 
   @include break-min($md) {
-    width: calc((9 / 12) * 100%);
+    max-width: calc((9 / 12) * 100%);
   }
 }
 
-.hero-home__text {
+.featured-link__text {
+  font-size: 18px;
   font-weight: $fw-regular;
   margin-bottom: $item-padding * 2;
 }
 
-a.hero-home__link {
+a.featured-link__link {
   @include button_primary;
   margin: 0;
 
-  &.hero-home__link--external {
+  &.featured-link__link--external {
     display: inline-flex;
     justify-content: center;
 
@@ -81,14 +75,15 @@ a.hero-home__link {
   }
 }
 
-.hero-home__background-image {
+.featured-link__background-image {
   @include absolute_fill;
   @include object_fit_cover;
   z-index: 1;
 }
 
-.hero-home__overlay {
+.featured-link__overlay {
   @include absolute_fill;
-  background: $hero-gradient;
+  background: rgba($color-secondary, 0.25);
+
   z-index: 2;
 }
