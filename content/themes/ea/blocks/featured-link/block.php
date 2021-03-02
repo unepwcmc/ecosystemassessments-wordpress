@@ -29,7 +29,12 @@
       <?php endif; ?>
 
       <?php if ($link_url !== '') : ?>
-        <a href="<?php echo $link_url; ?>" class="featured-link__link<?php if ($link_url_external) echo ' featured-link__link--external'; ?>"<?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>><?php echo $link_text; ?>
+        <a 
+          href="<?php echo $link_url; ?>" 
+          class="featured-link__link<?php if ($link_url_external) echo ' featured-link__link--external'; ?>"
+          <?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>
+        >
+          <?php echo $link_text; ?>
           <?php if ($link_url_external) get_template_part( 'template-parts/icons/icon', 'external' ); ?>
         </a>
       <?php endif; ?>
