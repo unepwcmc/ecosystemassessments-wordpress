@@ -1,7 +1,12 @@
 <template>
   <div :class="['listing', `listing--${postType}`]" v-if="!isLoading">
     <div class="listing__header">
-      <p class="listing__count" v-if="!isFetching">Showing {{ posts.length }} of {{ maxPosts }} entries</p>
+      <p
+        v-if="!isFetching"
+        class="listing__count"
+      >
+        Showing {{ posts.length }} of {{ maxPosts }} entries
+      </p>
 
       <listing-drawer
         :filters="filters"
@@ -11,7 +16,10 @@
     </div>
 
     <div class="listing__body">
-      <div class="listing__content" v-if="posts.length">
+      <div
+        v-if="posts.length"
+        class="listing__content"
+      >
         <listing-cards
           :modal="this.modal"
           :posts="posts"
@@ -23,7 +31,12 @@
       </div>
 
       <div class="listing__content listing__content--empty" v-else>
-        <p class="listing___empty-message" v-if="!isFetching">No results found.</p>
+        <p
+          v-if="!isFetching"
+          class="listing___empty-message"
+        >
+          No results found.
+        </p>
       </div>
 
       <div

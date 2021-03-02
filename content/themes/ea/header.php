@@ -2,7 +2,7 @@
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" dir="ltr" class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="<?php global $sitepress; echo $sitepress->get_current_language() ?>" dir="ltr" class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -29,6 +29,11 @@
 
 <body <?php body_class($body_class); ?>>
   <div id="v-app">
+  <i18n
+    fallback-locale="en"
+    locale="<?php echo $sitepress->get_current_language() ?>"
+    :messages="$root.translations"
+  ></i18n>
     <!-- Drawers -->
     <?php get_template_part( 'template-parts/drawers/drawers' ); ?>
 

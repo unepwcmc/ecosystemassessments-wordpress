@@ -21,7 +21,7 @@
         class="header-tools__nav-toggle"
         controls="navigation"
         drawer="menu"
-        label="Menu Toggle"
+        label="<?php _e( 'Menu Toggle', 'wcmc' ); ?>"
       >
         <?php get_template_part( 'template-parts/icons/icon', 'menu' ); ?>
       </drawer-trigger>

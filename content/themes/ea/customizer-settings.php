@@ -258,59 +258,6 @@ function blog_posts_customizer_settings($wp_customize) {
 add_action('customize_register', 'blog_posts_customizer_settings');
 
 /*-------------------------------------------------------------------------------
-	Newsletter
--------------------------------------------------------------------------------*/
-
-function newsletter_customizer_settings($wp_customize) {
-  // Add Newsletter Section
-  $wp_customize->add_section( 'newsletter', array (
-  'title' => 'Newsletter',
-  'description' => 'Settings to configure the newsletter widget in the footer',
-  'priority' => 110
-  ) );
-
-    // Enable
-    $wp_customize->add_setting('newsletter_enabled');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'newsletter_enabled',
-    array(
-    'label'     => 'Enable',
-    'section'   => 'newsletter',
-    'settings'  => 'newsletter_enabled',
-    'type'      => 'checkbox'
-    ) ) );
-
-    // Text
-    $wp_customize->add_setting('newsletter_text');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'newsletter_text',
-    array(
-    'label' => 'Text',
-    'type' => 'textarea',
-    'section' => 'newsletter',
-    'settings' => 'newsletter_text'
-    ) ) );
-
-    // Link URL
-    $wp_customize->add_setting('newsletter_link_url');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'newsletter_link_url',
-    array(
-      'label' => 'Link URL',
-      'section' => 'newsletter',
-      'settings' => 'newsletter_link_url'
-    ) ) );
-
-    // Link Text
-    $wp_customize->add_setting('newsletter_link_text');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'newsletter_link_text',
-    array(
-    'label' => 'Link Text',
-    'section' => 'newsletter',
-    'settings' => 'newsletter_link_text'
-    ) ) );
-
-}
-add_action('customize_register', 'newsletter_customizer_settings');
-
-/*-------------------------------------------------------------------------------
 	Social Media Links
 -------------------------------------------------------------------------------*/
 

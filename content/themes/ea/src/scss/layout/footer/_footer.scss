@@ -17,7 +17,7 @@
   padding-top: $item-padding;
   padding-bottom: $item-padding;
 
-  @include break-min($sm) {
+  @include break-min($md) {
     display: flex;
   }
 }
@@ -31,17 +31,33 @@
   align-self: flex-start;
   flex: 0 0 170px;
 
-  @include break-min($sm) {
+  @include break-min($md) {
     margin-bottom: 0;
   }
 }
 
 p.footer__text {
   color: currentColor;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
+  margin-top: $item-padding * 2;
   margin-bottom: 0;
-  max-width: 700px;
 
-  flex: 1 1 auto;
+  @include break-min($md) {
+    margin-top: 0;
+    max-width: 700px;
+
+    flex: 1 1 auto;
+  }
+
+  &:last-child {
+    font-size: 16px;
+
+    @include break-min($md) {
+      margin-left: $grid-gap;
+      text-align: right;
+
+      flex: 1 1 450px;
+    }
+  }
 }
