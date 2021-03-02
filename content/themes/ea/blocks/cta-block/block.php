@@ -26,6 +26,7 @@
         <p class="cta-block__text"><?php echo $text; ?></p>
         <a href="<?php echo $link_url; ?>" class="cta-block__link<?php if ($link_url_external) echo ' cta-block__link--external'; ?>"<?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>><?php echo $link_text; ?></a>
       </div>
+      <div class="cta-block__bottom-border"></div>
     </div>
   </div>
 </div>

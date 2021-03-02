@@ -10,44 +10,70 @@
 
 .cta-block__inner,
 .editor-block-list__layout .cta-block__inner {
+  @include inner;
   position: relative;
   z-index: 2;
 }
 
 .cta-block__body,
 .editor-block-list__layout .cta-block__body {
+  min-height: 450px;
   width: 100%;
 
   @include break-min($sm) {
-    min-height: 400px;
+    min-height: 600px;
   }
 }
 
 .cta-block__content,
 .editor-block-list__layout .cta-block__content {
-  background-color: #E3EAEE;
-  border-top: 8px solid lighten($color-primary, 25%);
+  background-color: $color-white;
   color: $color-secondary;
-  margin-left: auto;
-  padding: $item-padding;
+  margin-left: $grid-gap;
+  margin-right: $grid-gap;
+  padding: 20px;
+  
+  width: calc((3 / 4) * 100%);
+
+  position: absolute;
+  left: 0;
+  bottom: $spacer-small;
 
   @include break-min($sm) {
-    margin-bottom: $spacer-medium;
+    margin-right: auto;
     padding: $spacer-medium;
-    width: 50%;
+    width: calc((5 / 12) * 100%);
+
+    bottom: $spacer-large;
   }
 
   @include break-min($md) {
-    padding: $spacer-xlarge $spacer-medium $spacer-xlarge $spacer-large;
+    padding: 60px $spacer-medium 45px $spacer-medium;
   }
 
   & *:last-child {
     margin-bottom: 0;
   }
+
+  &:after {
+    --border-height: 20px;
+
+    background-color: $color-primary;
+    content: '';
+
+    height: var(--border-height);
+    width: 50%;
+
+    position: absolute;
+    left: 0;
+    bottom: calc(var(--border-height) * -1);
+    z-index: 1;
+  }
 }
 
 h3.cta-block__title,
 .editor-block-list__layout h3.cta-block__title {
+  @include h2;
   color: currentColor;
   margin-bottom: $spacer-small;
 }
@@ -60,7 +86,7 @@ p.cta-block__text,
 
 a.cta-block__link,
 .editor-block-list__layout a.cta-block__link {
-  @include button_primary;
+  @include button_secondary;
   margin: 0 !important;
 
   &.cta-block__link--external {
@@ -76,13 +102,9 @@ a.cta-block__link,
 
 .cta-block__background-image,
 .editor-block-list__layout .cta-block__background-image {
-  display: block;
+  @include absolute_fill;
+  font-family: 'object-fit: cover;';
+  object-fit: cover;
 
-  @include break-min($sm) {
-    @include absolute_fill;
-    font-family: 'object-fit: cover;';
-    object-fit: cover;
-
-    z-index: 1;
-  }
+  z-index: 1;
 }
