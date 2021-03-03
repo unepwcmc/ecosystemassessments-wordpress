@@ -147,12 +147,13 @@
 @mixin heading {
   color: $color-headings;
   font-family: $font-heading;
-  font-weight: $fw-light;
+  font-weight: $fw-regular;
   margin-bottom: $item-padding;
 }
 
 @mixin font_heading-1 {
   font-size: 40px;
+  font-weight: $fw-light;
   line-height: 48px;
 
   @include break-min($sm) {
@@ -163,6 +164,7 @@
 
 @mixin font_heading-2 {
   font-size: 34px;
+  font-weight: $fw-light;
   line-height: 40px;
 
   @include break-min($sm) {
@@ -173,7 +175,6 @@
 
 @mixin font_heading-cta {
   font-size: 34px;
-  font-weight: $fw-regular;
   line-height: 40px;
 
   @include break-min($sm) {
@@ -197,8 +198,8 @@
   line-height: 22px;
 
   @include break-min($sm) {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 25px;
+    line-height: 28px;
   }
 }
 
