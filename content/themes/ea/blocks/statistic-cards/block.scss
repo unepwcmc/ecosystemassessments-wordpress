@@ -57,7 +57,7 @@ h3.statistic-card__value {
   margin-bottom: 0;
 }
 
-p.statistic-card__statistic {
+p.statistic-card__statistic { 
   @include font_heading-5;
 
   @include break-min($sm) {

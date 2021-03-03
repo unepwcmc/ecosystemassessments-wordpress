@@ -4,6 +4,11 @@
     Created by UNEP-WCMC
     With Genesis Custom Blocks for Gutenberg - https://wordpress.org/plugins/genesis-custom-blocks/
   */
+  $link_url = block_field('link-url', false);
+  $link_args = array(
+    'text' => block_field( 'link-text', false ), 
+    'url' => $link_url
+  );
 ?>
 
 <div class="statistic-cards">
@@ -28,4 +33,9 @@
     </ul>
   <?php endif;
   reset_block_rows('tile'); ?>
+  
+  <?php if ($link_url !== '') : ?>
+    <?php set_query_var('link_args', $link_args); ?>
+    <?php get_template_part('template-parts/components/links/link', 'view-more'); ?>
+  <?php endif; ?>
 </div>

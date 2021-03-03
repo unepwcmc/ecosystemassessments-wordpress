@@ -1,0 +1,36 @@
+.link-view-more {
+  @include spacer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.link-view-more__link {
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+}
+
+.link-view-more__icon {
+  background-color: $color-mid-grey;
+  border-radius: 50%;
+  color: $color-primary;
+  margin-left: 9px;
+  padding: 12px;
+
+  position: relative;
+
+  svg {
+    color: currentColor;
+    
+    height: 16px;
+    width: 8px;
+
+    position: absolute;
+    top: 4px;
+    left: 9px;
+  }
+}
+
