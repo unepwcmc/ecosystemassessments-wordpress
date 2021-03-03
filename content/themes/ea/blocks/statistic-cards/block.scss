@@ -3,6 +3,7 @@
 
 .statistic-cards {
   @include spacer;
+  @include spacer_section;
 }
 
 .statistic-cards__cards {

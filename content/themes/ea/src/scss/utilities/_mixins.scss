@@ -48,6 +48,18 @@
   }
 }
 
+@mixin spacer_section {
+  margin-bottom: $spacer-medium;
+
+  @include break-min($sm) {
+    margin-bottom: 55px;
+  }
+
+  @include break-min($md) {
+    margin-bottom: 150px;
+  }
+}
+
 @mixin spacer {
   @include spacer_top;
   @include spacer_bottom;

@@ -25,12 +25,11 @@ a.link-view-more__link {
   svg {
     color: currentColor;
     
-    height: 16px;
-    width: 8px;
+    height: 33%;
+    width: 33%;
 
     position: absolute;
-    top: 4px;
-    left: 9px;
+    transform: translate(-50%, -50%);
   }
 }
 
