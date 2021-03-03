@@ -1,6 +1,7 @@
 
 .form-contact__form {
   @include spacer;
+  @include restrain_width;
 
   @include break-min($xs) {
     margin-right: auto;
