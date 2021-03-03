@@ -6,10 +6,10 @@
 }
 
 .statistic-cards__cards {
+  @include structural_ul;
   display: block;
 
   @include break-min($sm) {  
-    @include structural_ul;
     display: flex;
     margin-right: -$grid-gap;
   }
@@ -55,4 +55,12 @@ h2.statistic-card__value {
   @include h1;
   color: $color-primary;
   margin-bottom: 0;
+}
+
+h4.statistic-card__statistic {
+  @include font_heading-5;
+
+  @include break-min($sm) {
+    @include font_heading-4;
+  }
 }
