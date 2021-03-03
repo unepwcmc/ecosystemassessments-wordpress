@@ -55,17 +55,15 @@
   }
 
   &:after {
-    --border-height: 20px;
-
     background-color: $color-primary;
     content: '';
 
-    height: var(--border-height);
+    height: 20px;
     width: 50%;
 
     position: absolute;
+    top: 100%;
     left: 0;
-    bottom: calc(var(--border-height) * -1);
     z-index: 1;
   }
 
