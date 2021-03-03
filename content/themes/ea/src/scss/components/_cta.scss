@@ -73,7 +73,7 @@
 
 h3.cta-block__title,
 .editor-block-list__layout h3.cta-block__title {
-  @include h2;
+  @include font_heading-cta;
   margin-bottom: $spacer-small;
 }
 

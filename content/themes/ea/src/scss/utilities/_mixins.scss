@@ -171,6 +171,17 @@
   }
 }
 
+@mixin font_heading-cta {
+  font-size: 45px;
+  font-weight: $fw-regular;
+  line-height: 52px;
+
+  @include break-min($sm) {
+    font-size: 45px;
+    line-height: 52px;
+  }
+}
+
 @mixin font_heading-3 {
   font-size: 28px;
   line-height: 32px;
