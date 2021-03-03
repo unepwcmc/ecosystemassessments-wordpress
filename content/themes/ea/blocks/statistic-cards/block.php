@@ -13,14 +13,14 @@
         <li class="statistic-cards__card">
           <div class="statistic-card">
             <?php if (block_sub_value('value')) : ?>
-              <h2 class="statistic-card__value">
+              <h3 class="statistic-card__value">
                 <?php echo block_sub_value('value'); ?>
-              </h2>
+              </h3>
             <?php endif; ?>
             <?php if (block_sub_value('statistic')) : ?>
-              <h4 class="statistic-card__statistic">
+              <p class="statistic-card__statistic">
                 <?php echo block_sub_value('statistic'); ?>
-              </h4>
+              </p>
             <?php endif; ?>
           </div>
         </li>

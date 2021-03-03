@@ -64,14 +64,19 @@ p.tile-icon__description {
   }
 }
 
+h4.tile-icon__title {
+  @include h2;
+}
+
 .tile-icon__links {
   display: flex;
   align-items: center;
+  margin-right: -6px;
 }
 
 a.tile-icon__link {
   @include button_secondary;
-  margin-right: 5px;
+  margin-right: 6px;
 
   @include break-min($md) {
     margin-right: 15px;

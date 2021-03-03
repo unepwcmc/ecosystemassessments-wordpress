@@ -51,13 +51,13 @@
   }
 }
 
-h2.statistic-card__value {
+h3.statistic-card__value {
   @include h1;
   color: $color-primary;
   margin-bottom: 0;
 }
 
-h4.statistic-card__statistic {
+p.statistic-card__statistic {
   @include font_heading-5;
 
   @include break-min($sm) {

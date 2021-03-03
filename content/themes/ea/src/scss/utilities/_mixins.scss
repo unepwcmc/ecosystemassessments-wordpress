@@ -218,8 +218,8 @@
   line-height: 20px;
 
   @include break-min($xxs) {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 25px;
+    line-height: 25px;
   }
 }
 
@@ -338,7 +338,7 @@
   line-height: 1;
   margin: 12px 0;
   outline: 0;
-  padding: 16px 36px;
+  padding: 16px 21px;
   text-align: center;
   text-decoration: none;
 
@@ -350,6 +350,10 @@
   @include break-min($xxs) {
     font-size: 20px;
     line-height: 28px;
+  }
+
+  @include break-min($lg) {
+    padding: 16px 36px;
   }
 }
 
