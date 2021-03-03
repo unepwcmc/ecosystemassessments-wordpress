@@ -13,7 +13,7 @@ a.link-view-more__link {
   align-items: center;
 }
 
-.link-view-more__icon {
+.link-view-more__icon-wrapper {
   background-color: $color-mid-grey;
   border-radius: 50%;
   color: $color-primary;
@@ -21,15 +21,15 @@ a.link-view-more__link {
   padding: 12px;
 
   position: relative;
+}
 
-  svg {
-    color: currentColor;
+.link-view-more__icon {
+  color: currentColor;
     
-    height: 33%;
-    width: 33%;
+  height: 33%;
+  width: 33%;
 
-    position: absolute;
-    transform: translate(-50%, -50%);
-  }
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
