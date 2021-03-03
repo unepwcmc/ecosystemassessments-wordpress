@@ -321,7 +321,7 @@
   border-radius: 4px;
   cursor: pointer;
   font-family: $font-body;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: $fw-regular;
   line-height: 1;
   margin: 12px 0;
@@ -334,6 +334,11 @@
 
   transition: background-color 0.3s ease-in-out, color 0.3s ease,
     border-color 0.35s ease;
+
+  @include break-min($xxs) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 @mixin button_small {
@@ -362,12 +367,6 @@
   color: $color-primary;
   background-color: transparent;
   border-color: $color-primary;
-  font-size: 16px;
-
-  @include break-min($xxs) {
-    font-size: 20px;
-    line-height: 28px;
-  }
 
   &:hover {
     color: #fff;
