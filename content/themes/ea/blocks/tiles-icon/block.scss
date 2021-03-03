@@ -49,6 +49,8 @@
   height: 80px;
 
   @include break-min($md) {
+    width: 115px;
+    height: 140px;
     margin-bottom: $spacer-large;
   }
 }
