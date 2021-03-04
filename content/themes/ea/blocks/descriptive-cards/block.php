@@ -4,8 +4,6 @@
     Created by UNEP-WCMC
     With Genesis Custom Blocks for Gutenberg - https://getblocklab.com/
   */
-
-$items = array();
 ?>
 
 <div class="descriptive-cards">
