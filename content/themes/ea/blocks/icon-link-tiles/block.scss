@@ -1,0 +1,53 @@
+@import "../../src/scss/utilities/variables";
+@import "../../src/scss/utilities/mixins";
+
+.icon-link-tiles {
+  @include spacer;
+}
+
+.icon-link-tiles__header {
+  @include section_header;
+}
+
+.icon-link-tiles__title {
+  @include section_title;
+}
+
+.icon-link-tiles__items {
+  @include structural_ul;
+  display: flex;
+  margin-right: -$grid-gap;
+}
+
+.icon-link-tiles__item {
+  flex: 0 0 calc(((1 / 4) * 100%) - #{$grid-gap});
+  margin-right: $grid-gap;
+}
+
+.icon-link-tile {
+  border-radius: 5px;
+  overflow: hidden;
+  padding-bottom: calc((7 / 6) * 100%);
+  position: relative;
+}
+
+h4.icon-link-tile__title {
+  color: $color-white;
+  font-weight: $fw-regular;
+
+  position: absolute;
+  top: $item-padding;
+  left: $item-padding;
+  z-index: 3;
+}
+
+.icon-link-tile__image-overlay {
+  @include absolute_fill;
+  @include object_fit_cover;
+  z-index: 2;
+}
+
+a.icon-link-tile__fauxlink {
+  @include absolute_fill;
+  z-index: 4;
+}
