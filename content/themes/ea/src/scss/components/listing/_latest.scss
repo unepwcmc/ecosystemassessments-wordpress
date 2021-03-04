@@ -1,5 +1,10 @@
 .listing-latest {
-  @include spacer_bottom;
+  @include spacer-top;
+  margin-bottom: $spacer-small;
+
+  @include break-min($sm) {
+    margin-bottom: 100px;
+  }
 }
 
 .listing-latest__inner {
@@ -8,24 +13,13 @@
 
 .listing-latest__header {
   margin-bottom: $spacer-small;
-  text-align: center;
 
   @include break-min($sm) {
-    margin-bottom: $spacer-medium * 1.5;
+    margin-bottom: $spacer-medium;
   }
 }
 
 h3.listing-latest__title {
   @include font_heading-2;
   margin-bottom: $item-padding-smaller;
-  text-transform: capitalize;
-}
-
-a.listing-latest__link {
-  color: $color-grey-text;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }

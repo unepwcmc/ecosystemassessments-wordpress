@@ -463,7 +463,7 @@
   margin-bottom: $spacer-medium;
   width: 100%;
 
-  @include break-min($xxs) {
+  @include break-min($sm) {
     width: calc(((1 / 2) * 100%) - #{$grid-gap});
 
     display: flex;
@@ -471,24 +471,10 @@
     flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
   }
 
-  @include break-min($xs) {
-    margin-right: $listing-gap;
-    width: calc(((1 / 2) * 100%) - #{$listing-gap});
-
-    display: flex;
-    flex: 0 0 calc(((1 / 2) * 100%) - #{$listing-gap});
-  }
-
-  @include break-min($sm) {
-    width: calc(((1 / 3) * 100%) - #{$listing-gap});
-
-    flex: 0 0 calc(((1 / 3) * 100%) - #{$listing-gap});
-  }
-
   @include break-min($md) {
-    width: calc(((1 / 4) * 100%) - #{$listing-gap});
+    width: calc(((1 / 3) * 100%) - #{$grid-gap});
 
-    flex: 0 0 calc(((1 / 4) * 100%) - #{$listing-gap});
+    flex: 0 0 calc(((1 / 3) * 100%) - #{$grid-gap});
   }
 }
 

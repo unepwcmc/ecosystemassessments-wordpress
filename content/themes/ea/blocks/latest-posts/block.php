@@ -6,7 +6,7 @@
   */
 
   // Variables
-  $post_label = '';
+  $post_label = block_value( 'post-label' );
   $post_type = block_value( 'post-type' );
   $block_field_config = block_field_config( 'post-type' );
 
@@ -15,12 +15,18 @@
       $post_label = $option['label'];
     }
   }
+
+  $link_url = '/' . strtolower($post_label);
+  $link_args = array(
+    'text' => block_field( 'link-text', false ), 
+    'url' => $link_url
+  );
 ?>
+
 <div class="listing-latest">
   <div class="listing-latest__inner">
     <div class="listing-latest__header">
       <h3 class="listing-latest__title">Latest <?php echo $post_label; ?></h3>
-      <a href="<?php echo '/' . strtolower($post_label); ?>" class="listing-latest__link">View all</a>
     </div>
     <div class="listing-latest__body">
 
@@ -31,4 +37,9 @@
 
     </div>
   </div>
+
+  <?php if ($link_url !== '') : ?>
+    <?php set_query_var('link_args', $link_args); ?>
+    <?php get_template_part('template-parts/components/links/link', 'view-more'); ?>
+  <?php endif; ?>
 </div>
