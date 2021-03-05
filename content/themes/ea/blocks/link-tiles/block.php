@@ -8,6 +8,11 @@
 // Variables
 
 $section_title = block_field('section-title', false);
+
+$link_args = array(
+  'text' => block_field( 'section-link-text', false ), 
+  'url' => block_field( 'section-link-url', false )
+);
 ?>
 
 <div class="link-tiles">
@@ -48,4 +53,9 @@ $section_title = block_field('section-title', false);
     <?php endif;
     reset_block_rows('tile'); ?>
   </div>
+
+  <?php if ($link_url !== '') : ?>
+    <?php set_query_var('link_args', $link_args); ?>
+    <?php get_template_part('template-parts/components/links/link', 'view-more'); ?>
+  <?php endif; ?>
 </div>
