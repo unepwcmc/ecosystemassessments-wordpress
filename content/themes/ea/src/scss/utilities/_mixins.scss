@@ -21,7 +21,7 @@
 }
 
 //-------------------------------------------------
-// Spacer
+// Spacer (Margin)
 //-------------------------------------------------
 
 @mixin spacer_top {
@@ -45,6 +45,18 @@
 
   @include break-min($md) {
     margin-bottom: $spacer-large;
+  }
+}
+
+@mixin spacer_section {
+  margin-bottom: $spacer-medium;
+
+  @include break-min($sm) {
+    margin-bottom: 55px;
+  }
+
+  @include break-min($md) {
+    margin-bottom: 150px;
   }
 }
 
@@ -83,19 +95,37 @@
   }
 }
 
-@mixin spacer_body {
+//-------------------------------------------------
+// Spacer (Padding)
+//-------------------------------------------------
+
+@mixin spacer_padding_top {
   padding-top: $spacer-small;
-  padding-bottom: $spacer-small;
 
   @include break-min($sm) {
     padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   @include break-min($md) {
     padding-top: $spacer-large;
+  }
+}
+
+@mixin spacer_padding_bottom {
+  padding-bottom: $spacer-small;
+
+  @include break-min($sm) {
+    padding-bottom: 50px;
+  }
+
+  @include break-min($md) {
     padding-bottom: $spacer-large;
   }
+}
+
+@mixin spacer_body {
+  @include spacer_padding_top;
+  @include spacer_padding_bottom;
 }
 
 @mixin spacer_body_small {
@@ -147,12 +177,13 @@
 @mixin heading {
   color: $color-headings;
   font-family: $font-heading;
-  font-weight: $fw-light;
+  font-weight: $fw-regular;
   margin-bottom: $item-padding;
 }
 
 @mixin font_heading-1 {
   font-size: 40px;
+  font-weight: $fw-light;
   line-height: 48px;
 
   @include break-min($sm) {
@@ -163,7 +194,6 @@
 
 @mixin font_heading-2 {
   font-size: 34px;
-  font-weight: $fw-regular;
   line-height: 40px;
 
   @include break-min($sm) {
@@ -183,12 +213,12 @@
 }
 
 @mixin font_heading-4 {
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
 
   @include break-min($sm) {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 25px;
+    line-height: 28px;
   }
 }
 
@@ -207,8 +237,8 @@
   line-height: 20px;
 
   @include break-min($xxs) {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 25px;
+    line-height: 25px;
   }
 }
 
@@ -327,7 +357,7 @@
   line-height: 1;
   margin: 12px 0;
   outline: 0;
-  padding: 16px 36px;
+  padding: 16px 21px;
   text-align: center;
   text-decoration: none;
 
@@ -339,6 +369,10 @@
   @include break-min($xxs) {
     font-size: 20px;
     line-height: 28px;
+  }
+
+  @include break-min($lg) {
+    padding: 16px 36px;
   }
 }
 
@@ -412,6 +446,13 @@
     border-color: darken($color-accent, 20%);
     background-color: darken($color-accent, 20%);
   }
+}
+
+@mixin button_with_icon {
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
 }
 
 //-------------------------------------------------
@@ -555,6 +596,10 @@
 @mixin section_title {
   @include h2;
   margin: 0;
+}
+
+@mixin section_footer {
+  @include spacer_padding_top;
 }
 
 //-------------------------------------------------
