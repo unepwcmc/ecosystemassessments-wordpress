@@ -163,16 +163,6 @@
 
 @mixin font_heading-2 {
   font-size: 34px;
-  line-height: 40px;
-
-  @include break-min($sm) {
-    font-size: 40px;
-    line-height: 48px;
-  }
-}
-
-@mixin font_heading-cta {
-  font-size: 34px;
   font-weight: $fw-regular;
   line-height: 40px;
 
@@ -187,8 +177,8 @@
   line-height: 32px;
 
   @include break-min($sm) {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 40px;
+    line-height: 45px;
   }
 }
 
