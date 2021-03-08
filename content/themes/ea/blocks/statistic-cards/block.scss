@@ -3,27 +3,43 @@
 
 .statistic-cards {
   @include spacer;
-  @include spacer_section;
 }
 
-.statistic-cards__cards {
+.statistic-cards__items {
   @include structural_ul;
   display: block;
 
-  @include break-min($sm) {  
+  @include break-min($md) {
     display: flex;
     margin-right: -$grid-gap;
   }
 }
 
-.statistic-cards__card {
-  position: relative;
-  z-index: 1;
+.statistic-cards__item {
+  margin-bottom: $grid-gap;
 
-  @include break-min($sm) {
+  display: flex;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include break-min($md) {
     margin-right: $grid-gap;
+    margin-bottom: 0;
+
     flex: 0 0 calc(((1 / 3) * 100%) - #{$grid-gap});
   }
+}
+
+.statistic-card {
+  background-color: $color-light-grey;
+  border-radius: 3px;
+  padding: $item-padding * 2;
+  width: 100%;
+
+  position: relative;
+  z-index: 1;
 
   &:after {
     content: '';
@@ -39,29 +55,26 @@
   }
 }
 
-.statistic-card {
-  background-color: $color-light-grey;
-  border-radius: 3px;
-  margin-bottom: $grid-gap;
-  padding: 30px;
-  
-  min-height: 205px;
-
-  @include break-min($sm) {
-    margin-bottom: 0;
-  }
-}
-
-h3.statistic-card__value {
-  @include h1;
+h3.statistic-card__title {
+  @include font_heading-1;
   color: $color-primary;
-  margin-bottom: 0;
+  margin-bottom: $item-padding-smaller;
 }
 
-p.statistic-card__statistic { 
-  @include font_heading-5;
+p.statistic-card__text {
+  @include font_heading-4;
+  margin-bottom: $item-padding;
 
-  @include break-min($sm) {
-    @include font_heading-4;
+  @include break-min($md) {
+    margin-bottom: $item-padding * 2;
   }
+}
+
+.statistic-cards__footer {
+  @include spacer_top;
+  text-align: center;
+}
+
+a.statistic-cards__link {
+  @include button_with_icon;
 }

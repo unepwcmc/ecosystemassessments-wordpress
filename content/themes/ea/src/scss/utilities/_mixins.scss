@@ -21,7 +21,7 @@
 }
 
 //-------------------------------------------------
-// Spacer
+// Spacer (Margin)
 //-------------------------------------------------
 
 @mixin spacer_top {
@@ -95,19 +95,37 @@
   }
 }
 
-@mixin spacer_body {
+//-------------------------------------------------
+// Spacer (Padding)
+//-------------------------------------------------
+
+@mixin spacer_padding_top {
   padding-top: $spacer-small;
-  padding-bottom: $spacer-small;
 
   @include break-min($sm) {
     padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   @include break-min($md) {
     padding-top: $spacer-large;
+  }
+}
+
+@mixin spacer_padding_bottom {
+  padding-bottom: $spacer-small;
+
+  @include break-min($sm) {
+    padding-bottom: 50px;
+  }
+
+  @include break-min($md) {
     padding-bottom: $spacer-large;
   }
+}
+
+@mixin spacer_body {
+  @include spacer_padding_top;
+  @include spacer_padding_bottom;
 }
 
 @mixin spacer_body_small {
@@ -195,8 +213,8 @@
 }
 
 @mixin font_heading-4 {
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
 
   @include break-min($sm) {
     font-size: 25px;
@@ -430,6 +448,13 @@
   }
 }
 
+@mixin button_with_icon {
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+}
+
 //-------------------------------------------------
 // Listings
 //-------------------------------------------------
@@ -571,6 +596,10 @@
 @mixin section_title {
   @include h2;
   margin: 0;
+}
+
+@mixin section_footer {
+  @include spacer_padding_top;
 }
 
 //-------------------------------------------------
