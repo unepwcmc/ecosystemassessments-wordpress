@@ -1,10 +1,5 @@
 .listing-latest {
-  @include spacer-top;
-  margin-bottom: $spacer-small;
-
-  @include break-min($sm) {
-    margin-bottom: 100px;
-  }
+  @include spacer;
 }
 
 .listing-latest__inner {
@@ -22,4 +17,13 @@
 h3.listing-latest__title {
   @include font_heading-2;
   margin-bottom: $item-padding-smaller;
+}
+
+.listing-latest__footer {
+  @include spacer_top;
+  text-align: center;
+}
+
+a.listing-latest__link {
+  @include button_with_icon;
 }

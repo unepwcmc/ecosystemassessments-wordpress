@@ -39,7 +39,11 @@
   </div>
 
   <?php if ($link_url !== '') : ?>
-    <?php set_query_var('link_args', $link_args); ?>
-    <?php get_template_part('template-parts/components/links/link', 'view-more'); ?>
+    <div class="listing-latest__footer">
+      <a href="<?php echo $link_args['url']; ?>" class="listing-latest__link">
+        <?php echo $link_args['text']; ?>
+        <?php get_template_part('template-parts/icons/icon', 'view-more'); ?>
+      </a>
+    </div>
   <?php endif; ?>
 </div>
