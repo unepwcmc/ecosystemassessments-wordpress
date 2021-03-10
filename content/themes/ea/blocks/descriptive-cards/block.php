@@ -4,6 +4,14 @@
     Created by UNEP-WCMC
     With Genesis Custom Blocks for Gutenberg - https://getblocklab.com/
   */
+
+  /* Query */
+  $get_items_query = array(
+    'post_type' => 'process',
+    'posts_per_page' => 3
+  );
+
+  $get_items = new WP_Query($get_items_query);
 ?>
 
 <div class="descriptive-cards">
@@ -16,44 +24,20 @@
 
     <div class="descriptive-cards__body">
 
-      <?php if (block_rows('card')) : ?>
+      <?php if ( $get_items->have_posts() ) : ?>
         <ul class="descriptive-cards__items">
 
-          <?php while (block_rows('card')) : block_row('card'); ?>
+          <?php while ( $get_items->have_posts() ) : $get_items->the_post(); ?>
 
             <li class="descriptive-cards__item">
-              <div class="descriptive-card">
-                <div class="descriptive-card__header">
-                  <?php if (block_sub_value('image')) : ?>
-                    <?php $image_url = wp_get_attachment_image_src(block_sub_value('image'), 'full-size')[0]; ?>
-                    <div class="descriptive-card__image-wrap">
-                      <img 
-                        class="descriptive-card__image" 
-                        src="<?php echo $image_url; ?>" 
-                        alt="<?php echo block_sub_value('title'); ?>"
-                      >
-                    </div>
-                  <?php endif; ?>
-                </div>
-                <div class="descriptive-card__body">
-                  <?php if (block_sub_value('description')) : ?>
-                    <h3 class="descriptive-card__title">
-                      <?php echo block_sub_value('description'); ?>
-                    </h3>
-                  <?php endif; ?>
-                </div>
-
-                <?php if (block_sub_value('link-url')) : ?>
-                  <a class="descriptive-card__fauxlink" href="<?php echo block_sub_value('link-url'); ?>"></a>
-                <?php endif; ?>
-              </div>
+              <?php get_template_part( 'template-parts/components/cards/card', 'process' ); ?>
             </li>
 
           <?php endwhile; ?>
 
         </ul>
       <?php endif;
-      reset_block_rows('card'); ?>
+      wp_reset_postdata(); ?>
     </div>
   </div>
 </div>

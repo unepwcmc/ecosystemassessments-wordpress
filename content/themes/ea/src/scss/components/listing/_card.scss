@@ -2,6 +2,9 @@
   cursor: pointer;
   width: 100%;
 
+  display: flex;
+  flex-direction: column;
+
   position: relative;
 }
 
@@ -9,13 +12,9 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   overflow: hidden;
-  padding-bottom: calc((7 / 10) * 100%); 
+  padding-bottom: calc((7 / 10) * 100%);
 
   position: relative;
-
-  .listing--member & {
-    padding-bottom: calc((2 / 3) * 100%);
-  }
 }
 
 .card-listing__image {
@@ -38,30 +37,24 @@
   background-color: $color-light-grey;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  padding: 28px 30px;
-  
-  @include break-min-max($sm, $lg) {
-    height: 250px;
-  }
+  padding: $item-padding * 2;
+  width: 100%;
 
-  @include break-min($lg) {
-    height: 200px;
-  }
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 p.card-listing__date {
-  @include font_heading-6;
-
-  @include break-min($sm) {
-    @include font_heading-5;
-  }
+  @include font_heading-5;
+  margin-bottom: $item-padding-small;
 }
 
 h3.card-listing__title {
-  @include font_heading-5;
+  @include font_heading-4;
 
   @include break-min($sm) {
-    @include font_heading-4;
+    margin-bottom: $item-padding * 2;
   }
 }
 

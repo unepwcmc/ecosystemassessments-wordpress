@@ -2,13 +2,7 @@
 @import "../../src/scss/utilities/mixins";
 
 .descriptive-cards {
-  @include spacer-top;
-  @include ignore_restrained_width;
-  margin-bottom: $spacer-small;
-
-  @include break-min($sm) {
-    margin-bottom: 100px;
-  }
+  @include spacer;
 }
 
 .descriptive-cards__inner {
@@ -16,11 +10,7 @@
 }
 
 .descriptive-cards__header {
-  margin-bottom: $spacer-small;
-
-  @include break-min($sm) {
-    margin-bottom: $spacer-medium;
-  }
+  @include spacer_small;
 }
 
 h3.descriptive-cards__title {
@@ -39,59 +29,3 @@ h3.descriptive-cards__title {
 .descriptive-cards__item {
   @include listing_item;
 }
-
-.descriptive-card {
-  cursor: pointer;
-  width: 100%;
-
-  position: relative;
-}
-
-.descriptive-card__image-wrap {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  overflow: hidden;
-  padding-bottom: calc((7 / 10) * 100%); 
-
-  position: relative;
-}
-
-.descriptive-card__image {
-  @include absolute_fill;
-  @include object_fit_cover;
-  transition: transform .5s ease;
-  will-change: transform;
-
-  .descriptive-card:hover & {
-    transform: scale(1.015);
-  }
-}
-
-.descriptive-card__body {
-  background-color: $color-light-grey;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  padding: 28px 30px;
-  
-  @include break-min-max($sm, $lg) {
-    height: 250px;
-  }
-
-  @include break-min($lg) {
-    height: 200px;
-  }
-}
-
-h3.descriptive-card__title {
-  @include font_heading-5;
-
-  @include break-min($sm) {
-    @include font_heading-4;
-  }
-}
-
-a.descriptive-card__fauxlink {
-  @include absolute_fill;
-  z-index: 2;
-}
-
