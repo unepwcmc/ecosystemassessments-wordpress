@@ -5,6 +5,12 @@
   @include spacer;
 }
 
+.link-tiles__inner {
+  &:not(.layout-container__inner) & {
+    @include inner;
+  }
+}
+
 .link-tiles__header {
   @include section_header;
 }
@@ -29,6 +35,16 @@
     margin-bottom: 0;
     flex: 0 0 calc(((1 / 4) * 100%) - #{$grid-gap});
   }
+}
+
+
+.link-tiles__footer {
+  @include spacer_top;
+  text-align: center;
+}
+
+a.link-tiles__link {
+  @include button_with_icon;
 }
 
 .link-tile {
