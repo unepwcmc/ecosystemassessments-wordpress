@@ -3,7 +3,6 @@
 
 .descriptive-cards {
   @include spacer;
-  @include ignore_restrained_width;
 }
 
 .descriptive-cards__inner {
