@@ -2,13 +2,8 @@
 @import "../../src/scss/utilities/mixins";
 
 .descriptive-cards {
-  @include spacer-top;
+  @include spacer;
   @include ignore_restrained_width;
-  margin-bottom: $spacer-small;
-
-  @include break-min($sm) {
-    margin-bottom: 100px;
-  }
 }
 
 .descriptive-cards__inner {
@@ -16,11 +11,7 @@
 }
 
 .descriptive-cards__header {
-  margin-bottom: $spacer-small;
-
-  @include break-min($sm) {
-    margin-bottom: $spacer-medium;
-  }
+  @include spacer_small;
 }
 
 h3.descriptive-cards__title {
@@ -43,6 +34,9 @@ h3.descriptive-cards__title {
 .descriptive-card {
   cursor: pointer;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
 
   position: relative;
 }
@@ -71,22 +65,19 @@ h3.descriptive-cards__title {
   background-color: $color-light-grey;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  padding: 28px 30px;
-  
-  @include break-min-max($sm, $lg) {
-    height: 250px;
-  }
+  padding: $item-padding * 2;
+  width: 100%;
 
-  @include break-min($lg) {
-    height: 200px;
-  }
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 h3.descriptive-card__title {
-  @include font_heading-5;
+  @include font_heading-4;
 
   @include break-min($sm) {
-    @include font_heading-4;
+    margin-bottom: $item-padding * 2;
   }
 }
 
