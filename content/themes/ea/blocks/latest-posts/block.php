@@ -18,7 +18,7 @@
 
   $link_url = '/' . strtolower($post_label);
   $link_args = array(
-    'text' => block_field( 'link-text', false ), 
+    'text' => block_field( 'link-text', false ),
     'url' => $link_url
   );
 ?>
@@ -36,14 +36,14 @@
       />
 
     </div>
-  </div>
 
-  <?php if ($link_url !== '') : ?>
-    <div class="listing-latest__footer">
-      <a href="<?php echo $link_args['url']; ?>" class="listing-latest__link">
-        <?php echo $link_args['text']; ?>
-        <?php get_template_part('template-parts/icons/icon', 'view-more'); ?>
-      </a>
-    </div>
-  <?php endif; ?>
+    <?php if ($link_url !== '') : ?>
+      <div class="listing-latest__footer">
+        <a href="<?php echo $link_args['url']; ?>" class="listing-latest__link">
+          <?php echo $link_args['text']; ?>
+          <?php get_template_part('template-parts/icons/icon', 'view-more'); ?>
+        </a>
+      </div>
+    <?php endif; ?>
+  </div>
 </div>
