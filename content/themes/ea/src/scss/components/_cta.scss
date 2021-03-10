@@ -1,6 +1,4 @@
-.cta-block,
-.editor-block-list__layout .cta-block {
-  @include spacer_bottom;
+.cta-block {
   overflow: hidden;
   width: 100%;
 
@@ -30,7 +28,7 @@
   background-color: $color-white;
   color: $color-secondary;
   padding: 20px;
-  
+
   width: 90%;
 
   position: absolute;
@@ -40,10 +38,10 @@
   @include break-min($sm) {
     margin-right: auto;
     padding: $spacer-medium;
-    
+
     bottom: $spacer-large;
   }
-  
+
   @include break-min($lg) {
     padding: 60px $spacer-medium 45px $spacer-medium;
 
