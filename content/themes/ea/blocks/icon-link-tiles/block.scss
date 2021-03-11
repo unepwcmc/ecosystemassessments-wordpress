@@ -1,0 +1,72 @@
+@import "../../src/scss/utilities/variables";
+@import "../../src/scss/utilities/mixins";
+
+.icon-link-tiles {
+  @include spacer;
+}
+
+.icon-link-tiles__header {
+  @include section_header;
+}
+
+.icon-link-tiles__title {
+  @include section_title;
+}
+
+.icon-link-tiles__items {
+  @include structural_ul;
+  margin-right: -$grid-gap;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-link-tiles__item {
+  margin-right: $grid-gap;
+  margin-bottom: $grid-gap;
+
+  flex: 0 0 calc(((1 / 2) * 100%)- #{$grid-gap});
+
+  @include break-min($md) {
+    margin-bottom: 0;
+
+    flex: 0 0 calc(((1 / 4) * 100%) - #{$grid-gap});
+  }
+}
+
+.icon-link-tile {
+  background-color: $color-dark-grey;
+  border-radius: 5px;
+  color: $color-white;
+  padding-bottom: calc((7 / 6) * 100%);
+
+  display: flex;
+
+  position: relative;
+}
+
+.icon-link-tile__content {
+  @include absolute_fill;
+  padding: $item-padding;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h4.icon-link-tile__title {
+  color: currentColor;
+  font-weight: $fw-regular;
+}
+
+.icon-link-tile__icon {
+  max-width: 100px;
+  max-height: 70px;
+
+  display: flex;
+}
+
+a.icon-link-tile__fauxlink {
+  @include absolute_fill;
+  z-index: 2;
+}

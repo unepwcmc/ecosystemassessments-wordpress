@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294 350">
-  <g data-name="Group 106" transform="translate(-5062 -3245)">
-    <rect data-name="Rectangle 35" width="294" height="350" rx="5" transform="translate(5062 3245)" fill="#57575d" style="mix-blend-mode:multiply;isolation:isolate" />
-    <path data-name="Path 479" d="M5178.677 3564.951h-80.27a6.414 6.414 0 01-6.407-6.406v-62.569h86.677a6.413 6.413 0 016.406 6.406v56.163a6.414 6.414 0 01-6.406 6.406zm-84-66.3v59.889a3.731 3.731 0 003.726 3.726h80.27a3.73 3.73 0 003.725-3.726v-56.163a3.729 3.729 0 00-3.725-3.725z" fill="#fff" />
-    <path data-name="Path 480" d="M5136.618 3498.658H5092v-8.328a6.414 6.414 0 016.407-6.406h30.316a3.876 3.876 0 013.656 2.6zm-41.938-2.681h38.162l-2.994-8.573a1.193 1.193 0 00-1.126-.8h-30.315a3.73 3.73 0 00-3.726 3.725z" fill="#fff" />
+<svg version="1.1" id="svg16" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 93.1 81" xml:space="preserve">
+  <g id="g14" transform="translate(-5091.461 -3483.44)">
+    <path id="path10" fill="currentColor" d="M5178.1 3564.5h-80.3c-3.5 0-6.4-2.9-6.4-6.4v-62.6h86.7c3.5 0 6.4 2.9 6.4 6.4v56.2c0 3.5-2.8 6.4-6.4 6.4zm-84-66.3v59.9c0 2.1 1.7 3.7 3.7 3.7h80.3c2.1 0 3.7-1.7 3.7-3.7v-56.2c0-2.1-1.7-3.7-3.7-3.7h-84z"/>
+    <path id="path12" fill="currentColor" d="M5136.1 3498.2h-44.6v-8.3c0-3.5 2.9-6.4 6.4-6.4h30.3c1.6 0 3.1 1 3.7 2.6l4.2 12.1zm-42-2.7h38.2l-3-8.6c-.2-.5-.6-.8-1.1-.8h-30.3c-2.1 0-3.7 1.7-3.7 3.7l-.1 5.7z"/>
   </g>
 </svg>
