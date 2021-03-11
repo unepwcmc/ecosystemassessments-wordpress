@@ -16,6 +16,7 @@
 .icon-link-tiles__items {
   @include structural_ul;
   margin-right: -$grid-gap;
+
   display: flex;
   flex-wrap: wrap;
 }
@@ -23,8 +24,9 @@
 .icon-link-tiles__item {
   margin-right: $grid-gap;
   margin-bottom: $grid-gap;
+
   flex: 0 0 calc(((1 / 2) * 100%)- #{$grid-gap});
-  
+
   @include break-min($md) {
     margin-bottom: 0;
     flex: 0 0 calc(((1 / 4) * 100%) - #{$grid-gap});
@@ -32,29 +34,38 @@
 }
 
 .icon-link-tile {
+  background-color: $color-dark-grey;
+  color: $color-white;
   border-radius: 5px;
-  overflow: hidden;
   padding-bottom: calc((7 / 6) * 100%);
+
+  display: flex;
+
   position: relative;
 }
 
-h4.icon-link-tile__title {
-  color: $color-white;
-  font-weight: $fw-regular;
+.icon-link-tile__content {
+  @include absolute_fill;
+  padding: $item-padding;
 
-  position: absolute;
-  top: $item-padding;
-  left: $item-padding;
-  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.icon-link-tile__image-overlay {
-  @include absolute_fill;
-  @include object_fit_cover;
-  z-index: 2;
+h4.icon-link-tile__title {
+  color: currentColor;
+  font-weight: $fw-regular;
+}
+
+.icon-link-tile__icon {
+  max-width: 100px;
+  max-height: 70px;
+
+  display: flex;
 }
 
 a.icon-link-tile__fauxlink {
   @include absolute_fill;
-  z-index: 4;
+  z-index: 2;
 }
