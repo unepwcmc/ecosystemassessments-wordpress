@@ -28,11 +28,6 @@
 
 <body <?php body_class($body_class); ?>>
   <div id="v-app">
-  <i18n
-    fallback-locale="en"
-    locale="<?php echo $sitepress->get_current_language() ?>"
-    :messages="$root.translations"
-  ></i18n>
     <!-- Drawers -->
     <?php get_template_part( 'template-parts/drawers/drawers' ); ?>
 

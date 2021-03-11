@@ -29,15 +29,13 @@
           type="text"
           name="s"
           id="s"
-          value=""
           class="header-search__input"
-          placeholder="Search here"
+          :placeholder="$t('search.search_here')"
         >
 
         <input
           type="submit"
-          name=""
-          value="Search"
+          :value="$t('search.search')"
           class="header-search__button"
         >
       </form>

@@ -1,8 +1,12 @@
 <template>
-  <div :class="['header', { 'header--scrolled' : scrolled }]" ref="header">
+  <div
+    class="header"
+    :class="{ 'header--scrolled': scrolled }"
+    ref="header"
+  >
     <div class="header__inner">
       <div class="header__body">
-        <slot></slot>
+        <slot />
       </div>
     </div>
   </div>

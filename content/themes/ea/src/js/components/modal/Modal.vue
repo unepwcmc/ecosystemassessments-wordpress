@@ -1,9 +1,15 @@
 <template>
-  <div :class="['modal', { 'modal--active' : active }]">
+  <div
+    class="modal"
+    :class="{ 'modal--active': active }"
+  >
     <div class="modal__inner">
 
       <div class="modal__body">
-        <div class="modal__close" v-on:click="closeModal">
+        <div
+          v-on:click="closeModal"
+          class="modal__close"
+        >
           <span class="modal__close-span"></span>
           <span class="modal__close-span"></span>
         </div>
@@ -12,10 +18,12 @@
           <slot />
         </div>
       </div>
-
     </div>
 
-    <div class="modal__overlay" v-on:click="closeModal"></div>
+    <div
+      class="modal__overlay"
+      v-on:click="closeModal"
+    />
   </div>
 </template>
 

@@ -2,20 +2,20 @@
   <ul class="listing-filter__terms">
     <li
       v-for="term in terms"
-      class="listing-filter__term"
       :key="term.term_id"
+      class="listing-filter__term"
     >
       <input
-        class="listing-filter__checkbox"
         :id="term.term_id"
         type="checkbox"
         :value="term.term_id"
         v-model="checkedTerms"
+        class="listing-filter__checkbox"
       />
       <label
-        class="listing-filter__label"
         :for="term.term_id"
         v-html="term.name"
+        class="listing-filter__label"
       />
     </li>
   </ul>

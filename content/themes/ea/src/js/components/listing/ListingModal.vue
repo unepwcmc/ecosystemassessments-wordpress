@@ -42,16 +42,16 @@
               :href="`https://twitter.com/${ twitterUrl }`"
             >
               <IconTwitter class="listing-modal__social-icon" />
-              Twitter
+              {{ $t('social.twitter') }}
             </a>
           </li>
         </ul>
       </div>
       <div class="listing-modal__column listing-modal__column--large">
         <div
-          class="listing-modal__content richtext"
           v-if="content"
           v-html="content"
+          class="listing-modal__content richtext"
         />
       </div>
     </div>

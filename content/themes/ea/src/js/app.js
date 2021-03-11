@@ -1,15 +1,6 @@
 import Vue from 'vue'
-import VueI18n from 'vue-i18n'
 import objectFitImages from 'object-fit-images'
 import VueProgressiveImage from 'vue-progressive-image'
-
-Vue.use(VueI18n)
-
-Vue.use(VueProgressiveImage)
-
-Vue.config.productionTip = false
-
-window.axios = require('axios')
 
 import AddClassOnClick from './helpers/AddClassOnClick.vue'
 import Drawer from './components/drawers/Drawer.vue'
@@ -19,7 +10,16 @@ import LatestPosts from './components/widgets/LatestPosts.vue'
 import ListingGrid from './components/listing/ListingGrid.vue'
 import HeaderSearch from './components/header/HeaderSearch.vue'
 import MainHeader from './components/header/MainHeader.vue'
-import I18n from './components/utilities/I18n.vue'
+
+window.axios = require('axios')
+
+import translate from './helpers/translation-helper.js'
+
+Vue.use(VueProgressiveImage)
+
+Vue.config.productionTip = false
+
+Vue.prototype.$t = translate
 
 window.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add('loaded')
@@ -40,11 +40,8 @@ window.addEventListener("DOMContentLoaded", () => {
         HeaderSearch,
         LatestPosts,
         ListingGrid,
-        MainHeader,
-        I18n
+        MainHeader
       },
-
-      i18n: new VueI18n({ silentTranslationWarn: true }),
 
       data () {
         return {

@@ -1,9 +1,15 @@
 <template>
   <li class="listing-filter__term">
-    <input class="listing-filter__checkbox" type="checkbox" :value="value" :checked="checked" @change="onChange($event.target.checked)" />
+    <input
+      :checked="checked"
+      @change="onChange($event.target.checked)"
+      type="checkbox"
+      :value="value"
+      class="listing-filter__checkbox"
+    />
     <label
-      class="listing-filter__label"
       v-html="label"
+      class="listing-filter__label"
     />
   </li>
 </template>

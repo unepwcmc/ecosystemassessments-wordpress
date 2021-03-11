@@ -86,10 +86,10 @@ if (! function_exists('custom_setup')){
 		add_theme_support('automatic-feed-links');
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menu('primary', __('Primary Menu', 'custom'));
-		register_nav_menu('mobile', __('Mobile Menu', 'custom'));
-		register_nav_menu('footer', __('Footer Menu', 'custom'));
-		register_nav_menu('social', __('Social Menu', 'custom'));
+		register_nav_menu('primary', __('Primary Menu', 'wcmc'));
+		register_nav_menu('mobile', __('Mobile Menu', 'wcmc'));
+		register_nav_menu('footer', __('Footer Menu', 'wcmc'));
+		register_nav_menu('social', __('Social Menu', 'wcmc'));
 
 		// Add support for Featured Images
 		add_theme_support('post-thumbnails');
@@ -141,13 +141,7 @@ function custom_load_js(){
     wp_enqueue_script( 'polyfill_js', 'https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Symbol,Array.prototype.@@iterator,Element.prototype.classList,Object.values,Object.entries,IntersectionObserver', '', '', true );
     wp_enqueue_script( 'vendor_js', get_template_directory_uri() . '/dist/build/js/vendor.js', '', '', true );
     wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/dist/build/js/app.js', array('vendor_js'), '', true );
-    $translation_array = array(
-      'search' => array(
-        'search' => __( 'Search', 'wcmc-vue' ),
-        'search_for' => __( 'Search for:', 'wcmc-vue' ),
-        'search_here' => __( 'Search here', 'wcmc-vue' ),
-      )
-    );
+    $translation_array = include 'translations/wcmc-vue.php';
     wp_localize_script( 'theme_js', 'vue_translations', $translation_array );
 	}
 }

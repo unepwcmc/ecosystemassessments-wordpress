@@ -2,14 +2,31 @@
   <div class="card-listing__card" @click="clickHandler()">
     <div class="card-listing__header">
       <div class="card-listing__image-wrap">
-        <img class="card-listing__image" :src="imageUrl" :alt="title">
+        <img
+          class="card-listing__image"
+          :src="imageUrl"
+          :alt="title"
+        >
       </div>
     </div>
     <div class="card-listing__body">
-      <p class="card-listing__date" v-if="hasDate">{{ date }}</p>
-      <h3 class="card-listing__title">{{ title }}</h3>
+      <p
+        v-if="hasDate"
+        class="card-listing__date"
+      >
+        {{ date }}
+      </p>
+      <h3 class="card-listing__title">
+        {{ title }}
+      </h3>
     </div>
-    <a :href="link" class="card-listing__fauxlink" :title="title" :target="hrefTarget" v-if="!modal"></a>
+    <a
+      v-if="!modal"
+      :href="link"
+      class="card-listing__fauxlink"
+      :title="title"
+      :target="hrefTarget"
+    ></a>
   </div>
 </template>
 
