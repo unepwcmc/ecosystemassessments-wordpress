@@ -86,10 +86,10 @@ if (! function_exists('custom_setup')){
 		add_theme_support('automatic-feed-links');
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menu('primary', __('Primary Menu', 'custom'));
-		register_nav_menu('mobile', __('Mobile Menu', 'custom'));
-		register_nav_menu('footer', __('Footer Menu', 'custom'));
-		register_nav_menu('social', __('Social Menu', 'custom'));
+		register_nav_menu('primary', __('Primary Menu', 'wcmc'));
+		register_nav_menu('mobile', __('Mobile Menu', 'wcmc'));
+		register_nav_menu('footer', __('Footer Menu', 'wcmc'));
+		register_nav_menu('social', __('Social Menu', 'wcmc'));
 
 		// Add support for Featured Images
 		add_theme_support('post-thumbnails');
@@ -141,6 +141,8 @@ function custom_load_js(){
     wp_enqueue_script( 'polyfill_js', 'https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Symbol,Array.prototype.@@iterator,Element.prototype.classList,Object.values,Object.entries,IntersectionObserver', '', '', true );
     wp_enqueue_script( 'vendor_js', get_template_directory_uri() . '/dist/build/js/vendor.js', '', '', true );
     wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/dist/build/js/app.js', array('vendor_js'), '', true );
+    $translation_array = include 'translations/wcmc-vue.php';
+    wp_localize_script( 'theme_js', 'vue_translations', $translation_array );
 	}
 }
 
@@ -367,6 +369,35 @@ function custom_rewrite_rules() {
     add_rewrite_rule('^resources/all', 'index.php?post_type=resource', 'top');
 }
 add_action('init', 'custom_rewrite_rules');
+
+/*-------------------------------------------------------------------------------------------------
+IMPORT CUSTOMIZER SETTINGS
+------------------------------------------------------------------------------------------------- */
+function get_wpml_translations_json() {
+  // global $sitepress;
+
+
+  // return json_encode(
+  //   array(
+  //     'current_language' => $sitepress->get_current_language()
+  //   )
+  // );
+  return json_encode(
+    array_values(
+      array_map(
+        function ($item) {
+          return $item;
+          return array (
+            'string_language' => $item['string_language'],
+            'context' => $item['context'],
+            'value' => addslashes($item['value'])
+          );
+        },
+        icl_get_string_translations()
+      )
+    )
+  );
+}
 
 /*-------------------------------------------------------------------------------------------------
 IMPORT CUSTOMIZER SETTINGS

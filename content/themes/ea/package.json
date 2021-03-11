@@ -40,6 +40,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
+    "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "svg-sprite-loader": "^5.2.1",
     "uglify-js": "^3.12.6",
@@ -56,6 +57,7 @@
     "object-fit-videos": "^1.0.4",
     "qs": "^6.9.6",
     "throttle-debounce": "^2.3.0",
+    "vue-i18n": "^8.23.0",
     "vue-progressive-image": "^3.2.0"
   }
 }

@@ -20,7 +20,7 @@ get_header(); ?>
 					<?php if ( have_posts() ) : ?>
 						<h2 class="layout-primary__title">
 							<?php printf(
-								__( 'Showing  %d of %d results for "%s"', 'wcmc' ),
+								__( 'Showing %d of %d results for "%s"', 'wcmc' ),
 								$wp_query->post_count,
 								$wp_query->found_posts,
 								'<span>' . get_search_query() . '</span>'
@@ -58,7 +58,7 @@ get_header(); ?>
 						<div class="layout-primary__body">
 							<div class="layout-search">
 								<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wcmc' ); ?></p>
-								
+
 								<form class="layout-search__form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 									<label class="utility__screen-reader-only" for="s"><?php _e( 'Search for:', 'wcmc' ); ?></label>
 

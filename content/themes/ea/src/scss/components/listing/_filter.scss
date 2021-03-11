@@ -1,7 +1,7 @@
 .listing-filter__drawer-toggle {
   @include button_primary;
   margin-left: $grid-gap * 2;
-  width: 150px;
+  min-width: 150px;
 
   display: flex;
   align-items: center;
@@ -10,6 +10,7 @@
   svg {
     width: 20px;
     height: 20px;
+    margin-left: $item-padding;
   }
 }
 

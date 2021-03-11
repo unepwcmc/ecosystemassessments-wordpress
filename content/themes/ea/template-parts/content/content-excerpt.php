@@ -28,9 +28,9 @@
 			<?php
 				the_excerpt();
 			?>
-			<a class="entry__link" href="<?php the_permalink(); ?>" title="Read more">
+			<a class="entry__link" href="<?php the_permalink(); ?>" title="<?php _e( 'Read more', 'wcmc' ); ?>">
 				<?php get_template_part( '/template-parts/icons/icon', 'arrow-right' ); ?>
-				Read more
+				<?php _e( 'Read more', 'wcmc' ); ?>
 			</a>
 		</div><!-- .entry-content -->
 	</div>

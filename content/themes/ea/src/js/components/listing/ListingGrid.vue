@@ -1,17 +1,32 @@
 <template>
-  <div :class="['listing', `listing--${postType}`]" v-if="!isLoading">
+  <div
+    v-if="!isLoading"
+    class="listing"
+    :class="`listing--${postType}`"
+  >
     <div class="listing__header">
-      <p class="listing__count" v-if="!isFetching">Showing {{ posts.length }} of {{ maxPosts }} entries</p>
+      <p
+        v-if="!isFetching"
+        class="listing__count"
+      >
+        {{ $t('listing.count_text', {
+          posts_length: this.posts.length,
+          max_posts: this.maxPosts
+        }) }}
+      </p>
 
       <listing-drawer
+        v-if="filters.length"
         :filters="filters"
         @filterSelected="onFilterSelected()"
-        v-if="filters.length"
       />
     </div>
 
     <div class="listing__body">
-      <div class="listing__content" v-if="posts.length">
+      <div
+        v-if="posts.length"
+        class="listing__content"
+      >
         <listing-cards
           :modal="this.modal"
           :posts="posts"
@@ -22,15 +37,23 @@
         <observer v-on:intersect="intersected" />
       </div>
 
-      <div class="listing__content listing__content--empty" v-else>
-        <p class="listing___empty-message" v-if="!isFetching">No results found.</p>
+      <div
+        v-else
+        class="listing__content listing__content--empty"
+      >
+        <p
+          v-if="!isFetching"
+          class="listing___empty-message"
+        >
+          {{ $t('common.no_results_found') }}
+        </p>
       </div>
 
       <div
-        class="listing__loader"
         v-if="isFetching"
+        class="listing__loader"
       >
-        <loader />
+        <Loader />
       </div>
 
       <listing-modal
@@ -40,8 +63,11 @@
     </div>
   </div>
 
-  <div class="listing__loader listing__loader--padded" v-else>
-    <loader />
+  <div
+    v-else
+    class="listing__loader listing__loader--padded"
+  >
+    <Loader />
   </div>
 </template>
 
@@ -49,7 +75,7 @@
 import ListingCards from './ListingCards.vue'
 import ListingDrawer from './ListingDrawer.vue'
 import ListingModal from '../listing/ListingModal.vue'
-import Loader from '../utilities/Loader.vue'
+import Loader from '../../icons/IconLoader.vue'
 import Observer from '../utilities/Observer.vue'
 
 export default {

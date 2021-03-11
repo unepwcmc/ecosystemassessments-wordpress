@@ -1,28 +1,62 @@
 <template>
-  <div :class="['header-search', { 'header-search--bar-active' : active }]">
-    <button class="header-search__toggle" aria-label="Search Button" @click="handleClick">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+  <div
+    class="header-search"
+    :class="{ 'header-search--bar-active': active }"
+  >
+    <button
+      class="header-search__toggle"
+      aria-label="Search Button"
+      @click="handleClick"
+    >
+      <IconSearch />
     </button>
     <div class="header-search__bar">
-      <form class="header-search__form" role="search" method="get" id="searchform" :action="formAction">
-        <label for="s" class="utility__screen-reader-only">Search for:</label>
+      <form
+        class="header-search__form"
+        role="search"
+        method="get"
+        id="searchform"
+        :action="formAction"
+      >
+        <label
+          for="s"
+          class="utility__screen-reader-only"
+        >
+          {{ $t('search.search_for') }}
+        </label>
 
-        <input type="text" name="s" id="s" value="" class="header-search__input" placeholder="Search here">
+        <input
+          type="text"
+          name="s"
+          id="s"
+          class="header-search__input"
+          :placeholder="$t('search.search_here')"
+        >
 
-        <input type="submit" name="" value="Search" class="header-search__button">
+        <input
+          type="submit"
+          :value="$t('search.search')"
+          class="header-search__button"
+        >
       </form>
     </div>
   </div>
 </template>
 
 <script>
+import IconSearch from '../../icons/IconSearch.vue'
+
 export default {
   name: 'HeaderSearch',
+
+  components: {
+    IconSearch
+  },
 
   props: {
     formAction: {
       type: String,
-      default: ''
+      required: true
     }
   },
 
