@@ -29,14 +29,15 @@
 
   @include break-min($md) {
     margin-bottom: 0;
+
     flex: 0 0 calc(((1 / 4) * 100%) - #{$grid-gap});
   }
 }
 
 .icon-link-tile {
   background-color: $color-dark-grey;
-  color: $color-white;
   border-radius: 5px;
+  color: $color-white;
   padding-bottom: calc((7 / 6) * 100%);
 
   display: flex;
