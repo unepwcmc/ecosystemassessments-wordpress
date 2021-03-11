@@ -24,9 +24,9 @@
                   <?php endif; ?>
 
                   <?php if (block_sub_value('title')) : ?>
-                    <h3 class="tile-icon__title">
+                    <h4 class="tile-icon__title">
                       <?php echo block_sub_value('title'); ?>
-                    </h3>
+                    </h4>
                   <?php endif; ?>
 
                   <?php if (block_sub_value('description')) : ?>

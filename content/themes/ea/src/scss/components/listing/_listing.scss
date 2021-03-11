@@ -21,19 +21,12 @@ p.listing__count {
 
 .listing__item {
   @include listing_item;
-  @include listing_item_dividers;
 
   .listing-latest & {
-    @include break-max($sm) {
+    @include break-min-max($sm, $md) {
       &:nth-child(3) {
         display: none;
-      }
-    }
-
-    @include break-max($md) {
-      &:nth-child(4) {
-        display: none;
-      }
+      } 
     }
   }
 }

@@ -21,11 +21,12 @@
   <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>" class="cta-block__background-image" style="opacity: <?php echo $background_image_opacity; ?>;">
   <div class="cta-block__inner">
     <div class="cta-block__body">
-      <div class="cta-block__content">
+      <div class="cta-block__content<?php if (!$background_image_url) echo ' cta-block__content--no-image'; ?>">
         <h3 class="cta-block__title"><?php echo $title; ?></h3>
         <p class="cta-block__text"><?php echo $text; ?></p>
         <a href="<?php echo $link_url; ?>" class="cta-block__link<?php if ($link_url_external) echo ' cta-block__link--external'; ?>"<?php if ($link_url_external) echo ' target="_blank"'; ?><?php echo 'title="' . $link_text . '"'; ?>><?php echo $link_text; ?></a>
       </div>
+      <div class="cta-block__bottom-border"></div>
     </div>
   </div>
 </div>

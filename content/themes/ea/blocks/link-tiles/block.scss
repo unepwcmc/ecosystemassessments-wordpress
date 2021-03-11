@@ -5,6 +5,10 @@
   @include spacer;
 }
 
+.link-tiles__inner {
+  @include inner;
+}
+
 .link-tiles__header {
   @include section_header;
 }
@@ -15,13 +19,30 @@
 
 .link-tiles__items {
   @include structural_ul;
-  display: flex;
   margin-right: -$grid-gap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .link-tiles__item {
-  flex: 0 0 calc(((1 / 4) * 100%) - #{$grid-gap});
   margin-right: $grid-gap;
+  margin-bottom: $grid-gap;
+  flex: 0 0 calc(((1 / 2) * 100%)- #{$grid-gap});
+
+  @include break-min($md) {
+    margin-bottom: 0;
+    flex: 0 0 calc(((1 / 4) * 100%) - #{$grid-gap});
+  }
+}
+
+
+.link-tiles__footer {
+  @include spacer_top;
+  text-align: center;
+}
+
+a.link-tiles__link {
+  @include button_with_icon;
 }
 
 .link-tile {
