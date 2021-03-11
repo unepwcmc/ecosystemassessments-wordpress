@@ -6,9 +6,7 @@
 }
 
 .link-tiles__inner {
-  &:not(.layout-container__inner) & {
-    @include inner;
-  }
+  @include inner;
 }
 
 .link-tiles__header {
@@ -30,7 +28,7 @@
   margin-right: $grid-gap;
   margin-bottom: $grid-gap;
   flex: 0 0 calc(((1 / 2) * 100%)- #{$grid-gap});
-    
+
   @include break-min($md) {
     margin-bottom: 0;
     flex: 0 0 calc(((1 / 4) * 100%) - #{$grid-gap});
