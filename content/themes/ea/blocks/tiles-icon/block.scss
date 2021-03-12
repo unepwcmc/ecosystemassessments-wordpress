@@ -76,6 +76,7 @@ h4.tile-icon__title {
 
 a.tile-icon__link {
   @include button_secondary;
+  @include button_wider;
   margin-right: 6px;
 
   @include break-min($md) {

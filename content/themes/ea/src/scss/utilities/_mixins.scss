@@ -343,7 +343,7 @@
     border-color 0.35s ease;
 
   @include break-min($lg) {
-    padding: 12px 36px;
+    padding: 14px 32px;
   }
 }
 
@@ -357,8 +357,10 @@
 }
 
 @mixin button_wider {
-  padding-right: 30px;
-  padding-left: 30px;
+  @include break-min($lg) {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
 }
 
 @mixin button_primary {

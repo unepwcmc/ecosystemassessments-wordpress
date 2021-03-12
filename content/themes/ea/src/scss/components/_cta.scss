@@ -85,6 +85,7 @@ p.cta-block__text,
 a.cta-block__link,
 .editor-block-list__layout a.cta-block__link {
   @include button_secondary;
+  @include button_wider;
   margin: 0 !important;
 
   &.cta-block__link--external {
