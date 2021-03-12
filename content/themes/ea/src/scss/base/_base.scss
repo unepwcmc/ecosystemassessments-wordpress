@@ -60,25 +60,11 @@ figcaption,
   color: $color-grey-text;
 }
 
-ol, ul {
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
+ul {
+  margin-left: 0;
 
-li {
-  color: inherit;
-  list-style: disc outside none;
-}
-
-.editor-block-list__layout,
-.entry__content,
-.layout-sidebar {
-  ul {
-    margin-left: 0;
-
-    li {
-      list-style: none;
-    }
+  li {
+    list-style: none;
   }
 }
 
