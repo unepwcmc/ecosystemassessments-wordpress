@@ -47,7 +47,7 @@ li.listing-filter__term {
 }
 
 .listing-filter__label {
-  @include h4;
+  @include font_heading-4;
   cursor: pointer;
   padding-left: $grid-gap * 2.5;
 

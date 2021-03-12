@@ -15,7 +15,7 @@
 }
 
 p.footer-newsletter__text {
-  @include h4;
+  @include font_heading-4;
   margin-right: $grid-gap;
   margin-bottom: 5px;
 

@@ -44,7 +44,7 @@
 }
 
 h2.featured-link__title {
-  @include h1;
+  @include font_heading-1;
   color: currentColor;
   margin-bottom: $item-padding * 2;
 

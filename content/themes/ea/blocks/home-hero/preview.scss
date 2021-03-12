@@ -58,7 +58,7 @@
 
 .editor-styles-wrapper h2.hero-home__title,
 h2.hero-home__title {
-  @include h3;
+  @include font_heading-3;
   color: currentColor;
   font-weight: $fw-light;
   margin-bottom: $item-padding * 2;

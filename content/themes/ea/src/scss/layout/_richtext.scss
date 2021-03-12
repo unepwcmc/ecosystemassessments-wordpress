@@ -1,11 +1,11 @@
 .richtext {
 
   > h2 {
-    @include h3;
+    @include font_heading-3;
   }
 
   > h3 {
-    @include h4;
+    @include font_heading-4;
     font-weight: $fw-medium;
   }
 
@@ -47,7 +47,7 @@
     margin-bottom: #{$grid-gap * 2};
 
     p {
-      @include h3;
+      @include font_heading-3;
       color: $color-primary;
       font-weight: $fw-regular;
     }

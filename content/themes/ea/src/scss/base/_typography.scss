@@ -23,27 +23,27 @@ TYPOGRAPHY
   }
 
   h1 {
-    @include h1;
+    @include font_heading-1;
   }
 
   h2 {
-    @include h2;
+    @include font_heading-2;
   }
 
   h3 {
-    @include h3;
+    @include font_heading-3;
   }
 
   h4 {
-    @include h4;
+    @include font_heading-4;
   }
 
   h5 {
-    @include h5;
+    @include font_heading-5;
   }
 
   h6 {
-    @include h6;
+    @include font_heading-6;
   }
 }
 

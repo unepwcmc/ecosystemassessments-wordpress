@@ -252,30 +252,6 @@
   line-height: 16px;
 }
 
-@mixin h1 {
-  @include font_heading-1;
-}
-
-@mixin h2 {
-  @include font_heading-2;
-}
-
-@mixin h3 {
-  @include font_heading-3;
-}
-
-@mixin h4 {
-  @include font_heading-4;
-}
-
-@mixin h5 {
-  @include font_heading-5;
-}
-
-@mixin h6 {
-  @include font_heading-6;
-}
-
 @mixin paragraph {
   @include font_base_text;
   color: inherit;
@@ -520,7 +496,7 @@
 }
 
 @mixin section_title {
-  @include h2;
+  @include font_heading-2;
   margin: 0;
 }
 

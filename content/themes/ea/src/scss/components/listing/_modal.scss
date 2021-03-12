@@ -1,11 +1,11 @@
 h3.listing-modal__title {
-  @include h2;
+  @include font_heading-2;
   font-weight: $fw-bold;
   margin-bottom: $item-padding-smaller;
 }
 
 h4.listing-modal__heading {
-  @include h2;
+  @include font_heading-2;
   margin-bottom: $item-padding-small;
 }
 

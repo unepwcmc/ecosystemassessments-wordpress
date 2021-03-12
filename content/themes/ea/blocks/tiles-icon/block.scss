@@ -65,7 +65,7 @@ p.tile-icon__description {
 }
 
 h4.tile-icon__title {
-  @include h2;
+  @include font_heading-2;
 }
 
 .tile-icon__links {

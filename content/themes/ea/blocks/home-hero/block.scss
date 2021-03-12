@@ -50,7 +50,7 @@
 }
 
 h2.hero-home__title {
-  @include h1;
+  @include font_heading-1;
   color: currentColor;
   font-weight: $fw-light;
   margin-bottom: $item-padding * 2;
