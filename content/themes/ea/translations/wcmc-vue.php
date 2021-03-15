@@ -5,7 +5,8 @@ return array(
     'filter' => __( 'Filter', 'wcmc-vue' ),
     'filters' => __( 'Filters', 'wcmc-vue' ),
     'filter_toggle' => __( 'Filter Toggle', 'wcmc-vue' ),
-    'no_results_found' => __( 'No results found.', 'wcmc-vue' )
+    'no_results_found' => __( 'No results found.', 'wcmc-vue' ),
+    'view_all' => __( 'View all', 'wcmc-vue')
   ),
   'listing' => array(
     'count_text' => __( 'Showing %{posts_length} of %{max_posts} entries', 'wcmc-vue' )

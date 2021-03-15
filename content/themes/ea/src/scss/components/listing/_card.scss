@@ -47,6 +47,7 @@
 
 p.card-listing__date {
   @include font_small_text;
+  color: $color-dark-grey;
   margin-bottom: $item-padding-small;
 }
 

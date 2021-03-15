@@ -17,7 +17,6 @@
       class="listing-filter__drawer-toggle"
     >
       {{ $t('common.filter') }}
-      <IconToggle />
     </drawer-trigger>
   </div>
 </template>

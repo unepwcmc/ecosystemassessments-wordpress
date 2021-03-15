@@ -7,13 +7,21 @@
     <div class="listing__header">
       <p
         v-if="!isFetching"
-        class="listing__count"
+        class="listing__text"
       >
         {{ $t('listing.count_text', {
           posts_length: this.posts.length,
           max_posts: this.maxPosts
         }) }}
       </p>
+      <!-- TODO: pass link dynamically -->
+      <a
+        v-if="!isFetching"
+        href="#"
+        class="listing_link"
+      >
+        {{ $t('common.view_all') }}
+      </a>
 
       <listing-drawer
         v-if="filters.length"
