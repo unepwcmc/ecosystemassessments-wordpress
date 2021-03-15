@@ -19,7 +19,7 @@
 
     > li.menu-item {
       > a {
-        @include font_large_text;
+        @include font_base_text;
         padding-top: $item-padding-small;
         padding-bottom: $item-padding-small;
       }

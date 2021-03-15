@@ -46,12 +46,12 @@
 }
 
 p.card-listing__date {
-  @include font_heading-5;
+  @include font_small_text;
   margin-bottom: $item-padding-small;
 }
 
 h3.card-listing__title {
-  @include font_heading-4;
+  @include font_heading-5;
 
   @include break-min($sm) {
     margin-bottom: $item-padding * 2;

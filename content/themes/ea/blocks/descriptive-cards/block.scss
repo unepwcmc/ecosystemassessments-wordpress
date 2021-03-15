@@ -10,12 +10,11 @@
 }
 
 .descriptive-cards__header {
-  @include spacer_small;
+  @include section_header;
 }
 
 h3.descriptive-cards__title {
-  @include font_heading-2;
-  margin-bottom: $item-padding-smaller;
+  @include section_title;
 }
 
 .descriptive-cards__items {

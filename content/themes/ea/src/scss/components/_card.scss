@@ -75,6 +75,7 @@ p.card__details {
 }
 
 h3.card__title {
+  @include font_heading-5;
   color: currentColor;
   font-size: 18px;
   font-weight: 500;

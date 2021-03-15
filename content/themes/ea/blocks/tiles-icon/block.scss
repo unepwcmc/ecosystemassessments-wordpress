@@ -55,17 +55,18 @@
   }
 }
 
+h4.tile-icon__title {
+  @include font_heading-3;
+  font-weight: $fw-light;
+}
+
 p.tile-icon__description {
-  @include font_large_text;
+  @include font_heading-5;
   margin-bottom: 15px;
 
   @include break-min($md) {
     margin-bottom: $spacer-small;
   }
-}
-
-h4.tile-icon__title {
-  @include font_heading-2;
 }
 
 .tile-icon__links {

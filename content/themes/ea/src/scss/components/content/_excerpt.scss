@@ -71,7 +71,7 @@ h2.entry-excerpt__title {
 }
 
 p.entry-excerpt__details {
-  @include font_small_text;
+  @include font_smaller_text;
   color: $color-primary;
   font-weight: $fw-bold;
   margin-bottom: #{$item-padding-small};

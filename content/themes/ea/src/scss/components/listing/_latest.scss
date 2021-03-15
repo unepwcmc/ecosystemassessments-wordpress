@@ -7,16 +7,11 @@
 }
 
 .listing-latest__header {
-  margin-bottom: $spacer-small;
-
-  @include break-min($sm) {
-    margin-bottom: $spacer-medium;
-  }
+  @include section_header;
 }
 
 h3.listing-latest__title {
-  @include font_heading-2;
-  margin-bottom: $item-padding-smaller;
+  @include section_title;
 }
 
 .listing-latest__footer {

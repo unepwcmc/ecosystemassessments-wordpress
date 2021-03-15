@@ -78,7 +78,7 @@ h3.cta-block__title,
 
 p.cta-block__text,
 .editor-block-list__layout .cta-block__text {
-  @include font_large_text;
+  @include font_base_text;
   margin-bottom: $spacer-small;
 }
 

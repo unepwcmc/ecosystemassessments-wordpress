@@ -217,39 +217,39 @@
   line-height: 24px;
 
   @include break-min($sm) {
-    font-size: 25px;
-    line-height: 28px;
+    font-size: 30px;
+    line-height: 40px;
   }
 }
 
 @mixin font_heading-5 {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 25px;
+  line-height: 28px;
 }
 
 @mixin font_heading-6 {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 30px;
 }
 
-@mixin font_large_text {
+@mixin font_base_text {
   font-size: 16px;
   line-height: 20px;
 
   @include break-min($xxs) {
-    font-size: 25px;
-    line-height: 25px;
+    font-size: $font-base-size;
+    line-height: $font-base-line-height;
   }
 }
 
-@mixin font_base_text {
-  font-size: $font-base-size;
-  line-height: $font-base-line-height;
+@mixin font_small_text {
+  font-size: 16px;
+  line-height: 24px;
 }
 
-@mixin font_small_text {
+@mixin font_smaller_text {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 22px;
 }
 
 @mixin paragraph {
@@ -474,10 +474,10 @@
 //-------------------------------------------------
 
 @mixin section_header {
-  margin-bottom: $grid-gap;
+  margin-bottom: $spacer-small;
 
   @include break-min($sm) {
-    margin-bottom: $grid-gap * 2;
+    margin-bottom: $spacer-medium;
   }
 }
 
@@ -498,7 +498,7 @@
 }
 
 @mixin section_title {
-  @include font_heading-2;
+  @include font_heading-3;
   margin: 0;
 }
 
