@@ -1,6 +1,13 @@
 <template>
-  <div class="card-listing__card" @click="clickHandler()">
-    <div class="card-listing__header">
+  <div
+    class="card-listing__card"
+    :class="`card-listing__card--${postType}`"
+    @click="clickHandler()"
+  >
+    <div
+      v-if="!isResource"
+      class="card-listing__header"
+    >
       <div class="card-listing__image-wrap">
         <img
           class="card-listing__image"
@@ -16,6 +23,20 @@
       >
         {{ date }}
       </p>
+      <ul
+        v-if="isResource"
+        class="card-listing__details-items"
+      >
+        <li
+          v-if="resourceType"
+          class="card-listing__details-item"
+        >
+          {{ $t(`resources.${resourceType}`) }}
+        </li>
+        <li class="card-listing__details-item">
+          {{ $t('resources.resource') }}
+        </li>
+      </ul>
       <h3 class="card-listing__title">
         {{ title }}
       </h3>
@@ -88,6 +109,10 @@
         }
       },
 
+      isResource() {
+        return this.postType === 'resource'
+      },
+
       link() {
         if (this.postType == 'member') {
           return this.config.ACF && this.config.ACF.url
@@ -104,6 +129,18 @@
 
       hrefTarget() {
         return (this.postType == 'member' || this.postType == 'casestudy') ? '_blank' : '_self'
+      },
+
+      resourceStage() {
+        return (this.postType == 'resource' && this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_stage')) ?
+          this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_stage')[0].slug :
+          undefined
+      },
+
+      resourceType() {
+        return (this.postType == 'resource' && this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_type')) ?
+          this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_type')[0].slug :
+          undefined
       },
 
       title() {

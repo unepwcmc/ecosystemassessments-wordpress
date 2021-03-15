@@ -9,7 +9,19 @@ return array(
     'view_all' => __( 'View all', 'wcmc-vue')
   ),
   'listing' => array(
-    'count_text' => __( 'Showing %{posts_length} of %{max_posts} entries', 'wcmc-vue' )
+    'count_text' => __( 'Showing %{posts_length} of %{max_posts} entries', 'wcmc-vue' ),
+  ),
+  'resources' => array(
+    'case_study' => __( 'Case Study', 'wcmc-vue' ),
+    'case_studies' => __( 'Case Studies', 'wcmc-vue' ),
+    'guide' => __( 'Guide', 'wcmc-vue' ),
+    'guides' => __( 'Guides', 'wcmc-vue' ),
+    'report' => __( 'Report', 'wcmc-vue' ),
+    'reports' => __( 'Reports', 'wcmc-vue' ),
+    'resource' => __( 'Resource', 'wcmc-vue' ),
+    'resources' => __( 'Resources', 'wcmc-vue' ),
+    'webinar' => __( 'Webinar', 'wcmc-vue' ),
+    'webinars' => __( 'Webinars', 'wcmc-vue' )
   ),
   'search' => array(
     'search' => __( 'Search', 'wcmc-vue' ),

@@ -43,12 +43,43 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+
+  .card-listing__card--resource & {
+    min-height: 300px;
+  }
 }
 
 p.card-listing__date {
   @include font_small_text;
   color: $color-dark-grey;
   margin-bottom: $item-padding-small;
+}
+
+ul.card-listing__details-items {
+  @include structural_ul;
+  display: flex;
+}
+
+li.card-listing__details-item {
+  @include font_small_text;
+  color: $color-primary;
+  margin-bottom: $item-padding-small;
+
+  &:not(:last-child) {
+    margin-right: $item-padding-smaller;
+    padding-right: $item-padding-small;
+
+    position: relative;
+
+    &::after {
+      content: '•';
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      right: 0;
+    }
+  }
+
 }
 
 h3.card-listing__title {

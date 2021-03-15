@@ -135,7 +135,7 @@ export default {
       activeTerms: {},
       config: {
         postsBaseUrl: '/wp-json/wp/v2/',
-        resourcesBaseUrl: '/wp-json/relevanssi/v1/search?s=',
+        resourcesBaseUrl: '/wp-json/relevanssi/v1/search?_embed&s=',
         eventsBaseUrl: '/wp-json/ecosystem-assessments/v1/events?_embed',
         filtersBaseURL: '/wp-json/ecosystem-assessments/v1/list-filters'
       },
