@@ -26,10 +26,21 @@
   // Images
 
   .wp-block-image {
-    margin-top: #{$grid-gap * 2};
-    margin-bottom: #{$grid-gap * 2};
+    margin-top: $spacer-medium;
+    margin-bottom: $spacer-medium;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     img {
+      width: 100%;
+      height: auto;
+
       display: block;
     }
 

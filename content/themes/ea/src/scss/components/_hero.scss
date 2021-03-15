@@ -54,7 +54,7 @@
 }
 
 h2.hero__title {
-  @include font_heading-2;
+  @include font_heading-1;
   font-weight: $fw-light;
   color: currentColor;
 
@@ -62,10 +62,6 @@ h2.hero__title {
 
   &:only-child {
     margin-bottom: 0;
-  }
-
-  @include break-min($sm) {
-    @include font_heading-1;
   }
 }
 

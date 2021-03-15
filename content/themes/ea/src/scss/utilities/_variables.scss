@@ -46,6 +46,9 @@ $fw-black: 900;
 $color-primary: #8526E3;
 $color-secondary: #27292C;
 
+$color-accent: #FAC359;
+$color-accent-dark: #F89C1B;
+
 $color-darker-grey: #57575D;
 $color-dark-grey: #4A4D52;
 $color-mid-grey: #E5E5E5;
@@ -54,13 +57,11 @@ $color-white: #ffffff;
 
 $color-border: rgba($color-secondary,0.25);
 $color-border-light: rgba(255,255,255,0.25);
+$color-body-font: $color-dark-grey;
 $color-error: #dc3232;
 $color-grey-text: #8D8D8D;
-$color-accent: #FAC359;
-$color-accent-dark: #F89C1B;
 $color-link: #4968b3;
-$color-body-font: #0e0e0e;
-$color-headings: $color-body-font;
+$color-headings: $color-secondary;
 $color-tools-icons: $color-primary;
 
 $color-header: $color-light-grey;
