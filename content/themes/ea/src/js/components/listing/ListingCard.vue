@@ -131,16 +131,13 @@
         return (this.postType == 'member' || this.postType == 'casestudy') ? '_blank' : '_self'
       },
 
-      resourceStage() {
-        return (this.postType == 'resource' && this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_stage')) ?
-          this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_stage')[0].slug :
-          undefined
-      },
-
       resourceType() {
-        return (this.postType == 'resource' && this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_type')) ?
-          this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_type')[0].slug :
-          undefined
+        return this.postType == 'resource' &&
+          this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_type') ?
+            this.config._embedded['wp:term']
+            .find(term => term[0].taxonomy == 'resource_type')[0]
+            .slug.replace('-', '_') :
+            undefined
       },
 
       title() {
