@@ -1,5 +1,5 @@
 .social {
-  margin-top: #{$item-padding * 1.5};
+  margin-top: $item-padding-smaller;
 }
 
 p.social__heading {
@@ -27,12 +27,8 @@ p.social__heading {
 .social__icon,
 .richtext .social__icon {
   @include no_bullets;
-  margin-right: #{$grid-gap * 2};
+  margin-right: $item-padding;
   margin-bottom: 0;
-
-  @include break-min($sm) {
-    margin-right: #{$grid-gap * 1.5};
-  }
 
   &:last-child {
     margin-right: 0;
@@ -45,8 +41,8 @@ p.social__heading {
   svg {
     fill: $color-grey-text;
     transition: opacity 0.3s ease;
-    max-width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
 
     &:hover {
       opacity: 0.6;

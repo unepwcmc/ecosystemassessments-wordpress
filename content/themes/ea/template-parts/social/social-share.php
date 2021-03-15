@@ -2,11 +2,6 @@
   $page_url = get_site_url() . $_SERVER['REQUEST_URI'];
 
   $socials = array(
-    'email' => array(
-      'name' => 'email',
-      'label' => __( 'Email', 'wcmc' ),
-      'url' => 'mailto:?body=' . $page_url
-    ),
     'facebook' => array(
       'name' => 'facebook',
       'label' => 'Facebook',
@@ -16,6 +11,11 @@
       'name' => 'twitter',
       'label' => 'Twitter',
       'url' => 'https://twitter.com/intent/tweet?url=' . $page_url
+    ),
+    'email' => array(
+      'name' => 'email',
+      'label' => __( 'Email', 'wcmc' ),
+      'url' => 'mailto:?body=' . $page_url
     )
   );
 
