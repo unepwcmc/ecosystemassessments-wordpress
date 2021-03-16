@@ -62,7 +62,7 @@
 }
 
 h2.entry-excerpt__title {
-  @include font_heading-3;
+  @include font_heading-4;
   margin-bottom: $item-padding;
 
   a {
@@ -71,12 +71,10 @@ h2.entry-excerpt__title {
 }
 
 p.entry-excerpt__details {
-  @include font_smaller_text;
+  @include font_small_text;
   color: $color-primary;
-  font-weight: $fw-bold;
   margin-bottom: #{$item-padding-small};
   text-align: center;
-  text-transform: uppercase;
 
   .entry-excerpt--search & {
     text-align: left;
@@ -90,25 +88,30 @@ p.entry-excerpt__details {
 }
 
 a.entry-excerpt__link {
-  font-size: 18px;
-  font-weight: $fw-bold;
-  line-height: 1;
-  margin-top: $item-padding-small;
-  margin-bottom: 0;
-  padding-left: 30px;
-  text-decoration: none;
-
-  svg {
-    display: inline-block;
-    width: 16px;
-
-    position: absolute;
-    top: 50%;
-    left: 0;
-
-    transform: translateY(-50%);
-  }
+  @include button_secondary;
+  @include button_small;
 }
+
+// a.entry-excerpt__link {
+//   font-size: 18px;
+//   font-weight: $fw-bold;
+//   line-height: 1;
+//   margin-top: $item-padding-small;
+//   margin-bottom: 0;
+//   padding-left: 30px;
+//   text-decoration: none;
+//
+//   svg {
+//     display: inline-block;
+//     width: 16px;
+//
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//
+//     transform: translateY(-50%);
+//   }
+// }
 
 a.entry-excerpt__fauxlink {
   height: 100%;
