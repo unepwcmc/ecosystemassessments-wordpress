@@ -30,8 +30,9 @@ a.entry__resource-link {
 
   &.entry__resource-link--external {
     svg {
+      color: $color-primary;
       margin-left: $item-padding-smaller;
-      width: 15px;
+      width: 12px;
 
       display: inline-block;
     }
@@ -129,10 +130,10 @@ a.entry__link {
 
   &.entry__link--external {
     @include button_with_icon;
-    
+
     svg {
       margin-left: $item-padding-smaller;
-      width: 15px;
+      width: 10px;
     }
   }
 
