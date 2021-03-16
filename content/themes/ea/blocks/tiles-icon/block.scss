@@ -11,7 +11,6 @@
 
 .tiles-icon__items {
   @include structural_ul;
-  display: block;
 
   @include break-min($md) {
     display: flex;
@@ -36,15 +35,15 @@
 }
 
 .tile-icon__body {
-  margin: 20px;
+  margin: $spacer-small;
 
   @include break-min($md) {
-    margin: 32px $spacer-medium 50px $spacer-medium;
+    margin: $spacer-medium;
   }
 }
 
 .tile-icon__icon {
-  margin-bottom: 48px;
+  margin-bottom: $spacer-medium;
   width: 80px;
   height: 80px;
 
