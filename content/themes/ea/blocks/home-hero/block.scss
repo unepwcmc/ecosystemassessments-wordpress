@@ -15,7 +15,7 @@
     min-height: 500px;
 
     @include break-min($sm) {
-      min-height: 650px;
+      min-height: 600px;
     }
 
     @include break-min($lg) {

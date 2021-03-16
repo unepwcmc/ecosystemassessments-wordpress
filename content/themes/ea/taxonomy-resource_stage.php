@@ -38,18 +38,6 @@
 		<div class="layout-container__body">
 			<section class="layout-primary">
 				<div class="layout-primary__body layout-primary__body--archive">
-					<ul>
-						<?php if ($resource_stage_slug) : ?>
-							<li>
-								<p>Resource Stage Slug: <?php echo $resource_stage_slug; ?></p>
-							</li>
-						<?php endif; ?>
-						<?php if ($resource_type_slug) : ?>
-							<li>
-								<p>Resource Type Slug: <?php echo $resource_type_slug; ?></p>
-							</li>
-						<?php endif; ?>
-					</ul>
 
 					<listing-grid
 						post-type="<?php echo $post_type; ?>"

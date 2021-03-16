@@ -13,11 +13,7 @@
   position: relative;
 
   .layout__body & {
-    min-height: 200px;
-
-    @include break-min($xs) {
-      min-height: 300px;
-    }
+    min-height: 350px;
 
     @include break-min($sm) {
       min-height: 650px;
