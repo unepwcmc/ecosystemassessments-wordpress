@@ -41,6 +41,8 @@
 
 					<listing-grid
 						post-type="<?php echo $post_type; ?>"
+						term-label=<?php echo 'resource_stage'; ?>
+						term-id=<?php echo $resource_stage; ?>
 						resource-stage="<?php echo $resource_stage ?>"
 						resource-type="<?php echo $resource_type ?>"
 					/>

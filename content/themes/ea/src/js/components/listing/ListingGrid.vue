@@ -1,6 +1,5 @@
 <template>
   <div
-    v-if="!isLoading"
     class="listing"
     :class="`listing--${postType}`"
   >
@@ -16,7 +15,6 @@
       </p>
       <!-- TODO: pass link dynamically -->
       <a
-        v-if="!isFetching"
         href="#"
         class="listing_link"
       >
@@ -71,12 +69,12 @@
     </div>
   </div>
 
-  <div
+  <!-- <div
     v-else
     class="listing__loader listing__loader--padded"
   >
     <Loader />
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -110,6 +108,14 @@ export default {
       type: String,
       required: true
     },
+    termId: {
+      type: String,
+      default: undefined
+    },
+    termLabel: {
+      type: String,
+      default: undefined
+    },
     modal: {
       type: Boolean,
       default: false
@@ -121,8 +127,17 @@ export default {
   },
 
   mounted() {
-    this.getPosts()
     this.getFilters()
+
+    if (this.termLabel) {
+      this.$store.commit('updatePreselectedTerm', {
+        filter: this.termLabel,
+        term_id: this.termId
+      })
+      console.log('Sending terms');
+    } else {
+      this.getPosts()
+    }
 
     this.$eventHub.$on('termsUpdated', (filter, checkedTerms) => {
       this.$set(this.activeTerms, filter, checkedTerms)

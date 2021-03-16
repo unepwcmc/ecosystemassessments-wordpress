@@ -42,6 +42,36 @@
       }
     },
 
+    created () {
+      console.log('ListingTerms created');
+
+      if (this.preselectedTerm) {
+        console.log('preselectedTerm found: ', this.preselectedTerm)
+        if (this.preselectedTerm.filter == this.filter) {
+          this.addToCheckedTerms(this.preselectedTerm.term_id)
+        }
+      }
+    },
+
+    computed: {
+      preselectedTerm () {
+        return this.$store.state.preselectedTerm
+      }
+    },
+
+    methods: {
+      addToCheckedTerms (id) {
+        console.log('Received term');
+        if (this.containsTerm(id)) {
+          console.log('pushing id');
+          this.checkedTerms.push(id)
+        }
+      },
+      containsTerm (id) {
+        return this.terms.filter(term => term.term_id == id).length
+      }
+    },
+
     watch: {
       checkedTerms: function () {
         this.$eventHub.$emit('termsUpdated', this.filter, this.checkedTerms)

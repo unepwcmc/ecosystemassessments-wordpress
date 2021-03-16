@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import store from './store'
+
 import objectFitImages from 'object-fit-images'
 import VueProgressiveImage from 'vue-progressive-image'
 
@@ -32,6 +34,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     new Vue({
       el: '#v-app',
+
+      store,
+
       components: {
         AddClassOnClick,
         Drawer,
