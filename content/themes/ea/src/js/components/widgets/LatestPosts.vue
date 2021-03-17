@@ -54,7 +54,7 @@
       postsParams() {
         let params = {
           'page': 1,
-          'per_page': 4
+          'per_page': 3
         }
 
         return params
