@@ -45,6 +45,10 @@
     created () {
       console.log('ListingTerms created');
 
+      this.$eventHub.$on('clearCheckedTerms', () => {
+        this.clearCheckedTerms()
+      })
+
       if (this.preselectedTerm) {
         console.log('preselectedTerm found: ', this.preselectedTerm)
         if (this.preselectedTerm.filter == this.filter) {
@@ -67,14 +71,24 @@
           this.checkedTerms.push(id)
         }
       },
+
+      clearCheckedTerms () {
+        console.log('Clearing checked terms');
+        this.checkedTerms = []
+      },
+
       containsTerm (id) {
         return this.terms.filter(term => term.term_id == id).length
       }
     },
 
     watch: {
-      checkedTerms: function () {
-        this.$eventHub.$emit('termsUpdated', this.filter, this.checkedTerms)
+      checkedTerms: {
+        deep: true,
+
+        handler () {
+          this.$eventHub.$emit('termsUpdated', this.filter, this.checkedTerms)
+        }
       }
     }
   }

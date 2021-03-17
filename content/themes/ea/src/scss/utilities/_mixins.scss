@@ -322,16 +322,24 @@
 // Buttons
 //-------------------------------------------------
 
-@mixin button {
+@mixin button_reset {
   appearance: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+@mixin button {
+  @include button_reset;
   border: 1px solid transparent;
   border-radius: 4px;
-  cursor: pointer;
   font-family: $font-body;
   font-size: 20px;
   font-weight: $fw-regular;
   line-height: 1;
-  outline: 0;
   padding: 12px 21px;
   text-align: center;
   text-decoration: none;
@@ -430,6 +438,11 @@
 
   display: inline-flex;
   align-items: center;
+}
+
+@mixin button_text {
+  @include button_reset;
+  text-decoration: underline;
 }
 
 //-------------------------------------------------

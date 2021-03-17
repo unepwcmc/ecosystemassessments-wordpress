@@ -10,15 +10,7 @@
  * @version 1.2
  */
 
-	$post_type_slug = get_post_type();
-
-	$post_type = get_post_type_object( $post_type_slug );
-
-	$post_type_singular_name = $post_type->labels->singular_name;
-
-	$post_type_label = $post_type_singular_name == 'Post' ?
-		__( 'News', 'wcmc' ) :
-		$post_type_singular_name;
+	$post_type_label = get_post_type_label(	get_post_type() );
 
 	$cta_link_text = get_field( 'cta_link_text' );
 	$cta_link_url = get_field( 'cta_link_url' );

@@ -9,17 +9,18 @@
         class="listing__text"
       >
         {{ $t('listing.count_text', {
-          posts_length: this.posts.length,
-          max_posts: this.maxPosts
+          posts_length: posts.length,
+          max_posts: maxPosts
         }) }}
       </p>
       <!-- TODO: pass link dynamically -->
-      <a
-        href="#"
-        class="listing_link"
+      <button
+        v-if="Object.keys(activeTerms).length !== 0"
+        class="listing_text-button"
+        @click="clearActiveTerms"
       >
         {{ $t('common.view_all') }}
-      </a>
+      </button>
 
       <listing-drawer
         v-if="filters.length"
@@ -212,10 +213,18 @@ export default {
   },
 
   methods: {
+    clearActiveTerms() {
+      console.log('Document title: ', document.title);
+      window.history.replaceState({}, document.location.origin, document.location.pathname);
+      this.activeTerms = {}
+      this.$eventHub.$emit('clearCheckedTerms')
+    },
+
     getFilters() {
       axios.get(this.filtersURL)
       .then((response) => {
-        this.filters = this.getFiltersWithTerms(response.data.filters);
+        const newFilters = this.updateFiltersTaxonomyName(response.data.filters, 'category', 'categories')
+        this.filters = this.getFiltersWithTerms(newFilters)
       })
       .catch((error) => {
         console.error(error)
@@ -288,6 +297,13 @@ export default {
 
     updateActivePost(id) {
       this.activePost = this.posts[id];
+    },
+
+    updateFiltersTaxonomyName(filters, currentName, newName) {
+      return filters.map(filter => {
+        filter.taxonomy = filter.taxonomy === currentName ? newName : filter.taxonomy
+        return filter
+      })
     }
   }
 }

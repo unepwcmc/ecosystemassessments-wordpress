@@ -25,6 +25,18 @@
 	set_query_var( 'hero-opacity', get_theme_mod( 'resources_hero_overlay_opacity' ) );
 
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
+
+	if (isset($_GET['stage'])) {
+		$resource_stage_slug = $_GET['stage'];
+		$term_label = 'resource_stage';
+		$resource_stage_term = get_term_by('slug', $resource_stage_slug, $term_label);
+		$term_id = $resource_stage_term->term_id;
+	} else if (isset($_GET['type'])) {
+		$resource_type_slug = $_GET['type'];
+		$term_label = 'resource_type';
+		$resource_type_term = get_term_by('slug', $resource_type_slug, $term_label);
+		$term_id = $resource_type_term->term_id;
+	}
 ?>
 
 <div class="layout-container">
@@ -33,9 +45,11 @@
 			<section class="layout-primary">
 				<div class="layout-primary__body layout-primary__body--archive">
 
-				<h1>Archive Resource!</h1>
-
-					<listing-grid post-type="<?php echo $post_type; ?>" />
+					<listing-grid
+						post-type="<?php echo $post_type; ?>"
+						term-label="<?php echo $term_label; ?>"
+						term-id="<?php echo $term_id; ?>"
+					/>
 
 				</div>
 			</section>

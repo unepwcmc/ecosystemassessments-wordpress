@@ -24,6 +24,8 @@ function post_filters( WP_REST_Request $request ) {
 
     $post_type = $parameters['post_type'];
 
+		$excluded_taxonomies = ['translation_priority'];
+
     /*
       Get taxonomies by post type
     */
@@ -37,7 +39,10 @@ function post_filters( WP_REST_Request $request ) {
 
     $index = 0;
     foreach( $taxonomies as $taxonomy ) {
-      if (in_array($post_type, $taxonomy->object_type, true)) {
+      if (
+				in_array($post_type, $taxonomy->object_type, true) &&
+				!in_array($taxonomy->name, $excluded_taxonomies)
+			) {
         //Get terms by taxonomy
         $terms = get_terms( $taxonomy->name, $args);
         $new_terms = [];

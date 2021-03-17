@@ -25,6 +25,13 @@
 	set_query_var( 'hero-opacity', get_theme_mod( 'news_hero_overlay_opacity' ) );
 
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
+
+	if (isset($_GET['category'])) {
+		$category_slug = $_GET['category'];
+		// $term_label = 'resource_stage';
+		// $resource_stage_term = get_term_by('slug', $resource_stage_slug, $term_label);
+		// $term_id = $resource_stage_term->term_id;
+	}
 ?>
 
 <div class="layout-container">
@@ -32,6 +39,8 @@
 		<div class="layout-container__body">
 			<section class="layout-primary">
 				<div class="layout-primary__body layout-primary__body--archive">
+
+					<h1><?php echo 'Category slug: ' . $category_slug; ?></h1>
 
 					<listing-grid post-type="<?php echo $post_type; ?>" />
 

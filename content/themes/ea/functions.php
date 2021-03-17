@@ -359,16 +359,18 @@ function pagination_bar() {
 }
 
 /*-------------------------------------------------------------------------------------------------
-MULTIPLE TAXONOMIES IN ONE URL - https://wordpress.stackexchange.com/a/181003
+GET POST TYPE LABEL
 ------------------------------------------------------------------------------------------------- */
 
-function custom_rewrite_rules() {
-    add_rewrite_rule('^resources/resource_stage/(.*)/resource_type/(.*)?', 'index.php?resource_stage=$matches[1]&resource_type=$matches[2]', 'top');
-    add_rewrite_rule('^resources/resource_stage/(.*)', 'index.php?resource_stage=$matches[1]', 'top');
-    add_rewrite_rule('^resources/resource_type/(.*)?', 'index.php?resource_type=$matches[1]', 'top');
-    add_rewrite_rule('^resources/all', 'index.php?post_type=resource', 'top');
+function get_post_type_label( $post_type_slug ) {
+  $post_type = get_post_type_object( $post_type_slug );
+
+  $post_type_singular_name = $post_type->labels->singular_name;
+
+  return $post_type_singular_name == 'Post' ?
+    __( 'News', 'wcmc' ) :
+    $post_type_singular_name;
 }
-add_action('init', 'custom_rewrite_rules');
 
 /*-------------------------------------------------------------------------------------------------
 IMPORT CUSTOMIZER SETTINGS
