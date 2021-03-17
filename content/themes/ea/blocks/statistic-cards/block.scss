@@ -5,6 +5,12 @@
   @include spacer;
 }
 
+.statistic-cards__body {
+  .widgets & {
+    @include inner;
+  }
+}
+
 .statistic-cards__items {
   @include structural_ul;
   display: block;
