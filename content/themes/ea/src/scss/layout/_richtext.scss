@@ -67,4 +67,10 @@
       }
     }
   }
+
+  .constrained {
+    @include break-min($md) {
+      max-width: calc((8 / 12) * 100%);
+    }
+  }
 }
