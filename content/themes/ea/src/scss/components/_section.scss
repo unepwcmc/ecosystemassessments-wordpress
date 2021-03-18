@@ -47,3 +47,31 @@
     margin-top: 0;
   }
 }
+
+.section {
+  @include spacer;
+}
+
+.section__inner {
+  @include inner;
+}
+
+.section__header {
+  @include section_header;
+}
+
+h3.section__title {
+  @include section_title;
+}
+
+.section__items {
+  @include listing_items;
+
+  @include break-min($md) {
+    margin-top: 0;
+  }
+}
+
+.section__item {
+  @include listing_item;
+}
