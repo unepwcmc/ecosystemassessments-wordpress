@@ -296,7 +296,7 @@ export default {
     },
 
     updateActivePost(id) {
-      this.activePost = this.posts[id];
+      this.activePost = this.posts[id]
     },
 
     updateFiltersTaxonomyName(filters, currentName, newName) {

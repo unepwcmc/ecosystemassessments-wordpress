@@ -1,6 +1,6 @@
 <?php
 /*
-    Descriptive Cards Block
+    Process Cards Block
     Created by UNEP-WCMC
     With Genesis Custom Blocks for Gutenberg - https://getblocklab.com/
   */

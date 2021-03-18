@@ -1,6 +1,6 @@
 <?php
 /*
-    Descriptive Cards Block
+    Link Cards Block
     Created by UNEP-WCMC
     With Genesis Custom Blocks for Gutenberg - https://getblocklab.com/
   */
@@ -32,9 +32,9 @@
                   <?php if (block_sub_value('image')) : ?>
                     <?php $image_url = wp_get_attachment_image_src(block_sub_value('image'), 'full-size')[0]; ?>
                     <div class="card-listing__image-wrap">
-                      <img 
-                        class="card-listing__image" 
-                        src="<?php echo $image_url; ?>" 
+                      <img
+                        class="card-listing__image"
+                        src="<?php echo $image_url; ?>"
                         alt="<?php echo block_sub_value('title'); ?>"
                       >
                     </div>

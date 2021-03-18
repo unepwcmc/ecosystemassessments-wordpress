@@ -37,7 +37,6 @@ li.link-tiles__item {
   }
 }
 
-
 .link-tiles__footer {
   @include spacer_top;
   text-align: center;
@@ -68,6 +67,13 @@ h4.link-tile__title {
   @include absolute_fill;
   @include object_fit_cover;
   z-index: 1;
+
+  transition: transform .8s ease;
+  will-change: transform;
+
+  .link-tile:hover & {
+    transform: scale(1.015);
+  }
 }
 
 .link-tile__image-overlay {

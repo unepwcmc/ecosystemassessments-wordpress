@@ -39,7 +39,7 @@
     @include absolute_fill;
     object-fit: cover;
     font-family: 'object-fit: cover;';
-    transition: transform .5s ease;
+    transition: transform .8s ease;
     will-change: transform;
 
     .card:hover & {
