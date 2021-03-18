@@ -6,7 +6,9 @@
 }
 
 .tiles-icon__inner {
-  @include inner;
+  .home & {
+    @include inner;
+  }
 }
 
 .tiles-icon__items {
