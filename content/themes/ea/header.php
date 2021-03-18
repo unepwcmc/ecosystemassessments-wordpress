@@ -19,7 +19,7 @@
     if ($post) {
       $body_class .= ' ' . $body_base_class . '-' . $post->post_name;
 
-      if (is_single( $post )) {
+      if (is_single( $post ) || is_page_template( 'page-no-hero.php' )) {
         $body_class .= ' no-hero';
       }
     }

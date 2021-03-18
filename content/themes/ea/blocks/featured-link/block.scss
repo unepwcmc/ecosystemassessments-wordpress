@@ -83,7 +83,7 @@ a.featured-link__link {
 
 .featured-link__overlay {
   @include absolute_fill;
-  background: rgba($color-secondary, 0.25);
+  background: $color-secondary;
 
   z-index: 2;
 }
