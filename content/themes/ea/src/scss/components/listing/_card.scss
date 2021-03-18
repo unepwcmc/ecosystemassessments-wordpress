@@ -20,7 +20,7 @@
 .card-listing__image {
   @include absolute_fill;
   @include object_fit_cover;
-  transition: transform .5s ease;
+  transition: transform .8s ease;
   will-change: transform;
 
   .listing--member & {
