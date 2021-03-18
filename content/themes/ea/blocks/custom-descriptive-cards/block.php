@@ -8,25 +8,25 @@
   $title = block_value('section-title');
 ?>
 
-<div class="cards">
-  <div class="cards__inner">
+<div class="section">
+  <div class="section__inner">
 
   <?php if ($title !== '') : ?>
-    <div class="cards__header">
-      <h3 class="cards__title">
+    <div class="section__header">
+      <h3 class="section__title">
         <?php echo $title ?>
       </h3>
     </div>
   <?php endif; ?>
 
-    <div class="cards__body">
+    <div class="section__body">
 
       <?php if (block_rows('card')) : ?>
-        <ul class="cards__items">
+        <ul class="section__items">
 
           <?php while (block_rows('card')) : block_row('card'); ?>
 
-            <li class="cards__item">
+            <li class="section__item">
               <div class="card-listing__card">
                 <header class="card-listing__header">
                   <?php if (block_sub_value('image')) : ?>
