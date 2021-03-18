@@ -34,7 +34,7 @@
 			<section class="layout-primary">
 				<div class="layout-primary__body layout-primary__body--archive">
 
-					<listing-grid post-type="<?php echo $post_type; ?>" :modal="true" />
+					<listing-grid post-type="<?php echo $post_type; ?>" />
 
 				</div>
 			</section>
