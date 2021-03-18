@@ -9,6 +9,13 @@
 
 	get_header();
 
+	if (isset($_GET['type'])) {
+		$partner_type_slug = $_GET['type'];
+		$term_label = 'partner_type';
+		$partner_type_term = get_term_by('slug', $partner_type_slug, $term_label);
+		$term_id = $partner_type_term->term_id;
+	}
+
 	$post_type = get_queried_object()->name;
 
 	// Page Hero
@@ -34,7 +41,12 @@
 			<section class="layout-primary">
 				<div class="layout-primary__body layout-primary__body--archive">
 
-					<listing-grid post-type="<?php echo $post_type; ?>" :modal="true" />
+					<listing-grid
+						post-type="<?php echo $post_type; ?>"
+						term-label="<?php echo $term_label; ?>"
+						term-id="<?php echo $term_id; ?>"
+						:modal="true" />
+					/>
 
 				</div>
 			</section>
