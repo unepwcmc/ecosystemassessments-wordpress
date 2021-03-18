@@ -5,9 +5,9 @@
     </h3>
     <h4
       class="listing-modal__heading"
-      v-if="jobTitle"
+      v-if="partnerType"
     >
-      {{ jobTitle }}
+      {{ partnerType }}
     </h4>
     <div class="listing-modal__columns">
       <div
@@ -24,28 +24,6 @@
             :alt="title"
           >
         </div>
-        <ul
-          class="listing-modal__items"
-          v-if="email || twitterUrl"
-        >
-          <li class="listing-modal__item">
-            <a
-              class="listing-modal__link"
-              :href="`mailto:${ email }`"
-            >
-              {{ email }}
-            </a>
-          </li>
-          <li class="listing-modal__item">
-            <a
-              class="listing-modal__link"
-              :href="`https://twitter.com/${ twitterUrl }`"
-            >
-              <IconTwitter class="listing-modal__social-icon" />
-              {{ $t('social.twitter') }}
-            </a>
-          </li>
-        </ul>
       </div>
       <div class="listing-modal__column listing-modal__column--large">
         <div
@@ -60,14 +38,12 @@
 
 <script>
   import { decodeString } from '../../helpers/application-helpers.js'
-  import IconTwitter from '../../icons/IconTwitter.vue'
   import Modal from '../modal/Modal.vue'
 
   export default {
     name: 'ListingModal',
 
     components: {
-      IconTwitter,
       Modal
     },
 
@@ -83,24 +59,16 @@
         return this.post.content ? this.post.content.rendered : ''
       },
 
-      email() {
-        return this.post.ACF ? this.post.ACF.email : ''
-      },
-
       imageUrl() {
-        return this.post._embedded['wp:featuredmedia'] ? this.post._embedded['wp:featuredmedia'][0].source_url : ''
+        return this.post._embedded && this.post._embedded['wp:featuredmedia'] ? this.post._embedded['wp:featuredmedia'][0].source_url : ''
       },
 
-      jobTitle() {
-        return this.post.ACF ? this.post.ACF.job_title : ''
+      partnerType() {
+        return this.post._embedded && this.post._embedded['wp:term'] ? this.post._embedded['wp:term'][0].find(term => term.taxonomy === 'partner_type').name : ''
       },
 
       title() {
         return this.post.title ? decodeString(this.post.title.rendered) : ''
-      },
-
-      twitterUrl() {
-        return this.post.ACF ? this.post.ACF.twitter_account : ''
       }
     }
   }
