@@ -13,7 +13,7 @@
           max_posts: maxPosts
         }) }}
       </p>
-      <!-- TODO: pass link dynamically -->
+
       <button
         v-if="Object.keys(activeTerms).length !== 0"
         class="listing_text-button"

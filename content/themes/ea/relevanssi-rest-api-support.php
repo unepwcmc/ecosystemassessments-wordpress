@@ -40,11 +40,12 @@ function relevanssi_rest_api_filter_add_filters() {
 
     // Default search args
     $args = array(
-      'paged' => $parameters['page'],
-      'posts_per_page' => $per_page,
-      'tax_query' => [],
+      'order' => 'DESC',
       'orderby' => 'date',
-      'order' => 'DESC'
+      'paged' => $parameters['page'],
+      'post_type' => 'resource',
+      'posts_per_page' => $per_page,
+      'tax_query' => []
     );
 
     // Add additional arguements conditionally from parameters
