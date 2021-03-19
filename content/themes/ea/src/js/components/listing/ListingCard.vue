@@ -42,7 +42,7 @@
       </h3>
     </div>
     <a
-      v-if="!modal"
+      v-if="!modal || (modal && externalLinkURL)"
       :href="link"
       class="card-listing__fauxlink"
       :title="title"
@@ -94,6 +94,10 @@
         }
       },
 
+      externalLinkURL() {
+        return this.config.acf && this.config.acf.external_link_url ? this.config.acf.external_link_url : ''
+      },
+
       imageUrl() {
         if (this.postType == 'casestudy') {
           return this.config.imageUrl
@@ -114,13 +118,7 @@
       },
 
       link() {
-        if (this.postType == 'member') {
-          return this.config.ACF && this.config.ACF.url
-            ? this.config.ACF.url
-            : ''
-        } else {
-          return this.config.link
-        }
+        return this.externalLinkURL ? this.externalLinkURL : this.config.link
       },
 
       hasDate() {
@@ -128,7 +126,7 @@
       },
 
       hrefTarget() {
-        return (this.postType == 'member' || this.postType == 'casestudy') ? '_blank' : '_self'
+        return this.externalLinkURL ? '_blank' : '_self'
       },
 
       resourceType() {
@@ -147,7 +145,7 @@
 
     methods: {
       clickHandler () {
-        if (this.modal) {
+        if (this.modal & !this.externalLinkURL) {
           this.$eventHub.$emit('modal-open')
           this.$parent.$emit('onCardClicked', this.id)
         }

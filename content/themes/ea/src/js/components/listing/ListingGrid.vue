@@ -20,16 +20,16 @@
         class="listing_text-button"
         @click="clearActiveTerms"
         >
-        {{ $t('common.view_all') }}
-      </button>
+          {{ $t('common.view_all') }}
+        </button>
 
-      <listing-drawer
-      v-if="filters.length"
-      v-bind="{
-        activeTermsCount,
-        filters
-        }"
-        @filterSelected="onFilterSelected()"
+        <listing-drawer
+          v-if="filters.length"
+          v-bind="{
+            activeTermsCount,
+            filters
+          }"
+          @filterSelected="onFilterSelected()"
         />
       </div>
     </div>
