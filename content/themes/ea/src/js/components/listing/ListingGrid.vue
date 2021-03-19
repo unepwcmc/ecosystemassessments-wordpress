@@ -15,7 +15,7 @@
       </p>
 
       <button
-        v-if="Object.keys(activeTerms).length !== 0"
+        v-if="activeTermsCount !== 0"
         class="listing_text-button"
         @click="clearActiveTerms"
       >
@@ -24,7 +24,10 @@
 
       <listing-drawer
         v-if="filters.length"
-        :filters="filters"
+        v-bind="{
+          activeTermsCount,
+          filters
+        }"
         @filterSelected="onFilterSelected()"
       />
     </div>
@@ -167,6 +170,14 @@ export default {
   },
 
   computed: {
+    activeTermsCount() {
+      let amount = 0
+      for (const term in this.activeTerms) {
+        amount += this.activeTerms[term].length
+      }
+      return amount
+    },
+
     filtersURL() {
       let requestURL = this.config.filtersBaseURL + '?post_type=' + this.postSingular
 

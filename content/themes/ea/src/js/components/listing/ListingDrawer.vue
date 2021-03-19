@@ -17,6 +17,12 @@
       class="listing-filter__drawer-toggle"
     >
       {{ $t('common.filter') }}
+      <span
+        v-show="activeTermsCount"
+        class="listing-filter__drawer-count"
+      >
+        {{ activeTermsCount }}
+      </span>
     </drawer-trigger>
   </div>
 </template>
@@ -38,6 +44,10 @@
     },
 
     props: {
+      activeTermsCount: {
+        type: Number,
+        default: undefined
+      },
       filters: {
         type: Array,
         required: true
