@@ -1,0 +1,26 @@
+@import "../../src/scss/utilities/variables";
+@import "../../src/scss/utilities/mixins";
+@import "../../src/scss/components/section";
+@import "../../src/scss/components/listing/card";
+
+.card-listing__body {
+  padding: $item-padding;
+}
+
+.editor-styles-wrapper .card-listing__card h3,
+.editor-styles-wrapper .card-listing__card p {
+  margin-top: 0;
+  margin-bottom: $item-padding-smaller;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.editor-styles-wrapper .card-listing__card h3 {
+  font-size: 18px;
+}
+
+.editor-styles-wrapper .card-listing__card p {
+  font-size: 12px;
+}

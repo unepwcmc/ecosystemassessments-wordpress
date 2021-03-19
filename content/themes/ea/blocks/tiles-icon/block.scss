@@ -11,7 +11,8 @@
   }
 }
 
-.tiles-icon__items {
+ul.tiles-icon__items,
+.editor-styles-wrapper ul.tiles-icon__items {
   @include structural_ul;
 
   @include break-min($md) {
@@ -20,14 +21,15 @@
   }
 }
 
-.tiles-icon__item {
+li.tiles-icon__item,
+.editor-styles-wrapper li.tiles-icon__item {
   margin-bottom: $grid-gap;
 
   @include break-min($md) {
     margin-right: $grid-gap;
     margin-bottom: 0;
     display: flex;
-    
+
     flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
   }
 }
@@ -72,17 +74,33 @@ p.tile-icon__description {
 }
 
 .tile-icon__links {
-  display: flex;
-  align-items: center;
-  margin-right: -6px;
+  margin-bottom: -$item-padding-small;
+
+  @include break-min($sm) {
+    display: flex;
+    align-items: center;
+    margin-right: -$item-padding-small;
+    margin-bottom: 0;
+  }
+
+  @include break-min($md) {
+    margin-right: -$item-padding;
+  }
 }
 
 a.tile-icon__link {
   @include button_secondary;
   @include button_wider;
-  margin-right: 6px;
+  margin-bottom: $item-padding-small;
+  width: 100%;
+
+  @include break-min($sm) {
+    margin-right: $item-padding-small;
+    margin-bottom: 0;
+    width: auto;
+  }
 
   @include break-min($md) {
-    margin-right: 15px;
+    margin-right: $item-padding;
   }
 }
