@@ -13,12 +13,18 @@
 	$thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/dist/img/square-placeholder.jpg';
 
 	$post_type_slug = get_post_type();
+	$isTypePost = $post_type_slug === 'post';
+	$isTypeResource = $post_type_slug === 'resource';
 
 	$post_type = get_post_type_object( $post_type_slug );
 
 	$post_type_singular_name = $post_type->labels->singular_name;
 
-	$post_type_label = $post_type_singular_name == 'Post' ?
+	if ($isTypeResource) {
+		$resource_type = get_the_terms($post->ID, 'resource_type')[0];
+	}
+
+	$post_type_label = $isTypePost ?
 		__( 'News', 'wcmc' ) :
 		$post_type_singular_name;
 ?>
@@ -35,7 +41,11 @@
 				<?php
 				the_title( sprintf( '<h2 class="entry-excerpt__title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 				?>
-				<p class="entry-excerpt__details"><?php echo $post_type_label; ?> • <?php echo the_date('j F Y'); ?></p>
+				<p class="entry-excerpt__details">
+					<?php echo $post_type_label; ?>
+					<?php if ($isTypePost) echo the_date(' • j F Y'); ?>
+					<?php if ($isTypeResource) echo ' • ' . $resource_type->name; ?>
+				</p>
 				<?php if (get_the_excerpt() != ''): ?>
 					<p class="entry-excerpt__content"><?php
 						the_excerpt();
