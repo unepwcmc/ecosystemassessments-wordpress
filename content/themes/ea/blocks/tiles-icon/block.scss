@@ -26,7 +26,8 @@
   @include break-min($md) {
     margin-right: $grid-gap;
     margin-bottom: 0;
-
+    display: flex;
+    
     flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
   }
 }
