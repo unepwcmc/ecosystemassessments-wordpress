@@ -28,6 +28,9 @@
   .wp-block-image {
     margin-top: $spacer-medium;
     margin-bottom: $spacer-medium;
+    padding-bottom: calc((19 / 29) * 100%);
+
+    position: relative;
 
     &:first-child {
       margin-top: 0;
@@ -38,9 +41,8 @@
     }
 
     img {
-      width: 100%;
-      height: auto;
-
+      @include absolute_fill;
+      @include object_fit_cover;
       display: block;
     }
 
