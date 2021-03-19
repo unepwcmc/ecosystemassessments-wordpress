@@ -1,10 +1,17 @@
 .listing__header {
   padding-top: $spacer-small;
   padding-bottom: $spacer-small;
+  width: 100%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.listing__filters {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 p.listing__text {

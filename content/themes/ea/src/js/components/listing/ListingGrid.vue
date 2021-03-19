@@ -14,22 +14,24 @@
         }) }}
       </p>
 
-      <button
+      <div class="listing__filters">
+        <button
         v-if="activeTermsCount !== 0"
         class="listing_text-button"
         @click="clearActiveTerms"
-      >
+        >
         {{ $t('common.view_all') }}
       </button>
 
       <listing-drawer
-        v-if="filters.length"
-        v-bind="{
-          activeTermsCount,
-          filters
+      v-if="filters.length"
+      v-bind="{
+        activeTermsCount,
+        filters
         }"
         @filterSelected="onFilterSelected()"
-      />
+        />
+      </div>
     </div>
 
     <div class="listing__body">
