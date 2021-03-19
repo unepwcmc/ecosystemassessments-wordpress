@@ -1,5 +1,6 @@
 .listing-filter__drawer-toggle {
   @include button_secondary;
+  @include button_wider;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: $grid-gap * 2;
@@ -8,11 +9,26 @@
   align-items: center;
   justify-content: space-between;
 
+  position: relative;
+
   svg {
     width: 20px;
     height: 20px;
     margin-left: $item-padding;
   }
+}
+
+.listing-filter__drawer-count {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: $color-primary;
+  color: $color-white;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 .listing-filter__items {
