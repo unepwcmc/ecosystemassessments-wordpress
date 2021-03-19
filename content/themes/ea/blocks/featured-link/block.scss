@@ -1,5 +1,6 @@
 @import "../../src/scss/utilities/variables";
 @import "../../src/scss/utilities/mixins";
+@import "../../src/scss/components/icon";
 
 .featured-link__body {
   width: 100%;
@@ -75,7 +76,8 @@ a.featured-link__link {
   }
 }
 
-.featured-link__background-image {
+.featured-link__background-image,
+.block-editor__container .featured-link__background-image {
   @include absolute_fill;
   @include object_fit_cover;
   z-index: 1;

@@ -1,17 +1,17 @@
 <?php
-  $thumbnail_override = get_field( 'small_image' );
-
-  if ($thumbnail_override != '') {
-    $thumbnail_url = $thumbnail_override;
-  } else {
-    $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/card-placeholder.jpg';
-  }
+  $thumbnail_url = get_the_post_thumbnail_url() != ''
+    ? get_the_post_thumbnail_url()
+    : get_stylesheet_directory_uri() . '/inc/img/card-placeholder.jpg';
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="card-listing__card">
 	<header class="card-listing__header">
-    <div class="card-listing__image">
-      <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
+    <div class="card-listing__image-wrap">
+      <img
+        src="<?php echo $thumbnail_url; ?>"
+        alt="<?php the_title(); ?>"
+        class="card-listing__image"
+      />
     </div>
 	</header>
 	<div class="card-listing__body">

@@ -26,7 +26,7 @@
 <div class="listing-latest">
   <div class="listing-latest__inner">
     <div class="listing-latest__header">
-      <h3 class="listing-latest__title">Latest <?php echo $post_label; ?></h3>
+      <h3 class="listing-latest__title"><?php _e( 'Latest' ) ?> <?php echo $post_label; ?></h3>
     </div>
     <div class="listing-latest__body">
 
