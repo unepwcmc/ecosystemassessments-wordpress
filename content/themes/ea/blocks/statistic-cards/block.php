@@ -4,36 +4,57 @@
     Created by UNEP-WCMC
     With Genesis Custom Blocks for Gutenberg - https://wordpress.org/plugins/genesis-custom-blocks/
   */
-  $link_url = block_field('link-url', false);
+  $link_url = block_field( 'link-url', false );
   $link_args = array(
     'text' => block_field( 'link-text', false ),
     'url' => $link_url
   );
+
+  $countries_worked_in = get_theme_mod( 'statistics_block_countries_count' );
+  $resources_count = wp_count_posts( 'resource' )->publish ;
+  $years_of_operation = get_theme_mod( 'statistics_block_years_count' );
 ?>
 
 <div class="statistic-cards">
   <div class="statistic-cards__body">
-    <?php if (block_rows('statistic-card')) : ?>
       <ul class="statistic-cards__items">
-        <?php while (block_rows('statistic-card')) : block_row('statistic-card'); ?>
+        <?php if( $countries_worked_in != 0 ): ?>
           <li class="statistic-cards__item">
             <div class="statistic-card">
-              <?php if (block_sub_value('value')) : ?>
-                <h3 class="statistic-card__title">
-                  <?php echo block_sub_value('value'); ?>
-                </h3>
-              <?php endif; ?>
-              <?php if (block_sub_value('statistic')) : ?>
-                <p class="statistic-card__text">
-                  <?php echo block_sub_value('statistic'); ?>
-                </p>
-              <?php endif; ?>
+              <h3 class="statistic-card__title">
+                <?php echo $countries_worked_in; ?>
+              </h3>
+              <p class="statistic-card__text">
+                <?php _e('Countries worked in'); ?>
+              </p>
             </div>
           </li>
-        <?php endwhile; ?>
+        <?php endif; ?>
+        <?php if( $resources_count != 0 ): ?>
+          <li class="statistic-cards__item">
+            <div class="statistic-card">
+              <h3 class="statistic-card__title">
+                <?php echo $resources_count; ?>
+              </h3>
+              <p class="statistic-card__text">
+                <?php _e('Resources'); ?>
+              </p>
+            </div>
+          </li>
+        <?php endif; ?>
+        <?php if( $years_of_operation != 0 ): ?>
+          <li class="statistic-cards__item">
+            <div class="statistic-card">
+              <h3 class="statistic-card__title">
+                <?php echo $years_of_operation; ?>
+              </h3>
+              <p class="statistic-card__text">
+                <?php _e('Years of operation'); ?>
+              </p>
+            </div>
+          </li>
+        <?php endif; ?>
       </ul>
-    <?php endif;
-    reset_block_rows('tile'); ?>
   </div>
 
   <?php if ($link_url !== '') : ?>

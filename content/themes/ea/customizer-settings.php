@@ -65,3 +65,9 @@ require_once( 'customizer-settings/heroes.php' );
 -------------------------------------------------------------------------------*/
 
 require_once( 'customizer-settings/cta-block.php' );
+
+/*-------------------------------------------------------------------------------
+  Statistics Block Customiser Settings
+-------------------------------------------------------------------------------*/
+
+require_once( 'customizer-settings/statistics-block.php' );
