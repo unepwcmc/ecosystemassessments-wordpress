@@ -16,6 +16,7 @@
 
 p.listing__text {
   @include font_small_text;
+  line-height: 50px;
   margin-bottom: 0;
 }
 

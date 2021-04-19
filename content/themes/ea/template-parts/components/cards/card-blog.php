@@ -18,7 +18,6 @@
 		<div class="card-listing__content">
       <p class="card-listing__details"><?php the_time( 'd/m/y' ); ?></p>
       <h3 class="card-listing__title"><?php the_title(); ?></h3>
-      <p class="card-listing__link">More</p>
 		</div>
 	</div>
   <a class="card-listing__fauxlink" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"></a>
