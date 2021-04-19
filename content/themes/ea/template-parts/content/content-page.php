@@ -13,6 +13,7 @@
 	$post_classes = implode(' ', $post_classes_array);
 ?>
 
+<?php get_template_part('template-parts/components/content-back-button'); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
 	<div class="entry__body">
 		<div class="entry__content">
