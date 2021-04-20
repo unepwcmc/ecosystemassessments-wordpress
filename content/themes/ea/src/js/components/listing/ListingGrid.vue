@@ -244,7 +244,10 @@ export default {
       axios.get(this.filtersURL)
       .then((response) => {
         const newFilters = this.updateFiltersTaxonomyName(response.data.filters, 'category', 'categories')
-        this.filters = this.getFiltersWithTerms(newFilters)
+        this.filters = this.getFiltersWithTerms(newFilters).sort(function(a, b) {
+          return a.label.toLowerCase().localeCompare(b.label.toLowerCase())
+        })
+        console.log('hello2!', this.filters);
       })
       .catch((error) => {
         console.error(error)
