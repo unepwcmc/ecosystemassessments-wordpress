@@ -56,13 +56,13 @@ a.header-tools__button {
 .header-tools__item--cta {
   display: none;
 
-  @include break-min(1024px) {
+  @include break-min($headerNavShow) {
     display: block;
   }
 }
 
 .header-tools__item--menu-toggle {
-  @include break-min(1024px) {
+  @include break-min($headerNavShow) {
     display: none;
   }
 }

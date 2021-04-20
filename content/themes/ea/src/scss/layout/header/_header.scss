@@ -10,6 +10,14 @@
 
   transition: color .3s ease, background-color .3s ease;
 
+  .language-switcher & {
+    top: 35px;
+
+    @include break-min($headerNavShow) {
+      top: 0;
+    }
+  }
+
   .no-hero &,
   &.header--scrolled {
     background-color: $color-header;
@@ -20,6 +28,26 @@
     top: 46px;
 
     @include break-min(783px) {
+      top: 64px;
+    }
+
+    @include break-min($headerNavShow) {
+      top: 32px;
+    }
+  }
+
+  .language-switcher.logged-in.admin-bar & {
+    top: 81px;
+
+    @include break-min(783px) {
+      top: 99px;
+    }
+
+    @include break-min($headerNavShow) {
+      top: 64px;
+    }
+
+    @include break-min(938px) {
       top: 32px;
     }
   }
@@ -33,14 +61,22 @@
 .header__items {
   padding-top: 10px;
   padding-bottom: 10px;
-  height: $headerHeight;
+  height: $headerMobileHeight;
 
   display: flex;
 
   transition: height .3s ease;
 
   .header--scrolled & {
-    height: $headerHeightScrolled;
+    height: $headerMobileHeightScrolled;
+  }
+
+  @include break-min($headerNavShow) {
+    height: $headerHeight;
+
+    .header--scrolled & {
+      height: $headerHeightScrolled;
+    }
   }
 }
 
@@ -49,20 +85,32 @@
 }
 
 .header__item--logo {
-  width: 60px;
+  width: 40px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 0 0 60px;
+  flex: 0 0 40px;
 
   transition: color .3s ease, flex-basis .3s ease, width .3s ease;
 
+  @include break-min($headerNavShow) {
+    width: 60px;
+
+    flex: 0 0 60px;
+  }
+
   .header--scrolled & {
     color: $color-primary;
-    width: 45px;
+    width: 32px;
 
-    flex-basis: 45px;
+    flex-basis: 32px;
+
+    @include break-min($headerNavShow) {
+      width: 45px;
+
+      flex-basis: 45px;
+    }
   }
 }
 
@@ -80,6 +128,20 @@
   display: flex;
   justify-content: flex-end;
   flex: 0 0 auto;
+
+  &.header__item--language-switcher {
+    @include break-min($headerNavShow) {
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+
+      .header--scrolled & {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+  }
 }
 
 .header__title {

@@ -6,7 +6,7 @@
 
     display: none;
 
-    @include break-min(1024px) {
+    @include break-min($headerNavShow) {
       display: flex;
     }
 
@@ -24,7 +24,6 @@
       position: relative;
 
       transition: padding .3s ease;
-
 
       &:hover a::before {
         transform: scaleX(1);

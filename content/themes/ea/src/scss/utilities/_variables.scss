@@ -90,8 +90,11 @@ $xlg: 1440px;
 // HEADER
 //-------------------------------------------------
 
+$headerMobileHeight: 60px;
+$headerMobileHeightScrolled: 40px;
 $headerHeight: 120px;
 $headerHeightScrolled: 80px;
+$headerNavShow: $md;
 
 //-------------------------------------------------
 // DRAWERS

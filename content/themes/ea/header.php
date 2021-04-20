@@ -23,6 +23,9 @@
         $body_class .= ' no-hero';
       }
     }
+    if ( get_theme_mod( 'enable_language_switcher' ) ) {
+      $body_class .= ' language-switcher';
+    }
   ?>
 </head>
 
@@ -32,6 +35,15 @@
     <?php get_template_part( 'template-parts/drawers/drawers' ); ?>
 
     <!-- Header -->
+    <?php if ( get_theme_mod( 'enable_language_switcher' ) ) : ?>
+      <div class="layout-topbar">
+        <div class="layout-topbar__inner">
+          <div class="layout-topbar__body">
+            <?php do_action( 'wpml_add_language_selector' ); ?>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
     <header class="layout-header">
       <main-header>
 
@@ -48,7 +60,10 @@
             <?php endif; ?>
           </div>
 
-          <div class="header__item header__item--tools">
+          <div class="header__item header__item--tools<?php if ( get_theme_mod( 'enable_language_switcher' ) ) echo ' header__item--language-switcher'; ?>">
+            <?php if ( get_theme_mod( 'enable_language_switcher' ) ) :
+              do_action( 'wpml_add_language_selector' );
+            endif; ?>
             <!-- Header Tools -->
             <?php get_template_part( 'template-parts/header/tools' ); ?>
           </div>

@@ -31,6 +31,12 @@ function remove_customizer_settings() {
 add_action( 'customize_register', 'remove_customizer_settings', 11 );
 
 /*-------------------------------------------------------------------------------
+  Language Switcher Customiser Settings
+-------------------------------------------------------------------------------*/
+
+require_once( 'customizer-settings/language-switcher.php' );
+
+/*-------------------------------------------------------------------------------
   Header Button Customiser Settings
 -------------------------------------------------------------------------------*/
 

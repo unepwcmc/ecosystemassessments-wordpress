@@ -1,0 +1,48 @@
+// WPML Language Switcher
+
+.wpml-ls-legacy-list-horizontal {
+  padding: 0 !important;
+
+  .layout-header & {
+    display: none;
+
+    @include break-min($headerNavShow) {
+      display: block;
+    }
+  }
+
+  .header--scrolled & {
+    display: none;
+  }
+
+  a {
+    padding: 0 5px !important;
+    margin-bottom: 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .wpml-ls-slot-shortcode_actions.wpml-ls-last-item a {
+    padding-right: 0 !important;
+  }
+
+  .wpml-ls-slot-shortcode_actions.wpml-ls-item.wpml-ls-current-language a {
+    text-decoration: underline;
+  }
+}
+
+.wpml-ls-native {
+  font-size: 12px;
+}
+
+
+.menu-item.wpml-ls-menu-item {
+  display: inline-block;
+  margin-right: $grid-gap;
+
+  &.wpml-ls-current-language .wpml-ls-native {
+    text-decoration: underline;
+  }
+}
