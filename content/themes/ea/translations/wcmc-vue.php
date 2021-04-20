@@ -9,7 +9,7 @@ return array(
     'view_all' => __( 'View all', 'wcmc-vue')
   ),
   'listing' => array(
-    'count_text' => __( 'Showing %{posts_length} of %{max_posts} entries', 'wcmc-vue' ),
+    'count_text' => __( '<span>Showing </span>%{posts_length} of %{max_posts}<span> entries</span>', 'wcmc-vue' ),
   ),
   'post_types' => array(
     'event' => __( 'event', 'wcmc-vue' ),

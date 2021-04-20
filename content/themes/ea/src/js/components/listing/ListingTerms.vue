@@ -43,14 +43,11 @@
     },
 
     created () {
-      console.log('ListingTerms created');
-
       this.$eventHub.$on('clearCheckedTerms', () => {
         this.clearCheckedTerms()
       })
 
       if (this.preselectedTerm) {
-        console.log('preselectedTerm found: ', this.preselectedTerm)
         if (this.preselectedTerm.filter == this.filter) {
           this.addToCheckedTerms(this.preselectedTerm.term_id)
         }
@@ -65,15 +62,12 @@
 
     methods: {
       addToCheckedTerms (id) {
-        console.log('Received term');
         if (this.containsTerm(id)) {
-          console.log('pushing id');
           this.checkedTerms.push(id)
         }
       },
 
       clearCheckedTerms () {
-        console.log('Clearing checked terms');
         this.checkedTerms = []
       },
 
