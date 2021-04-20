@@ -31,6 +31,12 @@ function remove_customizer_settings() {
 add_action( 'customize_register', 'remove_customizer_settings', 11 );
 
 /*-------------------------------------------------------------------------------
+  Language Switcher Customiser Settings
+-------------------------------------------------------------------------------*/
+
+require_once( 'customizer-settings/language-switcher.php' );
+
+/*-------------------------------------------------------------------------------
   Header Button Customiser Settings
 -------------------------------------------------------------------------------*/
 
@@ -65,3 +71,9 @@ require_once( 'customizer-settings/heroes.php' );
 -------------------------------------------------------------------------------*/
 
 require_once( 'customizer-settings/cta-block.php' );
+
+/*-------------------------------------------------------------------------------
+  Statistics Block Customiser Settings
+-------------------------------------------------------------------------------*/
+
+require_once( 'customizer-settings/statistics-block.php' );

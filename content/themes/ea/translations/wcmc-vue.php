@@ -11,6 +11,17 @@ return array(
   'listing' => array(
     'count_text' => __( 'Showing %{posts_length} of %{max_posts} entries', 'wcmc-vue' ),
   ),
+  'post_types' => array(
+    'event' => __( 'event', 'wcmc-vue' ),
+    'events' => __( 'events', 'wcmc-vue' ),
+    'news' => __( 'news', 'wcmc-vue' ),
+    'resource' => __( 'resource', 'wcmc-vue' ),
+    'resources' => __( 'resources', 'wcmc-vue' ),
+    'partner' => __( 'partner', 'wcmc-vue' ),
+    'partners' => __( 'partners', 'wcmc-vue' ),
+    'post' => __( 'post', 'wcmc-vue' ),
+    'posts' => __( 'posts', 'wcmc-vue' ),
+  ),
   'resources' => array(
     'case_study' => __( 'Case Study', 'wcmc-vue' ),
     'case_studies' => __( 'Case Studies', 'wcmc-vue' ),

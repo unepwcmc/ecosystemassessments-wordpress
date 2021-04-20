@@ -20,7 +20,7 @@
         class="listing_text-button"
         @click="clearActiveTerms"
         >
-          {{ $t('common.view_all') }}
+          {{ viewAllText }}
         </button>
 
         <listing-drawer
@@ -209,6 +209,13 @@ export default {
       });
 
       return params
+    },
+
+    viewAllText () {
+      const pluralPostName = this.postType === 'posts'
+        ? 'news'
+        : this.postSingular + 's'
+      return `${this.$t('common.view_all')} ${this.$t('post_types')[pluralPostName]}`
     }
   },
 
