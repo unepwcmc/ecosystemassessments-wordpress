@@ -14,9 +14,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
-	<div class="entry__header">
-    <?php get_template_part('template-parts/components/buttons/button-back', 'content'); ?>
-  </div>
+  <?php if (basename( $template ) !== 'front-page.php') : ?>
+  	<div class="entry__header">
+      <?php get_template_part('template-parts/components/buttons/button-back', 'content'); ?>
+    </div>
+  <?php endif; ?>
 	<div class="entry__body">
 		<div class="entry__content">
 
