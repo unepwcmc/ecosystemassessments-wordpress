@@ -17,10 +17,9 @@
 	$cta_link_external = get_field( 'external_link' );
 ?>
 
-<?php get_template_part('template-parts/components/single-back-button'); ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry richtext' ); ?>>
 	<div class="entry__header">
+		<?php get_template_part('template-parts/components/buttons/button-back', 'single'); ?>
 		<h2 class="entry__title"><?php the_title(); ?></h2>
 		<p class="entry__details"><?php echo $post_type_label; ?> • <?php echo the_date('j F Y'); ?></p>
 	</div><!-- .entry-header -->

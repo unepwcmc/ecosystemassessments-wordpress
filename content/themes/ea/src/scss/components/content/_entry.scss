@@ -1,5 +1,5 @@
 .entry {
-  position: relative;
+  // position: relative;
 }
 
 .entry__header {
@@ -7,6 +7,38 @@
 
   .layout-primary--restrained & {
     @include restrain_width;
+  }
+}
+
+a.entry__header-link {
+  @include font_small_text;
+  text-decoration: none;
+  margin-bottom: $item-padding;
+  padding-left: 30px;
+
+  display: block;
+
+  @include break-min($lg) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  svg {
+    color: $color-primary;
+    width: 25px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+    transition: transform .3s ease;
+    will-change: transform;
+  }
+
+  &:hover svg {
+    transform: translate(-2px, -50%);
   }
 }
 

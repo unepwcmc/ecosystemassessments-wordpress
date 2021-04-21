@@ -21,7 +21,7 @@ switch ($post_type) {
 
 <a
   href="<?php echo $back_url; ?>"
-  class="layout-primary__link"
+  class="entry__header-link"
 >
   <?php get_template_part('template-parts/icons/icon', 'arrow-left'); ?>
   <?php echo 'View all ' . $post_type_plural; ?>
