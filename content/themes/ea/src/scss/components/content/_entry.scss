@@ -45,7 +45,7 @@ a.entry__header-link {
 h2.entry__title {
   @include font_heading-3;
   font-weight: $fw-light;
-  margin-bottom: $item-padding;
+  margin-bottom: $item-padding * 2;
 }
 
 p.entry__details,
