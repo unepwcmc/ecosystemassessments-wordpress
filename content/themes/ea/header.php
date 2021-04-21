@@ -23,7 +23,7 @@
         $body_class .= ' no-hero';
       }
     }
-    if ( get_theme_mod( 'enable_language_switcher' ) ) {
+    if ( get_theme_mod( 'enable_language_switcher' === true ) ) {
       $body_class .= ' language-switcher';
     }
   ?>
@@ -35,7 +35,7 @@
     <?php get_template_part( 'template-parts/drawers/drawers' ); ?>
 
     <!-- Header -->
-    <?php if ( get_theme_mod( 'enable_language_switcher' ) ) : ?>
+    <?php if ( get_theme_mod( 'enable_language_switcher' ) === true ) : ?>
       <div class="layout-topbar">
         <div class="layout-topbar__inner">
           <div class="layout-topbar__body">
@@ -60,7 +60,7 @@
             <?php endif; ?>
           </div>
 
-          <div class="header__item header__item--tools<?php if ( get_theme_mod( 'enable_language_switcher' ) ) echo ' header__item--language-switcher'; ?>">
+          <div class="header__item header__item--tools<?php if ( get_theme_mod( 'enable_language_switcher' ) === true ) echo ' header__item--language-switcher'; ?>">
             <?php if ( get_theme_mod( 'enable_language_switcher' ) ) :
               do_action( 'wpml_add_language_selector' );
             endif; ?>
