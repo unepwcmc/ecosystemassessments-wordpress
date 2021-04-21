@@ -14,7 +14,9 @@
 
   .layout__body & {
     min-height: 350px;
+  }
 
+  .layout__body .hero:not(.hero--simple) & {
     @include break-min($sm) {
       min-height: 650px;
     }

@@ -7,12 +7,11 @@
       <p
         v-if="!isFetching"
         class="listing__text"
-      >
-        {{ $t('listing.count_text', {
+        v-html="$t('listing.count_text', {
           posts_length: posts.length,
           max_posts: maxPosts
-        }) }}
-      </p>
+        })"
+      />
 
       <div class="listing__filters">
         <button
@@ -225,7 +224,6 @@ export default {
         this.posts = []
         this.maxPosts = 1
         this.page = 1;
-        console.log('postsParams: ', this.postsParams);
         this.getPosts()
       },
       deep: true
@@ -234,7 +232,6 @@ export default {
 
   methods: {
     clearActiveTerms() {
-      console.log('Document title: ', document.title);
       window.history.replaceState({}, document.location.origin, document.location.pathname);
       this.activeTerms = {}
       this.$eventHub.$emit('clearCheckedTerms')
@@ -244,7 +241,9 @@ export default {
       axios.get(this.filtersURL)
       .then((response) => {
         const newFilters = this.updateFiltersTaxonomyName(response.data.filters, 'category', 'categories')
-        this.filters = this.getFiltersWithTerms(newFilters)
+        this.filters = this.getFiltersWithTerms(newFilters).sort(function(a, b) {
+          return a.label.toLowerCase().localeCompare(b.label.toLowerCase())
+        })
       })
       .catch((error) => {
         console.error(error)

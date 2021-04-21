@@ -18,6 +18,14 @@ p.listing__text {
   @include font_small_text;
   line-height: 50px;
   margin-bottom: 0;
+
+  span {
+    display: none;
+
+    @include break-min($sm) {
+      display: inline;
+    }
+  }
 }
 
 .listing_text-button {

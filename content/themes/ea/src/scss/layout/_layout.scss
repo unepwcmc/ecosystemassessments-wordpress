@@ -30,6 +30,8 @@
 }
 
 .layout-primary {
+  position: relative;
+
   @include break-min($md) {
     .layout-container--has-sidebar & {
       width: calc((9 / 12) * 100%);
@@ -39,31 +41,6 @@
     .layout-container--sidebar-right & {
       order: 1;
     }
-  }
-}
-
-a.layout-primary__link {
-  @include font_small_text;
-  text-decoration: none;
-  padding-left: 30px;
-
-  position: relative;
-
-  svg {
-    color: $color-primary;
-    width: 25px;
-
-    position: absolute;
-    top: 50%;
-    left: 0;
-
-    transform: translateY(-50%);
-    transition: transform .3s ease;
-    will-change: transform;
-  }
-
-  &:hover svg {
-    transform: translate(-2px, -50%);
   }
 }
 

@@ -1,5 +1,5 @@
 .entry {
-  position: relative;
+  // position: relative;
 }
 
 .entry__header {
@@ -10,10 +10,42 @@
   }
 }
 
+a.entry__header-link {
+  @include font_small_text;
+  text-decoration: none;
+  margin-bottom: $item-padding;
+  padding-left: 30px;
+
+  display: block;
+
+  @include break-min($lg) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  svg {
+    color: $color-primary;
+    width: 25px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+    transition: transform .3s ease;
+    will-change: transform;
+  }
+
+  &:hover svg {
+    transform: translate(-2px, -50%);
+  }
+}
+
 h2.entry__title {
   @include font_heading-3;
   font-weight: $fw-light;
-  margin-bottom: $item-padding;
+  margin-bottom: $item-padding * 2;
 }
 
 p.entry__details,

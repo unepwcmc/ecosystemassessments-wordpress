@@ -32,7 +32,9 @@ function post_filters( WP_REST_Request $request ) {
     $taxonomies = get_taxonomies( [], 'objects' );
 
     $args = array(
-      'hide_empty' => 0
+      'hide_empty' => 0,
+			'orderby' => 'term_order',
+			'order' => 'ASC'
     );
 
     $filters = [];

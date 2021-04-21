@@ -1,13 +1,8 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying full width page
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ Template Name: Simple Hero
  *
  */
 
@@ -23,11 +18,10 @@ get_header(); ?>
 			/* Variables */
 			$hero_title = get_field( 'hero_title' ) != '' ? get_field( 'hero_title' ) : get_the_title();
 			set_query_var('hero-title', $hero_title);
-			set_query_var('hero-text', get_field( 'hero_text' ));
 			set_query_var('hero-background-image', get_post_thumbnail_id(get_the_id()));
 			set_query_var('hero-opacity', get_field( 'hero_opacity' ));
 
-			get_template_part( 'template-parts/components/heroes/hero', 'page' );
+			get_template_part( 'template-parts/components/heroes/hero', 'simple' );
 
 		endwhile; // End of the loop.
 	endif;

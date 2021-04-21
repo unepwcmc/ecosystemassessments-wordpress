@@ -52,6 +52,23 @@
     }
   }
 
+  .wp-block-embed.is-type-video {
+    .wp-block-embed__wrapper {
+      padding-bottom: calc((9 / 16) * 100%);
+
+      position: relative;
+    }
+
+    iframe {
+      @include absolute_fill;
+    }
+
+    figcaption {
+      text-align: left;
+      font-size: 12px;
+    }
+  }
+
   .wp-block-separator {
     margin: 0;
     border: 0;
