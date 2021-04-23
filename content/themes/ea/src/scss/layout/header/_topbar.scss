@@ -1,7 +1,8 @@
 .layout-topbar {
-  display: block;
   background-color: $color-secondary;
   color: $color-white;
+
+  display: block;
 
   position: fixed;
   top: 0;
@@ -33,10 +34,14 @@
 
 
 .layout-topbar__inner {
-  @include inner;
+  padding-left: $grid-gap;
+  padding-right: $grid-gap;
 }
 
 .layout-topbar__body {
+  height: 35px;
+
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 }

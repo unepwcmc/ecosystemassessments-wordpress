@@ -23,7 +23,7 @@
         $body_class .= ' no-hero';
       }
     }
-    if ( get_theme_mod( 'enable_language_switcher' === true ) ) {
+    if ( get_theme_mod( 'enable_language_switcher' ) === true ) {
       $body_class .= ' language-switcher';
     }
   ?>
