@@ -9,8 +9,8 @@
  * @since 1.0
  * @version 1.2
  */
-
-	$post_type_label = get_post_type_label(	get_post_type() );
+	$post_type = get_post_type();
+	$post_type_label = get_post_type_label(	$post_type );
 
 	$cta_link_text = get_field( 'cta_link_text' );
 	$cta_link_url = get_field( 'cta_link_url' );
@@ -19,7 +19,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry richtext' ); ?>>
 	<div class="entry__header">
-		<?php get_template_part('template-parts/components/buttons/button-back', 'single'); ?>
+		<?php if ($post_type == 'process') {
+			get_template_part('template-parts/components/buttons/button-back', 'content');
+		} else {
+			get_template_part('template-parts/components/buttons/button-back', 'single');
+		} ?>
 		<h2 class="entry__title"><?php the_title(); ?></h2>
 		<p class="entry__details"><?php echo $post_type_label; ?> • <?php echo the_date('j F Y'); ?></p>
 	</div><!-- .entry-header -->
