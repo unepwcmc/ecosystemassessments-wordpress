@@ -19,6 +19,8 @@ a.entry__header-link {
   display: block;
 
   @include break-min($lg) {
+    line-height: 45px;
+
     position: absolute;
     top: 0;
     left: 0;
