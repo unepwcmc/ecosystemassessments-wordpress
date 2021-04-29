@@ -26,10 +26,15 @@ function hero_customizer_settings($wp_customize) {
     // Add a control to input the default overlay opacity
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_overlay_opacity',
     array(
-      'label' => 'Default Overlay Opacity',
+      'label' => 'Overlay Opacity',
+      'type' => 'range',
       'section' => 'default_hero',
-      'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-      'settings' => 'default_hero_overlay_opacity'
+      'settings' => 'default_hero_overlay_opacity',
+      'input_attrs' => array(
+        'min' => 0,
+        'max' => 10,
+        'step' => 1,
+      )
     ) ) );
 
     // Default text
@@ -94,9 +99,14 @@ function hero_customizer_settings($wp_customize) {
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'events_hero_overlay_opacity',
     array(
       'label' => 'Overlay Opacity',
+      'type' => 'range',
       'section' => 'events_hero',
-      'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-      'settings' => 'events_hero_overlay_opacity'
+      'settings' => 'events_hero_overlay_opacity',
+      'input_attrs' => array(
+        'min' => 0,
+        'max' => 10,
+        'step' => 1,
+      )
     ) ) );
 
     // Events Hero text
@@ -161,9 +171,14 @@ function hero_customizer_settings($wp_customize) {
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_hero_overlay_opacity',
     array(
       'label' => 'Overlay Opacity',
+      'type' => 'range',
       'section' => 'news_hero',
-      'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-      'settings' => 'news_hero_overlay_opacity'
+      'settings' => 'news_hero_overlay_opacity',
+      'input_attrs' => array(
+        'min' => 0,
+        'max' => 10,
+        'step' => 1,
+      )
     ) ) );
 
     // News Hero text
@@ -228,9 +243,14 @@ function hero_customizer_settings($wp_customize) {
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_overlay_opacity',
     array(
       'label' => 'Overlay Opacity',
+      'type' => 'range',
       'section' => 'partners_hero',
-      'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-      'settings' => 'partners_hero_overlay_opacity'
+      'settings' => 'partners_hero_overlay_opacity',
+      'input_attrs' => array(
+        'min' => 0,
+        'max' => 10,
+        'step' => 1,
+      )
     ) ) );
 
     // Partners Hero text
@@ -295,9 +315,14 @@ function hero_customizer_settings($wp_customize) {
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'resources_hero_overlay_opacity',
     array(
       'label' => 'Overlay Opacity',
+      'type' => 'range',
       'section' => 'resources_hero',
-      'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-      'settings' => 'resources_hero_overlay_opacity'
+      'settings' => 'resources_hero_overlay_opacity',
+      'input_attrs' => array(
+        'min' => 0,
+        'max' => 10,
+        'step' => 1,
+      )
     ) ) );
 }
 
