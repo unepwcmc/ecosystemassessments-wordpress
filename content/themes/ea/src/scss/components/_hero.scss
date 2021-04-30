@@ -62,8 +62,15 @@ h2.hero__title {
 }
 
 p.hero__text {
-  @include font_heading-5;
-  max-width: calc((5 / 12) * 100%);
+  @include font_small_text;
+
+  @include break-min($sm) {
+    @include font_heading-5;
+    max-width: calc((7 / 12) * 100%);
+  }
+  @include break-min($lg) {
+    max-width: calc((5 / 12) * 100%);
+  }
 }
 
 .hero__overlay {
