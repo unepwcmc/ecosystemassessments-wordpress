@@ -1,3 +1,9 @@
+// WordPress Admin Bar
+
+#wpadminbar {
+  z-index: 4 !important;
+}
+
 // WPML Language Switcher
 
 .wpml-ls-legacy-list-horizontal {
@@ -5,7 +11,7 @@
   line-height: 1 !important;
   padding: 0 !important;
 
-  .layout-header & {
+  .header & {
     display: none;
 
     @include break-min($headerNavShow) {
@@ -16,7 +22,7 @@
     }
   }
 
-  .header--scrolled & {
+  .layout-header--scrolled .header & {
     display: none;
   }
 

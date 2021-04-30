@@ -3,7 +3,7 @@
   transition: max-height .1s ease;
   will-change: max-height;
 
-  .header--scrolled & {
+  .layout-header--scrolled & {
     max-height: 60px;
   }
 }

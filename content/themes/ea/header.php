@@ -35,41 +35,46 @@
     <?php get_template_part( 'template-parts/drawers/drawers' ); ?>
 
     <!-- Header -->
-    <?php if ( get_theme_mod( 'enable_language_switcher' ) === true ) : ?>
-      <div class="layout-topbar">
-        <div class="layout-topbar__inner">
-          <div class="layout-topbar__body">
-            <?php do_action( 'wpml_add_language_selector' ); ?>
+    <main-header>
+      <?php if ( get_theme_mod( 'enable_language_switcher' ) === true ) : ?>
+        <div class="layout-topbar">
+          <div class="layout-topbar__inner">
+            <div class="layout-topbar__body">
+              <?php do_action( 'wpml_add_language_selector' ); ?>
+            </div>
           </div>
         </div>
-      </div>
-    <?php endif; ?>
-    <header class="layout-header">
-      <main-header>
+      <?php endif; ?>
 
-        <div class="header__items">
-          <div class="header__item header__item--logo">
-            <!-- Site Name & Logo  -->
-            <?php get_template_part( 'template-parts/header/logo' ); ?>
-          </div>
 
-          <div class="header__item header__item--nav">
-            <!-- Main (primary) Navigation -->
-            <?php if ( has_nav_menu( 'primary' ) ) : ?>
-              <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-            <?php endif; ?>
-          </div>
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__body">
+            <div class="header__items">
+              <div class="header__item header__item--logo">
+                <!-- Site Name & Logo  -->
+                <?php get_template_part( 'template-parts/header/logo' ); ?>
+              </div>
 
-          <div class="header__item header__item--tools<?php if ( get_theme_mod( 'enable_language_switcher' ) === true ) echo ' header__item--language-switcher'; ?>">
-            <?php if ( get_theme_mod( 'enable_language_switcher' ) ) :
-              do_action( 'wpml_add_language_selector' );
-            endif; ?>
-            <!-- Header Tools -->
-            <?php get_template_part( 'template-parts/header/tools' ); ?>
+              <div class="header__item header__item--nav">
+                <!-- Main (primary) Navigation -->
+                <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                  <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+                <?php endif; ?>
+              </div>
+
+              <div class="header__item header__item--tools<?php if ( get_theme_mod( 'enable_language_switcher' ) === true ) echo ' header__item--language-switcher'; ?>">
+                <?php if ( get_theme_mod( 'enable_language_switcher' ) ) :
+                  do_action( 'wpml_add_language_selector' );
+                endif; ?>
+                <!-- Header Tools -->
+                <?php get_template_part( 'template-parts/header/tools' ); ?>
+              </div>
+            </div>
           </div>
         </div>
+      </header>
 
-      </main-header>
-    </header>
+    </main-header>
 
     <main class="layout-main" role="main">

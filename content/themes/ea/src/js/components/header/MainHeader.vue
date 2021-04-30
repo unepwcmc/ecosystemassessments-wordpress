@@ -1,13 +1,9 @@
 <template>
   <div
-    class="header"
-    :class="{ 'header--scrolled': scrolled }"
+    class="layout-header"
+    :class="{ 'layout-header--scrolled': scrolled }"
   >
-    <div class="header__inner">
-      <div class="header__body">
-        <slot />
-      </div>
-    </div>
+    <slot />
   </div>
 </template>
 

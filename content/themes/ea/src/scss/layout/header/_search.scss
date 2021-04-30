@@ -16,7 +16,7 @@
   transition: color .3s ease;
 
   .no-hero &,
-  .header--scrolled & {
+  .layout-header--scrolled & {
     color: $color-tools-icons;
   }
 
@@ -49,7 +49,7 @@
   max-width: 100%;
 
   position: fixed;
-  top: 85px;
+  top: 65px;
   right: #{$grid-gap / 2};
   left: #{$grid-gap / 2};
   z-index: 10;
@@ -70,8 +70,24 @@
     right: -36px;
   }
 
+  .layout-header--scrolled & {
+    top: 50px;
+
+    @include break-min($headerNavShow) {
+      top: calc(100% + 5px);
+    }
+  }
+
   .admin-bar & {
-    top: 130px;
+    top: 110px;
+
+    @include break-min($xs) {
+      top: calc(100% + 5px);
+    }
+  }
+
+  .admin-bar .layout-header--scrolled & {
+    top: 50px;
 
     @include break-min($xs) {
       top: calc(100% + 5px);

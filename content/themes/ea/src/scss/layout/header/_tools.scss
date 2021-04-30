@@ -33,7 +33,7 @@ a.header-tools__button {
   font-size: inherit;
 
   .no-hero &,
-  .header--scrolled & {
+  .layout-header--scrolled & {
     color: $color-tools-icons;
 
     &:hover {
@@ -81,7 +81,7 @@ a.header-tools__button {
 
   display: block;
 
-  .header--scrolled & {
+  .layout-header--scrolled & {
     color: $color-tools-icons;
   }
 }
