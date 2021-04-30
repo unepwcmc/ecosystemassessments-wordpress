@@ -91,7 +91,7 @@
       }
     }
 
-    .header--scrolled & {
+    .layout-header--scrolled & {
       > li {
         padding-top: 17.5px;
         padding-bottom: 17.5px;
@@ -103,7 +103,7 @@
     }
 
     .no-hero &,
-    .header--scrolled & {
+    .layout-header--scrolled & {
       .menu-item-has-children > a {
         &::after {
           background-image: url('../../img/icon-angle-down-purple.svg');

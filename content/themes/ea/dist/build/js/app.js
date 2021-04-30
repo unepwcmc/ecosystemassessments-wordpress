@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "b085bb1712f1509a1b22";
+/******/ 	var hotCurrentHash = "3ea32e76607b9e83c22e";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1238,7 +1238,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ico
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! throttle-debounce */ \"./node_modules/throttle-debounce/index.umd.js\");\n/* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(throttle_debounce__WEBPACK_IMPORTED_MODULE_0__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"main-header\",\n  data: function data() {\n    return {\n      distanceToTrigger: 1,\n      scrolled: false\n    };\n  },\n  created: function created() {\n    window.addEventListener('scroll', this.headerScroll);\n  },\n  destroyed: function destroyed() {\n    window.removeEventListener('scroll', this.headerScroll);\n  },\n  methods: {\n    headerScroll: Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_0__[\"debounce\"])(250, function () {\n      this.scrolled = document.documentElement.scrollTop > this.distanceToTrigger;\n    })\n  }\n});\n\n//# sourceURL=webpack:///./src/js/components/header/MainHeader.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! throttle-debounce */ \"./node_modules/throttle-debounce/index.umd.js\");\n/* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(throttle_debounce__WEBPACK_IMPORTED_MODULE_0__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"main-header\",\n  data: function data() {\n    return {\n      distanceToTrigger: 1,\n      scrolled: false\n    };\n  },\n  created: function created() {\n    window.addEventListener('scroll', this.headerScroll);\n  },\n  destroyed: function destroyed() {\n    window.removeEventListener('scroll', this.headerScroll);\n  },\n  methods: {\n    headerScroll: Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_0__[\"debounce\"])(0, function () {\n      this.scrolled = document.documentElement.scrollTop > this.distanceToTrigger;\n    })\n  }\n});\n\n//# sourceURL=webpack:///./src/js/components/header/MainHeader.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -3027,7 +3027,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    { staticClass: \"header\", class: { \"header--scrolled\": _vm.scrolled } },\n    [\n      _c(\"div\", { staticClass: \"header__inner\" }, [\n        _c(\"div\", { staticClass: \"header__body\" }, [_vm._t(\"default\")], 2)\n      ])\n    ]\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/js/components/header/MainHeader.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    {\n      staticClass: \"layout-header\",\n      class: { \"layout-header--scrolled\": _vm.scrolled }\n    },\n    [_vm._t(\"default\")],\n    2\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/js/components/header/MainHeader.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 

@@ -2,53 +2,15 @@
   background-color: transparent;
   color: $color-white;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-
-  transition: color .3s ease, background-color .3s ease;
-
-  .language-switcher & {
-    top: 35px;
-
-    @include break-min($headerNavShow) {
-      top: 0;
-    }
-  }
+  transition: color .1s ease, background-color .1s ease;
 
   .no-hero &,
-  &.header--scrolled {
+  .layout-header--scrolled & {
     background-color: $color-header;
-    color: $color-secondary;
-  }
-
-  .logged-in.admin-bar & {
-    top: 46px;
-
-    @include break-min(783px) {
-      top: 64px;
-    }
+    color: $color-primary;
 
     @include break-min($headerNavShow) {
-      top: 32px;
-    }
-  }
-
-  .language-switcher.logged-in.admin-bar & {
-    top: 81px;
-
-    @include break-min(783px) {
-      top: 99px;
-    }
-
-    @include break-min($headerNavShow) {
-      top: 64px;
-    }
-
-    @include break-min(938px) {
-      top: 32px;
+      color: $color-secondary;
     }
   }
 }
@@ -67,14 +29,14 @@
 
   transition: height .3s ease;
 
-  .header--scrolled & {
+  .layout-header--scrolled & {
     height: $headerMobileHeightScrolled;
   }
 
   @include break-min($headerNavShow) {
     height: $headerHeight;
 
-    .header--scrolled & {
+    .layout-header--scrolled & {
       height: $headerHeightScrolled;
     }
   }
@@ -92,7 +54,7 @@
   justify-content: center;
   flex: 0 0 40px;
 
-  transition: color .3s ease, flex-basis .3s ease, width .3s ease;
+  transition: color .1s ease, flex-basis .1s ease, width .1s ease;
 
   @include break-min($headerNavShow) {
     width: 60px;
@@ -100,7 +62,7 @@
     flex: 0 0 60px;
   }
 
-  .header--scrolled & {
+  .layout-header--scrolled & {
     color: $color-primary;
     width: 32px;
 
@@ -135,7 +97,7 @@
       align-items: flex-end;
       justify-content: flex-start;
 
-      .header--scrolled & {
+      .layout-header--scrolled & {
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
@@ -156,7 +118,7 @@
     will-change: height;
   }
 
-  .header--scrolled & {
+  .layout-header--scrolled & {
     svg {
       height: $headerHeightScrolled;
     }

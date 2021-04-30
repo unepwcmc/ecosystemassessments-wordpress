@@ -17,7 +17,7 @@
       height: 100px;
       transition: width .3s ease transform .3s ease;
 
-      .header--scrolled & {
+      .layout-header--scrolled & {
         height: 60px;
         transform: scale(1.25) translateY(7px);
       }
