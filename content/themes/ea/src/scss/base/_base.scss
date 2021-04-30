@@ -3,14 +3,14 @@ BASE
 --------------------------------------------------------------*/
 
 body {
-  font-size: $font-base-size;
-  line-height: 1.6;
   background-color: $color-white;
   color: $color-body-font;
   font-family: $font-body;
-
+  font-size: $font-base-size;
+  line-height: 1.6;
   opacity: 0;
   visibility: hidden;
+
   transition: opacity 0.5s ease, visibility 0.5s ease;
 
   &.layout__body--loaded {

@@ -81,6 +81,7 @@ a.header-tools__button {
 
   display: block;
 
+  .no-hero &,
   .layout-header--scrolled & {
     color: $color-tools-icons;
   }
