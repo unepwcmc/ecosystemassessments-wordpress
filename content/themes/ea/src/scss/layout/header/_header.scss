@@ -8,7 +8,7 @@
   right: 0;
   z-index: 5;
 
-  transition: color .3s ease, background-color .3s ease;
+  transition: color .1s ease, background-color .1s ease;
 
   .language-switcher & {
     top: 35px;
@@ -92,7 +92,7 @@
   justify-content: center;
   flex: 0 0 40px;
 
-  transition: color .3s ease, flex-basis .3s ease, width .3s ease;
+  transition: color .1s ease, flex-basis .1s ease, width .1s ease;
 
   @include break-min($headerNavShow) {
     width: 60px;

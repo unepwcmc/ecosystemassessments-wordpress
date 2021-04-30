@@ -33,7 +33,7 @@ export default {
   },
 
   methods: {
-    headerScroll: debounce(250, function() {
+    headerScroll: debounce(50, function() {
       this.scrolled = document.documentElement.scrollTop > this.distanceToTrigger
     })
   }

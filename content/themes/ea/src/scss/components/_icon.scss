@@ -1,6 +1,6 @@
 .icon-logo {
   max-height: 100px;
-  transition: max-height .3s ease;
+  transition: max-height .1s ease;
   will-change: max-height;
 
   .header--scrolled & {
