@@ -21,22 +21,6 @@ function hero_customizer_settings($wp_customize) {
       'settings' => 'default_hero_image'
     ) ) );
 
-    // Default Hero overlay opacity
-    $wp_customize->add_setting('default_hero_overlay_opacity');
-    // Add a control to input the default overlay opacity
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_overlay_opacity',
-    array(
-      'label' => 'Overlay Opacity',
-      'type' => 'range',
-      'section' => 'default_hero',
-      'settings' => 'default_hero_overlay_opacity',
-      'input_attrs' => array(
-        'min' => 0,
-        'max' => 10,
-        'step' => 1,
-      )
-    ) ) );
-
     // Default text
     $wp_customize->add_setting('default_hero_text');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_text',
