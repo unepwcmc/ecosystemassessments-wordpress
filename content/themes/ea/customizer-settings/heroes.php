@@ -5,6 +5,7 @@ function hero_customizer_settings($wp_customize) {
   /*-------------------------------------------------------------------------------
   	Default
   -------------------------------------------------------------------------------*/
+
   // Add Default Hero Section
   $wp_customize->add_section( 'default_hero', array (
   'title' => 'Default Hero Settings',
@@ -31,28 +32,10 @@ function hero_customizer_settings($wp_customize) {
     'settings' => 'default_hero_text'
     ) ) );
 
-    // Default button text
-    $wp_customize->add_setting('default_hero_button_link');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link',
-    array(
-    'label' => 'Button Link',
-    'type' => 'dropdown-pages',
-    'section' => 'default_hero',
-    'settings' => 'default_hero_button_link'
-    ) ) );
-
-    // Default button url
-    $wp_customize->add_setting('default_hero_button_text');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_text',
-    array(
-    'label' => 'Button Text',
-    'section' => 'default_hero',
-    'settings' => 'default_hero_button_text'
-    ) ) );
-
   /*-------------------------------------------------------------------------------
   	Events
   -------------------------------------------------------------------------------*/
+
   // Add Events Hero Section
   $wp_customize->add_section( 'events_hero', array (
     'title' => 'Events Page',
@@ -61,7 +44,7 @@ function hero_customizer_settings($wp_customize) {
     'priority' => 100
   ) );
 
-    // Events Hero title
+    // Events Hero Title
     $wp_customize->add_setting('events_hero_title');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'events_hero_title',
     array(
@@ -70,7 +53,7 @@ function hero_customizer_settings($wp_customize) {
     'settings' => 'events_hero_title'
     ) ) );
 
-    // Events Hero background image
+    // Events Hero Background Image
     $wp_customize->add_setting('events_hero_image');
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'events_hero_image', array(
       'label' => 'Background Image',
@@ -78,7 +61,7 @@ function hero_customizer_settings($wp_customize) {
       'settings' => 'events_hero_image'
     ) ) );
 
-    // Events Hero Hero overlay opacity
+    // Events Hero Hero Overlay Opacity
     $wp_customize->add_setting('events_hero_overlay_opacity');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'events_hero_overlay_opacity',
     array(
@@ -93,7 +76,7 @@ function hero_customizer_settings($wp_customize) {
       )
     ) ) );
 
-    // Events Hero text
+    // Events Hero Text
     $wp_customize->add_setting('events_hero_text');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'events_hero_text',
     array(
@@ -103,28 +86,10 @@ function hero_customizer_settings($wp_customize) {
     'settings' => 'events_hero_text'
     ) ) );
 
-    // Events Hero button url
-    $wp_customize->add_setting('events_hero_button_link');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'events_hero_button_link',
-    array(
-    'label' => 'Button Link',
-    'type' => 'dropdown-pages',
-    'section' => 'events_hero',
-    'settings' => 'events_hero_button_link'
-    ) ) );
-
-    // Events Hero button text
-    $wp_customize->add_setting('events_hero_button_text');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'events_hero_button_text',
-    array(
-    'label' => 'Button Text',
-    'section' => 'events_hero',
-    'settings' => 'events_hero_button_text'
-    ) ) );
-
   /*-------------------------------------------------------------------------------
     News
   -------------------------------------------------------------------------------*/
+
   // Add News Hero Section
   $wp_customize->add_section( 'news_hero', array (
     'title' => 'News Page',
@@ -133,7 +98,7 @@ function hero_customizer_settings($wp_customize) {
     'priority' => 100
   ) );
 
-    // News Hero title
+    // News Hero Title
     $wp_customize->add_setting('news_hero_title');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_hero_title',
     array(
@@ -142,7 +107,7 @@ function hero_customizer_settings($wp_customize) {
     'settings' => 'news_hero_title'
     ) ) );
 
-    // News Hero background image
+    // News Hero Background Image
     $wp_customize->add_setting('news_hero_image');
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'news_hero_image', array(
       'label' => 'Background Image',
@@ -150,7 +115,7 @@ function hero_customizer_settings($wp_customize) {
       'settings' => 'news_hero_image'
     ) ) );
 
-    // News Hero Hero overlay opacity
+    // News Hero Hero Overlay Opacity
     $wp_customize->add_setting('news_hero_overlay_opacity');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_hero_overlay_opacity',
     array(
@@ -165,7 +130,7 @@ function hero_customizer_settings($wp_customize) {
       )
     ) ) );
 
-    // News Hero text
+    // News Hero Text
     $wp_customize->add_setting('news_hero_text');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_hero_text',
     array(
@@ -175,28 +140,10 @@ function hero_customizer_settings($wp_customize) {
     'settings' => 'news_hero_text'
     ) ) );
 
-    // News Hero button url
-    $wp_customize->add_setting('news_hero_button_link');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_hero_button_link',
-    array(
-    'label' => 'Button Link',
-    'type' => 'dropdown-pages',
-    'section' => 'news_hero',
-    'settings' => 'news_hero_button_link'
-    ) ) );
-
-    // News Hero button text
-    $wp_customize->add_setting('news_hero_button_text');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_hero_button_text',
-    array(
-    'label' => 'Button Text',
-    'section' => 'news_hero',
-    'settings' => 'news_hero_button_text'
-    ) ) );
-
   /*-------------------------------------------------------------------------------
   	Partners
   -------------------------------------------------------------------------------*/
+
   // Add Partners Hero Section
   $wp_customize->add_section( 'partners_hero', array (
     'title' => 'Partners Page',
@@ -205,7 +152,7 @@ function hero_customizer_settings($wp_customize) {
     'priority' => 100
   ) );
 
-    // Partners Hero title
+    // Partners Hero Title
     $wp_customize->add_setting('partners_hero_title');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_title',
     array(
@@ -214,7 +161,7 @@ function hero_customizer_settings($wp_customize) {
     'settings' => 'partners_hero_title'
     ) ) );
 
-    // Partners Hero background image
+    // Partners Hero Background Image
     $wp_customize->add_setting('partners_hero_image');
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'partners_hero_image', array(
       'label' => 'Background Image',
@@ -222,7 +169,7 @@ function hero_customizer_settings($wp_customize) {
       'settings' => 'partners_hero_image'
     ) ) );
 
-    // Partners Hero Hero overlay opacity
+    // Partners Hero Hero Overlay Opacity
     $wp_customize->add_setting('partners_hero_overlay_opacity');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_overlay_opacity',
     array(
@@ -237,7 +184,7 @@ function hero_customizer_settings($wp_customize) {
       )
     ) ) );
 
-    // Partners Hero text
+    // Partners Hero Text
     $wp_customize->add_setting('partners_hero_text');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_text',
     array(
@@ -247,28 +194,10 @@ function hero_customizer_settings($wp_customize) {
     'settings' => 'partners_hero_text'
     ) ) );
 
-    // Partners Hero button url
-    $wp_customize->add_setting('partners_hero_button_link');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_button_link',
-    array(
-    'label' => 'Button Link',
-    'type' => 'dropdown-pages',
-    'section' => 'partners_hero',
-    'settings' => 'partners_hero_button_link'
-    ) ) );
-
-    // Partners Hero button text
-    $wp_customize->add_setting('partners_hero_button_text');
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_hero_button_text',
-    array(
-    'label' => 'Button Text',
-    'section' => 'partners_hero',
-    'settings' => 'partners_hero_button_text'
-    ) ) );
-
   /*-------------------------------------------------------------------------------
   	Resources
   -------------------------------------------------------------------------------*/
+
   // Add Resources Hero Section
   $wp_customize->add_section( 'resources_hero', array (
     'title' => 'Resources Page',
@@ -277,7 +206,7 @@ function hero_customizer_settings($wp_customize) {
     'priority' => 100
   ) );
 
-    // Resources Hero title
+    // Resources Hero Title
     $wp_customize->add_setting('resources_hero_title');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'resources_hero_title',
     array(
@@ -286,7 +215,7 @@ function hero_customizer_settings($wp_customize) {
     'settings' => 'resources_hero_title'
     ) ) );
 
-    // Resources Hero background image
+    // Resources Hero Background Image
     $wp_customize->add_setting('resources_hero_image');
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'resources_hero_image', array(
       'label' => 'Background Image',
@@ -294,7 +223,7 @@ function hero_customizer_settings($wp_customize) {
       'settings' => 'resources_hero_image'
     ) ) );
 
-    // Resources Hero Hero overlay opacity
+    // Resources Hero Overlay Opacity
     $wp_customize->add_setting('resources_hero_overlay_opacity');
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'resources_hero_overlay_opacity',
     array(
@@ -307,6 +236,16 @@ function hero_customizer_settings($wp_customize) {
         'max' => 10,
         'step' => 1,
       )
+    ) ) );
+
+    // Resources Hero Text
+    $wp_customize->add_setting('resources_hero_text');
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'resources_hero_text',
+    array(
+    'label' => 'Text',
+    'type' => 'textarea',
+    'section' => 'resources_hero',
+    'settings' => 'resources_hero_text'
     ) ) );
 }
 
