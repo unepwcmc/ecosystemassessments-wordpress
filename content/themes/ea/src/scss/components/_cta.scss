@@ -42,9 +42,14 @@
     bottom: $spacer-large;
   }
 
-  @include break-min($lg) {
+  @include break-min($md) {
     padding: 60px $spacer-medium 45px $spacer-medium;
+    width: 100%;
 
+    width: calc((8 / 12) * 100% - #{$grid-gap / 2});
+  }
+
+  @include break-min($lg) {
     width: calc((6 / 12) * 100% - #{$grid-gap / 2});
   }
 
