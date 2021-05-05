@@ -11,21 +11,58 @@
  */
 	$post_type = get_post_type();
 	$post_type_label = get_post_type_label(	$post_type );
+	$is_process = $post_type === 'process';
+	$is_event = $post_type === 'event';
 
 	$cta_link_text = get_field( 'cta_link_text' );
 	$cta_link_url = get_field( 'cta_link_url' );
 	$cta_link_external = get_field( 'external_link' );
+
+	if ($is_event) {
+		$event_start_date = get_field( 'date_start' );
+		$event_end_date = get_field( 'date_end' );
+		$event_time = get_field( 'time' );
+		$event_location = get_field( 'location' );
+	}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry richtext' ); ?>>
 	<div class="entry__header">
-		<?php if ($post_type == 'process') {
+		<?php if ($is_process) {
 			get_template_part('template-parts/components/buttons/button-back', 'content');
 		} else {
 			get_template_part('template-parts/components/buttons/button-back', 'single');
 		} ?>
-		<h2 class="entry__title"><?php the_title(); ?></h2>
-		<p class="entry__details"><?php echo $post_type_label; ?> • <?php echo the_date('j F Y'); ?></p>
+		<h2 class="entry__title">
+			<?php the_title(); ?>
+		</h2>
+
+		<ul class="entry__details">
+			<li class="entry__detail">
+				<?php echo $post_type_label; ?>
+			</li>
+
+			<li class="entry__detail">
+				<?php if ($event_start_date): ?>
+					<?php echo $event_start_date; ?>
+					<?php if ($event_end_date) echo ' - ' . $event_end_date; ?>
+				<?php else : ?>
+					<?php echo the_date('j F Y'); ?>
+				<?php endif; ?>
+			</li>
+
+			<?php if ($event_time): ?>
+				<li class="entry__detail">
+					<?php echo $event_time; ?>
+				</li>
+			<?php endif; ?>
+
+			<?php if ($event_location): ?>
+				<li class="entry__detail">
+					<?php echo $event_location; ?>
+				</li>
+			<?php endif; ?>
+		</ul>
 	</div><!-- .entry-header -->
 	<div class="entry__body">
 		<div class="entry__content">

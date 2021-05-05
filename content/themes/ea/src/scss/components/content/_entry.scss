@@ -31,16 +31,19 @@ a.entry__header-link {
     width: 25px;
 
     position: absolute;
-    top: 50%;
+    top: 5px;
     left: 0;
 
-    transform: translateY(-50%);
     transition: transform .3s ease;
     will-change: transform;
+
+    @include break-min($lg) {
+      top: 14px;
+    }
   }
 
   &:hover svg {
-    transform: translate(-2px, -50%);
+    transform: translateX(-2px);
   }
 }
 
@@ -50,11 +53,38 @@ h2.entry__title {
   margin-bottom: $item-padding * 2;
 }
 
-p.entry__details,
-.richtext p.entry__details {
+ul.entry__details,
+.richtext ul.entry__details {
+  margin-bottom: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li.entry__detail,
+.richtext li.entry__detail {
   @include font_small_text;
   color: $color-dark-grey;
   margin-bottom: $item-padding-small;
+
+  position: relative;
+
+  &:not(:last-child) {
+    padding-right: 20px;
+
+    &::after {
+      content: '•';
+      font-size: 16px;
+      width: 10px;
+
+      display: block;
+
+      position: absolute;
+      top: 50%;
+      right: 3px;
+      transform: translateY(-50%);
+    }
+  }
 }
 
 a.entry__resource-link {
