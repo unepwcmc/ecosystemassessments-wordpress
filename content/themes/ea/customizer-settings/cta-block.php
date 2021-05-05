@@ -20,9 +20,14 @@ function cta_block_customizer_settings($wp_customize) {
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_background_image_opacity',
     array(
     'label' => 'Background Image Opacity',
-    'description' => 'From 0-1 in 0.1 increments',
+    'type' => 'range',
     'section' => 'cta_block',
-    'settings' => 'cta_block_background_image_opacity'
+    'settings' => 'cta_block_background_image_opacity',
+    'input_attrs' => array(
+      'min' => 0,
+      'max' => 10,
+      'step' => 1,
+    )
     ) ) );
 
     // Background color
