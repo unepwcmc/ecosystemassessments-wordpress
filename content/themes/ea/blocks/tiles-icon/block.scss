@@ -15,9 +15,11 @@ ul.tiles-icon__items,
 .editor-styles-wrapper ul.tiles-icon__items {
   @include structural_ul;
 
-  @include break-min($md) {
-    display: flex;
-    margin-right: -$grid-gap;
+  .layout__body & {
+    @include break-min($md) {
+      display: flex;
+      margin-right: -$grid-gap;
+    }
   }
 }
 
@@ -25,12 +27,14 @@ li.tiles-icon__item,
 .editor-styles-wrapper li.tiles-icon__item {
   margin-bottom: $grid-gap;
 
-  @include break-min($md) {
-    margin-right: $grid-gap;
-    margin-bottom: 0;
-    display: flex;
+  .layout__body & {
+    @include break-min($md) {
+      margin-right: $grid-gap;
+      margin-bottom: 0;
+      display: flex;
 
-    flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
+      flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
+    }
   }
 }
 
