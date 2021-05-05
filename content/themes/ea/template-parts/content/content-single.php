@@ -11,8 +11,9 @@
  */
 	$post_type = get_post_type();
 	$post_type_label = get_post_type_label(	$post_type );
-	$is_process = $post_type === 'process';
 	$is_event = $post_type === 'event';
+	$is_process = $post_type === 'process';
+	$is_resource = $post_type === 'resource';
 
 	$cta_link_text = get_field( 'cta_link_text' );
 	$cta_link_url = get_field( 'cta_link_url' );
@@ -86,12 +87,18 @@
 				?>
 			</div><!-- .entry-content -->
 			<div class="entry__footer">
+				<?php if ($is_resource) : ?>
+					<!-- Downloads List -->
+					<?php get_template_part( 'template-parts/components/resources/resource', 'download-list' ); ?>
+				<?php endif; ?>
+
 				<?php if ($cta_link_url && $cta_link_text) : ?>
 					<a href="<?php echo $cta_link_url ?>" class="entry__link<?php if ($cta_link_external) echo ' entry__link--external'; ?>"<?php if ($cta_link_external) echo ' target="_blank"'; ?>>
 						<?php echo $cta_link_text; ?>
 						<?php if ($cta_link_external) get_template_part( 'template-parts/icons/icon', 'external' ); ?>
 					</a>
 				<?php endif; ?>
+
 				<?php get_template_part( 'template-parts/social/social', 'share' ); ?>
 			</div><!-- .entry-footer -->
 	</div>

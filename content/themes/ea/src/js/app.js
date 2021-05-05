@@ -5,6 +5,7 @@ import objectFitImages from 'object-fit-images'
 import VueProgressiveImage from 'vue-progressive-image'
 
 import AddClassOnClick from './helpers/AddClassOnClick.vue'
+import DownloadList from './components/resources/DownloadList.vue'
 import Drawer from './components/drawers/Drawer.vue'
 import DrawerTrigger from './components/drawers/DrawerTrigger.vue'
 import DrawersOverlay from './components/drawers/DrawersOverlay.vue'
@@ -39,6 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       components: {
         AddClassOnClick,
+        DownloadList,
         Drawer,
         DrawerTrigger,
         DrawersOverlay,

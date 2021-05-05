@@ -53,6 +53,10 @@ function relevanssi_rest_api_filter_add_filters() {
       $args['s'] = $parameters['s'];
     }
 
+    if ( isset( $parameters['p'] ) ) {
+      $args['p'] = $parameters['p'];
+    }
+
     if ( isset( $parameters['orderby'] ) ) {
       $args['orderby'] = $parameters['orderby'];
     }

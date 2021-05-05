@@ -131,19 +131,21 @@ input[type="submit"] {
 }
 
 select {
-  width: 100%;
-  -webkit-appearance: none;
   appearance: none;
-  border: 1px solid $color-secondary;
-  max-width: 100%;
-  font-family: $font-body;
-  font-size: inherit;
-  padding: 12.5px 10px;
-  border-radius: 0;
-  background-color: #fff;
+  background-color: $color-white;
+  background-image: url("../../img/icon-angle-down-secondary.svg");
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
   background-size: auto 10px, 100%;
+  border: 1px solid $color-secondary;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: $font-body;
+  font-size: inherit;
+  padding: 12.5px 10px;
+  outline: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 input[type="date"] {
