@@ -297,7 +297,7 @@ function footer_logo( $items, $args ) {
   if ($args->theme_location == 'footer') {
     $unep_logo_url = 'https://unep-wcmc.org';
     $unep_logo_alt = 'UNEP-WCMC';
-    $logo = load_template_part('template-parts/global/logo');
+    $logo = load_template_part('template-parts/global/logo', 'white');
     $logo_unep = load_template_part('template-parts/global/logo', 'unep');
 
     $items .= '<li class="menu-item menu-item--logo"><ul class="menu-item-logos">';
