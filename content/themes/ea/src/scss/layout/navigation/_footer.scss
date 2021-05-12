@@ -56,14 +56,18 @@
     }
 
     &.menu-item--logo {
-      width: 100%;
+      width: calc(((12 / 12) * 100%) - #{$grid-gap};
+      flex: 0 0 calc(((12 / 12) * 100%) - #{$grid-gap};
+
+      @include break-min($xxs) {
+        width: 260px;
+
+        flex: 0 0 260px;
+      }
 
       @include break-min($sm) {
         margin-right: 0;
         margin-left: auto;
-        width: 260px;
-
-        flex: 0 0 260px;
       }
     }
   }
