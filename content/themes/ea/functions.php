@@ -295,8 +295,18 @@ add_filter( 'wp_nav_menu_items', 'footer_logo', 10, 2 );
 
 function footer_logo( $items, $args ) {
   if ($args->theme_location == 'footer') {
+    $unep_logo_url = 'https://unep-wcmc.org';
+    $unep_logo_alt = 'UNEP-WCMC';
     $logo = load_template_part('template-parts/global/logo');
-    $items .= '<li class="menu-item menu-item--logo"><a class="nav-footer__logo" href="' . get_site_url() . '" title="' . get_bloginfo('name') . '">' . $logo . '</a></li>';
+    $logo_unep = load_template_part('template-parts/global/logo', 'unep');
+
+    $items .= '<li class="menu-item menu-item--logo"><ul class="menu-item-logos">';
+
+    $items .= '<li class="menu-item-logo"><a class="nav-footer__logo" href="' . get_site_url() . '" title="' . get_bloginfo('name') . '">' . $logo . '</a></li>';
+
+    $items .= '<li class="menu-item-logo"><a class="nav-footer__logo" href="' . $unep_logo_url . '" title="' . $unep_logo_alt . '">' . $logo_unep . '</a></li>';
+
+    $items .= '</ul></li>';
   }
   return $items;
 }
