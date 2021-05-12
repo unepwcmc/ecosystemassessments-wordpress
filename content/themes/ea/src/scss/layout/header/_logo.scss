@@ -1,0 +1,42 @@
+.header-logo {
+  color: $color-white;
+  height: 100%;
+
+  display: block;
+  will-change: height;
+  position: relative;
+}
+
+.header-logo__icon {
+  transition: opacity .2s ease;
+  will-change: opacity;
+
+  .icon-logo {
+    @include absolute_fill;
+    @include object_fit_contain;
+  }
+
+  &.header-logo__icon--colour {
+    opacity: 0;
+  }
+}
+
+.header-logo__icon--solid {
+  .no-hero & {
+    opacity: 0;
+  }
+
+  .layout-header--scrolled:not(.no-hero) & {
+    opacity: 0;
+  }
+}
+
+.header-logo__icon--colour {
+  .no-hero & {
+    opacity: 1;
+  }
+
+  .layout-header--scrolled:not(.no-hero) & {
+    opacity: 1;
+  }
+}

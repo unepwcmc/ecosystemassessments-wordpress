@@ -1,6 +1,10 @@
 .header-tools {
   display: flex;
 
+  &:only-child {
+    flex: 1;
+  }
+
   @include break-min($md) {
     margin-left: 15px;
   }

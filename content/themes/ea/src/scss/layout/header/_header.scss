@@ -80,37 +80,6 @@
   @include screen_reader_only;
 }
 
-.header__logo {
-  height: 100%;
-
-  display: block;
-  will-change: height;
-  position: relative;
-}
-
-.header__logo-icon {
-  transition: opacity .2s ease;
-  will-change: opacity;
-
-  svg {
-    @include absolute_fill;
-    @include object_fit_contain;
-  }
-
-  &.header__logo-icon--white {
-    .layout-header--scrolled & {
-      opacity: 0;
-    }
-  }
-  &.header__logo-icon--colour {
-      opacity: 0;
-
-    .layout-header--scrolled & {
-      opacity: 1;
-    }
-  }
-}
-
 .header__item--nav {
   display: flex;
   align-items: center;
