@@ -4,7 +4,7 @@ function statistics_block_customizer_settings($wp_customize) {
   $wp_customize->add_section( 'statistics_block', array (
   'title' => 'Statistics Block',
   'description' => 'Address and Statistics Block',
-  'priority' => 170
+  'priority' => 100
   ) );
 
     // Add Countries Count Setting & Control
