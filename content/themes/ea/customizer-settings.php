@@ -65,3 +65,9 @@ require_once( 'customizer-settings/cta-block.php' );
 -------------------------------------------------------------------------------*/
 
 require_once( 'customizer-settings/statistics-block.php' );
+
+/*-------------------------------------------------------------------------------
+  Footer Customiser Settings
+-------------------------------------------------------------------------------*/
+
+require_once( 'customizer-settings/footer.php' );

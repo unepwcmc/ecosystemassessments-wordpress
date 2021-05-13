@@ -302,9 +302,9 @@ function footer_logo( $items, $args ) {
 
     $items .= '<li class="menu-item menu-item--logo"><ul class="menu-item-logos">';
 
-    $items .= '<li class="menu-item-logo"><a class="nav-footer__logo" href="' . get_site_url() . '" title="' . get_bloginfo('name') . '">' . $logo . '</a></li>';
-
     $items .= '<li class="menu-item-logo"><a class="nav-footer__logo" href="' . $unep_logo_url . '" title="' . $unep_logo_alt . '">' . $logo_unep . '</a></li>';
+
+    $items .= '<li class="menu-item-logo"><a class="nav-footer__logo" href="' . get_site_url() . '" title="' . get_bloginfo('name') . '">' . $logo . '</a></li>';
 
     $items .= '</ul></li>';
   }

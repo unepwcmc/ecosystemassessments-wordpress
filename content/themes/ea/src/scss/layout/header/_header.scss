@@ -57,9 +57,9 @@
   transition: color .1s ease, flex-basis .1s ease, width .1s ease;
 
   @include break-min($headerNavShow) {
-    width: 150px;
+    width: 170px;
 
-    flex: 0 0 150px;
+    flex: 0 0 170px;
   }
 
   .layout-header--scrolled & {
@@ -69,9 +69,9 @@
     flex-basis: 100px;
 
     @include break-min($headerNavShow) {
-      width: 120px;
+      width: 130px;
 
-      flex-basis: 120px;
+      flex-basis: 130px;
     }
   }
 }

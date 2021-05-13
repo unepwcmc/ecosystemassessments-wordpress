@@ -22,20 +22,6 @@
   }
 }
 
-.footer__image {
-  margin-right: 10px;
-  margin-bottom: 10px;
-  width: 170px;
-
-  display: block;
-  align-self: flex-start;
-  flex: 0 0 170px;
-
-  @include break-min($md) {
-    margin-bottom: 0;
-  }
-}
-
 p.footer__text {
   color: currentColor;
   font-size: 14px;
@@ -54,7 +40,8 @@ p.footer__text {
     font-size: 16px;
 
     @include break-min($md) {
-      margin-left: $grid-gap;
+      margin-left: auto;
+      padding-left: $grid-gap;
       text-align: right;
 
       flex: 1 1 450px;
