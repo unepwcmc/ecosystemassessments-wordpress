@@ -104,6 +104,10 @@
         top: 0;
         left: -#{$spacer-large / 2};
       }
+
+      &:hover {
+        opacity: 0.85;
+      }
     }
 
     &:hover {
