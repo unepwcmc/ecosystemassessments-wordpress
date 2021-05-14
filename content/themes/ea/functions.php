@@ -135,12 +135,33 @@ add_action( 'wp_enqueue_scripts', 'custom_styles' );
 LOAD JS
 ------------------------------------------------------------------------------------------------- */
 
+function load_js_with_hashes() {
+  $dirJS = new DirectoryIterator(get_stylesheet_directory() . '/dist/build/js');
+
+  foreach ($dirJS as $file) {
+    if (pathinfo($file, PATHINFO_EXTENSION) === 'js') {
+      $fullName = basename($file);
+      $name = substr(basename($fullName), 0, strpos(basename($fullName), '.'));
+
+      switch($name) {
+        case 'main':
+          $deps = array('vendor');
+          break;
+        default:
+          $deps = null;
+          break;
+      }
+
+      wp_enqueue_script( $name, get_template_directory_uri() . '/dist/build/js/' . $fullName, $deps, null, true );
+    }
+  }
+}
+
 function custom_load_js(){
 	// Enqueue Javascript
 	if(!is_admin()) {
     wp_enqueue_script( 'polyfill_js', 'https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Symbol,Array.prototype.@@iterator,Element.prototype.classList,Object.values,Object.entries,IntersectionObserver', '', '', true );
-    wp_enqueue_script( 'vendor_js', get_template_directory_uri() . '/dist/build/js/vendor.js', '', '', true );
-    wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/dist/build/js/app.js', array('vendor_js'), '', true );
+    load_js_with_hashes();
     $translation_array = include 'translations/wcmc-vue.php';
     wp_localize_script( 'theme_js', 'vue_translations', $translation_array );
 	}
