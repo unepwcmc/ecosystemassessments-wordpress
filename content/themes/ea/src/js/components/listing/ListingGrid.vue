@@ -19,7 +19,7 @@
         class="listing_text-button"
         @click="clearActiveTerms"
         >
-          {{ viewAllText }}
+
         </button>
 
         <listing-drawer
@@ -145,6 +145,7 @@ export default {
     }
 
     this.$eventHub.$on('termsUpdated', (filter, checkedTerms) => {
+      console.log('terms set');
       this.$set(this.activeTerms, filter, checkedTerms)
     })
   },
@@ -277,8 +278,11 @@ export default {
       if (!this.isFetching && ((this.posts.length < this.maxPosts) || this.isLoading)) {
         this.isFetching = true
 
+        console.log('getting posts')
         axios.get(this.getPostsURL(), { params: this.postsParams })
         .then((response) => {
+          console.log(response)
+
           this.maxPosts = parseInt(response.headers['x-wp-total'])
           this.totalPostCount = this.maxPosts
           this.page += 1
@@ -306,6 +310,8 @@ export default {
         ? this.config.eventsBaseUrl
         : this.config.postsBaseUrl + this.postType + '?_embed'
       }
+
+      console.log(encodeURI(requestURL))
 
       return encodeURI(requestURL)
     },
