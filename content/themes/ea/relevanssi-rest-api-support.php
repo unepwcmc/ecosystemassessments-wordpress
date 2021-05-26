@@ -27,6 +27,13 @@ function relevanssi_rest_api_filter_add_filters() {
 
     $parameters = $request->get_query_params();
 
+    // global $sitepress;
+    // $lang = $parameters['lang'];
+    //
+    // if ($lang !== 'en') {
+    //   $sitepress->switch_lang($lang);
+    // }
+
     // Force the posts_per_page to be no more than 12
     if (
       isset( $parameters['per_page'] )
@@ -45,6 +52,7 @@ function relevanssi_rest_api_filter_add_filters() {
       'paged' => $parameters['page'],
       'post_type' => 'resource',
       'posts_per_page' => $per_page,
+      // 'suppress_filters' => false,
       'tax_query' => []
     );
 

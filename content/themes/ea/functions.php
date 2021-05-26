@@ -432,6 +432,9 @@ function get_wpml_translations_json() {
   );
 }
 
+// Define constant for current language
+define('ICL_LANGUAGE_CODE', true);
+
 /*-------------------------------------------------------------------------------------------------
 IMPORT CUSTOMIZER SETTINGS
 ------------------------------------------------------------------------------------------------- */

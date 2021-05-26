@@ -22,7 +22,10 @@
 			<section class="layout-primary">
 				<div class="layout-primary__body layout-primary__body--archive">
 
-					<listing-grid post-type="<?php echo $post_type; ?>" />
+					<listing-grid
+						locale="<?php echo ICL_LANGUAGE_CODE; ?>"
+						post-type="<?php echo $post_type; ?>"
+					/>
 
 				</div>
 			</section>

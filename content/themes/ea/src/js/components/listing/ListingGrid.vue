@@ -124,6 +124,10 @@ export default {
     modal: {
       type: Boolean,
       default: false
+    },
+    locale: {
+      type: String,
+      required: true
     }
   },
 
@@ -155,10 +159,11 @@ export default {
       activePost: {},
       activeTerms: {},
       config: {
-        postsBaseUrl: '/wp-json/wp/v2/',
-        resourcesBaseUrl: '/wp-json/relevanssi/v1/search?_embed&s=',
-        eventsBaseUrl: '/wp-json/ecosystem-assessments/v1/events?_embed',
-        filtersBaseURL: '/wp-json/ecosystem-assessments/v1/list-filters'
+        postsBaseUrl: `/wp-json/wp/v2/`,
+        resourcesBaseUrl: `/wp-json/wp/v2/resource`,
+        resourcesSearchUrl: `/wp-json/relevanssi/v1/search?_embed&type=resource`,
+        eventsBaseUrl: `/wp-json/ecosystem-assessments/v1/events?_embed`,
+        filtersBaseURL: `/wp-json/ecosystem-assessments/v1/list-filters`
       },
       filters: [],
       isLoading: true,
@@ -180,16 +185,24 @@ export default {
       return amount
     },
 
+    baseUrl() {
+      return document.location.protocol + document.location.hostname
+    },
+
+    currentLocale() {
+      return this.locale ? `${this.locale}` : ''
+    },
+
     filtersURL() {
       let requestURL = this.config.filtersBaseURL + '?post_type=' + this.postSingular
-
       return encodeURI(requestURL)
     },
 
     postsParams() {
       let params = {
         'page': this.page,
-        'per_page': this.perPage
+        'per_page': this.perPage,
+        'lang': this.locale
       }
 
       if (this.resourceStage) {
@@ -209,6 +222,23 @@ export default {
       });
 
       return params
+    },
+
+    postsURL() {
+      let requestURL = ''
+
+      // TODO make in to a switch statement
+      if (this.postType == 'resource') {
+        requestURL = this.config.resourcesSearchUrl
+      } else {
+        requestURL = this.postType == 'event'
+        ? this.config.eventsBaseUrl
+        : this.config.postsBaseUrl + this.postType + '?_embed'
+      }
+
+      console.log(encodeURI(requestURL))
+
+      return encodeURI(requestURL)
     },
 
     viewAllText () {
@@ -239,8 +269,13 @@ export default {
     },
 
     getFilters() {
-      axios.get(this.filtersURL)
+      axios({
+        url: this.filtersURL,
+        baseUrl: this.baseUrl,
+        params: { 'lang': this.locale }
+      })
       .then((response) => {
+        console.log(response);
         const newFilters = this.updateFiltersTaxonomyName(response.data.filters, 'category', 'categories')
         this.filters = this.getFiltersWithTerms(newFilters).sort(function(a, b) {
           return a.label.toLowerCase().localeCompare(b.label.toLowerCase())
@@ -279,7 +314,12 @@ export default {
         this.isFetching = true
 
         console.log('getting posts')
-        axios.get(this.getPostsURL(), { params: this.postsParams })
+        console.log('getting posts url: ', this.postsURL, this.baseUrl)
+        axios({
+          url: this.postsURL,
+          baseUrl: this.baseUrl,
+          params: this.postsParams
+        })
         .then((response) => {
           console.log(response)
 
@@ -299,22 +339,6 @@ export default {
       }
     },
 
-    getPostsURL() {
-      let requestURL = ''
-
-      // TODO make in to a switch statement
-      if (this.postType == 'resource') {
-        requestURL = this.config.resourcesBaseUrl
-      } else {
-        requestURL = this.postType == 'event'
-        ? this.config.eventsBaseUrl
-        : this.config.postsBaseUrl + this.postType + '?_embed'
-      }
-
-      console.log(encodeURI(requestURL))
-
-      return encodeURI(requestURL)
-    },
 
     intersected() {
       this.getPosts()

@@ -8,6 +8,12 @@ return array(
     'no_results_found' => __( 'No results found.', 'wcmc-vue' ),
     'view_all' => __( 'View all', 'wcmc-vue')
   ),
+  'filters' => array(
+    'types' => __( 'types', 'wcmc-vue' ),
+    'type' => __( 'type', 'wcmc-vue' ),
+    'stages' => __( 'stages', 'wcmc-vue' ),
+    'stage' => __( 'stage', 'wcmc-vue' ),
+  ),
   'listing' => array(
     'count_text' => __( '<span>Showing </span>%{posts_length} of %{max_posts}<span> entries</span>', 'wcmc-vue' ),
   ),
