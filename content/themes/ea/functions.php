@@ -123,7 +123,6 @@ LOAD STYLES
 ------------------------------------------------------------------------------------------------- */
 
 function custom_styles(){
-    wp_enqueue_style( 'adobe_typekit', 'https://use.typekit.net/dkb3oud.css' );
     wp_enqueue_style( 'flickity', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
     wp_enqueue_style( 'main_css', get_stylesheet_directory_uri() . '/dist/build/css/main.css' );
     wp_enqueue_style( 'ie_css', get_stylesheet_directory_uri() . '/dist/build/css/ie.css' );
@@ -162,7 +161,7 @@ function load_js_with_hashes() {
 function custom_load_js(){
 	// Enqueue Javascript
 	if(!is_admin()) {
-    wp_enqueue_script( 'polyfill_js', 'https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Symbol,Array.prototype.@@iterator,Element.prototype.classList,Object.values,Object.entries,IntersectionObserver', '', '', true );
+    wp_enqueue_script( 'polyfill_js', 'https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Symbol,Array.prototype.@@iterator,Element.prototype.classList,Object.values,Object.entries,IntersectionObserver,NodeList.prototype.forEach', '', '', true );
     load_js_with_hashes();
 	}
 }
