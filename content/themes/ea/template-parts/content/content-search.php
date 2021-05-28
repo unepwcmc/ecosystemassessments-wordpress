@@ -13,8 +13,8 @@
 	$thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/dist/img/square-placeholder.jpg';
 
 	$post_type_slug = get_post_type();
-	$isTypePost = $post_type_slug === 'post';
-	$isTypeResource = $post_type_slug === 'resource';
+	$isTypePost = $post_type_slug === __( 'post', 'wcmc' );
+	$isTypeResource = $post_type_slug === __( 'resource', 'wcmc' );
 
 	$post_type = get_post_type_object( $post_type_slug );
 
