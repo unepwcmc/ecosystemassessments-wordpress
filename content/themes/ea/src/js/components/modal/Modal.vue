@@ -53,12 +53,12 @@
     methods: {
       closeModal() {
         this.active = false
-        this.toggleBodyClass('removeClass', 'layout__body--modal-active');
+        this.toggleBodyClass('removeClass', 'layout-main--modal-active');
       },
 
       openModal() {
         this.active = true
-        this.toggleBodyClass('addClass', 'layout__body--modal-active');
+        this.toggleBodyClass('addClass', 'layout-main--modal-active');
       },
 
       toggleBodyClass(addRemoveClass, className) {

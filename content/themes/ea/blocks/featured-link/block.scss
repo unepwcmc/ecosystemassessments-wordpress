@@ -11,7 +11,7 @@
 
   position: relative;
 
-  .layout__body & {
+  .layout-main & {
     @include break-min($lg) {
       min-height: 800px;
     }
