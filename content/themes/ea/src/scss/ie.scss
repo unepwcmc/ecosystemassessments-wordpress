@@ -66,6 +66,8 @@
     li.tiles-icon__item,
     .editor-styles-wrapper li.tiles-icon__item {
       .layout-main & {
+        width: calc(((1 / 2) * 100%) - #{$grid-gap});
+
         @include break-min($md) {
           width: calc(((1 / 2) * 100%) - #{$grid-gap});
         }
@@ -75,7 +77,7 @@
     // Link tiles
 
     li.link-tiles__item {
-      width: calc(((1 / 2) * 100%)- #{$grid-gap});
+      width: calc(((1 / 4) * 100%) - #{$grid-gap});
 
       @include break-min($md) {
         width: calc(((1 / 4) * 100%) - #{$grid-gap});
