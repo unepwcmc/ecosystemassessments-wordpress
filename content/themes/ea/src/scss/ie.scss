@@ -13,15 +13,15 @@
     }
 
     // Icon
-    .icon-logo {
-      height: 100px;
-      transition: width .3s ease transform .3s ease;
-
-      .layout-header--scrolled & {
-        height: 60px;
-        transform: scale(1.25) translateY(7px);
-      }
-    }
+    // .icon-logo {
+    //   height: 100px;
+    //   transition: width .3s ease transform .3s ease;
+    //
+    //   .layout-header--scrolled & {
+    //     height: 60px;
+    //     transform: scale(1.25) translateY(7px);
+    //   }
+    // }
 
     // Layout
 
@@ -36,6 +36,22 @@
 
     // Blocks
 
+    // Home Hero
+
+    .hero-home__body {
+      .layout__body & {
+        height: 500px;
+
+        @include break-min($sm) {
+          height: 600px;
+        }
+
+        @include break-min($lg) {
+          height: 800px;
+        }
+      }
+    }
+
     // Top Level Landing Page Intro
 
     .block-intro__column {
@@ -45,24 +61,24 @@
       }
     }
 
-    // Text Image Columns
+    // Icon Tiles
 
-    .block-text-image__column {
-      @include break-min($sm) {
-        width: 49.35%;
-        flex: 0 0 49.35%;
+    li.tiles-icon__item,
+    .editor-styles-wrapper li.tiles-icon__item {
+      .layout__body & {
+        @include break-min($md) {
+          width: calc(((1 / 2) * 100%) - #{$grid-gap});
+        }
       }
     }
 
-    // Case Study Stats
-    .casestudy-stats {
+    // Link tiles
+
+    li.link-tiles__item {
+      width: calc(((1 / 2) * 100%)- #{$grid-gap});
+
       @include break-min($md) {
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
-      @include break-min($lg) {
-        margin-left: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter}) !important;
-        margin-right: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter}) !important;
+        width: calc(((1 / 4) * 100%) - #{$grid-gap});
       }
     }
 
