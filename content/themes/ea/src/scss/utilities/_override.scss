@@ -73,7 +73,11 @@
   display: inline-block;
   margin-right: $grid-gap;
 
-  &.wpml-ls-current-language .wpml-ls-native {
-    text-decoration: underline;
+  .wpml-ls-native {
+    text-decoration: none;
+
+    &.wpml-ls-current-language {
+      text-decoration: underline;
+    }
   }
 }

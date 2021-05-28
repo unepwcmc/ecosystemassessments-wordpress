@@ -40,6 +40,7 @@
 				<div class="layout-primary__body layout-primary__body--archive">
 
 					<listing-grid
+						locale="<?php echo ICL_LANGUAGE_CODE; ?>"
 						post-type="<?php echo $post_type; ?>"
 						term-label=<?php echo 'resource_stage'; ?>
 						term-id=<?php echo $resource_stage; ?>

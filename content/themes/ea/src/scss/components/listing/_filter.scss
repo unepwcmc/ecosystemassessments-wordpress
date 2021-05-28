@@ -48,6 +48,7 @@
 h4.listing-filter__title {
   font-weight: $fw-bold;
   margin-bottom: $spacer-small;
+  text-transform: capitalize;
 }
 
 ul.listing-filter__terms {

@@ -25,7 +25,7 @@
                 <?php echo $countries_worked_in; ?>
               </h3>
               <p class="statistic-card__text">
-                <?php _e('Countries worked in'); ?>
+                <?php _e( 'Countries worked in', 'wcmc' ); ?>
               </p>
             </div>
           </li>
@@ -37,7 +37,7 @@
                 <?php echo $resources_count; ?>
               </h3>
               <p class="statistic-card__text">
-                <?php _e('Resources'); ?>
+                <?php _e( 'Resources', 'wcmc' ); ?>
               </p>
             </div>
           </li>
@@ -49,7 +49,7 @@
                 <?php echo $years_of_operation; ?>
               </h3>
               <p class="statistic-card__text">
-                <?php _e('Years of operation'); ?>
+                <?php _e( 'Years of operation', 'wcmc' ); ?>
               </p>
             </div>
           </li>
