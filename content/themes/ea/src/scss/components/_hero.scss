@@ -12,7 +12,7 @@
 
   position: relative;
 
-  .layout__body & {
+  .layout-main & {
     min-height: 350px;
 
     @include break-min($sm) {

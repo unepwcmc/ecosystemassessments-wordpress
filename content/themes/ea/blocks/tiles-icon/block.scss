@@ -15,7 +15,7 @@ ul.tiles-icon__items,
 .editor-styles-wrapper ul.tiles-icon__items {
   @include structural_ul;
 
-  .layout__body & {
+  .layout-main & {
     @include break-min($md) {
       display: flex;
       margin-right: -$grid-gap;
@@ -27,7 +27,7 @@ li.tiles-icon__item,
 .editor-styles-wrapper li.tiles-icon__item {
   margin-bottom: $grid-gap;
 
-  .layout__body & {
+  .layout-main & {
     @include break-min($md) {
       margin-right: $grid-gap;
       margin-bottom: 0;

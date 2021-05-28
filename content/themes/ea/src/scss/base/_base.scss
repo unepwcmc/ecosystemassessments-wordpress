@@ -13,7 +13,7 @@ body {
 
   transition: opacity 0.5s ease, visibility 0.5s ease;
 
-  &.layout__body--loaded {
+  &.layout-main--loaded {
     opacity: 1;
     visibility: visible;
   }
@@ -26,7 +26,7 @@ body {
     }
   }
 
-  &.layout__body--modal-active {
+  &.layout-main--modal-active {
     position: fixed;
     right: 0;
     left: 0;
@@ -217,6 +217,6 @@ td {
 
 // Flickity
 
-.layout__body .flickity-page-dots {
+.layout-main .flickity-page-dots {
   bottom: 0;
 }

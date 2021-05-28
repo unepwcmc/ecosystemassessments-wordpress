@@ -7,7 +7,7 @@ Add Class to Body
 // Add specific CSS class by filter.
 
 add_filter( 'body_class', function( $classes ) {
-    return array_merge( $classes, array( 'layout__body' ) );
+    return array_merge( $classes, array( 'layout-main' ) );
 } );
 
 /*-------------------------------------------------------------------------------------------------
