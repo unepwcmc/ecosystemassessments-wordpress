@@ -66,6 +66,11 @@
 
 .wpml-ls-native {
   font-size: 14px;
+  text-decoration: none;
+
+  .wpml-ls-current-language & {
+    text-decoration: underline;
+  }
 }
 
 
@@ -73,11 +78,7 @@
   display: inline-block;
   margin-right: $grid-gap;
 
-  .wpml-ls-native {
-    text-decoration: none;
-
-    &.wpml-ls-current-language {
-      text-decoration: underline;
-    }
+  &.wpml-ls-current-language .wpml-ls-native {
+    text-decoration: underline;
   }
 }
