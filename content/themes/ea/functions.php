@@ -161,7 +161,7 @@ function load_js_with_hashes() {
 function custom_load_js(){
 	// Enqueue Javascript
 	if(!is_admin()) {
-    wp_enqueue_script( 'polyfill_js', 'https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Symbol,Array.prototype.@@iterator,Element.prototype.classList,Object.values,Object.entries,IntersectionObserver', '', '', true );
+    wp_enqueue_script( 'polyfill_js', 'https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Symbol,Array.prototype.@@iterator,Element.prototype.classList,Object.values,Object.entries,IntersectionObserver,NodeList.prototype.forEach', '', '', true );
     load_js_with_hashes();
 	}
 }
