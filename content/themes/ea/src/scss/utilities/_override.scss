@@ -68,6 +68,8 @@
   font-size: 14px;
   text-decoration: none;
 
+  display: inline-block;
+
   .wpml-ls-current-language & {
     text-decoration: underline;
   }
