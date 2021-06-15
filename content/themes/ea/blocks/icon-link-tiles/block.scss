@@ -13,7 +13,7 @@
   @include section_title;
 }
 
-.icon-link-tiles__items {
+ul.icon-link-tiles__items {
   @include structural_ul;
   margin-right: -$grid-gap;
 
@@ -21,7 +21,7 @@
   flex-wrap: wrap;
 }
 
-.icon-link-tiles__item {
+li.icon-link-tiles__item {
   margin-right: $grid-gap;
   margin-bottom: $grid-gap;
 
