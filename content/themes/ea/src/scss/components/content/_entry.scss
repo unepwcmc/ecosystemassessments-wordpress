@@ -104,10 +104,6 @@ a.entry__resource-link {
 }
 
 .entry__body {
-  strong {
-    font-size: 20px;
-  }
-
   .error-404 & {
     max-width: $restrained-width;
     margin-left: auto;

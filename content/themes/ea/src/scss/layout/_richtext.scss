@@ -55,18 +55,23 @@
 
   .entry__content > ol, .entry__content > ul,
   > ol, > ul {
-    margin-left: 20px;
+    margin-left: 30px;
     margin-bottom: 20px;
 
     li {
       color: inherit;
       list-style: disc outside none;
-      margin-bottom: 10px;
+      padding-left: 5px;
+      margin-bottom: 15px;
 
       &:last-child {
         margin-bottom: 0;
       }
     }
+  }
+
+  > ol li {
+    list-style: decimal outside none;
   }
 
   .constrained {
