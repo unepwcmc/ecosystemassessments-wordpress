@@ -38,32 +38,34 @@
 			<?php the_title(); ?>
 		</h2>
 
-		<ul class="entry__details">
-			<li class="entry__detail">
-				<?php echo $post_type_label; ?>
-			</li>
+		<?php if (!$is_process): ?>
+			<ul class="entry__details">
+				<li class="entry__detail">
+					<?php echo $post_type_label; ?>
+				</li>
 
-			<li class="entry__detail">
-				<?php if ($event_start_date): ?>
-					<?php echo $event_start_date; ?>
-					<?php if ($event_end_date) echo ' - ' . $event_end_date; ?>
-				<?php else : ?>
-					<?php echo the_date('j F Y'); ?>
+				<li class="entry__detail">
+					<?php if ($event_start_date): ?>
+						<?php echo $event_start_date; ?>
+						<?php if ($event_end_date) echo ' - ' . $event_end_date; ?>
+					<?php else : ?>
+						<?php echo the_date('j F Y'); ?>
+					<?php endif; ?>
+				</li>
+
+				<?php if ($event_time): ?>
+					<li class="entry__detail">
+						<?php echo $event_time; ?>
+					</li>
 				<?php endif; ?>
-			</li>
 
-			<?php if ($event_time): ?>
-				<li class="entry__detail">
-					<?php echo $event_time; ?>
-				</li>
-			<?php endif; ?>
-
-			<?php if ($event_location): ?>
-				<li class="entry__detail">
-					<?php echo $event_location; ?>
-				</li>
-			<?php endif; ?>
-		</ul>
+				<?php if ($event_location): ?>
+					<li class="entry__detail">
+						<?php echo $event_location; ?>
+					</li>
+				<?php endif; ?>
+			</ul>
+		<?php endif; ?>
 	</div><!-- .entry-header -->
 	<div class="entry__body">
 		<div class="entry__content">
