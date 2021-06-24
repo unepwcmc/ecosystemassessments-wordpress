@@ -124,6 +124,7 @@ LOAD STYLES
 
 function custom_styles(){
     wp_enqueue_style( 'flickity', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
+    wp_enqueue_style( 'typekit', 'https://use.typekit.net/sqd3ejn.css' );
     wp_enqueue_style( 'main_css', get_stylesheet_directory_uri() . '/dist/build/css/main.css' );
     wp_enqueue_style( 'ie_css', get_stylesheet_directory_uri() . '/dist/build/css/ie.css' );
 }
