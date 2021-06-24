@@ -130,12 +130,25 @@
       },
 
       resourceType() {
-        return this.postType == 'resource' &&
-          this.config._embedded['wp:term'].find(term => term[0].taxonomy == 'resource_type') ?
-            this.config._embedded['wp:term']
-            .find(term => term[0].taxonomy == 'resource_type')[0]
-            .slug.replace('-', '_') :
-            undefined
+        let type = undefined
+
+        if (this.postType == 'resource' && this.config._embedded) {
+          const wpterms = this.config._embedded['wp:term']
+
+          if (wpterms.length) {
+            wpterms.forEach(wpterm => {
+              if (
+                wpterm.length &&
+                wpterm[0].hasOwnProperty('taxonomy') &&
+                wpterm[0].taxonomy == 'resource_type'
+              ) {
+                type = wpterm[0].slug.replace('-', '_')
+              }
+            })
+          }
+        }
+
+        return type
       },
 
       title() {
